@@ -476,7 +476,7 @@ body{font-family:var(--f);font-size:16px;line-height:1.7;color:var(--t);backgrou
 <!-- Screenshot Lightbox -->
 <div class="screenshot-modal" id="screenshotModal" onclick="closeScreenshot()">
   <button class="close-modal" onclick="closeScreenshot()">✕</button>
-  <img id="screenshotModalImg" src="" alt="" onclick="event.stopPropagation()">
+  <img id="screenshotModalImg" alt="" onclick="event.stopPropagation()" style="display:none">
 </div>
 
 <!-- Footer -->
@@ -897,11 +897,16 @@ function observeReveal() {
 
 /* ==================== SCREENSHOT LIGHTBOX ==================== */
 function openScreenshot(src) {
-  document.getElementById('screenshotModalImg').src = src;
+  const img = document.getElementById('screenshotModalImg');
+  img.src = src;
+  img.style.display = '';
   document.getElementById('screenshotModal').classList.add('open');
 }
 function closeScreenshot() {
   document.getElementById('screenshotModal').classList.remove('open');
+  const img = document.getElementById('screenshotModalImg');
+  img.src = '';
+  img.style.display = 'none';
 }
 
 /* ==================== RESUME UPLOAD / DOWNLOAD ==================== */
@@ -1056,9 +1061,9 @@ scrollContainer.addEventListener('scroll', () => {
 
 // Navigation clicks
 function scrollToSection(idx) {
-  if (!scrollContainer) return;
+  if (!scrollContainer || !scrollContainer.clientHeight) return;
   const target = idx * scrollContainer.clientHeight;
-  scrollContainer.scrollTo({ top: target, behavior: 'smooth' });
+  try { scrollContainer.scrollTo({ top: target, behavior: 'smooth' }); } catch(e) {}
   currentSection = idx;
   updateNavActive(idx);
 }
@@ -1114,7 +1119,7 @@ renderSkills();
 initResume();
 observeReveal();
 setTimeout(animateCounters, 800);
-if (scrollContainer) updateZoom();
+if (scrollContainer && scrollContainer.clientHeight) { try { updateZoom(); } catch(e) {} }
 
 /* ==================== CURSOR GLOW TRAIL ==================== */
 (function initCursorGlow() {
