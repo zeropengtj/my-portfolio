@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭天娇 · AI产品经理 | 作品集</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%234facfe'/><stop offset='100%25' stop-color='%233b82f6'/></linearGradient></defs><rect width='100' height='100' rx='20' fill='url(%23g)'/><text x='50' y='68' text-anchor='middle' font-size='52' font-family='sans-serif' font-weight='bold' fill='white'>P</text></svg>">
+<meta name="description" content="彭天娇 · AI产品经理 · 华科硕士 · 2027届 · 个人作品集">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<style>
+:root{
+  /* 智谱 GLM-5 浅色配色 */
+  --color-bg-primary: #f8f9fb;
+  --color-bg-card: #ffffff;
+  --color-brand-blue: #3b82f6;
+  --color-brand-blue-light: #4facfe;
+  --color-brand-purple: #8b5cf6;
+  --color-brand-pink: #a78bfa;
+  --color-text-primary: #0f172a;
+  --color-text-body: rgba(15,23,42,0.65);
+  --color-text-meta: rgba(15,23,42,0.4);
+  --color-text-weak: rgba(15,23,42,0.18);
+  --color-border-light: rgba(15,23,42,0.06);
+  --color-border-md: rgba(15,23,42,0.1);
+  --color-border-hover: rgba(59,130,246,0.25);
+  --color-btn-glow: rgba(59,130,246,0.25);
+  --color-nav-bg: rgba(248,249,251,0.8);
+  --color-modal-bg: rgba(255,255,255,0.96);
+  --color-modal-overlay: rgba(15,23,42,0.4);
+  /* 快捷引用 */
+  --bg:var(--color-bg-primary);
+  --bg2:var(--color-bg-card);
+  --accent1:var(--color-brand-blue);
+  --accent2:var(--color-brand-blue-light);
+  --accent3:var(--color-brand-purple);
+  --grad1:linear-gradient(135deg,#4facfe,#3b82f6);
+  --grad2:linear-gradient(135deg,#8b5cf6,#3b82f6);
+  --grad3:linear-gradient(135deg,#a78bfa,#4facfe);
+  --t:var(--color-text-primary);
+  --td:var(--color-text-body);
+  --tm:var(--color-text-meta);
+  --tl:var(--color-text-weak);
+  --b:var(--color-border-light);
+  --b2:var(--color-border-md);
+  --f:'Inter','PingFang SC','Microsoft YaHei','HarmonyOS Sans',sans-serif;
+  --mono:'JetBrains Mono',monospace;
+  --nav-h:64px;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:auto}
+body{font-family:var(--f);font-size:16px;line-height:1.7;color:var(--t);background:var(--bg);-webkit-font-smoothing:antialiased}
+
+/* ===== SCROLL SNAP CONTAINER ===== */
+.scroll-container{height:100vh;overflow-y:scroll;overflow-x:hidden;scroll-snap-type:y mandatory;-webkit-overflow-scrolling:touch}
+.scroll-container::-webkit-scrollbar{width:0}
+
+/* ===== ZOOM SECTION ===== */
+.zoom-section{height:100vh;scroll-snap-align:start;scroll-snap-stop:always;display:flex;align-items:center;position:relative}
+.zoom-content{width:100%;transition:transform 0.05s linear;will-change:transform}
+.zoom-section:nth-child(odd) .zoom-content{transform-origin:center center}
+.zoom-section:nth-child(even) .zoom-content{transform-origin:center center}
+
+/* ===== TOP NAVIGATION BAR ===== */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 40px;height:var(--nav-h);display:flex;align-items:center;justify-content:space-between;background:var(--color-nav-bg);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border-bottom:1px solid var(--b)}
+.nav-logo{font-weight:700;font-size:16px;letter-spacing:2px;background:var(--grad1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.nav-links{display:flex;gap:2px;align-items:center}
+.nav-links a{color:var(--tm);text-decoration:none;font-size:0.85rem;font-weight:500;padding:6px 14px;border-radius:8px;transition:all 0.3s;letter-spacing:0.5px;cursor:pointer}
+.nav-links a:hover,.nav-links a.active{color:var(--t);background:rgba(59,130,246,0.06)}
+
+/* ===== RIGHT DOTS NAVIGATION ===== */
+.nav-dots{position:fixed;right:24px;top:50%;transform:translateY(-50%);z-index:99;display:flex;flex-direction:column;gap:14px}
+.nav-dots .dot{width:10px;height:10px;border-radius:50%;background:rgba(15,23,42,0.12);cursor:pointer;transition:all 0.35s cubic-bezier(0.4,0,0.2,1);position:relative;border:none;padding:0}
+.nav-dots .dot:hover{transform:scale(1.4);background:rgba(15,23,42,0.3)}
+.nav-dots .dot.active{background:var(--color-brand-blue);box-shadow:0 0 12px rgba(59,130,246,0.5);transform:scale(1.25)}
+.nav-dots .dot .dot-label{position:absolute;right:20px;top:50%;transform:translateY(-50%);color:var(--tm);font-size:11px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity 0.3s}
+.nav-dots .dot:hover .dot-label{opacity:1}
+
+/* ===== CONTAINER ===== */
+.cont{max-width:1100px;margin:0 auto;padding:0 40px;width:100%}
+@media(max-width:1024px){.cont{padding:0 32px}}
+@media(max-width:640px){.cont{padding:0 20px}.nav{padding:0 16px}.nav-links a{font-size:0.7rem;padding:4px 8px;gap:0}}
+
+/* ===== BACKGROUND AMBIENCE ===== */
+.bg-ambient{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.bg-ambient .orb{position:absolute;border-radius:50%;filter:blur(150px)}
+.bg-ambient .orb:nth-child(1){width:700px;height:700px;top:-20%;right:-10%;background:rgba(139,92,246,0.06);animation:floatGlow 14s ease-in-out infinite alternate}
+.bg-ambient .orb:nth-child(2){width:550px;height:550px;bottom:-15%;left:-8%;background:rgba(59,130,246,0.05);animation:floatGlow2 17s ease-in-out infinite alternate}
+@keyframes floatGlow{0%{transform:translate(0,0) scale(1)}100%{transform:translate(-50px,30px) scale(1.1)}}
+@keyframes floatGlow2{0%{transform:translate(0,0) scale(1)}100%{transform:translate(40px,-25px) scale(1.08)}}
+
+/* ===== MOUSE CURSOR GLOW ===== */
+.cursor-glow{position:fixed;z-index:9999;pointer-events:none;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(59,130,246,0.12) 0%,rgba(139,92,246,0.06) 30%,transparent 70%);transform:translate(-50%,-50%);transition:opacity 0.6s;opacity:0;will-change:left,top}
+.cursor-glow.visible{opacity:1}
+.cursor-trail{position:fixed;z-index:9998;pointer-events:none}
+.cursor-dot{position:absolute;width:6px;height:6px;border-radius:50%;background:rgba(59,130,246,0.6);box-shadow:0 0 10px rgba(59,130,246,0.4),0 0 30px rgba(139,92,246,0.2);transform:translate(-50%,-50%);animation:dotFade 0.8s ease-out forwards}
+@keyframes dotFade{0%{opacity:1;transform:translate(-50%,-50%) scale(1)}100%{opacity:0;transform:translate(-50%,-50%) scale(0)}}
+
+/* ===== GRID TEXTURE ===== */
+.grid-noise{position:fixed;inset:0;z-index:0;pointer-events:none;background-image:radial-gradient(rgba(59,130,246,0.03) 1px,transparent 1px);background-size:50px 50px;mask-image:radial-gradient(ellipse at center,black 20%,transparent 60%)}
+
+/* ===== SCREEN 1: HERO ===== */
+.hero{position:relative;text-align:center;overflow:visible}
+.hero .zoom-content{display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:visible;position:relative}
+
+/* ===== CORGI MASCOT ===== */
+.corgi-wrap{position:absolute;right:-30px;bottom:40px;width:140px;height:140px;z-index:50;cursor:pointer;transition:transform 0.3s ease}
+.corgi-wrap:hover{transform:scale(1.05)}
+.corgi-img{width:100%;height:100%;object-fit:contain;animation:corgiIdle 3s ease-in-out infinite;filter:drop-shadow(0 4px 12px rgba(0,0,0,0.1))}
+.corgi-wrap:hover .corgi-img{animation:corgiIdle 1.5s ease-in-out infinite,corgiEarWiggle 0.5s ease-in-out}
+.corgi-wrap.breathing .corgi-img{animation:corgiBreathe 0.8s ease-in-out infinite;filter:drop-shadow(0 0 20px rgba(59,130,246,0.4))}
+@keyframes corgiIdle{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-8px) rotate(2deg)}}
+@keyframes corgiEarWiggle{0%,100%{transform:rotate(0)}25%{transform:rotate(-5deg)}75%{transform:rotate(5deg)}}
+@keyframes corgiBreathe{0%,100%{transform:scale(1)}50%{transform:scale(1.15)}}
+.corgi-bubble{position:absolute;top:-50px;left:50%;transform:translateX(-50%) scale(0);background:#fff;padding:8px 14px;border-radius:20px;font-size:12px;color:var(--t);box-shadow:0 2px 12px rgba(0,0,0,0.1);white-space:nowrap;opacity:0;transition:all 0.3s ease;pointer-events:none}
+.corgi-bubble::after{content:'';position:absolute;bottom:-6px;left:50%;transform:translateX(-50%);border-width:6px 6px 0;border-style:solid;border-color:#fff transparent transparent}
+.corgi-wrap:hover .corgi-bubble{transform:translateX(-50%) scale(1);opacity:1}
+@media(max-width:768px){.corgi-wrap{width:100px;height:100px;right:-10px;bottom:20px}}
+.hero-tag{font-size:12px;color:var(--accent1);letter-spacing:6px;text-transform:uppercase;margin-bottom:24px;font-family:var(--mono);font-weight:600}
+.hero h1{font-size:clamp(3rem,8vw,5rem);font-weight:900;line-height:1.05;letter-spacing:-2px;margin-bottom:20px;color:var(--t);max-width:100%;overflow:visible}
+.hero h1 .name{background:var(--grad2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;white-space:nowrap}
+.hero h1 .title{display:block;font-size:clamp(1.3rem,3.5vw,2.2rem);font-weight:700;color:var(--tl);-webkit-text-stroke:1px rgba(15,23,42,0.06);letter-spacing:4px;margin-top:8px}
+.hero-sub{font-size:16px;color:var(--td);margin-bottom:4px}
+.hero-quote{font-size:16px;color:var(--tm);margin-bottom:48px;padding-left:20px;border-left:2px solid var(--accent1);line-height:1.9}
+
+/* ===== HERO MARQUEE (横向滚动标语) ===== */
+.hero-marquee-wrap{width:100vw;max-width:100%;overflow:hidden;margin-bottom:40px;position:relative;mask-image:linear-gradient(90deg,transparent 0%,#000 15%,#000 85%,transparent 100%);-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 15%,#000 85%,transparent 100%)}
+.hero-marquee-track{display:flex;gap:0;width:max-content;animation:marqueeScroll 20s linear infinite}
+.hero-marquee-track:hover{animation-play-state:paused}
+.hero-marquee-item{flex-shrink:0;padding:12px 36px;font-size:clamp(1.2rem,3vw,2rem);font-weight:700;white-space:nowrap;background:var(--grad3);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:2px}
+.hero-marquee-item.sep{color:var(--tl);-webkit-text-fill-color:var(--tl);font-weight:300;padding:12px 16px;font-size:clamp(1rem,2.5vw,1.5rem)}
+@keyframes marqueeScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* Three Data Cards */
+.data-cards{display:flex;gap:12px;margin-bottom:36px;flex-wrap:wrap;justify-content:center}
+.data-card{flex:1;min-width:160px;max-width:210px;padding:28px 24px;background:#fff;border:1px solid var(--b);border-radius:16px;text-align:center;transition:all 0.35s ease;box-shadow:0 1px 2px rgba(0,0,0,0.04)}
+.data-card:hover{transform:translateY(-4px);border-color:var(--color-border-hover);box-shadow:0 12px 36px rgba(59,130,246,0.1)}
+.data-card:nth-child(1){border-left:3px solid var(--accent1)}
+.data-card:nth-child(2){border-left:3px solid var(--accent2)}
+.data-card:nth-child(3){border-left:3px solid var(--accent3)}
+.data-card .dc-value{font-size:clamp(32px,5vw,48px);font-weight:900;font-family:var(--mono);margin-bottom:4px}
+.data-card:nth-child(1) .dc-value{color:var(--accent1)}
+.data-card:nth-child(2) .dc-value{color:var(--accent2)}
+.data-card:nth-child(3) .dc-value{color:var(--accent3)}
+.data-card .dc-label{font-size:13px;color:var(--t);margin-bottom:4px;font-weight:600}
+.data-card .dc-ctx{font-size:11px;color:var(--tm);line-height:1.5}
+
+/* Tags */
+.hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:40px;justify-content:center}
+.hero-tags span{font-size:12px;padding:6px 16px;background:rgba(59,130,246,0.04);border:1px solid rgba(59,130,246,0.1);border-radius:20px;color:var(--accent1);letter-spacing:0.5px;font-weight:500}
+.hero-note{font-size:14px;color:var(--td);margin-bottom:32px;display:flex;align-items:center;gap:10px;justify-content:center}
+.hero-note::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--color-brand-blue);box-shadow:0 0 8px var(--color-brand-blue)}
+
+/* CTA */
+.cta-btn{display:inline-flex;align-items:center;gap:12px;padding:1rem 2.8rem;background:var(--grad1);border:none;border-radius:14px;color:#fff;font-size:15px;font-weight:600;cursor:pointer;text-decoration:none;transition:all 0.3s ease;letter-spacing:0.5px;position:relative;overflow:hidden;box-shadow:0 2px 12px rgba(59,130,246,0.2)}
+.cta-btn::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,0.25),transparent);opacity:0;transition:opacity 0.3s}
+.cta-btn:hover::before{opacity:1}
+.cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 30px var(--color-btn-glow)}
+.cta-btn::after{content:'↓';font-size:14px;transition:transform 0.3s}
+.cta-btn:hover::after{transform:translateY(4px)}
+@media(max-width:640px){.cta-btn{padding:0.7rem 2rem;font-size:14px}}
+
+/* ===== SCREEN 2: PROJECTS ===== */
+.section-header{margin-bottom:36px;width:100%}
+.section-tag{font-size:11px;color:var(--accent1);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px;font-family:var(--mono);font-weight:500}
+.section-tag::before{content:'// ';color:var(--tm)}
+.section-title{font-size:clamp(28px,4vw,36px);font-weight:800;color:var(--t)}
+.section-title span{color:var(--tl);-webkit-text-stroke:1px rgba(15,23,42,0.06)}
+.proj-hint{display:inline-flex;align-items:center;gap:10px;margin-top:16px;padding:12px 20px;background:linear-gradient(135deg,rgba(59,130,246,0.05),rgba(99,102,241,0.04));border:1px solid rgba(59,130,246,0.12);border-radius:14px;font-size:13px;color:var(--td);font-family:var(--mono);line-height:1.6;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);transition:border-color 0.3s,box-shadow 0.3s}
+.proj-hint::before{content:'';display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--accent1);flex-shrink:0;animation:dotGlint 2s ease-in-out infinite}
+.proj-hint:hover{border-color:rgba(59,130,246,0.28);box-shadow:0 4px 16px rgba(59,130,246,0.08)}
+@keyframes dotGlint{0%,100%{opacity:0.5;box-shadow:0 0 4px var(--accent1)}50%{opacity:1;box-shadow:0 0 12px var(--accent1)}}
+
+/* Project Categories */
+.proj-cats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:1024px){.proj-cats{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.proj-cats{grid-template-columns:1fr}}
+.proj-cat{background:#fff;border:1px solid var(--b);border-radius:16px;padding:1.8rem 2rem;transition:all 0.3s ease;box-shadow:0 1px 2px rgba(0,0,0,0.03)}
+.proj-cat:hover{border-color:var(--color-border-hover);box-shadow:0 8px 30px rgba(59,130,246,0.08);transform:translateY(-2px)}
+.proj-cat.cat-enterprise{border-top:3px solid var(--accent1)}
+.proj-cat.cat-indie{border-top:3px solid var(--accent2)}
+.proj-cat.cat-academic{border-top:3px solid var(--accent3)}
+.proj-cat-header{margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--b)}
+.proj-cat-icon{font-size:24px;display:block;margin-bottom:8px}
+.proj-cat-name{font-size:16px;font-weight:700;margin-bottom:2px;color:var(--t)}
+.proj-cat-count{font-size:11px;color:var(--tm)}
+.proj-list{display:flex;flex-direction:column;gap:8px}
+.proj-item{padding:14px 18px;background:rgba(59,130,246,0.02);border:1px solid transparent;border-radius:10px;cursor:pointer;transition:all 0.3s ease;position:relative;overflow:hidden}
+.proj-item:hover{border-color:var(--color-border-hover);box-shadow:0 0 20px rgba(59,130,246,0.06);transform:translateY(-2px)}
+.proj-item-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:4px}
+.proj-item-name{font-size:14px;font-weight:600;color:var(--t)}
+.proj-item-metric{font-size:16px;font-weight:900;font-family:var(--mono)}
+.proj-item.cat-enterprise .proj-item-metric{color:var(--accent1)}
+.proj-item.cat-indie .proj-item-metric{color:var(--accent2)}
+.proj-item.cat-academic .proj-item-metric{color:var(--accent3)}
+.proj-item-sub{font-size:11px;color:var(--tm);margin-bottom:6px}
+.proj-item-tags{display:flex;flex-wrap:wrap;gap:4px}
+.proj-item-tags span{font-size:10px;padding:3px 8px;background:rgba(59,130,246,0.04);border:1px solid rgba(59,130,246,0.08);border-radius:4px;color:var(--accent1);transition:all 0.3s}
+.proj-item-tags span:hover{background:rgba(59,130,246,0.1);color:var(--accent1)}
+.proj-item.active{border-color:var(--accent1)!important;box-shadow:0 0 24px rgba(59,130,246,0.12)!important;background:rgba(59,130,246,0.05)}
+@media(max-width:640px){.proj-cat{padding:1.2rem}}
+
+/* ===== PROJECT DETAIL MODAL ===== */
+.proj-modal-overlay{display:none;position:fixed;inset:0;z-index:200;background:var(--color-modal-overlay);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);align-items:flex-start;justify-content:center;padding:60px 20px 40px;overflow-y:auto}
+.proj-modal-overlay.open{display:flex}
+.proj-modal-card{width:100%;max-width:720px;background:#fff;border:1px solid var(--b);border-radius:20px;padding:40px 36px;box-shadow:0 20px 60px rgba(0,0,0,0.1),0 0 80px rgba(59,130,246,0.04);animation:modalReveal 0.35s ease}
+@keyframes modalReveal{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.proj-modal-close{position:sticky;top:0;float:right;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:rgba(15,23,42,0.04);border:1px solid var(--b);border-radius:50%;color:var(--tm);font-size:16px;cursor:pointer;margin:-12px -12px 0 12px;transition:all 0.3s;z-index:1}
+.proj-modal-close:hover{background:rgba(15,23,42,0.08);color:var(--t)}
+.proj-detail-back{display:none}
+.proj-detail-header{margin-bottom:36px}
+.proj-detail-header h3{font-size:24px;font-weight:800;margin-bottom:10px;color:var(--t)}
+.proj-detail-header .meta{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.proj-detail-header .meta span{font-size:13px;color:var(--tm)}
+.proj-detail-header .metric-badge{font-size:15px;font-weight:600;font-family:var(--mono);color:var(--accent1);padding:4px 12px;background:rgba(59,130,246,0.06);border:1px solid rgba(59,130,246,0.12);border-radius:8px}
+
+/* Detail Sections */
+.detail-section{margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid var(--b)}
+.detail-section:last-of-type{border-bottom:1px solid var(--b2)}
+.detail-section h4{font-size:12px;color:var(--accent1);margin-bottom:10px;letter-spacing:2px;text-transform:uppercase;display:flex;align-items:center;gap:8px;font-family:var(--mono);font-weight:600}
+.detail-section p{font-size:14px;color:var(--td);line-height:2;white-space:pre-line}
+
+/* Evidence Section */
+.evidence-section{margin-top:12px;padding:24px;background:rgba(59,130,246,0.015);border:1px solid var(--b);border-radius:14px}
+.evidence-section h4{color:var(--accent1);margin-bottom:16px;font-family:var(--mono);font-size:12px;font-weight:500}
+.evidence-list{display:flex;flex-direction:column;gap:8px}
+.evidence-item{border:1px solid var(--b);border-radius:10px;overflow:hidden;transition:all 0.3s;background:#fff}
+.evidence-item:hover{border-color:var(--b2)}
+.evidence-trigger{display:flex;align-items:center;gap:10px;padding:12px 16px;background:rgba(59,130,246,0.015);cursor:pointer;transition:all 0.3s;width:100%;border:none;color:var(--t);font-family:var(--f);font-size:13px;text-align:left}
+.evidence-trigger:hover{background:rgba(59,130,246,0.05)}
+.evidence-trigger .ev-icon{font-size:16px;flex-shrink:0}
+.evidence-trigger .ev-label{font-weight:600;flex:1}
+.evidence-trigger .ev-arrow{font-size:10px;color:var(--tm);transition:transform 0.3s}
+.evidence-item.open .ev-arrow{transform:rotate(180deg)}
+.evidence-content{max-height:0;overflow:hidden;transition:max-height 0.4s ease,padding 0.4s ease}
+.evidence-item.open .evidence-content{max-height:1500px;padding:0 16px 16px}
+.evidence-content p{font-size:13px;color:var(--td);line-height:1.9}
+.evidence-content .mermaid-wrap{background:rgba(59,130,246,0.02);border:1px solid var(--b);border-radius:8px;padding:20px;margin-top:8px;overflow-x:auto}
+.evidence-content .code-snippet{font-family:var(--mono);font-size:12px;color:var(--accent2);background:rgba(15,23,42,0.02);border:1px solid var(--b);border-radius:6px;padding:16px;margin-top:8px;white-space:pre-wrap;line-height:1.8;overflow-x:auto}
+.evidence-screenshot{width:100%;max-width:500px;border-radius:8px;border:1px solid var(--b);margin-top:8px;cursor:pointer;transition:all 0.3s}
+.evidence-screenshot:hover{border-color:var(--color-border-hover);box-shadow:0 4px 20px rgba(0,0,0,0.1)}
+.screenshot-modal{display:none;position:fixed;inset:0;z-index:999;background:rgba(15,23,42,0.8);backdrop-filter:blur(8px);align-items:center;justify-content:center}
+.screenshot-modal.open{display:flex}
+.screenshot-modal img{max-width:90vw;max-height:90vh;border-radius:12px;box-shadow:0 8px 40px rgba(0,0,0,0.3)}
+.screenshot-modal .close-modal{position:absolute;top:24px;right:24px;width:40px;height:40px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.9);border:1px solid rgba(15,23,42,0.1);border-radius:50%;color:var(--t);font-size:20px;cursor:pointer;transition:all 0.3s}
+.screenshot-modal .close-modal:hover{background:#fff}
+
+/* ===== CAPABILITIES ===== */
+.skill-badges{display:flex;flex-direction:column;gap:10px}
+.capability-card{display:flex;align-items:flex-start;gap:18px;padding:22px 28px;background:#fff;border:1px solid var(--b);border-radius:14px;transition:all 0.3s ease;box-shadow:0 1px 2px rgba(0,0,0,0.02)}
+.capability-card:hover{border-color:var(--color-border-hover);transform:translateX(4px);box-shadow:0 4px 24px rgba(59,130,246,0.08)}
+.cap-icon{font-size:22px;flex-shrink:0;width:40px;text-align:center;padding-top:2px}
+.cap-body{flex:1}
+.cap-tool{font-size:15px;font-weight:700;color:var(--t);margin-bottom:4px;letter-spacing:0.5px}
+.cap-proof{font-size:14px;color:var(--td);line-height:1.8}
+
+/* ===== ABOUT ===== */
+#about p{position:relative}
+
+/* ===== CONTACT ===== */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+@media(max-width:640px){.contact-grid{grid-template-columns:1fr;gap:32px}}
+.contact-info{display:flex;flex-direction:column;gap:10px}
+.contact-item{display:flex;align-items:center;gap:14px;padding:18px 22px;background:#fff;border:1px solid var(--b);border-radius:12px;text-decoration:none;color:var(--td);transition:all 0.3s ease;font-size:14px;box-shadow:0 1px 2px rgba(0,0,0,0.02)}
+.contact-item:hover{border-color:var(--color-border-hover);color:var(--t);box-shadow:0 4px 20px rgba(59,130,246,0.08);transform:translateX(4px)}
+.contact-item .ci-icon{width:42px;height:42px;display:flex;align-items:center;justify-content:center;background:rgba(59,130,246,0.06);border-radius:10px;font-size:18px;flex-shrink:0}
+.cta-group{display:flex;gap:12px;margin-top:8px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:0.8rem 2.4rem;border-radius:12px;font-size:14px;font-weight:600;cursor:pointer;text-decoration:none;transition:all 0.3s ease;border:none;font-family:var(--f)}
+.btn-primary{background:var(--grad1);color:#fff;box-shadow:0 2px 12px rgba(59,130,246,0.2)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 28px var(--color-btn-glow)}
+.btn-secondary{background:rgba(59,130,246,0.04);border:1px solid rgba(59,130,246,0.12);color:var(--accent1)}
+.btn-secondary:hover{background:rgba(59,130,246,0.08);border-color:rgba(59,130,246,0.2);color:var(--accent1)}
+@media(max-width:640px){.btn{padding:0.6rem 1.6rem}}
+
+/* Visual accent */
+.contact-visual{display:flex;justify-content:center;align-items:center}
+.contact-ring{width:160px;height:160px;border-radius:50%;background:radial-gradient(circle,rgba(59,130,246,0.06),transparent 60%);border:1px solid rgba(59,130,246,0.12);display:flex;align-items:center;justify-content:center;animation:contactFloat 6s ease-in-out infinite}
+.contact-ring .cr-inner{font-family:var(--mono);font-size:14px;background:var(--grad1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:3px;text-align:center;font-weight:600}
+@keyframes contactFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+
+/* ===== FOOTER ===== */
+.footer{text-align:center;padding:40px 24px;border-top:1px solid var(--b);background:#fff}
+.footer p{font-size:12px;color:var(--tm)}
+
+/* ===== SCROLL INDICATOR ===== */
+.scroll-hint{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--tl);font-size:10px;letter-spacing:3px;animation:scrollBounce 2s infinite}
+.scroll-hint .sh-line{width:1px;height:28px;background:linear-gradient(180deg,rgba(59,130,246,0.5),transparent)}
+@keyframes scrollBounce{0%,100%{opacity:0.2;transform:translateX(-50%) translateY(0)}50%{opacity:0.8;transform:translateX(-50%) translateY(8px)}}
+
+/* ===== REVEAL ANIMATION ===== */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.7s ease,transform 0.7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* ===== MOBILE ===== */
+@media(max-width:640px){
+  .hero h1{font-size:clamp(2.2rem,10vw,3rem)}
+  .hero h1 .title{font-size:clamp(0.9rem,5vw,1.5rem)}
+  .nav-links a{font-size:0.7rem;padding:4px 10px}
+  .nav-links{gap:0}
+  .data-cards{flex-direction:column}
+  .data-card{max-width:100%}
+  .capability-card{padding:16px;gap:12px}
+  .capability-card:hover{transform:none}
+  .section-title{font-size:clamp(22px,6vw,30px)}
+  .section-header{margin-bottom:24px}
+  .proj-cat{padding:1.2rem}
+  .hero-tags span{font-size:0.7rem;padding:5px 12px}
+  .hero-quote{font-size:14px}
+  .hero-sub{font-size:14px}
+  .hero-marquee-item{font-size:clamp(1rem,5vw,1.3rem);padding:10px 24px}
+  .nav-dots{right:10px;gap:12px}
+  .nav-dots .dot{width:8px;height:8px}
+}
+</style>
+</head>
+<body>
+
+<!-- Background Ambience (PRD 5.1) -->
+<div class="bg-ambient">
+  <div class="orb"></div>
+  <div class="orb"></div>
+</div>
+<div class="grid-noise"></div>
+
+<!-- Top Navigation -->
+<nav class="nav">
+  <div class="nav-logo">彭天娇</div>
+  <div class="nav-links" id="navLinks">
+    <a data-target="0" class="active">首页</a>
+    <a data-target="1">项目</a>
+    <a data-target="2">能力</a>
+    <a data-target="3">关于</a>
+    <a data-target="4">联系</a>
+  </div>
+</nav>
+
+<!-- Right Dots Navigation -->
+<div class="nav-dots" id="navDots">
+  <button class="dot active" data-target="0"><span class="dot-label">首页</span></button>
+  <button class="dot" data-target="1"><span class="dot-label">项目经历</span></button>
+  <button class="dot" data-target="2"><span class="dot-label">核心能力</span></button>
+  <button class="dot" data-target="3"><span class="dot-label">关于我</span></button>
+  <button class="dot" data-target="4"><span class="dot-label">联系我</span></button>
+</div>
+
+<!-- Scroll Container -->
+<div class="scroll-container" id="scrollContainer">
+
+  <!-- ===== SCREEN 1: HERO ===== -->
+  <section class="zoom-section hero" id="section-0">
+    <div class="zoom-content"><div class="cont">
+      <div class="hero-tag">⚡ PENG TIANJIAO</div>
+      <h1>
+        <span class="name">彭天娇</span>
+        <span class="title">AI产品经理</span>
+      </h1>
+      <p class="hero-sub">华中科技大学 · 图书情报（医学信息）硕士 · 2027届</p>
+      <p style="font-size:12px;color:var(--tm);margin-bottom:20px">延边大学 · 工商管理本科 · 医疗信息+AI复合背景</p>
+
+      <div class="hero-marquee-wrap" id="heroMarquee"></div>
+
+      <div class="data-cards">
+        <div class="data-card">
+          <div class="dc-value" data-target="99" data-suffix="%">0%</div>
+          <div class="dc-label">效率提升</div>
+          <div class="dc-ctx">3天→2分钟，HR分析效率提升</div>
+        </div>
+        <div class="data-card">
+          <div class="dc-value" data-target="90" data-suffix="%+">0%+</div>
+          <div class="dc-label">意图识别</div>
+          <div class="dc-ctx">Amanda智能体 8大场景</div>
+        </div>
+        <div class="data-card">
+          <div class="dc-value" data-target="5.143" data-suffix="" data-decimal="3">0</div>
+          <div class="dc-label">C刊一作</div>
+          <div class="dc-ctx">IF5.143 学科排名 3/45</div>
+        </div>
+      </div>
+
+      <div class="hero-tags">
+        <span>#AI产品</span><span>#Prompt工程</span><span>#Agent开发</span><span>#RAG</span><span>#医疗信息</span><span>#知识图谱</span>
+      </div>
+
+      <div class="hero-note">世界五百强企业AI产品实习 · 独立完成AI Agent从0到1落地 · 一作C刊</div>
+
+      <a class="cta-btn" onclick="scrollToSection(1)">查看全部项目</a>
+
+      <!-- Corgi Mascot -->
+      <div class="corgi-wrap" id="corgiWrap" onclick="toggleCorgiBreathe(event)" title="点我～">
+        <div class="corgi-bubble" id="corgiBubble">汪汪！你好呀 👋</div>
+        <img class="corgi-img" src="corgi.png" alt="Corgi" onerror="this.style.display='none';this.parentElement.style.display='none'" id="corgiImg">
+      </div>
+
+      <div class="scroll-hint">
+        <span>向下滚动</span>
+        <div class="sh-line"></div>
+      </div>
+    </div></div>
+  </section>
+
+  <!-- ===== SCREEN 2: PROJECTS ===== -->
+  <section class="zoom-section" id="section-1">
+    <div class="zoom-content"><div class="cont" style="padding-top:var(--nav-h);padding-bottom:20px">
+      <div class="section-header reveal">
+        <div class="section-tag">📂 Evidence-Based</div>
+        <h2 class="section-title">项目<span>经历</span></h2>
+        <p class="proj-hint reveal">👆 点击任意项目卡片，查看需求背景、技术选型、迭代日志与效果数据</p>
+      </div>
+      <div class="proj-cats" id="projCats"></div>
+    </div></div>
+  </section>
+
+  <!-- ===== SCREEN 3: CAPABILITIES ===== -->
+  <section class="zoom-section" id="section-2" style="background:#f5f7fa">
+    <div class="zoom-content"><div class="cont">
+      <div class="section-header reveal">
+        <div class="section-tag">🛠️ Evidence</div>
+        <h2 class="section-title">能力<span>举证</span></h2>
+      </div>
+      <div class="skill-badges" id="skillBadges"></div>
+    </div></div>
+  </section>
+
+  <!-- ===== SCREEN 4: ABOUT ===== -->
+  <section class="zoom-section" id="section-3" style="background:#f5f7fa">
+    <div class="zoom-content"><div class="cont">
+      <div class="section-header reveal">
+        <div class="section-tag">📋 About</div>
+        <h2 class="section-title">关于<span>我</span></h2>
+      </div>
+      <p class="reveal" style="font-size:17px;color:var(--td);line-height:2.2;max-width:700px">
+        211本+985硕士，医学图书情报（信息检索/知识图谱）背景。世界五百强企业AI产品实习，独立完成企业级AI Agent从0到1落地，效率提升99%。一作C刊，数据驱动决策。
+      </p>
+    </div></div>
+  </section>
+
+  <!-- ===== SCREEN 5: CONTACT ===== -->
+  <section class="zoom-section" id="section-4">
+    <div class="zoom-content"><div class="cont">
+      <div class="section-header reveal">
+        <div class="section-tag">📬 Connect</div>
+        <h2 class="section-title">联系<span>我</span></h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <a href="mailto:1766647040@qq.com" class="contact-item">
+            <span class="ci-icon">📧</span>
+            <span>1766647040@qq.com</span>
+          </a>
+          <a href="tel:15200320041" class="contact-item">
+            <span class="ci-icon">📱</span>
+            <span>15200320041</span>
+          </a>
+        </div>
+        <div class="contact-visual reveal">
+          <div class="contact-ring">
+            <div class="cr-inner">PTJ</div>
+          </div>
+        </div>
+      </div>
+    </div></div>
+  </section>
+
+</div><!-- /.scroll-container -->
+
+<!-- ===== PROJECT DETAIL MODAL ===== -->
+<div class="proj-modal-overlay" id="projModal" onclick="closeDetailModal(event)">
+  <div class="proj-modal-card" id="projModalCard" onclick="event.stopPropagation()">
+    <button class="proj-modal-close" onclick="closeDetailModal()">✕</button>
+    <div id="projDetailContent"></div>
+  </div>
+</div>
+
+<!-- Screenshot Lightbox -->
+<div class="screenshot-modal" id="screenshotModal" onclick="closeScreenshot()">
+  <button class="close-modal" onclick="closeScreenshot()">✕</button>
+  <img id="screenshotModalImg" alt="" onclick="event.stopPropagation()" style="display:none">
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <p>© 2026 彭天娇 · AI Product Manager</p>
+</footer>
+
+<script>
+/* ==================== DATA ==================== */
+const projectData = [
+  {
+    id: 1,
+    title: "智能分析 Chatbot",
+    company: "博世",
+    category: "enterprise",
+    metric: "99%",
+    metricLabel: "效率提升",
+    metricContext: "3天→2分钟",
+    summary: "独立设计四层AI架构，将HR问卷分析从3天压缩至2分钟",
+    tags: ["大模型", "RAG", "图表生成"],
+    detail: {
+      background: "HR手动分析问卷耗时3天/份，只能抽样，无法覆盖全员。通过访谈发现核心痛点不在'分析能力'，而在'数据分散、反复沟通'。需将HR的隐性分析逻辑转化为可执行的AI工作流，实现全量问卷的快速分析。",
+      techStack: "Dify工作流平台（多节点编排） · 对比GPT/Claude等国外大模型后选择DeepSeek · RAG知识库检索 · Python代码节点（得分计算+数据格式化） · 文档提取器（PDF/Word解析）",
+      role: "独立负责全流程产品设计。决策采用对话式AI架构（意图识别→知识检索→逻辑推理→可视化），而非单一模型调用，确保分析结果可追溯、可解释。",
+      challenge: "核心痛点: 数据分散、反复沟通 → 设计知识检索模块整合多源数据；信息呈现效率低 → 增加图表自动生成功能，降低阅读门槛。",
+      iterationLog: "V1.0: 基础问答式分析，准确率约70%。\n→ 发现仅靠大模型无法回答HR历史数据相关问题，存在严重知识盲区\nV2.0: 增加知识检索层，引入RAG模块。\n→ RAG补充了数据查询能力，但缺乏可视化，HR反馈文字过多，数据可视化不强\nV3.0: 四层架构重构，增加图表自动生成，输出可读性大幅提升。\n→ 架构定型后，60+轮Prompt调优中分析50+条badcase，发现多轮追问场景下意图识别不稳定\nV4.0: 优化Prompt策略+增强上下文记忆，意图识别大幅提升。\n→ HR提出核心新需求：能否同时对比22家子公司×11部门×7维度的数据？\nV9.7.0: 当前版本，支持多对象交互分析（22家子公司×11部门×7维度），成为HR月度复盘固定工具。",
+      result: "3个工作日→2分钟，效率提升99%，成为HR部门固定使用工具。沉淀了可复用的'非结构化数据→结构化分析→自动可视化'链路的HR场景智能化分析SOP。"
+    },
+    evidence: [
+      { type: "architecture", label: "架构设计图", icon: "🏗️", mermaid: "graph LR\n  A[用户输入问卷] --> B[文档提取器]\n  B --> C[LLM]\n  C --> D[直接回复]\n  C --> E[输出Word文档]" },
+      { type: "timeline", label: "上线记录", icon: "📅", content: "2025.10-2026.02 · 博世HR部门持续使用" },
+      { type: "comparison", label: "数据对比", icon: "📊", content: "分析效率：3天 → 2分钟，提升99%" },
+      { type: "screenshot", label: "产品截图", icon: "📸", img: "screenshot-chatbot.png", caption: "博世满意度Chatbot · 实际运行界面" }
+    ]
+  },
+  {
+    id: 2,
+    title: "人才画像系统",
+    company: "博世",
+    category: "enterprise",
+    metric: "70%",
+    metricLabel: "效率提升",
+    metricContext: "HR筛选效率",
+    summary: "Dify+Python双轨方案，标准化率95%，日均减少4小时重复工作",
+    tags: ["Dify", "Prompt工程", "数据治理"],
+    detail: {
+      background: "企业人才库积累数千份在职人员简历，格式各异、信息碎片化，瓶颈在于'数据格式不统一'和'照片等非结构化信息无法检索'。需要将非结构化简历转化为可比对、可搜索的结构化人才数据。",
+      techStack: "Dify+Python低代码双轨方案（文件上传→文档解析→LLM→代码节点链） · 照片解析入库+工号自动关联 · Markdown标准化模板 · Python数据清洗+格式校验",
+      role: "产品设计与技术实现。梳理企业档案管理全链路，发现瓶颈在于数据格式不统一和照片信息无法检索。负责人才画像模型设计、AI信息提取流程搭建和系统落地。",
+      challenge: "简历格式多样+照片等非结构化信息无法检索 → 设计三阶段提取-解析-验证闭环+照片解析方案；信息非结构化 → 标准化Markdown表格输出。",
+      iterationLog: "V1.0: 单阶段提取，输出一致性约60%。\n→ 发现简历撰写风格差异极大，同一信息在不同简历中表述完全不同，模型难以泛化\nV2.0: 增加Few-shot示例嵌入，一致性提升至75%。\n→ 一致性达标但仍存在信息漏检，尤其照片信息完全无法检索，HR需手动翻看\nV3.0: 三阶段闭环（提取→解析→验证）+照片解析入库，一致性达90%。\n→ 核心字段提取稳定后，发现中英文混合简历的格式差异导致部分模块错位\nV4.0: 增加中英文混合简历解析能力，覆盖6大模块标准化输出，日均减少4小时重复工作。",
+      result: "数据提取效率提升约70%，日均减少团队4小时重复工作，沉淀超过50份标准化人才画像。验证了低成本数据治理路径。"
+    },
+    evidence: [
+      { type: "architecture", label: "架构设计图", icon: "🏗️", mermaid: "graph LR\n  A[PDF/Word简历] --> B[文档解析]\n  B --> C[LLM提取-解析-验证]\n  C --> D[标准化Markdown输出]\n  D --> E[人才库]" },
+      { type: "timeline", label: "上线记录", icon: "📅", content: "2025-2026 · 博世人才管理部门使用中" },
+      { type: "code", label: "Prompt策略示例", icon: "💻", content: "# 三阶段Prompt体系\n阶段1：快速抓取基础信息（姓名、联系方式、学历）\n阶段2：深度语义解析（教育/工作经历、实体关系建立）\n阶段3：交叉校验提取准确性和完整性\n\n# 标准化模板\n| 字段名 | 字段值 | |\n要求：格式100%一致，标题行不可省略" },
+      { type: "screenshot", label: "人才画像生成器", icon: "📸", img: "screenshot-personnel.png", caption: "Personnel Data Excel Generator · 人才画像自动生成工具" },
+      { type: "screenshot", label: "Dify工作流", icon: "🔧", img: "screenshot-talent-dify.png", caption: "Dify工作流 · 人才画像Prompt编排界面" }
+    ]
+  },
+  {
+    id: 3,
+    title: "招聘数据自动化",
+    company: "博世",
+    category: "enterprise",
+    metric: "2min",
+    metricLabel: "数据汇总",
+    metricContext: "从2天压缩至2分钟",
+    summary: "Python自动化采集+PowerBI实时看板，重复工作量减少80%",
+    tags: ["Python", "PowerBI", "自动化"],
+    detail: {
+      background: "跨年度、月份数据量大，人工易出错。流程卡在'多源Excel手动合并'和'重复清洗'。管理层决策缺乏实时数据支撑，招聘效率难以量化评估。",
+      techStack: "Python多线程脚本（Pandas自动化清洗+指标计算+多源汇总） · PowerBI（实时看板+漏斗分析+渠道对比+预警机制） · 多平台数据对接",
+      role: "数据产品负责人。负责需求分析、数据源梳理、自动化流程设计和可视化看板搭建。将模糊的「想看数据」需求转化为具体指标体系，将数据分析从'事后汇报'转变为'实时监控'。",
+      challenge: "多源Excel手动合并 → Python多线程脚本统一清洗+汇总；管理层决策缺实时数据 → PowerBI实时看板含漏斗分析。",
+      iterationLog: "V1.0: 覆盖2个数据源的基础自动化采集，验证可行性。\n→ 2个数据源远不够，HR每月需要对比所有招聘渠道效率，无法跨平台对比\nV2.0: 扩展到全部招聘平台，增加多线程数据清洗逻辑。\n→ 清洗脚本稳定后，HR反馈'数据有了但看不出趋势'，Excel表格阅读效率低\nV3.0: 搭建PowerBI看板，含漏斗分析+渠道对比+周期监控。\n→ 看板上线后管理层频繁查看但依赖手动刷新，希望能'异常时不用盯着也能知道'\nV4.0: 增加自动预警机制，关键指标异常主动推送通知，实现'实时监控'。",
+      result: "跨年度数据汇总从2天降至2分钟，重复工作量减少80%。看板被HR部门采用，成为月度复盘固定工具，实现从'事后汇报'到'实时监控'的转变。"
+    },
+    evidence: [
+      { type: "code", label: "数据采集脚本示例", icon: "💻", content: "# Python自动化数据采集\nimport pandas as pd\nfrom concurrent.futures import ThreadPoolExecutor\n\n# 多源数据采集\nsources = ['招聘平台A', '内推系统', 'ATS']\n# 统一清洗逻辑\n# PowerBI实时看板对接" },
+      { type: "comparison", label: "数据对比", icon: "📊", content: "数据汇总时间：2天 → 2分钟\n重复工作量减少：80%\n报表生成：手动 → 自动化" },
+      { type: "timeline", label: "上线记录", icon: "📅", content: "2025-2026 · HR部门使用，并为月度复盘工具" },
+      { type: "screenshot", label: "PowerBI看板", icon: "📸", img: "screenshot-powerbi.png", caption: "招聘数据PowerBI实时看板 · 多源数据可视化" }
+    ]
+  },
+  {
+    id: 4,
+    title: "Amanda 智能体",
+    company: "独立开发",
+    category: "indie",
+    metric: "90%+",
+    metricLabel: "意图识别",
+    metricContext: "响应时长缩短近40%",
+    summary: "情感陪伴AI Agent，5轮迭代，人设一致性98%，沉淀三层评测框架",
+    tags: ["LangChain", "Prompt工程", "Agent"],
+    detail: {
+      background: "爬取小红书200+篇情绪文案+20+用户访谈，发现Z世代年轻人存在大量未被满足的情感支持需求，现有AI共情力弱、说教式回应。需要打造有温度、能持续对话的AI伙伴。",
+      techStack: "LangChain（多轮对话系统+Agent框架） · LLM API（GPT/Claude） · Prompt工程（人设约束+场景策略） · Python（数据采集+对抗性评测脚本）",
+      role: "产品负责人。从零设计人设体系、对话策略和评测框架。拆解8大交互场景，通过100+Badcase分析发现'负面情绪下易说教'核心问题，重新设计Prompt优先级（共情优先于建议），构建多维度对抗性评测集。",
+      challenge: "AI共情力弱、说教式回应 → 100+Badcase分析后重新设计Prompt优先级；人设崩塌 → 构建三层评测框架（情绪理解+风格匹配+安全护栏）",
+      iterationLog: "V1.0: 基础对话，意图识别约70%，人设一致性85%，平均对话4轮。\n→ 发现用户情绪由平静转为低落时，模型仍用同一套策略回应，无法自适应切换\nV2.0: 增加场景路由（8大情感场景），意图识别提升至82%。\n→ 场景维度拆分后，100+Badcase分析发现核心根因：负面情绪下AI容易说教而非共情\nV3.0: 重构Prompt优先级（共情优先于建议），人设一致性突破至95%。\n→ 人设崩塌问题大幅改善，但评测仍依赖主观判断，无法量化迭代效果\nV4.0: 引入A/B测试+50+样本/轮+对抗性评测集，意图识别达90%+。\n→ 量化评测让迭代有了数据基准，进一步精细化Prompt策略\nV5.0: 精细化Prompt策略，人设一致性98%，响应时长缩短近40%，用户平均对话超12轮。",
+      result: "意图识别90%+，人设一致性98%，响应时长缩短近40%。沉淀了'人设一致性评测框架'（情绪理解+风格匹配+安全护栏三层），可复用于客服/教育/娱乐等AI人格设定场景。"
+    },
+    evidence: [
+      { type: "architecture", label: "Amanda架构设计", icon: "🏗️", mermaid: "graph TD\n  A[用户输入] --> B[意图识别]\n  B --> C[场景路由]\n  C --> D1[安慰]\n  C --> D2[鼓励]\n  C --> D3[日常闲聊]\n  C --> D4[深度对话]\n  C --> D5[情绪疏导]\n  C --> D6[知识分享]\n  C --> D7[趣味互动]\n  C --> D8[危机干预]\n  D1 & D2 & D3 & D4 & D5 & D6 & D7 & D8 --> E[人设一致性校验]\n  E --> F[回复输出]" },
+      { type: "code", label: "评测体系示例", icon: "💻", content: "# 人设一致性评测框架（三层）\n1. 情绪理解层：意图识别准确率90%+\n2. 风格匹配层：人设一致性98%\n3. 安全护栏层：回复安全性校验\n\n# 评测方法\n· A/B测试双轨制\n· 5轮迭代，每轮50+样本\n· 100+Badcase分类→针对性优化\n· 对抗性评测集构建" },
+      { type: "comparison", label: "迭代效果数据", icon: "📊", content: "对话轮次：4轮 → 10轮\n意图识别：70% → 90%+ (+20%)\n人设一致性：85% → 98% (+13%)\n响应时长：缩短近40%" }
+    ]
+  },
+  {
+    id: 5,
+    title: "C刊论文 · 长护险",
+    company: "华中科技大学",
+    category: "academic",
+    metric: "IF5.143",
+    metricLabel: "一作C刊",
+    metricContext: "学科排名 3/45",
+    summary: "央地视角下长期护理保险政策比较研究，内容分析法对比15份中央+228份地方政策",
+    tags: ["内容分析法", "政策比较", "WHO框架"],
+    detail: {
+      background: "我国60岁以上人口占比22%，已进入中度老龄化社会。长护险自2016年启动试点，49个国家级试点城市在覆盖范围、筹资机制、待遇标准等方面差异显著。2025年国家医保局明确3年内建立覆盖全民的长护险制度目标，需系统对比中央与地方政策差异。",
+      techStack: "内容分析法（定量+定性结合） · WHO长期照护框架（六大支柱） · 政策文本编码 · SPSS/Stata统计分析 · NVivo质性分析",
+      role: "第一作者。基于WHO长期照护框架，构建涵盖参保与保障对象、筹资机制、待遇给付、管理与评估、服务提供、信息化建设六个维度的政策分析框架。采用内容分析法，对15份中央政策文本及228份试点城市政策文本进行系统性比较，辅以官方新闻报道作为补充材料。",
+      challenge: "49个试点城市政策文本数量庞大、口径不一 → 构建统一六维分析框架+内容分析法系统编码；需同时兼顾中央宏观设计与地方实践差异 → 多层次对比分析，提炼城乡居民覆盖、筹资渠道独立性等核心差距维度。",
+      iterationLog: "初稿阶段: 确定研究问题+分析框架搭建+政策文本系统性检索筛选（15中央+228地方）。\n→ 导师反馈分析框架仅有宏观维度，缺乏可操作的下位编码体系，无法深入对比\n修改阶段: 经历50轮修改，每轮补充下位编码与数据验证，逐步强化研究方法论。\n→ 多次审稿后，专家提出需要从'发现差异'上升到'解释原因、提出路径'\n终稿阶段: 完善政策建议（四条建议路径）+英文摘要+格式规范。\n→ 发表后，将分析框架与方法论沉淀为可复用的政策文本分析工具。\n发表: 2026年1月录用于《中国卫生政策研究》（CSSCI/CSCD），学科排名3/45。",
+      result: "发表于《中国卫生政策研究》2026年1月第19卷第1期（复合IF 5.143，中信所IF 3.645，本学科领域排名 3/45，中文核心/CSSCI/CSCD）。核心发现：各试点基本完成核心制度建设，但在城乡居民覆盖、筹资渠道独立性、服务目录对应、专业照护人员供给及信息化技术应用方面与中央要求存在显著差距。提出逐步破除参保壁垒、推动地方服务与国家目录对接、依托战略支付整合存量资源、以信息化建设实现全链条数字化管理四条政策建议。"
+    },
+    evidence: [
+      { type: "public", label: "论文基本信息", icon: "🔗", content: "论文标题：央地视角下长期护理保险政策比较研究\n\n发表期刊：中国卫生政策研究 2026年1月第19卷第1期\nChinese Journal of Health Policy, January 2026, Vol.19 No.1\n\n期刊级别：中文核心期刊 · CSSCI来源期刊 · CSCD来源期刊\n复合IF：5.143 | 中信所IF：3.645\n本学科领域排名：3/45\nDOI：10.3969/j.issn.1674-2982.2026.01.002" },
+      { type: "architecture", label: "政策分析框架（六维度）", icon: "🏗️", mermaid: "graph TD\n  A[长护险政策分析框架] --> B[参保与保障对象]\n  A --> C[筹资机制]\n  A --> D[待遇给付]\n  A --> E[管理与评估]\n  A --> F[服务提供]\n  A --> G[信息化建设]\n  B --> B1[参保对象/保障对象]\n  C --> C1[筹资渠道/模式/标准]\n  D --> D1[给付内容/形式/标准]\n  E --> E1[监管/失能评估]\n  F --> F1[人才培养/定点机构]\n  G --> G1[信息系统/智能监管]" },
+      { type: "architecture", label: "论文摘要", icon: "📄", content: "目的：对比中央层面与49个国家级试点城市长期护理保险政策的差异，为制度全面推行提供决策依据。\n\n方法：基于构建的长期护理保险政策分析框架，采用内容分析法，对15份中央政策文本及228份试点城市政策文本开展系统性比较，并辅以官方新闻报道作为补充材料。\n\n结果：各试点地区已基本完成核心制度建设，但在城乡居民覆盖、筹资渠道独立性、服务目录对应、专业照护人员供给及信息化技术应用等方面，与中央层面政策要求尚存显著差距。\n\n结论：建议各试点城市立足实际，稳步推进制度转型，逐步扩大参保对象覆盖范围，细化待遇给付的内容和标准，通过战略性支付整合存量照护资源，引领区域信息化建设，为制度统一规范推进奠定基础。\n\n关键词：长期护理保险；失能人群；筹资机制；失能评估" }
+    ]
+  },
+  {
+    id: 6,
+    title: "数据分析项目群",
+    company: "华中科技大学",
+    category: "academic",
+    metric: "0.978",
+    metricLabel: "KMO值",
+    metricContext: "问卷效度检验",
+    summary: "老年健康问卷分析（7278份）+糖尿病知识图谱构建（625篇文献）",
+    tags: ["SPSS", "Python", "Neo4j"],
+    detail: {
+      background: "研究生期间参与多项研究：1）老年健康研究项目需处理大规模问卷数据；2）糖尿病知识图谱构建需系统整合医学文献与实体关系。需要综合运用统计分析、数据清洗及知识工程方法。",
+      techStack: "Python（Pandas/NumPy数据清洗+缺失值填充+异常值检测） · SPSS统计建模 · Protege（本体构建+实体录入） · Neo4j图数据库（Cypher语句）",
+      role: "独立负责7278份问卷全流程处理与统计建模；参与糖尿病知识图谱构建，完成625篇核心文献收集分类及50+实体录入。",
+      challenge: "大规模问卷数据清洗复杂 → Python自动化处理；医学文献实体关系分散 → Protege+Neo4j系统化知识管理。",
+      iterationLog: "问卷分析:\n初始KMO值约0.85，项目分析发现部分题项区分度不足，被试趋同作答 → 调整措辞+增加反向计分题\n第二轮KMO提升至0.92，但仍有题项贡献偏低 → 扩大样本量+项目分析剔除低区分度题项\n最终KMO达0.978，Cronbach's α>0.9。\n\n知识图谱:\n625篇文献初筛完成，但实体间关系零散、难以形成网络 → 用Protege建立本体框架，统一实体分类标准\n50+疾病/药物/症状实体录入后，需可查询可视化 → 编写Cypher语句导入Neo4j，实现知识图谱整合查询。",
+      result: "老年健康问卷KMO值达0.978，Cronbach's α>0.9，信效度均达优秀水平。糖尿病知识图谱实现625篇文献、50+实体的系统化知识管理。"
+    },
+    evidence: [
+      { type: "code", label: "问卷分析流程", icon: "💻", content: "# 7278份问卷数据分析全流程\n1. Python(Pandas/NumPy)数据清洗：缺失值填充+异常值检测\n2. SPSS：描述统计+项目分析（区分度检验）\n3. 探索性因子分析（EFA）\n4. 验证性因子分析（CFA）\n5. 信度检验（Cronbach's α > 0.9）\n6. 效度检验（KMO = 0.978）\n7. 回归/结构方程建模" },
+      { type: "architecture", label: "知识图谱构建流程", icon: "🏗️", mermaid: "graph LR\n  A[625篇文献收集] --> B[文献分类筛选]\n  B --> C[实体标注]\n  C --> D[Protege本体构建]\n  D --> E[Cypher语句编写]\n  E --> F[Neo4j图数据库]\n  F --> G[知识图谱整合]" },
+      { type: "screenshot", label: "Neo4j知识图谱可视化", icon: "🧠", img: "screenshot-neo4j.png", caption: "Neo4j图数据库 · 糖尿病知识图谱实体关系网络" },
+      { type: "comparison", label: "知识图谱成果", icon: "📊", content: "文献覆盖：625篇核心医学文献\n实体录入：50+疾病/药物/症状实体\n技术栈：Protege + Neo4j + Cypher\n成果：可查询、可视化的糖尿病知识网络" }
+    ]
+  }
+];
+
+const capabilityData = [
+  {
+    tool: "Dify 工作流编排",
+    icon: "🔗",
+    proof: "搭建「满意度分析Chatbot」四层工作流（意图识别→知识检索→逻辑推理→可视化），解决了HR数据分散、分析耗时长的问题，从3天压缩至2分钟。"
+  },
+  {
+    tool: "大模型选型与评测",
+    icon: "🤖",
+    proof: "对比GPT-4 / Claude / DeepSeek三款模型在中文语义理解场景下的效果与成本，最终选择DeepSeek，单次调用成本降低约70%，且中文共情能力不输GPT-4。"
+  },
+  {
+    tool: "Python 自动化工程",
+    icon: "🐍",
+    proof: "使用Trae辅助编写Python多线程脚本，实现跨年度招聘数据自动化清洗与汇总，将月度数据汇总从2天压缩至2分钟。"
+  },
+  {
+    tool: "Prompt 工程与评测迭代",
+    icon: "🎯",
+    proof: "通过100+ Badcase分析与5轮迭代，将Amanda智能体意图识别从70%提升至90%+，沉淀「人设一致性评测框架」（情绪理解+风格匹配+安全护栏三层）。"
+  },
+  {
+    tool: "知识图谱构建",
+    icon: "🧠",
+    proof: "使用Protege + Neo4j完成糖尿病知识图谱构建，系统化管理625篇核心文献与50+疾病/药物/症状实体，实现知识网络可视化查询。"
+  },
+  {
+    tool: "PowerBI 可视化看板",
+    icon: "📊",
+    proof: "搭建招聘数据PowerBI实时看板（含漏斗分析+渠道对比+预警机制），将数据分析从「事后汇报」转变为「实时监控」，被HR部门采纳为月度复盘固定工具。"
+  }
+];
+
+/* ==================== RENDER PROJECTS ==================== */
+const catMap = {
+  enterprise: { name: "企业落地", icon: "🏢", cssClass: "cat-enterprise" },
+  indie: { name: "独立开发", icon: "🚀", cssClass: "cat-indie" },
+  academic: { name: "学术研究", icon: "📖", cssClass: "cat-academic" }
+};
+
+function renderProjects() {
+  const cats = {};
+  projectData.forEach(p => {
+    if (!cats[p.category]) cats[p.category] = [];
+    cats[p.category].push(p);
+  });
+
+  const catOrder = ['enterprise', 'indie', 'academic'];
+  let html = '';
+  catOrder.forEach(cat => {
+    const projects = cats[cat];
+    if (!projects) return;
+    const c = catMap[cat];
+    html += `
+      <div class="proj-cat ${c.cssClass} reveal">
+        <div class="proj-cat-header">
+          <span class="proj-cat-icon">${c.icon}</span>
+          <div class="proj-cat-name">${c.name}</div>
+          <div class="proj-cat-count">${projects.length}个项目</div>
+        </div>
+        <div class="proj-list">
+          ${projects.map(p => `
+            <div class="proj-item ${c.cssClass}" data-pid="${p.id}" onclick="openDetail(${p.id})">
+              <div class="proj-item-header">
+                <span class="proj-item-name">${p.title}</span>
+                <span class="proj-item-metric">${p.metric}</span>
+              </div>
+              <div class="proj-item-sub">${p.metricContext} · ${p.company}</div>
+              <div class="proj-item-tags">${p.tags.map(t => `<span>${t}</span>`).join('')}</div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    `;
+  });
+  document.getElementById('projCats').innerHTML = html;
+}
+
+/* ==================== RENDER CAPABILITIES ==================== */
+function renderSkills() {
+  document.getElementById('skillBadges').innerHTML = capabilityData.map(c => `
+    <div class="capability-card reveal">
+      <div class="cap-icon">${c.icon}</div>
+      <div class="cap-body">
+        <div class="cap-tool">${c.tool}</div>
+        <div class="cap-proof">${c.proof}</div>
+      </div>
+    </div>
+  `).join('');
+}
+
+/* ==================== PROJECT DETAIL ==================== */
+let currentPid = null;
+
+function openDetail(pid) {
+  currentPid = pid;
+  const p = projectData.find(x => x.id === pid);
+  if (!p) return;
+
+  // Lock scrolling
+  if (scrollContainer) scrollContainer.style.overflowY = 'hidden';
+
+  // Highlight active project
+  document.querySelectorAll('.proj-item').forEach(el => el.classList.remove('active'));
+  document.querySelector(`.proj-item[data-pid="${pid}"]`)?.classList.add('active');
+
+  let detailHTML = `
+    <div class="proj-detail-header">
+      <h3>${p.title}</h3>
+      <div class="meta">
+        <span class="metric-badge">${p.metric} ${p.metricLabel}</span>
+        <span>${p.company} · ${p.metricContext}</span>
+      </div>
+    </div>
+    <div class="detail-section">
+      <h4>📋 需求背景</h4>
+      <p>${p.detail.background}</p>
+    </div>
+    <div class="detail-section">
+      <h4>🔧 技术选型</h4>
+      <p>${p.detail.techStack || '详见下方可信证据中的架构设计与技术方案。'}</p>
+    </div>
+    <div class="detail-section">
+      <h4>🎯 我的角色与关键决策</h4>
+      <p>${p.detail.role}</p>
+    </div>
+    <div class="detail-section">
+      <h4>⚡ 核心挑战与解法</h4>
+      <p>${p.detail.challenge}</p>
+    </div>
+    <div class="detail-section">
+      <h4>📝 迭代日志</h4>
+      <p>${p.detail.iterationLog || p.detail.iteration || '持续迭代优化中。'}</p>
+    </div>
+    <div class="detail-section">
+      <h4>📊 效果数据</h4>
+      <p>${p.detail.result}</p>
+    </div>
+  `;
+
+  // Evidence section
+  if (p.evidence && p.evidence.length) {
+    detailHTML += `
+      <div class="evidence-section">
+        <h4>🔍 可信证据（可验证）</h4>
+        <div class="evidence-list">
+          ${p.evidence.map((ev, i) => `
+            <div class="evidence-item" id="ev-${pid}-${i}">
+              <button class="evidence-trigger" onclick="toggleEvidence(${pid},${i})">
+                <span class="ev-icon">${ev.icon}</span>
+                <span class="ev-label">${ev.label}</span>
+                <span class="ev-arrow">▼</span>
+              </button>
+              <div class="evidence-content">
+                ${ev.mermaid ? `<div class="mermaid-wrap"><div class="mermaid">${ev.mermaid}</div></div>` : ''}
+                ${ev.content ? `<p>${ev.content.replace(/\n/g, '<br>')}</p>` : ''}
+                ${ev.img ? `<img src="${ev.img}" alt="${ev.caption||ev.label}" class="evidence-screenshot" onclick="openScreenshot('${ev.img}')"><p style="font-size:11px;color:var(--tm);margin-top:4px;text-align:center">${ev.caption||''}</p>` : ''}
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    `;
+  }
+
+  document.getElementById('projDetailContent').innerHTML = detailHTML;
+  document.getElementById('projModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+
+  // Scroll modal card to top
+  setTimeout(() => {
+    const card = document.getElementById('projModalCard');
+    if (card) card.scrollIntoView({ block: 'start' });
+  }, 50);
+
+  // Render mermaid diagrams
+  setTimeout(() => {
+    try {
+      mermaid.run({ querySelector: '#projModal .mermaid' });
+    } catch (e) { console.log('Mermaid render skip:', e.message); }
+  }, 300);
+}
+
+function closeDetailModal(e) {
+  if (e && e.target !== document.getElementById('projModal')) return;
+  document.getElementById('projModal').classList.remove('open');
+  document.body.style.overflow = '';
+  if (scrollContainer) scrollContainer.style.overflowY = 'scroll';
+  document.querySelectorAll('.proj-item').forEach(el => el.classList.remove('active'));
+  currentPid = null;
+}
+
+function closeDetail() {
+  document.getElementById('projModal').classList.remove('open');
+  document.body.style.overflow = '';
+  if (scrollContainer) scrollContainer.style.overflowY = 'scroll';
+  document.querySelectorAll('.proj-item').forEach(el => el.classList.remove('active'));
+  currentPid = null;
+}
+
+function toggleEvidence(pid, idx) {
+  const el = document.getElementById(`ev-${pid}-${idx}`);
+  el.classList.toggle('open');
+  // Re-render mermaid if it has one
+  if (el.classList.contains('open')) {
+    setTimeout(() => {
+      try { mermaid.run({ querySelector: `#ev-${pid}-${idx} .mermaid` }); } catch (e) {}
+    }, 200);
+  }
+}
+
+/* ==================== COUNT-UP ANIMATION ==================== */
+function animateCounters() {
+  const counters = document.querySelectorAll('.dc-value[data-target]');
+  const duration = 1500; // 1.5 seconds
+  const startTime = performance.now();
+
+  function update(now) {
+    const elapsed = now - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    // Ease out cubic
+    const eased = 1 - Math.pow(1 - progress, 3);
+
+    counters.forEach(c => {
+      const target = parseFloat(c.dataset.target);
+      const decimal = parseInt(c.dataset.decimal || 0);
+      const suffix = c.dataset.suffix || '';
+      const val = target * eased;
+      if (decimal > 0) {
+        c.textContent = val.toFixed(decimal) + suffix;
+      } else {
+        c.textContent = Math.round(val) + suffix;
+      }
+    });
+
+    if (progress < 1) {
+      requestAnimationFrame(update);
+    }
+  }
+
+  requestAnimationFrame(update);
+}
+
+/* ==================== REVEAL ON SCROLL ==================== */
+function observeReveal() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+}
+
+/* ==================== SCREENSHOT LIGHTBOX ==================== */
+function openScreenshot(src) {
+  const img = document.getElementById('screenshotModalImg');
+  img.src = src;
+  img.style.display = '';
+  document.getElementById('screenshotModal').classList.add('open');
+}
+function closeScreenshot() {
+  document.getElementById('screenshotModal').classList.remove('open');
+  const img = document.getElementById('screenshotModalImg');
+  img.src = '';
+  img.style.display = 'none';
+}
+
+/* ==================== RESUME UPLOAD / DOWNLOAD ==================== */
+let resumeFileData = null;
+let resumeFileName = '';
+
+function initResume() {
+  try {
+    const saved = localStorage.getItem('resume_data');
+    const savedName = localStorage.getItem('resume_name');
+    if (saved && savedName) {
+      resumeFileData = saved;
+      resumeFileName = savedName;
+      const nameEl = document.getElementById('resumeFileName');
+      const uploadEl = document.getElementById('resumeUpload');
+      if (nameEl) nameEl.textContent = savedName;
+      if (uploadEl) uploadEl.classList.add('has-file');
+    }
+  } catch(e) { console.log('Resume restore:', e.message); }
+}
+
+function handleResumeUpload(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+  if (file.size > 4 * 1024 * 1024) { alert('文件过大，请上传小于 4MB 的简历'); return; }
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    resumeFileData = e.target.result;
+    resumeFileName = file.name;
+    localStorage.setItem('resume_data', resumeFileData);
+    localStorage.setItem('resume_name', resumeFileName);
+    document.getElementById('resumeFileName').textContent = file.name;
+    document.getElementById('resumeUpload').classList.add('has-file');
+  };
+  reader.readAsDataURL(file);
+}
+
+function downloadResume() {
+  if (!resumeFileData) {
+    resumeFileData = localStorage.getItem('resume_data');
+    resumeFileName = localStorage.getItem('resume_name');
+  }
+  if (resumeFileData) {
+    const a = document.createElement('a');
+    a.href = resumeFileData;
+    a.download = resumeFileName;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  } else {
+    alert('请先上传简历文件，再点击下载。\n\n联系方式：\n📧 1766647040@qq.com\n📱 15200320041');
+  }
+}
+
+/* ==================== MERMAID INIT ==================== */
+mermaid.initialize({ startOnLoad: false, theme: 'neutral', themeVariables: { primaryColor: '#3b82f6', primaryTextColor: '#0f172a', lineColor: '#94a3b8', fontSize: '13px' } });
+
+/* ==================== ZOOM SCROLL CONTROLLER ==================== */
+const scrollContainer = document.getElementById('scrollContainer');
+if (!scrollContainer) { console.warn('Scroll container not found'); } else {
+const sections = document.querySelectorAll('.zoom-section');
+const zoomContents = document.querySelectorAll('.zoom-content');
+const totalSections = sections.length;
+let currentSection = 0;
+let isScrolling = false;
+let scrollTimeout;
+
+// Pattern: section 0→1 zoom in, 1→2 zoom out, 2→3 zoom in, 3→4 zoom out
+const MAX_SCALE = 1.06;
+const MIN_SCALE = 1.0;
+
+function getTargetScale(sectionIndex) {
+  // Odd sections (1,3) are zoomed in, even sections (0,2,4) are normal
+  return sectionIndex % 2 === 1 ? MAX_SCALE : MIN_SCALE;
+}
+
+function updateZoom() {
+  const containerHeight = scrollContainer.clientHeight;
+  const scrollTop = scrollContainer.scrollTop;
+
+  // Find which two sections we're between
+  let fromIdx = Math.floor(scrollTop / containerHeight);
+  fromIdx = Math.max(0, Math.min(fromIdx, totalSections - 1));
+  let toIdx = fromIdx + 1;
+
+  // Progress within current section viewport (0 to 1)
+  const sectionStart = fromIdx * containerHeight;
+  let progress = (scrollTop - sectionStart) / containerHeight;
+  progress = Math.max(0, Math.min(progress, 1));
+
+  if (toIdx >= totalSections) {
+    toIdx = fromIdx;
+    progress = 0;
+  }
+
+  // Scale targets
+  const fromScale = getTargetScale(fromIdx);
+  const toScale = getTargetScale(toIdx);
+
+  // Apply scales with smooth easing
+  const eased = progress < 0.5
+    ? 2 * progress * progress
+    : 1 - Math.pow(-2 * progress + 2, 2) / 2;
+
+  zoomContents.forEach((el, i) => {
+    if (i === fromIdx) {
+      const s = fromScale + (toScale - fromScale) * eased;
+      el.style.transform = `scale(${s})`;
+    } else if (i === toIdx) {
+      const s = fromScale + (toScale - fromScale) * eased;
+      el.style.transform = `scale(${s})`;
+    } else if (i === fromIdx - 1 || i === toIdx + 1) {
+      el.style.transform = i % 2 === 1 ? `scale(${MAX_SCALE})` : `scale(${MIN_SCALE})`;
+    } else {
+      el.style.transform = i % 2 === 1 ? `scale(${MAX_SCALE})` : `scale(${MIN_SCALE})`;
+    }
+  });
+
+  // Update current section
+  const newSection = Math.round(scrollTop / containerHeight);
+  if (newSection !== currentSection && newSection >= 0 && newSection < totalSections) {
+    currentSection = newSection;
+    updateNavActive(currentSection);
+    if (currentSection === 0) animateCounters();
+  }
+}
+
+function updateNavActive(idx) {
+  document.querySelectorAll('#navLinks a').forEach((a, i) => {
+    a.classList.toggle('active', i === idx);
+  });
+  document.querySelectorAll('#navDots .dot').forEach((d, i) => {
+    d.classList.toggle('active', i === idx);
+  });
+}
+
+// Scroll event with debounce
+scrollContainer.addEventListener('scroll', () => {
+  if (!isScrolling) {
+    requestAnimationFrame(() => {
+      updateZoom();
+      isScrolling = false;
+    });
+    isScrolling = true;
+  }
+  clearTimeout(scrollTimeout);
+  scrollTimeout = setTimeout(() => {
+    // Snap finished - apply final scales
+    updateZoom();
+  }, 150);
+});
+
+// Navigation clicks
+function scrollToSection(idx) {
+  if (!scrollContainer || !scrollContainer.clientHeight) return;
+  const target = idx * scrollContainer.clientHeight;
+  try { scrollContainer.scrollTo({ top: target, behavior: 'smooth' }); } catch(e) {}
+  currentSection = idx;
+  updateNavActive(idx);
+}
+
+document.querySelectorAll('#navLinks a').forEach((a, i) => {
+  a.addEventListener('click', () => scrollToSection(i));
+});
+document.querySelectorAll('#navDots .dot').forEach((d, i) => {
+  d.addEventListener('click', () => scrollToSection(i));
+});
+
+// Keyboard navigation
+document.addEventListener('keydown', (e) => {
+  if (document.getElementById('projModal').classList.contains('open')) return;
+  if (e.key === 'ArrowDown' || e.key === 'PageDown') {
+    e.preventDefault();
+    scrollToSection(Math.min(currentSection + 1, totalSections - 1));
+  } else if (e.key === 'ArrowUp' || e.key === 'PageUp') {
+    e.preventDefault();
+    scrollToSection(Math.max(currentSection - 1, 0));
+  }
+});
+
+// Initialize scales
+zoomContents.forEach((el, i) => {
+  el.style.transform = i % 2 === 1 ? `scale(${MAX_SCALE})` : `scale(${MIN_SCALE})`;
+});
+
+// Touch support for mobile
+let touchStartY = 0;
+scrollContainer.addEventListener('touchstart', (e) => {
+  touchStartY = e.touches[0].clientY;
+}, { passive: true });
+
+} // end else block for scrollContainer check
+
+/* ==================== MARQUEE GENERATOR ==================== */
+(function initMarquee() {
+  const wrap = document.getElementById('heroMarquee');
+  if (!wrap) return;
+  const items = ['图书情报背景', '信息检索', '知识图谱', '企业级AI落地'];
+  const track = document.createElement('div');
+  track.className = 'hero-marquee-track';
+  const segment = items.map(w => `<span class="hero-marquee-item">${w}</span><span class="hero-marquee-item sep">·</span>`).join('');
+  // 4x repetition for seamless loop
+  track.innerHTML = (segment).repeat(4);
+  wrap.appendChild(track);
+})();
+
+/* ==================== INIT ==================== */
+renderProjects();
+renderSkills();
+initResume();
+observeReveal();
+setTimeout(animateCounters, 800);
+if (scrollContainer && scrollContainer.clientHeight) { try { updateZoom(); } catch(e) {} }
+
+/* ==================== CURSOR GLOW TRAIL ==================== */
+(function initCursorGlow() {
+  // Create glow element
+  const glow = document.createElement('div');
+  glow.className = 'cursor-glow';
+  document.body.appendChild(glow);
+
+  // Trail container
+  const trail = document.createElement('div');
+  trail.className = 'cursor-trail';
+  document.body.appendChild(trail);
+
+  let mouseX = -100, mouseY = -100;
+  let lastDotTime = 0;
+  let glowTimer;
+  const DOT_INTERVAL = 50; // ms between dots
+
+  document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+
+    // Position glow instantly
+    glow.style.left = mouseX + 'px';
+    glow.style.top = mouseY + 'px';
+    glow.classList.add('visible');
+
+    // Reset hide timer
+    clearTimeout(glowTimer);
+    glowTimer = setTimeout(() => glow.classList.remove('visible'), 2000);
+
+    // Spawn trail dot
+    const now = performance.now();
+    if (now - lastDotTime > DOT_INTERVAL) {
+      lastDotTime = now;
+      const dot = document.createElement('div');
+      dot.className = 'cursor-dot';
+      dot.style.left = mouseX + 'px';
+      dot.style.top = mouseY + 'px';
+      trail.appendChild(dot);
+      // Remove after animation
+      setTimeout(() => dot.remove(), 800);
+    }
+  });
+
+  // Hide glow when mouse leaves window
+  document.addEventListener('mouseleave', () => {
+    glow.classList.remove('visible');
+  });
+  document.addEventListener('mouseenter', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    glow.style.left = mouseX + 'px';
+    glow.style.top = mouseY + 'px';
+    glow.classList.add('visible');
+  });
+})();
+
+/* ==================== CORGI INTERACTION ==================== */
+function toggleCorgiBreathe(e) {
+  e.stopPropagation();
+  const wrap = document.getElementById('corgiWrap');
+  if (!wrap) return;
+  const bubble = document.getElementById('corgiBubble');
+
+  // Breathing effect on click
+  wrap.classList.add('breathing');
+  if (bubble) {
+    const msgs = ['汪汪！🐾', '你好呀 👋', '嗷呜～', '来做朋友吧！', '汪！', '✌️'];
+    bubble.textContent = msgs[Math.floor(Math.random() * msgs.length)];
+  }
+
+  // Remove breathing after 2s
+  setTimeout(() => {
+    wrap.classList.remove('breathing');
+  }, 2000);
+
+  // Shake effect
+  if (wrap.style.animation) return;
+  wrap.style.animation = 'corgiShake 0.3s ease';
+  setTimeout(() => { wrap.style.animation = ''; }, 300);
+}
+
+// Shake keyframe added dynamically
+const shakeStyle = document.createElement('style');
+shakeStyle.textContent = `
+  @keyframes corgiShake {
+    0%,100% { transform: translate(0); }
+    20% { transform: translate(-6px, 4px); }
+    40% { transform: translate(6px, -4px); }
+    60% { transform: translate(-4px, -2px); }
+    80% { transform: translate(4px, 2px); }
+  }
+`;
+document.head.appendChild(shakeStyle);
+
+console.log('%cPeng Tianjiao %cPortfolio', 'font-family:Inter;font-size:16px;font-weight:bold;color:#3b82f6', 'color:#94a3b8;font-size:11px');
+</script>
+</body>
+</html>
