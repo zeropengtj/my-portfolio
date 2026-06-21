@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彭天娇 · AI产品经理 | 作品集</title>
+<meta name="description" content="彭天娇 · AI产品经理 · 华科硕士 · 2027届 · 个人作品集">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&family=Noto+Serif+SC:wght@300;400;500;600;700;900&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<style>
+:root{
+  --bg:#fafaf8;--bg2:#f5f3ef;--bg3:#ebe8e2;
+  --ink:#1a1a1a;--ink2:#3d3d3d;--ink3:#6b6b6b;--ink4:#9a9a9a;
+  --accent:#c9a84c;--accent2:#e2c97e;--accentd:rgba(201,168,76,0.08);--accentbg:rgba(201,168,76,0.03);
+  --line:rgba(0,0,0,0.08);--line2:rgba(0,0,0,0.04);
+  --f-serif:'Playfair Display','Noto Serif SC','STSong','Songti SC',serif;
+  --f-sans:'IBM Plex Sans','PingFang SC','Microsoft YaHei',sans-serif;
+  --mono:'JetBrains Mono',monospace;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:0}
+body{font-family:var(--f-sans);font-size:15px;line-height:1.8;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+
+/* ===== VERTICAL SIDEBAR NAVIGATION ===== */
+.nav{position:fixed;top:0;left:0;bottom:0;z-index:100;width:72px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:48px;border-right:1px solid var(--line2);background:rgba(250,250,248,0.85);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.nav-logo{font-family:var(--f-serif);font-weight:600;font-size:16px;writing-mode:vertical-rl;letter-spacing:4px;position:absolute;top:28px}
+.nav-links{display:flex;flex-direction:column;align-items:center;gap:28px}
+.nav-links a{color:var(--ink4);text-decoration:none;font-size:10px;font-weight:500;writing-mode:vertical-rl;letter-spacing:3px;text-transform:uppercase;padding:6px 0;transition:all 0.3s;position:relative}
+.nav-links a:hover{color:var(--ink)}
+.nav-links a::after{content:'';position:absolute;left:-8px;top:50%;transform:translateY(-50%);width:2px;height:0;background:var(--accent);transition:height 0.3s ease}
+.nav-links a:hover::after{height:100%}
+
+/* ===== CONTAINER ===== */
+.cont{max-width:880px;margin:0 auto;padding:0 40px 0 112px}
+@media(max-width:900px){.cont{padding:0 24px}.nav{display:none}}
+@media(min-width:901px){body{padding-left:72px}}
+
+/* ===== SCREEN 1: HERO ===== */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;padding:80px 0}
+.hero .cont{width:100%}
+.hero-tag{font-size:11px;color:var(--accent);letter-spacing:4px;text-transform:uppercase;margin-bottom:20px;font-family:var(--mono);font-weight:500}
+.hero h1{font-family:var(--f-serif);font-size:clamp(40px,5.5vw,78px);font-weight:800;line-height:1.08;letter-spacing:-1px;margin-bottom:16px;color:var(--ink)}
+.hero h1 .name{display:block}
+.hero h1 .title{display:block;font-size:clamp(22px,3.5vw,44px);font-weight:400;color:var(--ink3);letter-spacing:2px;margin-top:8px}
+.hero-sub{font-size:15px;color:var(--ink3);margin-bottom:6px;max-width:480px;font-family:var(--f-sans)}
+.hero-quote{font-size:15px;color:var(--ink3);font-style:italic;margin-bottom:40px;max-width:480px;padding-left:16px;border-left:2px solid var(--accent);line-height:1.8;font-family:var(--f-serif)}
+
+/* Three Data Cards */
+.data-cards{display:flex;gap:0;margin-bottom:32px;flex-wrap:wrap}
+.data-card{flex:1;min-width:150px;max-width:200px;padding:28px 24px;background:var(--bg);border:1px solid var(--line);border-right:none;text-align:center;transition:all 0.35s ease}
+.data-card:last-child{border-right:1px solid var(--line)}
+.data-card:hover{background:var(--bg2)}
+.data-card .dc-value{font-size:clamp(28px,5vw,46px);font-weight:900;font-family:var(--f-serif);margin-bottom:4px;color:var(--ink)}
+.data-card .dc-label{font-size:12px;color:var(--ink3);margin-bottom:6px;font-weight:500;font-family:var(--f-sans)}
+.data-card .dc-ctx{font-size:10px;color:var(--ink4);line-height:1.5;font-family:var(--f-sans)}
+
+/* Tags */
+.hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:40px}
+.hero-tags span{font-size:11px;padding:5px 14px;background:var(--bg2);border:1px solid var(--line2);color:var(--ink3);letter-spacing:0.5px;font-family:var(--f-sans)}
+.hero-note{font-size:13px;color:var(--ink3);margin-bottom:28px;display:flex;align-items:center;gap:8px;font-family:var(--f-sans)}
+.hero-note::before{content:'◆';font-size:10px;color:var(--accent)}
+
+/* CTA */
+.cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:transparent;border:1px solid var(--ink);color:var(--ink);font-size:14px;font-weight:500;cursor:pointer;text-decoration:none;transition:all 0.35s;font-family:var(--f-sans);letter-spacing:1px}
+.cta-btn:hover{background:var(--ink);color:var(--bg)}
+.cta-btn::after{content:'↓';font-size:12px;transition:transform 0.3s}
+.cta-btn:hover::after{transform:translateY(3px)}
+@keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
+
+/* ===== SCREEN 2: PROJECTS ===== */
+.section{padding:100px 0}
+.section-header{margin-bottom:56px}
+.section-tag{font-size:10px;color:var(--accent);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px;font-family:var(--mono);font-weight:500}
+.section-tag::before{content:'// ';color:var(--ink4)}
+.section-title{font-size:clamp(24px,4vw,32px);font-weight:800;font-family:var(--f-serif);color:var(--ink)}
+.section-title span{font-weight:400;color:var(--ink3)}
+
+/* Project Categories */
+.proj-cats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line)}
+@media(max-width:900px){.proj-cats{grid-template-columns:1fr;gap:16px;background:transparent}}
+.proj-cat{background:var(--bg);padding:36px 28px;transition:all 0.35s}
+.proj-cat:hover{background:var(--bg2)}
+.proj-cat:nth-child(n){border:none}
+.proj-cat-header{margin-bottom:24px;padding-bottom:20px;border-bottom:1px solid var(--line)}
+.proj-cat-icon{font-size:24px;display:block;margin-bottom:10px}
+.proj-cat-name{font-size:15px;font-weight:700;margin-bottom:6px;font-family:var(--f-serif);color:var(--ink)}
+.proj-cat-count{font-size:11px;color:var(--ink4)}
+.proj-list{display:flex;flex-direction:column;gap:14px}
+.proj-item{padding:16px;background:var(--bg2);border:1px solid var(--line2);cursor:pointer;transition:all 0.3s}
+.proj-item:hover{transform:translateY(-2px);border-color:var(--line);box-shadow:0 2px 8px rgba(0,0,0,0.04)}
+.proj-item-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+.proj-item-name{font-size:14px;font-weight:600;font-family:var(--f-serif);color:var(--ink)}
+.proj-item-metric{font-size:16px;font-weight:700;font-family:var(--mono);color:var(--accent)}
+.proj-item-sub{font-size:11px;color:var(--ink4);margin-bottom:8px;font-family:var(--f-sans)}
+.proj-item-tags{display:flex;flex-wrap:wrap;gap:4px}
+.proj-item-tags span{font-size:10px;padding:2px 8px;background:var(--bg);border:1px solid var(--line2);color:var(--ink4);font-family:var(--f-sans)}
+.proj-item.active{border-color:var(--accent)!important;background:var(--accentbg)}
+
+/* ===== SCREEN 3: PROJECT DETAIL MODAL ===== */
+.proj-modal-overlay{display:none;position:fixed;inset:0;z-index:200;background:rgba(26,26,26,0.6);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);align-items:flex-start;justify-content:center;padding:60px 20px 40px;overflow-y:auto}
+.proj-modal-overlay.open{display:flex}
+.proj-modal-card{width:100%;max-width:720px;background:var(--bg);border:1px solid var(--line);padding:40px 36px;box-shadow:0 4px 24px rgba(0,0,0,0.08);animation:modalReveal 0.35s ease}
+@keyframes modalReveal{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.proj-modal-close{position:sticky;top:0;float:right;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:var(--bg2);border:1px solid var(--line);color:var(--ink3);font-size:16px;cursor:pointer;margin:-12px -12px 0 12px;transition:all 0.3s;z-index:1}
+.proj-modal-close:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.proj-detail-back{display:none}
+.proj-detail-header{margin-bottom:36px}
+.proj-detail-header h3{font-size:24px;font-weight:800;margin-bottom:10px;font-family:var(--f-serif);color:var(--ink)}
+.proj-detail-header .meta{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.proj-detail-header .meta span{font-size:13px;color:var(--ink4);font-family:var(--f-sans)}
+.proj-detail-header .metric-badge{font-size:15px;font-weight:600;font-family:var(--mono);color:var(--accent);padding:4px 12px;background:var(--accentd);border:1px solid rgba(201,168,76,0.2)}
+
+/* Detail Sections */
+.detail-section{margin-bottom:28px;padding-bottom:28px;border-bottom:1px solid var(--line2)}
+.detail-section:last-of-type{border-bottom:1px solid var(--line)}
+.detail-section h4{font-size:12px;color:var(--accent);margin-bottom:10px;letter-spacing:2px;text-transform:uppercase;display:flex;align-items:center;gap:8px;font-family:var(--mono);font-weight:500}
+.detail-section p{font-size:14px;color:var(--ink2);line-height:2;font-family:var(--f-sans);white-space:pre-line}
+
+/* Evidence Section */
+.evidence-section{margin-top:12px;padding:28px;background:var(--bg2);border:1px solid var(--line2)}
+.evidence-section h4{color:var(--ink);margin-bottom:18px;font-family:var(--mono);font-size:12px;font-weight:500}
+.evidence-list{display:flex;flex-direction:column;gap:10px}
+.evidence-item{border:1px solid var(--line);transition:all 0.3s;background:var(--bg)}
+.evidence-item:hover{border-color:var(--ink3)}
+.evidence-trigger{display:flex;align-items:center;gap:10px;padding:14px 18px;background:transparent;cursor:pointer;transition:all 0.3s;width:100%;border:none;color:var(--ink);font-family:var(--f-sans);font-size:13px;text-align:left}
+.evidence-trigger:hover{background:var(--bg2)}
+.evidence-trigger .ev-icon{font-size:16px;flex-shrink:0}
+.evidence-trigger .ev-label{font-weight:600;flex:1}
+.evidence-trigger .ev-arrow{font-size:10px;color:var(--ink4);transition:transform 0.3s}
+.evidence-item.open .ev-arrow{transform:rotate(180deg)}
+.evidence-content{max-height:0;overflow:hidden;transition:max-height 0.4s ease,padding 0.4s ease}
+.evidence-item.open .evidence-content{max-height:1500px;padding:0 18px 18px}
+.evidence-content p{font-size:13px;color:var(--ink2);line-height:1.9;font-family:var(--f-sans)}
+.evidence-content .mermaid-wrap{background:var(--bg);border:1px solid var(--line2);padding:20px;margin-top:8px;overflow-x:auto}
+.evidence-content .code-snippet{font-family:var(--mono);font-size:12px;color:var(--ink2);background:var(--bg2);border:1px solid var(--line);padding:16px;margin-top:8px;white-space:pre-wrap;line-height:1.8;overflow-x:auto}
+.evidence-screenshot{width:100%;max-width:500px;border:1px solid var(--line);margin-top:8px;cursor:pointer;transition:all 0.3s}
+.evidence-screenshot:hover{border-color:var(--ink3)}
+.screenshot-modal{display:none;position:fixed;inset:0;z-index:999;background:rgba(26,26,26,0.8);backdrop-filter:blur(4px);align-items:center;justify-content:center}
+.screenshot-modal.open{display:flex}
+.screenshot-modal img{max-width:90vw;max-height:90vh;box-shadow:0 8px 40px rgba(0,0,0,0.15)}
+.screenshot-modal .close-modal{position:absolute;top:24px;right:24px;width:40px;height:40px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.9);border:1px solid var(--line);color:var(--ink);font-size:20px;cursor:pointer;transition:all 0.3s}
+.screenshot-modal .close-modal:hover{background:var(--bg)}
+
+/* ===== SCREEN 4: CAPABILITIES ===== */
+.skill-badges{display:flex;flex-direction:column;gap:1px;background:var(--line)}
+.capability-card{display:flex;align-items:flex-start;gap:20px;padding:24px 28px;background:var(--bg);transition:all 0.3s ease}
+.capability-card:hover{background:var(--bg2)}
+.cap-icon{font-size:22px;flex-shrink:0;width:40px;text-align:center;padding-top:2px}
+.cap-body{flex:1}
+.cap-tool{font-size:14px;font-weight:700;font-family:var(--f-serif);color:var(--ink);margin-bottom:4px}
+.cap-proof{font-size:13px;color:var(--ink3);line-height:1.8;font-family:var(--f-sans)}
+
+/* ===== SCREEN 5: CONTACT ===== */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+@media(max-width:768px){.contact-grid{grid-template-columns:1fr;gap:40px}}
+.contact-info{display:flex;flex-direction:column;gap:12px}
+.contact-item{display:flex;align-items:center;gap:12px;padding:16px 20px;background:var(--bg2);border:1px solid var(--line2);text-decoration:none;color:var(--ink2);transition:all 0.3s;font-size:14px;font-family:var(--f-sans)}
+.contact-item:hover{border-color:var(--ink);color:var(--ink)}
+.contact-item .ci-icon{width:40px;height:40px;display:flex;align-items:center;justify-content:center;background:var(--bg);border:1px solid var(--line2);font-size:16px;flex-shrink:0}
+.cta-group{display:flex;gap:12px;margin-top:8px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:12px 24px;font-size:13px;font-weight:500;cursor:pointer;text-decoration:none;transition:all 0.3s;border:none;font-family:var(--f-sans)}
+.btn-primary{background:var(--ink);border:1px solid var(--ink);color:var(--bg)}
+.btn-primary:hover{background:transparent;color:var(--ink)}
+.btn-secondary{background:transparent;border:1px solid var(--line);color:var(--ink2)}
+.btn-secondary:hover{border-color:var(--ink);color:var(--ink)}
+
+/* Visual accent */
+.contact-visual{display:flex;justify-content:center;align-items:center}
+.contact-ring{width:160px;height:160px;border-radius:50%;border:1px solid var(--accent);display:flex;align-items:center;justify-content:center}
+.contact-ring .cr-inner{font-family:var(--f-serif);font-size:24px;color:var(--accent);letter-spacing:2px;text-align:center;font-weight:300}
+
+/* ===== FOOTER ===== */
+.footer{text-align:center;padding:40px 24px;border-top:1px solid var(--line)}
+.footer p{font-size:12px;color:var(--ink4);font-family:var(--f-sans)}
+
+/* ===== SCROLL INDICATOR ===== */
+.scroll-hint{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--ink4);font-size:10px;letter-spacing:2px;animation:scrollBounce 2s infinite;font-family:var(--f-sans)}
+.scroll-hint .sh-line{width:1px;height:30px;background:var(--line)}
+@keyframes scrollBounce{0%,100%{opacity:0.4;transform:translateX(-50%) translateY(0)}50%{opacity:1;transform:translateX(-50%) translateY(6px)}}
+
+/* ===== REVEAL ANIMATION ===== */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity 0.7s ease,transform 0.7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* ===== RESUME UPLOAD/DOWNLOAD ===== */
+.resume-section{margin-top:24px;padding:24px;background:var(--bg2);border:1px solid var(--line2)}
+.resume-section .rs-label{font-size:12px;color:var(--ink3);margin-bottom:14px;display:flex;align-items:center;gap:6px;font-family:var(--mono);font-weight:500}
+.resume-upload{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.resume-upload input{display:none}
+.resume-upload .upload-btn{display:inline-flex;align-items:center;gap:6px;padding:10px 20px;background:transparent;border:1px dashed var(--accent);color:var(--accent);font-size:12px;cursor:pointer;transition:all 0.3s;font-family:var(--f-sans)}
+.resume-upload .upload-btn:hover{background:var(--accentd)}
+.resume-upload .file-name{font-size:11px;color:var(--ink4);max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-family:var(--f-sans)}
+.resume-upload .file-status{font-size:10px;color:var(--accent);display:none}
+.resume-upload.has-file .upload-btn{border-color:var(--ink3);color:var(--ink2);background:var(--bg)}
+.resume-upload.has-file .file-status{display:inline}
+.download-resume-btn{width:100%;justify-content:center}
+
+/* ===== MOBILE ===== */
+@media(max-width:900px){
+  .data-cards{flex-direction:column}
+  .data-card{max-width:100%;border-right:1px solid var(--line);border-bottom:none}
+  .data-card:last-child{border-bottom:1px solid var(--line)}
+  .capability-card{padding:20px 16px;gap:14px}
+}
+</style>
+</head>
+<body>
+
+<!-- Vertical Sidebar Navigation -->
+<nav class="nav">
+  <div class="nav-logo">彭天娇</div>
+  <div class="nav-links">
+    <a href="#hero">Home</a><a href="#projects">Work</a><a href="#skills">Skill</a><a href="#about">About</a><a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- ===== SCREEN 1: HERO ===== -->
+<section class="hero" id="hero">
+  <div class="cont">
+    <div class="hero-tag">⚡ PENG TIANJIAO</div>
+    <h1>
+      <span class="name">彭天娇</span>
+      <span class="title">AI产品经理</span>
+    </h1>
+    <p class="hero-sub">华中科技大学 · 图书情报（医学信息）硕士 · 2027届</p>
+    <p style="font-size:12px;color:var(--ink4);margin-bottom:20px">延边大学 · 工商管理本科 · 医疗信息+AI复合背景</p>
+    <p class="hero-quote">图书情报背景 · 信息检索 · 知识图谱 · 企业级AI落地</p>
+
+    <!-- Three Data Cards -->
+    <div class="data-cards">
+      <div class="data-card">
+        <div class="dc-value" data-target="99" data-suffix="%">0%</div>
+        <div class="dc-label">效率提升</div>
+        <div class="dc-ctx">3天→2分钟，HR分析效率提升</div>
+      </div>
+      <div class="data-card">
+        <div class="dc-value" data-target="90" data-suffix="%+">0%+</div>
+        <div class="dc-label">意图识别</div>
+        <div class="dc-ctx">Amanda智能体 8大场景</div>
+      </div>
+      <div class="data-card">
+        <div class="dc-value" data-target="5.143" data-suffix="" data-decimal="3">0</div>
+        <div class="dc-label">C刊一作</div>
+        <div class="dc-ctx">IF5.143 学科排名 3/45</div>
+      </div>
+    </div>
+
+    <!-- Tags -->
+    <div class="hero-tags">
+      <span>#AI产品</span><span>#Prompt工程</span><span>#Agent开发</span><span>#RAG</span><span>#医疗信息</span><span>#知识图谱</span>
+    </div>
+
+    <div class="hero-note">6个月企业AI产品实习 · 独立完成AI Agent从0到1落地 · 一作C刊</div>
+
+    <a href="#projects" class="cta-btn">查看全部项目</a>
+
+    <div class="scroll-hint">
+      <span>向下滚动</span>
+      <div class="sh-line"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SCREEN 2: PROJECTS ===== -->
+<section class="section" id="projects">
+  <div class="cont">
+    <div class="section-header reveal">
+      <div class="section-tag">📂 Evidence-Based</div>
+      <h2 class="section-title">项目<span>经历</span></h2>
+    </div>
+
+    <div class="proj-cats" id="projCats"></div>
+
+    <!-- ===== PROJECT DETAIL MODAL ===== -->
+    <div class="proj-modal-overlay" id="projModal" onclick="closeDetailModal(event)">
+      <div class="proj-modal-card" id="projModalCard" onclick="event.stopPropagation()">
+        <button class="proj-modal-close" onclick="closeDetailModal()">✕</button>
+        <div id="projDetailContent"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SCREEN 4: SKILLS ===== -->
+<section class="section" id="skills" style="background:var(--bg2)">
+  <div class="cont">
+    <div class="section-header reveal">
+      <div class="section-tag">🛠️ Evidence</div>
+      <h2 class="section-title">能力<span>举证</span></h2>
+    </div>
+    <div class="skill-badges" id="skillBadges"></div>
+  </div>
+</section>
+
+<!-- ===== SCREEN 4.5: ABOUT ===== -->
+<section class="section" id="about" style="background:var(--bg2)">
+  <div class="cont">
+    <div class="section-header reveal">
+      <div class="section-tag">📋 About</div>
+      <h2 class="section-title">关于<span>我</span></h2>
+    </div>
+    <p class="reveal" style="font-family:var(--f-serif);font-size:17px;color:var(--ink2);line-height:2.2;max-width:700px;font-style:italic">
+      211本+985硕士，医学图书情报（信息检索/知识图谱）背景。博世AI产品实习6个月，独立完成企业级AI Agent从0到1落地，效率提升99%。一作C刊，数据驱动决策。
+    </p>
+  </div>
+</section>
+
+<!-- ===== SCREEN 5: CONTACT ===== -->
+<section class="section" id="contact">
+  <div class="cont">
+    <div class="section-header reveal">
+      <div class="section-tag">📬 Connect</div>
+      <h2 class="section-title">联系<span>我</span></h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <a href="mailto:1766647040@qq.com" class="contact-item">
+          <span class="ci-icon">📧</span>
+          <span>1766647040@qq.com</span>
+        </a>
+        <a href="tel:15200320041" class="contact-item">
+          <span class="ci-icon">📱</span>
+          <span>15200320041</span>
+        </a>
+
+      </div>
+      <div class="contact-visual reveal">
+        <div class="contact-ring">
+          <div class="cr-inner">PTJ</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Screenshot Lightbox -->
+<div class="screenshot-modal" id="screenshotModal" onclick="closeScreenshot()">
+  <button class="close-modal" onclick="closeScreenshot()">✕</button>
+  <img id="screenshotModalImg" src="" alt="" onclick="event.stopPropagation()">
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <p>© 2026 彭天娇 · AI Product Manager</p>
+</footer>
+
+<script>
+/* ==================== DATA ==================== */
+const projectData = [
+  {
+    id: 1,
+    title: "智能分析 Chatbot",
+    company: "博世",
+    category: "enterprise",
+    metric: "99%",
+    metricLabel: "效率提升",
+    metricContext: "3天→2分钟",
+    summary: "独立设计四层AI架构，将HR问卷分析从3天压缩至2分钟",
+    tags: ["大模型", "RAG", "图表生成"],
+    detail: {
+      background: "HR手动分析问卷耗时3天/份，只能抽样，无法覆盖全员。通过访谈发现核心痛点不在'分析能力'，而在'数据分散、反复沟通'。需将HR的隐性分析逻辑转化为可执行的AI工作流，实现全量问卷的快速分析。",
+      techStack: "Dify工作流平台（多节点编排） · 对比GPT/Claude等国外大模型后选择DeepSeek · RAG知识库检索 · Python代码节点（得分计算+数据格式化） · 文档提取器（PDF/Word解析）",
+      role: "独立负责全流程产品设计。决策采用对话式AI架构（意图识别→知识检索→逻辑推理→可视化），而非单一模型调用，确保分析结果可追溯、可解释。",
+      challenge: "核心痛点: 数据分散、反复沟通 → 设计知识检索模块整合多源数据；信息呈现效率低 → 增加图表自动生成功能，降低阅读门槛。",
+      iterationLog: "V1.0: 基础问答式分析，准确率约70%。\n→ 发现仅靠大模型无法回答HR历史数据相关问题，存在严重知识盲区\nV2.0: 增加知识检索层，引入RAG模块。\n→ RAG补充了数据查询能力，但缺乏可视化，HR反馈文字过多，数据可视化不强\nV3.0: 四层架构重构，增加图表自动生成，输出可读性大幅提升。\n→ 架构定型后，60+轮Prompt调优中分析50+条badcase，发现多轮追问场景下意图识别不稳定\nV4.0: 优化Prompt策略+增强上下文记忆，意图识别大幅提升。\n→ HR提出核心新需求：能否同时对比22家子公司×11部门×7维度的数据？\nV9.7.0: 当前版本，支持多对象交互分析（22家子公司×11部门×7维度），成为HR月度复盘固定工具。",
+      result: "3个工作日→2分钟，效率提升99%，成为HR部门固定使用工具。沉淀了可复用的'非结构化数据→结构化分析→自动可视化'链路的HR场景智能化分析SOP。"
+    },
+    evidence: [
+      { type: "architecture", label: "架构设计图", icon: "🏗️", mermaid: "graph LR\n  A[用户输入问卷] --> B[文档提取器]\n  B --> C[LLM]\n  C --> D[直接回复]\n  C --> E[输出Word文档]" },
+      { type: "timeline", label: "上线记录", icon: "📅", content: "2025.10-2026.02 · 博世HR部门持续使用" },
+      { type: "comparison", label: "数据对比", icon: "📊", content: "分析效率：3天 → 2分钟，提升99%" },
+      { type: "screenshot", label: "产品截图", icon: "📸", img: "screenshot-chatbot.png", caption: "博世满意度Chatbot · 实际运行界面" }
+    ]
+  },
+  {
+    id: 2,
+    title: "人才画像系统",
+    company: "博世",
+    category: "enterprise",
+    metric: "70%",
+    metricLabel: "效率提升",
+    metricContext: "HR筛选效率",
+    summary: "Dify+Python双轨方案，标准化率95%，日均减少4小时重复工作",
+    tags: ["Dify", "Prompt工程", "数据治理"],
+    detail: {
+      background: "企业人才库积累数千份在职人员简历，格式各异、信息碎片化，瓶颈在于'数据格式不统一'和'照片等非结构化信息无法检索'。需要将非结构化简历转化为可比对、可搜索的结构化人才数据。",
+      techStack: "Dify+Python低代码双轨方案（文件上传→文档解析→LLM→代码节点链） · 照片解析入库+工号自动关联 · Markdown标准化模板 · Python数据清洗+格式校验",
+      role: "产品设计与技术实现。梳理企业档案管理全链路，发现瓶颈在于数据格式不统一和照片信息无法检索。负责人才画像模型设计、AI信息提取流程搭建和系统落地。",
+      challenge: "简历格式多样+照片等非结构化信息无法检索 → 设计三阶段提取-解析-验证闭环+照片解析方案；信息非结构化 → 标准化Markdown表格输出。",
+      iterationLog: "V1.0: 单阶段提取，输出一致性约60%。\n→ 发现简历撰写风格差异极大，同一信息在不同简历中表述完全不同，模型难以泛化\nV2.0: 增加Few-shot示例嵌入，一致性提升至75%。\n→ 一致性达标但仍存在信息漏检，尤其照片信息完全无法检索，HR需手动翻看\nV3.0: 三阶段闭环（提取→解析→验证）+照片解析入库，一致性达90%。\n→ 核心字段提取稳定后，发现中英文混合简历的格式差异导致部分模块错位\nV4.0: 增加中英文混合简历解析能力，覆盖6大模块标准化输出，日均减少4小时重复工作。",
+      result: "数据提取效率提升约70%，日均减少团队4小时重复工作，沉淀超过50份标准化人才画像。验证了低成本数据治理路径。"
+    },
+    evidence: [
+      { type: "architecture", label: "架构设计图", icon: "🏗️", mermaid: "graph LR\n  A[PDF/Word简历] --> B[文档解析]\n  B --> C[LLM提取-解析-验证]\n  C --> D[标准化Markdown输出]\n  D --> E[人才库]" },
+      { type: "timeline", label: "上线记录", icon: "📅", content: "2025-2026 · 博世人才管理部门使用中" },
+      { type: "code", label: "Prompt策略示例", icon: "💻", content: "# 三阶段Prompt体系\n阶段1：快速抓取基础信息（姓名、联系方式、学历）\n阶段2：深度语义解析（教育/工作经历、实体关系建立）\n阶段3：交叉校验提取准确性和完整性\n\n# 标准化模板\n| 字段名 | 字段值 | |\n要求：格式100%一致，标题行不可省略" },
+      { type: "screenshot", label: "人才画像生成器", icon: "📸", img: "screenshot-personnel.png", caption: "Personnel Data Excel Generator · 人才画像自动生成工具" },
+      { type: "screenshot", label: "Dify工作流", icon: "🔧", img: "screenshot-talent-dify.png", caption: "Dify工作流 · 人才画像Prompt编排界面" }
+    ]
+  },
+  {
+    id: 3,
+    title: "招聘数据自动化",
+    company: "博世",
+    category: "enterprise",
+    metric: "2min",
+    metricLabel: "数据汇总",
+    metricContext: "从2天压缩至2分钟",
+    summary: "Python自动化采集+PowerBI实时看板，重复工作量减少80%",
+    tags: ["Python", "PowerBI", "自动化"],
+    detail: {
+      background: "跨年度、月份数据量大，人工易出错。流程卡在'多源Excel手动合并'和'重复清洗'。管理层决策缺乏实时数据支撑，招聘效率难以量化评估。",
+      techStack: "Python多线程脚本（Pandas自动化清洗+指标计算+多源汇总） · PowerBI（实时看板+漏斗分析+渠道对比+预警机制） · 多平台数据对接",
+      role: "数据产品负责人。负责需求分析、数据源梳理、自动化流程设计和可视化看板搭建。将模糊的「想看数据」需求转化为具体指标体系，将数据分析从'事后汇报'转变为'实时监控'。",
+      challenge: "多源Excel手动合并 → Python多线程脚本统一清洗+汇总；管理层决策缺实时数据 → PowerBI实时看板含漏斗分析。",
+      iterationLog: "V1.0: 覆盖2个数据源的基础自动化采集，验证可行性。\n→ 2个数据源远不够，HR每月需要对比所有招聘渠道效率，无法跨平台对比\nV2.0: 扩展到全部招聘平台，增加多线程数据清洗逻辑。\n→ 清洗脚本稳定后，HR反馈'数据有了但看不出趋势'，Excel表格阅读效率低\nV3.0: 搭建PowerBI看板，含漏斗分析+渠道对比+周期监控。\n→ 看板上线后管理层频繁查看但依赖手动刷新，希望能'异常时不用盯着也能知道'\nV4.0: 增加自动预警机制，关键指标异常主动推送通知，实现'实时监控'。",
+      result: "跨年度数据汇总从2天降至2分钟，重复工作量减少80%。看板被HR部门采用，成为月度复盘固定工具，实现从'事后汇报'到'实时监控'的转变。"
+    },
+    evidence: [
+      { type: "code", label: "数据采集脚本示例", icon: "💻", content: "# Python自动化数据采集\nimport pandas as pd\nfrom concurrent.futures import ThreadPoolExecutor\n\n# 多源数据采集\nsources = ['招聘平台A', '内推系统', 'ATS']\n# 统一清洗逻辑\n# PowerBI实时看板对接" },
+      { type: "comparison", label: "数据对比", icon: "📊", content: "数据汇总时间：2天 → 2分钟\n重复工作量减少：80%\n报表生成：手动 → 自动化" },
+      { type: "timeline", label: "上线记录", icon: "📅", content: "2025-2026 · HR部门使用，并为月度复盘工具" },
+      { type: "screenshot", label: "PowerBI看板", icon: "📸", img: "screenshot-powerbi.png", caption: "招聘数据PowerBI实时看板 · 多源数据可视化" }
+    ]
+  },
+  {
+    id: 4,
+    title: "Amanda 智能体",
+    company: "独立开发",
+    category: "indie",
+    metric: "90%+",
+    metricLabel: "意图识别",
+    metricContext: "响应时长缩短近40%",
+    summary: "情感陪伴AI Agent，5轮迭代，人设一致性98%，沉淀三层评测框架",
+    tags: ["LangChain", "Prompt工程", "Agent"],
+    detail: {
+      background: "爬取小红书200+篇情绪文案+20+用户访谈，发现Z世代年轻人存在大量未被满足的情感支持需求，现有AI共情力弱、说教式回应。需要打造有温度、能持续对话的AI伙伴。",
+      techStack: "LangChain（多轮对话系统+Agent框架） · LLM API（GPT/Claude） · Prompt工程（人设约束+场景策略） · Python（数据采集+对抗性评测脚本）",
+      role: "产品负责人。从零设计人设体系、对话策略和评测框架。拆解8大交互场景，通过100+Badcase分析发现'负面情绪下易说教'核心问题，重新设计Prompt优先级（共情优先于建议），构建多维度对抗性评测集。",
+      challenge: "AI共情力弱、说教式回应 → 100+Badcase分析后重新设计Prompt优先级；人设崩塌 → 构建三层评测框架（情绪理解+风格匹配+安全护栏）",
+      iterationLog: "V1.0: 基础对话，意图识别约70%，人设一致性85%，平均对话4轮。\n→ 发现用户情绪由平静转为低落时，模型仍用同一套策略回应，无法自适应切换\nV2.0: 增加场景路由（8大情感场景），意图识别提升至82%。\n→ 场景维度拆分后，100+Badcase分析发现核心根因：负面情绪下AI容易说教而非共情\nV3.0: 重构Prompt优先级（共情优先于建议），人设一致性突破至95%。\n→ 人设崩塌问题大幅改善，但评测仍依赖主观判断，无法量化迭代效果\nV4.0: 引入A/B测试+50+样本/轮+对抗性评测集，意图识别达90%+。\n→ 量化评测让迭代有了数据基准，进一步精细化Prompt策略\nV5.0: 精细化Prompt策略，人设一致性98%，响应时长缩短近40%，用户平均对话超12轮。",
+      result: "意图识别90%+，人设一致性98%，响应时长缩短近40%。沉淀了'人设一致性评测框架'（情绪理解+风格匹配+安全护栏三层），可复用于客服/教育/娱乐等AI人格设定场景。"
+    },
+    evidence: [
+      { type: "architecture", label: "Amanda架构设计", icon: "🏗️", mermaid: "graph TD\n  A[用户输入] --> B[意图识别]\n  B --> C[场景路由]\n  C --> D1[安慰]\n  C --> D2[鼓励]\n  C --> D3[日常闲聊]\n  C --> D4[深度对话]\n  C --> D5[情绪疏导]\n  C --> D6[知识分享]\n  C --> D7[趣味互动]\n  C --> D8[危机干预]\n  D1 & D2 & D3 & D4 & D5 & D6 & D7 & D8 --> E[人设一致性校验]\n  E --> F[回复输出]" },
+      { type: "code", label: "评测体系示例", icon: "💻", content: "# 人设一致性评测框架（三层）\n1. 情绪理解层：意图识别准确率90%+\n2. 风格匹配层：人设一致性98%\n3. 安全护栏层：回复安全性校验\n\n# 评测方法\n· A/B测试双轨制\n· 5轮迭代，每轮50+样本\n· 100+Badcase分类→针对性优化\n· 对抗性评测集构建" },
+      { type: "comparison", label: "迭代效果数据", icon: "📊", content: "对话轮次：4轮 → 10轮\n意图识别：70% → 90%+ (+20%)\n人设一致性：85% → 98% (+13%)\n响应时长：缩短近40%" }
+    ]
+  },
+  {
+    id: 5,
+    title: "C刊论文 · 长护险",
+    company: "华中科技大学",
+    category: "academic",
+    metric: "IF5.143",
+    metricLabel: "一作C刊",
+    metricContext: "学科排名 3/45",
+    summary: "央地视角下长期护理保险政策比较研究，内容分析法对比15份中央+228份地方政策",
+    tags: ["内容分析法", "政策比较", "WHO框架"],
+    detail: {
+      background: "我国60岁以上人口占比22%，已进入中度老龄化社会。长护险自2016年启动试点，49个国家级试点城市在覆盖范围、筹资机制、待遇标准等方面差异显著。2025年国家医保局明确3年内建立覆盖全民的长护险制度目标，需系统对比中央与地方政策差异。",
+      techStack: "内容分析法（定量+定性结合） · WHO长期照护框架（六大支柱） · 政策文本编码 · SPSS/Stata统计分析 · NVivo质性分析",
+      role: "第一作者。基于WHO长期照护框架，构建涵盖参保与保障对象、筹资机制、待遇给付、管理与评估、服务提供、信息化建设六个维度的政策分析框架。采用内容分析法，对15份中央政策文本及228份试点城市政策文本进行系统性比较，辅以官方新闻报道作为补充材料。",
+      challenge: "49个试点城市政策文本数量庞大、口径不一 → 构建统一六维分析框架+内容分析法系统编码；需同时兼顾中央宏观设计与地方实践差异 → 多层次对比分析，提炼城乡居民覆盖、筹资渠道独立性等核心差距维度。",
+      iterationLog: "初稿阶段: 确定研究问题+分析框架搭建+政策文本系统性检索筛选（15中央+228地方）。\n→ 导师反馈分析框架仅有宏观维度，缺乏可操作的下位编码体系，无法深入对比\n修改阶段: 经历50轮修改，每轮补充下位编码与数据验证，逐步强化研究方法论。\n→ 多次审稿后，专家提出需要从'发现差异'上升到'解释原因、提出路径'\n终稿阶段: 完善政策建议（四条建议路径）+英文摘要+格式规范。\n→ 发表后，将分析框架与方法论沉淀为可复用的政策文本分析工具。\n发表: 2026年1月录用于《中国卫生政策研究》（CSSCI/CSCD），学科排名3/45。",
+      result: "发表于《中国卫生政策研究》2026年1月第19卷第1期（复合IF 5.143，中信所IF 3.645，本学科领域排名 3/45，中文核心/CSSCI/CSCD）。核心发现：各试点基本完成核心制度建设，但在城乡居民覆盖、筹资渠道独立性、服务目录对应、专业照护人员供给及信息化技术应用方面与中央要求存在显著差距。提出逐步破除参保壁垒、推动地方服务与国家目录对接、依托战略支付整合存量资源、以信息化建设实现全链条数字化管理四条政策建议。"
+    },
+    evidence: [
+      { type: "public", label: "论文基本信息", icon: "🔗", content: "论文标题：央地视角下长期护理保险政策比较研究\n\n发表期刊：中国卫生政策研究 2026年1月第19卷第1期\nChinese Journal of Health Policy, January 2026, Vol.19 No.1\n\n期刊级别：中文核心期刊 · CSSCI来源期刊 · CSCD来源期刊\n复合IF：5.143 | 中信所IF：3.645\n本学科领域排名：3/45\nDOI：10.3969/j.issn.1674-2982.2026.01.002" },
+      { type: "architecture", label: "政策分析框架（六维度）", icon: "🏗️", mermaid: "graph TD\n  A[长护险政策分析框架] --> B[参保与保障对象]\n  A --> C[筹资机制]\n  A --> D[待遇给付]\n  A --> E[管理与评估]\n  A --> F[服务提供]\n  A --> G[信息化建设]\n  B --> B1[参保对象/保障对象]\n  C --> C1[筹资渠道/模式/标准]\n  D --> D1[给付内容/形式/标准]\n  E --> E1[监管/失能评估]\n  F --> F1[人才培养/定点机构]\n  G --> G1[信息系统/智能监管]" },
+      { type: "architecture", label: "论文摘要", icon: "📄", content: "目的：对比中央层面与49个国家级试点城市长期护理保险政策的差异，为制度全面推行提供决策依据。\n\n方法：基于构建的长期护理保险政策分析框架，采用内容分析法，对15份中央政策文本及228份试点城市政策文本开展系统性比较，并辅以官方新闻报道作为补充材料。\n\n结果：各试点地区已基本完成核心制度建设，但在城乡居民覆盖、筹资渠道独立性、服务目录对应、专业照护人员供给及信息化技术应用等方面，与中央层面政策要求尚存显著差距。\n\n结论：建议各试点城市立足实际，稳步推进制度转型，逐步扩大参保对象覆盖范围，细化待遇给付的内容和标准，通过战略性支付整合存量照护资源，引领区域信息化建设，为制度统一规范推进奠定基础。\n\n关键词：长期护理保险；失能人群；筹资机制；失能评估" }
+    ]
+  },
+  {
+    id: 6,
+    title: "数据分析项目群",
+    company: "华中科技大学",
+    category: "academic",
+    metric: "0.978",
+    metricLabel: "KMO值",
+    metricContext: "问卷效度检验",
+    summary: "老年健康问卷分析（7278份）+糖尿病知识图谱构建（625篇文献）",
+    tags: ["SPSS", "Python", "Neo4j"],
+    detail: {
+      background: "研究生期间参与多项研究：1）老年健康研究项目需处理大规模问卷数据；2）糖尿病知识图谱构建需系统整合医学文献与实体关系。需要综合运用统计分析、数据清洗及知识工程方法。",
+      techStack: "Python（Pandas/NumPy数据清洗+缺失值填充+异常值检测） · SPSS统计建模 · Protege（本体构建+实体录入） · Neo4j图数据库（Cypher语句）",
+      role: "独立负责7278份问卷全流程处理与统计建模；参与糖尿病知识图谱构建，完成625篇核心文献收集分类及50+实体录入。",
+      challenge: "大规模问卷数据清洗复杂 → Python自动化处理；医学文献实体关系分散 → Protege+Neo4j系统化知识管理。",
+      iterationLog: "问卷分析:\n初始KMO值约0.85，项目分析发现部分题项区分度不足，被试趋同作答 → 调整措辞+增加反向计分题\n第二轮KMO提升至0.92，但仍有题项贡献偏低 → 扩大样本量+项目分析剔除低区分度题项\n最终KMO达0.978，Cronbach's α>0.9。\n\n知识图谱:\n625篇文献初筛完成，但实体间关系零散、难以形成网络 → 用Protege建立本体框架，统一实体分类标准\n50+疾病/药物/症状实体录入后，需可查询可视化 → 编写Cypher语句导入Neo4j，实现知识图谱整合查询。",
+      result: "老年健康问卷KMO值达0.978，Cronbach's α>0.9，信效度均达优秀水平。糖尿病知识图谱实现625篇文献、50+实体的系统化知识管理。"
+    },
+    evidence: [
+      { type: "code", label: "问卷分析流程", icon: "💻", content: "# 7278份问卷数据分析全流程\n1. Python(Pandas/NumPy)数据清洗：缺失值填充+异常值检测\n2. SPSS：描述统计+项目分析（区分度检验）\n3. 探索性因子分析（EFA）\n4. 验证性因子分析（CFA）\n5. 信度检验（Cronbach's α > 0.9）\n6. 效度检验（KMO = 0.978）\n7. 回归/结构方程建模" },
+      { type: "architecture", label: "知识图谱构建流程", icon: "🏗️", mermaid: "graph LR\n  A[625篇文献收集] --> B[文献分类筛选]\n  B --> C[实体标注]\n  C --> D[Protege本体构建]\n  D --> E[Cypher语句编写]\n  E --> F[Neo4j图数据库]\n  F --> G[知识图谱整合]" },
+      { type: "screenshot", label: "Neo4j知识图谱可视化", icon: "🧠", img: "screenshot-neo4j.png", caption: "Neo4j图数据库 · 糖尿病知识图谱实体关系网络" },
+      { type: "comparison", label: "知识图谱成果", icon: "📊", content: "文献覆盖：625篇核心医学文献\n实体录入：50+疾病/药物/症状实体\n技术栈：Protege + Neo4j + Cypher\n成果：可查询、可视化的糖尿病知识网络" }
+    ]
+  }
+];
+
+const capabilityData = [
+  {
+    tool: "Dify 工作流编排",
+    icon: "🔗",
+    proof: "搭建「满意度分析Chatbot」四层工作流（意图识别→知识检索→逻辑推理→可视化），解决了HR数据分散、分析耗时长的问题，从3天压缩至2分钟。"
+  },
+  {
+    tool: "大模型选型与评测",
+    icon: "🤖",
+    proof: "对比GPT-4 / Claude / DeepSeek三款模型在中文语义理解场景下的效果与成本，最终选择DeepSeek，单次调用成本降低约70%，且中文共情能力不输GPT-4。"
+  },
+  {
+    tool: "Python 自动化工程",
+    icon: "🐍",
+    proof: "使用Trae辅助编写Python多线程脚本，实现跨年度招聘数据自动化清洗与汇总，将月度数据汇总从2天压缩至2分钟。"
+  },
+  {
+    tool: "Prompt 工程与评测迭代",
+    icon: "🎯",
+    proof: "通过100+ Badcase分析与5轮迭代，将Amanda智能体意图识别从70%提升至90%+，沉淀「人设一致性评测框架」（情绪理解+风格匹配+安全护栏三层）。"
+  },
+  {
+    tool: "知识图谱构建",
+    icon: "🧠",
+    proof: "使用Protege + Neo4j完成糖尿病知识图谱构建，系统化管理625篇核心文献与50+疾病/药物/症状实体，实现知识网络可视化查询。"
+  },
+  {
+    tool: "PowerBI 可视化看板",
+    icon: "📊",
+    proof: "搭建招聘数据PowerBI实时看板（含漏斗分析+渠道对比+预警机制），将数据分析从「事后汇报」转变为「实时监控」，被HR部门采纳为月度复盘固定工具。"
+  }
+];
+
+/* ==================== RENDER PROJECTS ==================== */
+const catMap = {
+  enterprise: { name: "企业落地", icon: "🏢", cssClass: "cat-enterprise" },
+  indie: { name: "独立开发", icon: "🚀", cssClass: "cat-indie" },
+  academic: { name: "学术研究", icon: "📖", cssClass: "cat-academic" }
+};
+
+function renderProjects() {
+  const cats = {};
+  projectData.forEach(p => {
+    if (!cats[p.category]) cats[p.category] = [];
+    cats[p.category].push(p);
+  });
+
+  const catOrder = ['enterprise', 'indie', 'academic'];
+  let html = '';
+  catOrder.forEach(cat => {
+    const projects = cats[cat];
+    if (!projects) return;
+    const c = catMap[cat];
+    html += `
+      <div class="proj-cat ${c.cssClass} reveal">
+        <div class="proj-cat-header">
+          <span class="proj-cat-icon">${c.icon}</span>
+          <div class="proj-cat-name">${c.name}</div>
+          <div class="proj-cat-count">${projects.length}个项目</div>
+        </div>
+        <div class="proj-list">
+          ${projects.map(p => `
+            <div class="proj-item ${c.cssClass}" data-pid="${p.id}" onclick="openDetail(${p.id})">
+              <div class="proj-item-header">
+                <span class="proj-item-name">${p.title}</span>
+                <span class="proj-item-metric">${p.metric}</span>
+              </div>
+              <div class="proj-item-sub">${p.metricContext} · ${p.company}</div>
+              <div class="proj-item-tags">${p.tags.map(t => `<span>${t}</span>`).join('')}</div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    `;
+  });
+  document.getElementById('projCats').innerHTML = html;
+}
+
+/* ==================== RENDER CAPABILITIES ==================== */
+function renderSkills() {
+  document.getElementById('skillBadges').innerHTML = capabilityData.map(c => `
+    <div class="capability-card reveal">
+      <div class="cap-icon">${c.icon}</div>
+      <div class="cap-body">
+        <div class="cap-tool">${c.tool}</div>
+        <div class="cap-proof">${c.proof}</div>
+      </div>
+    </div>
+  `).join('');
+}
+
+/* ==================== PROJECT DETAIL ==================== */
+let currentPid = null;
+
+function openDetail(pid) {
+  currentPid = pid;
+  const p = projectData.find(x => x.id === pid);
+  if (!p) return;
+
+  // Highlight active project
+  document.querySelectorAll('.proj-item').forEach(el => el.classList.remove('active'));
+  document.querySelector(`.proj-item[data-pid="${pid}"]`)?.classList.add('active');
+
+  let detailHTML = `
+    <div class="proj-detail-header">
+      <h3>${p.title}</h3>
+      <div class="meta">
+        <span class="metric-badge">${p.metric} ${p.metricLabel}</span>
+        <span>${p.company} · ${p.metricContext}</span>
+      </div>
+    </div>
+    <div class="detail-section">
+      <h4>📋 需求背景</h4>
+      <p>${p.detail.background}</p>
+    </div>
+    <div class="detail-section">
+      <h4>🔧 技术选型</h4>
+      <p>${p.detail.techStack || '详见下方可信证据中的架构设计与技术方案。'}</p>
+    </div>
+    <div class="detail-section">
+      <h4>🎯 我的角色与关键决策</h4>
+      <p>${p.detail.role}</p>
+    </div>
+    <div class="detail-section">
+      <h4>⚡ 核心挑战与解法</h4>
+      <p>${p.detail.challenge}</p>
+    </div>
+    <div class="detail-section">
+      <h4>📝 迭代日志</h4>
+      <p>${p.detail.iterationLog || p.detail.iteration || '持续迭代优化中。'}</p>
+    </div>
+    <div class="detail-section">
+      <h4>📊 效果数据</h4>
+      <p>${p.detail.result}</p>
+    </div>
+  `;
+
+  // Evidence section
+  if (p.evidence && p.evidence.length) {
+    detailHTML += `
+      <div class="evidence-section">
+        <h4>🔍 可信证据（可验证）</h4>
+        <div class="evidence-list">
+          ${p.evidence.map((ev, i) => `
+            <div class="evidence-item" id="ev-${pid}-${i}">
+              <button class="evidence-trigger" onclick="toggleEvidence(${pid},${i})">
+                <span class="ev-icon">${ev.icon}</span>
+                <span class="ev-label">${ev.label}</span>
+                <span class="ev-arrow">▼</span>
+              </button>
+              <div class="evidence-content">
+                ${ev.mermaid ? `<div class="mermaid-wrap"><div class="mermaid">${ev.mermaid}</div></div>` : ''}
+                ${ev.content ? `<p>${ev.content.replace(/\n/g, '<br>')}</p>` : ''}
+                ${ev.img ? `<img src="${ev.img}" alt="${ev.caption||ev.label}" class="evidence-screenshot" onclick="openScreenshot('${ev.img}')"><p style="font-size:11px;color:var(--tm);margin-top:4px;text-align:center">${ev.caption||''}</p>` : ''}
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    `;
+  }
+
+  document.getElementById('projDetailContent').innerHTML = detailHTML;
+  document.getElementById('projModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+
+  // Scroll modal card to top
+  setTimeout(() => {
+    const card = document.getElementById('projModalCard');
+    if (card) card.scrollIntoView({ block: 'start' });
+  }, 50);
+
+  // Render mermaid diagrams
+  setTimeout(() => {
+    try {
+      mermaid.run({ querySelector: '#projModal .mermaid' });
+    } catch (e) { console.log('Mermaid render skip:', e.message); }
+  }, 300);
+}
+
+function closeDetailModal(e) {
+  if (e && e.target !== document.getElementById('projModal')) return;
+  document.getElementById('projModal').classList.remove('open');
+  document.body.style.overflow = '';
+  document.querySelectorAll('.proj-item').forEach(el => el.classList.remove('active'));
+  currentPid = null;
+}
+
+function closeDetail() {
+  document.getElementById('projModal').classList.remove('open');
+  document.body.style.overflow = '';
+  document.querySelectorAll('.proj-item').forEach(el => el.classList.remove('active'));
+  currentPid = null;
+}
+
+function toggleEvidence(pid, idx) {
+  const el = document.getElementById(`ev-${pid}-${idx}`);
+  el.classList.toggle('open');
+  // Re-render mermaid if it has one
+  if (el.classList.contains('open')) {
+    setTimeout(() => {
+      try { mermaid.run({ querySelector: `#ev-${pid}-${idx} .mermaid` }); } catch (e) {}
+    }, 200);
+  }
+}
+
+/* ==================== COUNT-UP ANIMATION ==================== */
+function animateCounters() {
+  const counters = document.querySelectorAll('.dc-value[data-target]');
+  const duration = 1500; // 1.5 seconds
+  const startTime = performance.now();
+
+  function update(now) {
+    const elapsed = now - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    // Ease out cubic
+    const eased = 1 - Math.pow(1 - progress, 3);
+
+    counters.forEach(c => {
+      const target = parseFloat(c.dataset.target);
+      const decimal = parseInt(c.dataset.decimal || 0);
+      const suffix = c.dataset.suffix || '';
+      const val = target * eased;
+      if (decimal > 0) {
+        c.textContent = val.toFixed(decimal) + suffix;
+      } else {
+        c.textContent = Math.round(val) + suffix;
+      }
+    });
+
+    if (progress < 1) {
+      requestAnimationFrame(update);
+    }
+  }
+
+  requestAnimationFrame(update);
+}
+
+/* ==================== REVEAL ON SCROLL ==================== */
+function observeReveal() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+}
+
+/* ==================== SCREENSHOT LIGHTBOX ==================== */
+function openScreenshot(src) {
+  document.getElementById('screenshotModalImg').src = src;
+  document.getElementById('screenshotModal').classList.add('open');
+}
+function closeScreenshot() {
+  document.getElementById('screenshotModal').classList.remove('open');
+}
+
+/* ==================== RESUME UPLOAD / DOWNLOAD ==================== */
+let resumeFileData = null;
+let resumeFileName = '';
+
+function initResume() {
+  try {
+    const saved = localStorage.getItem('resume_data');
+    const savedName = localStorage.getItem('resume_name');
+    if (saved && savedName) {
+      resumeFileData = saved;
+      resumeFileName = savedName;
+      const nameEl = document.getElementById('resumeFileName');
+      const uploadEl = document.getElementById('resumeUpload');
+      if (nameEl) nameEl.textContent = savedName;
+      if (uploadEl) uploadEl.classList.add('has-file');
+    }
+  } catch(e) { console.log('Resume restore:', e.message); }
+}
+
+function handleResumeUpload(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+  if (file.size > 4 * 1024 * 1024) { alert('文件过大，请上传小于 4MB 的简历'); return; }
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    resumeFileData = e.target.result;
+    resumeFileName = file.name;
+    localStorage.setItem('resume_data', resumeFileData);
+    localStorage.setItem('resume_name', resumeFileName);
+    document.getElementById('resumeFileName').textContent = file.name;
+    document.getElementById('resumeUpload').classList.add('has-file');
+  };
+  reader.readAsDataURL(file);
+}
+
+function downloadResume() {
+  if (!resumeFileData) {
+    resumeFileData = localStorage.getItem('resume_data');
+    resumeFileName = localStorage.getItem('resume_name');
+  }
+  if (resumeFileData) {
+    const a = document.createElement('a');
+    a.href = resumeFileData;
+    a.download = resumeFileName;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  } else {
+    alert('请先上传简历文件，再点击下载。\n\n联系方式：\n📧 1766647040@qq.com\n📱 15200320041');
+  }
+}
+
+/* ==================== MERMAID INIT ==================== */
+mermaid.initialize({ startOnLoad: false, theme: 'neutral', themeVariables: { primaryColor: '#c9a84c', primaryTextColor: '#1a1a1a', lineColor: '#9a9a9a', fontSize: '13px' } });
+
+/* ==================== INIT ==================== */
+renderProjects();
+renderSkills();
+observeReveal();
+initResume();
+
+// Trigger count-up when hero is visible
+const heroObserver = new IntersectionObserver((entries) => {
+  if (entries[0].isIntersecting) {
+    animateCounters();
+    heroObserver.unobserve(entries[0].target);
+  }
+}, { threshold: 0.3 });
+heroObserver.observe(document.getElementById('hero'));
+
+// Fallback: animate after 500ms if not triggered by observer
+setTimeout(() => {
+  const firstCounter = document.querySelector('.dc-value[data-target]');
+  if (firstCounter && firstCounter.textContent === '0%') {
+    animateCounters();
+  }
+}, 800);
+
+console.log('%cPeng Tianjiao %cPortfolio', 'font-family:serif;font-size:16px;font-weight:bold;color:#c9a84c', 'color:#6b6b6b;font-size:11px');
+</script>
+</body>
+</html>
