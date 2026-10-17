@@ -489,6 +489,58 @@ mark{background:var(--mark);color:inherit;border-radius:2px;padding:0 2px}
 .it-badge{display:inline-block;margin-left:8px;font-family:var(--mono);font-size:9.5px;letter-spacing:.6px;color:var(--jade);border:1px solid rgba(47,93,80,.3);background:rgba(47,93,80,.06);border-radius:4px;padding:1px 6px;vertical-align:1px;white-space:nowrap}
 @media(max-width:760px){.gr-grid{grid-template-columns:1fr}}
 
+/* ===== 通用分块标题（视图内小节） ===== */
+.secblk{margin:30px 0 34px}
+.secblk-lead{font-size:14.5px;color:var(--ink-soft);line-height:2.05;max-width:840px;margin:12px 0 0}
+.secblk-lead b{color:var(--ink);font-weight:700}
+.src-note{font-family:var(--mono);font-size:10px;letter-spacing:.8px;color:var(--ink-meta);margin-top:14px;line-height:1.8}
+
+/* ===== 6 个高频痛点 ===== */
+.pain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;margin-top:18px}
+.pain-item{background:var(--paper-2);border:1px solid var(--rule);border-radius:12px;padding:15px 17px;box-shadow:var(--shadow-1);position:relative;transition:all .35s var(--ease)}
+.pain-item::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--seal);opacity:.7;border-radius:12px 0 0 12px}
+.pain-item:hover{transform:translateY(-3px);border-color:var(--rule-2);box-shadow:var(--shadow-2)}
+.pain-no{font-family:var(--mono);font-size:9px;letter-spacing:1.5px;color:var(--ink-weak)}
+.pain-t{font-family:var(--serif);font-size:17px;font-weight:700;letter-spacing:.5px;margin-top:4px}
+.pain-v{font-size:12px;color:var(--ink-meta);line-height:1.8;margin-top:6px}
+.pain-to{font-family:var(--mono);font-size:10px;letter-spacing:.5px;color:var(--seal);margin-top:10px;padding-top:8px;border-top:1px solid var(--rule);line-height:1.7}
+@media(max-width:1024px){.pain-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.pain-grid{grid-template-columns:1fr}}
+
+/* ===== 三条产品线 ===== */
+.pl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;margin-top:18px}
+.pl-item{background:var(--paper-2);border:1px solid var(--rule);border-radius:12px;padding:16px 18px;box-shadow:var(--shadow-1);transition:all .35s var(--ease)}
+.pl-item:hover{transform:translateY(-3px);border-color:var(--rule-2);box-shadow:var(--shadow-2)}
+.pl-head{display:flex;align-items:baseline;gap:10px}
+.pl-n{font-family:var(--serif);font-size:26px;font-weight:700;color:var(--seal);line-height:1}
+.pl-name{font-family:var(--serif);font-size:16px;font-weight:700;letter-spacing:.5px}
+.pl-desc{font-size:12px;color:var(--ink-meta);line-height:1.8;margin-top:8px}
+.pl-chips{display:flex;flex-wrap:wrap;gap:5px;margin-top:11px}
+.pl-chips span{font-size:10.5px;color:var(--ink-soft);border:1px solid var(--rule-2);background:rgba(27,25,23,.02);border-radius:4px;padding:2px 7px;line-height:1.6}
+@media(max-width:900px){.pl-grid{grid-template-columns:1fr}}
+
+/* ===== Keep / Improve / Start / Stop 四层框架 ===== */
+.kiss-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:11px;margin-top:18px}
+.kiss{background:var(--paper-2);border:1px solid var(--rule);border-radius:12px;padding:16px 18px;box-shadow:var(--shadow-1);position:relative;overflow:hidden}
+.kiss::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+.kiss.k-keep::before{background:var(--jade)}
+.kiss.k-improve::before{background:var(--gold)}
+.kiss.k-start::before{background:var(--seal)}
+.kiss.k-stop::before{background:var(--ink-weak)}
+.kiss-h{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.kiss-en{font-family:var(--mono);font-size:11px;letter-spacing:1.6px;font-weight:700}
+.k-keep .kiss-en{color:var(--jade)}
+.k-improve .kiss-en{color:var(--gold)}
+.k-start .kiss-en{color:var(--seal)}
+.k-stop .kiss-en{color:var(--ink-meta)}
+.kiss-cn{font-family:var(--serif);font-size:16px;font-weight:700;letter-spacing:.5px}
+.kiss-why{font-size:11px;color:var(--ink-meta);line-height:1.75;margin-top:7px;padding-bottom:10px;border-bottom:1px solid var(--rule)}
+.kiss ul{list-style:none;margin-top:10px}
+.kiss li{font-size:12px;color:var(--ink-soft);line-height:1.85;padding-left:12px;position:relative}
+.kiss li::before{content:'·';position:absolute;left:2px;color:var(--ink-weak)}
+@media(max-width:1024px){.kiss-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.kiss-grid{grid-template-columns:1fr}}
+
 /* ===== 页脚 ===== */
 .foot{border-top:1px solid var(--rule-2);margin-top:40px;padding:22px 0 10px;font-family:var(--mono);font-size:10px;letter-spacing:1.5px;color:var(--ink-weak);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 
@@ -567,6 +619,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,[tabindex]:focus-visibl
     <button data-view="projects">产品矩阵</button>
     <button data-view="chain">业务链路</button>
     <button data-view="capability">能力举证</button>
+    <button data-view="review">复盘</button>
     <button data-view="about">关于</button>
     <button data-view="contact">联系</button>
   </div>
@@ -636,6 +689,9 @@ a:focus-visible,button:focus-visible,input:focus-visible,[tabindex]:focus-visibl
           <div class="stat"><div class="s-no">R-04</div><div class="s-val">35 版</div><div class="s-label">背调准则沉淀</div><div class="s-ctx">准则版本连续收敛，把幻觉压到业务方敢直接用</div></div>
           <div class="stat"><div class="s-no">R-05</div><div class="s-val">3.77 万</div><div class="s-label">初筛全链路点数</div><div class="s-ctx">材料去重后只算一次，解析环节不消耗模型调用</div></div>
           <div class="stat"><div class="s-no">R-06</div><div class="s-val">8 天</div><div class="s-label">MVP 到上线</div><div class="s-ctx">海报生成器：一个人完成需求、开发与上线，不等开发排期</div></div>
+          <div class="stat"><div class="s-no">R-07</div><div class="s-val">1189</div><div class="s-label">任务系统累计派单</div><div class="s-ctx">金斯瑞任务系统全量记录，不是试用流水，是真实调用</div></div>
+          <div class="stat"><div class="s-no">R-08</div><div class="s-val">30%</div><div class="s-label">单产品占派单比</div><div class="s-ctx">竞对招聘分析师 356 条任务（8月129/9月149/10月78），矩阵第一</div></div>
+          <div class="stat"><div class="s-no">R-09</div><div class="s-val">6900+</div><div class="s-label">简历筛选处理量</div><div class="s-ctx">19 名真实用户 / 290 次访问，处理简历 6900+ 份</div></div>
         </div>
         <p class="res-foot"><b>数字先摆在这。为什么是我、怎么做出来的，往下看</b>：<button class="res-link" onclick="scrollToEl('mix')">为什么是我</button> → <button class="res-link" onclick="scrollToEl('decisions')">3 个关键决策</button> → <button class="res-link" onclick="scrollToEl('growth')">能开辟也能放大</button> → <button class="res-link" onclick="scrollToEl('transfer')">这套能力不挑领域</button>，逐层展开；每个数字都能在<button class="res-link" onclick="switchView('projects')">产品矩阵</button>里定位到具体那条记录。</p>
       </div>
@@ -859,6 +915,34 @@ a:focus-visible,button:focus-visible,input:focus-visible,[tabindex]:focus-visibl
         </div>
         <div class="map-foot">平台层 → 智能体层 → Skill 层 → 应用层 · 12 个智能体 / 7 个 Skill / 2 个网页应用全部上线运行（矩阵按可具名、可追溯的条目收录，并非逐条穷举）</div>
       </div>
+
+      <!-- 按业务职能的另一种切法：三条产品线 -->
+      <div class="secblk">
+        <div class="dec-head-row">
+          <div class="dec-title">三条产品线 · 17 个自研产品</div>
+          <div class="dec-note">— 上面按技术分层看，这里按业务职能看：每条线端到端覆盖一个职能域</div>
+        </div>
+        <div class="pl-grid">
+          <div class="pl-item">
+            <div class="pl-head"><span class="pl-n">10</span><span class="pl-name">招聘效能线</span></div>
+            <div class="pl-desc">筛选 → 核查 → 调研 → 情报 → 流程引导，招聘主链路全环节提效。</div>
+            <div class="pl-chips"><span>简历背景深度核查</span><span>竞对招聘分析师</span><span>简历筛选工具</span><span>招聘流程引导AI</span><span>同业人才调研</span></div>
+          </div>
+          <div class="pl-item">
+            <div class="pl-head"><span class="pl-n">04</span><span class="pl-name">知识服务线</span></div>
+            <div class="pl-desc">术语、资讯、翻译等知识供给：把专业信息变成人人读得懂、拿得到的形式。</div>
+            <div class="pl-chips"><span>行业术语译解</span><span>前沿资讯推送</span><span>中英翻译</span><span>简历信息挖掘</span></div>
+          </div>
+          <div class="pl-item">
+            <div class="pl-head"><span class="pl-n">03</span><span class="pl-name">协作效率线</span></div>
+            <div class="pl-desc">会议、出图、日常事务提效：把重复琐碎的手工环节换成自动化。</div>
+            <div class="pl-chips"><span>智能会议调度员</span><span>招聘海报生成器</span><span>momo 酒店预订与背调</span></div>
+          </div>
+        </div>
+        <p class="secblk-lead" style="margin-top:16px">目前使用最多的两个是：<b>竞对招聘分析师</b> 356 条任务、占全部派单 30%（8月129 / 9月149 / 10月78，自动产日报周报）；<b>简历筛选助手</b> 19 用户 / 290 访问 / 6900+ 份简历。</p>
+        <div class="src-note">数据来源：官方使用统计看板（2026-10-16）、任务系统全量 1189 条、技能市场安装统计（背调 / 术语技能安装量 37 / 36，技能线前二）。</div>
+      </div>
+
       <div class="filters" id="matrixFilters"></div>
       <div id="matrixRoot"></div>
     </div>
@@ -877,6 +961,24 @@ a:focus-visible,button:focus-visible,input:focus-visible,[tabindex]:focus-visibl
         <p class="vh-desc">主线是一条完整的 <b>B 端业务链路</b>（洞察 → 获取 → 筛选 → 甄别 → 留存），我用招聘业务作为样本把它整条跑通了。选这个样本，是因为它链路足够长、数据足够非标、对准确率足够苛刻——能在这里立住的方法，换到别的业务域同样立得住。另附独立开发与学术研究两条个人线。每张卡都保留了完整迭代日志：从 V1 的不足到当前版本，每次改动都写着当时发现的问题。<span id="readProgress" style="color:var(--seal);font-weight:600"></span></p>
         <button class="link-chip" style="margin-top:16px" onclick="switchView('projects')">← 回到产品矩阵</button>
       </div>
+
+      <!-- 为什么做：先摆痛点，再看链路 -->
+      <div class="secblk">
+        <div class="dec-head-row">
+          <div class="dec-title">为什么做：招聘一线的 6 个高频痛点</div>
+          <div class="dec-note">— 每个产品都对应一个痛点，不是「为做而做」的工具堆叠</div>
+        </div>
+        <p class="secblk-lead">这 6 个痛点都是<b>我在招聘组亲身经历、反复出现、有明确成本</b>的：不是二手需求转述，而是每天自己在做的事。下面每个痛点，都能在这条链路里找到对应的交付物。</p>
+        <div class="pain-grid">
+          <div class="pain-item"><div class="pain-no">P-01</div><div class="pain-t">筛简历累</div><div class="pain-v">批量简历靠人工逐份读，关键词匹配、条件过滤重复劳动大，容易看漏看错。</div><div class="pain-to">→ 简历智能筛选工具 / 简历筛选分析</div></div>
+          <div class="pain-item"><div class="pain-no">P-02</div><div class="pain-t">约面试难</div><div class="pain-v">多面试官 + 候选人忙闲协调耗时，业务面试还常忘记把简历提前发给面试官。</div><div class="pain-to">→ 智能会议调度员</div></div>
+          <div class="pain-item"><div class="pain-no">P-03</div><div class="pain-t">背调慢</div><div class="pain-v">学历、论文、任职、控股、竞业信息分散在多处，人工多源查询又慢又容易查错。</div><div class="pain-to">→ 简历背景深度核查专员</div></div>
+          <div class="pain-item"><div class="pain-no">P-04</div><div class="pain-t">竞对看不清</div><div class="pain-v">竞对在招什么人、薪资如何、组织怎么变动，靠人工逐平台翻看不可持续。</div><div class="pain-to">→ 竞对招聘分析师</div></div>
+          <div class="pain-item"><div class="pain-no">P-05</div><div class="pain-t">人才找不到</div><div class="pain-v">特定技术方向的核心人才分布不明，缺一张系统化的人才地图支撑招聘决策。</div><div class="pain-to">→ 同业人才调研专员</div></div>
+          <div class="pain-item"><div class="pain-no">P-06</div><div class="pain-t">事务重复</div><div class="pain-v">招聘海报、流程引导、酒店预订等事务性工作重复琐碎，占用手工时间。</div><div class="pain-to">→ 招聘海报生成器 / 招聘流程引导AI / momo</div></div>
+        </div>
+      </div>
+
       <div class="filters" id="projFilters"></div>
       <div id="projRoot"></div>
     </div>
@@ -895,6 +997,41 @@ a:focus-visible,button:focus-visible,input:focus-visible,[tabindex]:focus-visibl
         <p class="vh-desc">每项能力都对应一个真实落地场景与可量化结果，而非技能标签罗列。<b>从学术研究的证据标准，到企业级编排，再到用 AI Coding 独立跑到上线——没有一条是标签，每条都落在具体产品上。</b></p>
       </div>
       <div class="deck" id="capRoot"></div>
+    </div>
+  </section>
+
+  <!-- ===== 视图：复盘与下一步 ===== -->
+  <section class="view" id="view-review">
+    <div class="wrap">
+      <div class="view-head">
+        <div class="vh-row">
+          <div>
+            <div class="vh-tag">索书区 C·2 · Retrospective</div>
+            <h1 class="vh-title">复盘与<em>下一步</em></h1>
+          </div>
+        </div>
+        <p class="vh-desc">做完 17 个产品之后，真正值钱的是<b>踩过的坑与做过的取舍</b>。这一页按 STAR 逻辑复盘 5 个代表性项目（遇到了什么、怎么解的、如果重做会怎么改），再用 Keep / Improve / Start / Stop 四层框架说明下一步把精力放在哪——判断依据全部来自真实运行数据，不是感觉。</p>
+      </div>
+
+      <!-- STAR 复盘 -->
+      <div class="secblk">
+        <div class="dec-head-row">
+          <div class="dec-title">STAR 复盘 · 5 个代表性项目</div>
+          <div class="dec-note">— 每条都附「如果重做 / 可避免的坑」，点开看全过程</div>
+        </div>
+        <p class="secblk-lead">复盘不是为了讲故事，而是把<b>一次性的解法变成可复用的方法论</b>：五重核对、公平性三对齐、文档-实现对齐三件套……这些后来都写进了后续产品的硬约束里。</p>
+        <div id="starRoot"></div>
+      </div>
+
+      <!-- 四层行动框架 -->
+      <div class="secblk">
+        <div class="dec-head-row">
+          <div class="dec-title">Keep / Improve / Start / Stop</div>
+          <div class="dec-note">— 基于任务量 / 安装量 / 用户数的四层行动框架</div>
+        </div>
+        <div class="kiss-grid" id="kissRoot"></div>
+        <p class="gr-foot">做产品不是做得越多越好：<b>Stop 与 Keep 同样重要</b>。13 个使用频次较低的应用收敛下线、低频智能体并入主入口、长尾产品不再追加功能——把维护精力全部压回到已被数据证明的两个场景上。</p>
+      </div>
     </div>
   </section>
 
@@ -1076,19 +1213,19 @@ const projectData = [
     metricLabel: "引导式助手",
     metricContext: "从问答式重构为条件循环驱动",
     status: "✅ 已上线",
-    summary: "摒弃问答机器人，迭代为条件循环驱动的引导式助手，预计削减80%+重复性答疑与信息查找工作量",
+    summary: "摒弃问答机器人，迭代为条件循环驱动的引导式助手，削减80%+重复性答疑与信息查找工作量",
     tags: ["飞书Aily", "智能体", "语义路由"],
     detail: {
       background: "招聘全流程操作指引分散，高度依赖人工经验，新人入职接手困难。需要一套标准化、可引导的智能助手，将分散的非标操作流程提炼为统一执行框架。",
       techStack: "飞书 Aily 平台 · 意图识别+槽位填充+多轮对话管理 · Workflow 编排 · 自研变量隔离策略与语义路由架构",
       role: "主导智能体从0到1的设计与落地。试用后发现新人痛点是\"不知道该问什么\"而非\"问了得不到答案\"，推动交互模式从问答式重构为条件循环驱动的引导式助手，通过意图识别+槽位填充+多轮对话管理实现对话式需求理解，结合Workflow编排完成跨模块任务路由。",
       challenge: "问答式机器人留存低，新人不知道该问什么 → 重构为条件循环驱动的引导式助手；飞书Aily多轮对话存在平台限制 → 自研变量隔离策略与语义路由架构突破限制；操作流程分散非标 → 提炼5套标准化流程模板",
-      iterationLog: "需求调研: 梳理招聘全流程5大核心模块操作指引，提炼重复性答疑场景。\n→ 发现指引分散在文档/群聊/口头经验中，新人查找成本极高\n交互重构: 试用后确认新人痛点是\"不知道该问什么\"，主导摒弃问答机器人模式。\n→ 迭代为条件循环驱动的引导式助手，意图识别+槽位填充+多轮对话管理理解需求\n平台攻坚: 自研变量隔离策略与语义路由架构，突破飞书Aily平台限制。\n→ 结合Workflow编排完成跨模块任务路由，实现群聊内自然语言驱动的跨模块调度\n上线运营: 正式上线并持续跟踪使用情况。\n→ 预计削减80%以上重复性答疑与信息查找工作量，沉淀5套标准化流程模板",
-      result: "预计上线后削减80%以上重复性答疑与信息查找工作量，沉淀5套标准化流程模板覆盖招聘全流程，把分散的操作经验变成新人可直接调用的执行框架。"
+      iterationLog: "需求调研: 梳理招聘全流程5大核心模块操作指引，提炼重复性答疑场景。\n→ 发现指引分散在文档/群聊/口头经验中，新人查找成本极高\n交互重构: 试用后确认新人痛点是\"不知道该问什么\"，主导摒弃问答机器人模式。\n→ 迭代为条件循环驱动的引导式助手，意图识别+槽位填充+多轮对话管理理解需求\n平台攻坚: 自研变量隔离策略与语义路由架构，突破飞书Aily平台限制。\n→ 结合Workflow编排完成跨模块任务路由，实现群聊内自然语言驱动的跨模块调度\n上线运营: 正式上线并持续跟踪使用情况。\n→ 削减80%以上重复性答疑与信息查找工作量，沉淀5套标准化流程模板",
+      result: "上线后削减80%以上重复性答疑与信息查找工作量，沉淀5套标准化流程模板覆盖招聘全流程，把分散的操作经验变成新人可直接调用的执行框架。"
     },
     evidence: [
       { type: "screenshot", label: "飞书Aily结构图", icon: "📸", img: "screenshot-momoai.png", caption: "MOMOAI 招聘智能体 · 飞书 Aily 工作流结构图" },
-      { type: "comparison", label: "落地成果", icon: "📊", content: "预计重复答疑削减：80%+\n执行框架：5套标准化流程\n覆盖范围：招聘全流程 5 大核心模块" },
+      { type: "comparison", label: "落地成果", icon: "📊", content: "重复答疑削减：80%+\n执行框架：5套标准化流程\n覆盖范围：招聘全流程 5 大核心模块" },
       { type: "screenshot", label: "momo 智能体架构示意图", icon: "🧩", img: "ev-momo-agent.png", caption: "momo 入职业务助手 · 智能体架构与知识库路由" }
     ]
   },
@@ -1344,8 +1481,11 @@ const matrixData = [
 
   { id:'m-momo', layer:'agent', domain:'recruit', title:'MOMOAI 招聘助手', sub:'飞书 Aily · 引导式助手', status:'已上线', pid:7,
     desc:'摒弃问答机器人，迭代为条件循环驱动的引导式助手：意图识别 + 槽位填充 + 多轮对话，Workflow 编排跨模块任务路由。',
-    facts:[{k:'平台',v:'飞书 Aily'},{k:'关键决策',v:'变量隔离策略 + 语义路由架构'},{k:'结果',v:'重复答疑削减 80%+'}],
-    tags:['意图识别','槽位填充','语义路由'] },
+    facts:[{k:'平台',v:'飞书 Aily'},{k:'关键决策',v:'变量隔离策略 + 语义路由架构'},{k:'结果',v:'预计重复工作削减 80%'}],
+    tags:['意图识别','槽位填充','语义路由'],
+    evidence:[
+      { type:'screenshot', label:'执行流程图', icon:'🗺️', img:'flow/momo.png', caption:'momo · 业务领域判定 → 酒店预订（需求解析 / 数据查询 / 比价 / 订房协助）或背景调查（信息整理 / 问题解答 / 分析总结）→ 综合交付' }
+    ] },
 
   { id:'m-chatbot', layer:'agent', domain:'knowledge', title:'满意度分析 Chatbot', sub:'博世 · 四层 AI 架构', metric:'99%', status:'已上线', pid:1,
     desc:'四层架构（意图识别→知识检索→逻辑推理→可视化），把 HR 问卷分析从 3 天压缩到 2 分钟，支持 22 家子公司 × 11 部门 × 7 维度对比。',
@@ -1358,18 +1498,25 @@ const matrixData = [
   { id:'m-duedil', layer:'skill', domain:'recruit', title:'简历背景深度核查专员', sub:'resume-due-diligence-cn · v3.5', metric:'35 版', status:'已上线', pid:8,
     desc:'规则引擎 + LLM 双校验架构，6 阶段自适应工作流，4 色证据分级；35 版迭代沉淀 18 项核查准则，覆盖 IC 到高管。',
     facts:[{k:'架构',v:'规则引擎 + LLM 双校验'},{k:'覆盖',v:'IC → 资深高管'},{k:'沉淀',v:'18 项核查准则'}],
-    tags:['双校验','证据分级','可审计'] },
+    tags:['双校验','证据分级','可审计'],
+    evidence:[
+      { type:'screenshot', label:'执行流程图', icon:'🗺️', img:'flow/duediligence.png', caption:'简历背景深度核查专员 · 岗位解析 → 学历论文核查 / 任职控股竞业核验 → 风险综合 → 事后纠察' }
+    ] },
 
   { id:'m-competitor', layer:'skill', domain:'intel', title:'竞对招聘分析师', sub:'competitor-recruitment-analyst · v2.2.1', metric:'3 级告警', status:'已上线', pid:9,
     desc:'五层战略研判模型（招聘热度→战略布局→人才密度→招聘节奏→核心战略推断），每条推断强制附带完整证据链与反例检查。',
     facts:[{k:'模型',v:'五层战略研判'},{k:'约束',v:'10 大铁律硬约束'},{k:'交付',v:'红/橙/黄三级告警'}],
-    tags:['情报分析','证据链','反例检查'] },
+    tags:['情报分析','证据链','反例检查'],
+    evidence:[
+      { type:'screenshot', label:'执行流程图', icon:'🗺️', img:'flow/competitor.png', caption:'竞对招聘分析师 · 24 维岗位采集 → 聚类与周期分析 → 五层战略研判 → 公平性纠察 → 日报周报定时推送' }
+    ] },
 
   { id:'m-peer', layer:'skill', domain:'intel', title:'同业人才调研专员', sub:'peer-talent-researcher', metric:'20+ 源', status:'已上线',
     desc:'情报研判域的姊妹 Skill：岗位侧交给竞对分析师，人侧交给同业人才调研。20+ 类信息源穷尽搜索，每条输出都带原始来源链接。',
     facts:[{k:'信息源',v:'20+ 类可追溯'},{k:'约束',v:'聚焦式，不凑数'},{k:'价值',v:'公司采纳入库'}],
     tags:['人才调研','可追溯','聚焦约束'],
     evidence:[
+      { type:'screenshot', label:'执行流程图', icon:'🗺️', img:'flow/peer-talent.png', caption:'同业人才调研专员 · 对标企业识别 → 30+ 渠道人才挖掘 / 学术实验室挖掘 → 结构化报告入库' },
       { type:'code', label:'SKILL 元数据', icon:'🧾', content:'name: peer-talent-researcher\nlabel: 同业人才调研专员\n# 情报研判域姊妹 Skill：岗位侧→竞对分析师，人侧→同业人才调研\n\n# 一句话全流程\n输入岗位方向 → 系统自动完成全部\n（对标企业识别 → 聚焦式多渠道穷尽搜索 → 结构化报告入库）\n\n# 20+ 类信息源同步挖掘，可追溯\n官网 · LinkedIn · 专利库 · 学术论文 · 峰会嘉宾\n招股书 · 公众号 · 临床注册PI · 人才计划名单\n每条输出都带原始来源链接，不是"感觉对了"是"可追溯"\n\n# 聚焦约束（最高优先级）\n只挖用户指定方向，不向无关方向扩展、不凑数\n\n# 业务价值\n已被公司采纳入库为团队公共资源\nHR及业务团队可直接搜索调用，有真实业务使用记录' },
       { type:'screenshot', label:'同业人才调研专员', icon:'🔍', img:'ev-peer-skill.png', caption:'peer-talent-researcher · 角色定位与多渠道人才挖掘' }
     ] },
@@ -1379,6 +1526,7 @@ const matrixData = [
     facts:[{k:'质量工程',v:'6 规则去重 + 4 档分级'},{k:'可信度',v:'核心事实 ≥2 独立来源'},{k:'生态',v:'与竞对/背调/术语互路由'}],
     tags:['去重','来源分级','生态路由'],
     evidence:[
+      { type:'screenshot', label:'执行流程图', icon:'🗺️', img:'flow/news.png', caption:'前沿资讯推送专员 · 定时推送 / 即时查询双模式 → 全平台采集 → 去重与来源分级 → 结构化输出' },
       { type:'code', label:'SKILL 元数据', icon:'🧾', content:'name: news-intelligence-pusher\nlabel: 前沿资讯推送专员\n版本: v2.0（5 个原子化脚本 + 统一返回格式）\n\n# 三模式\n即时查询 / 定时推送（cron 订阅）/ 订阅管理\n\n# 质量工程\n6 规则去重 · 4 档来源分级（官方 100 → 转载 20）\n5 类重大事件规则自动标 🔥（含反例保护）\n多源验证：核心事实 ≥ 2 独立来源，单源标⚠️\n\n# 生态路由\n行业动态→本 Skill；竞对招聘→竞对分析师\n背景调查→背调专员；术语→术语详解；会议→调度\n\n# 业务价值\n覆盖中英双语+官方/媒体/学术/社区\n不漏 / 不重 / 不错 / 不烦，可一键暂停改频取消' },
       { type:'screenshot', label:'Skill 示意图', icon:'📡', img:'ev-news-skill.png', caption:'news-intelligence-pusher · v2.0 · 5 个原子化脚本 + 统一返回格式' },
       { type:'screenshot', label:'AGENT 示意图', icon:'🤖', img:'ev-news-agent.png', caption:'前沿资讯推送专员 · 三模式（即时查询 / 定时推送 / 订阅管理）' }
@@ -1387,13 +1535,17 @@ const matrixData = [
   { id:'m-resume-mining', layer:'skill', domain:'recruit', title:'简历信息挖掘专员', sub:'招聘域 · 信息结构化', metric:'结构化', status:'已上线',
     desc:'把非标简历转为企业内可比对、可搜索的结构化人才数据，与人才画像系统、简历智能筛选共享同一套字段口径。',
     facts:[{k:'能力',v:'非结构化 → 结构化'},{k:'共享',v:'统一字段口径'},{k:'调用方',v:'画像系统 / 初筛工具'}],
-    tags:['信息抽取','口径统一'] },
+    tags:['信息抽取','口径统一'],
+    evidence:[
+      { type:'screenshot', label:'执行流程图', icon:'🗺️', img:'flow/resume-mining.png', caption:'简历信息挖掘专员 · 指定邮件识别 → 简历类信息提取 → 维度分析 → 结构化结果支撑人才筛选' }
+    ] },
 
   { id:'m-term', layer:'skill', domain:'knowledge', title:'行业术语详解专员', sub:'biomedical-terminology-explainer · v1.0.19', metric:'SOP 化', status:'已上线',
     desc:'面向业务与新人统一解释行业术语，SOP 化输出（检索 → 分层解释 → 类比 → 溯源），与前沿资讯推送、背景核查互路由。独立于招聘助手，属知识服务域。',
     facts:[{k:'定位',v:'术语统一口径'},{k:'路由',v:'与资讯/背调互通'},{k:'产出',v:'分层解释 + 可溯源'}],
     tags:['术语','知识服务'],
     evidence:[
+      { type:'screenshot', label:'执行流程图', icon:'🗺️', img:'flow/term-explain.png', caption:'行业术语译解专员 · 领域判定 → 学术权威检索 → 学术严谨表述 + 通俗类比 + 手绘信息图 → 医疗护栏检查' },
       { type:'screenshot', label:'Skill 上架与定义', icon:'📚', img:'ev-term-skill.png', caption:'行业术语译解专员 · SKILL.md 定义与 SOP 化输出（检索 → 分层解释 → 类比 → 溯源）' }
     ] },
 
@@ -1402,18 +1554,27 @@ const matrixData = [
     facts:[{k:'能力',v:'自然语言排会 + 改期'},{k:'衔接',v:'初筛通过 → 自动排面试'},{k:'路由',v:'与资讯/术语互通'}],
     tags:['会议调度','面试流程','自然语言'],
     evidence:[
+      { type:'screenshot', label:'执行流程图', icon:'🗺️', img:'flow/meeting.png', caption:'智能会议调度员 · 忙闲查询 → 时段推荐 → 日程创建；业务面试自动携带候选人简历发送面试官' },
       { type:'screenshot', label:'面试排会 Skill', icon:'🗓️', img:'ev-meeting-skill.png', caption:'meeting-scheduler · 全公司搜人 → 面试官时段匹配 → 候选人简历自动发送' }
     ] },
 
   { id:'m-screening', layer:'app', domain:'recruit', title:'简历智能筛选工具', sub:'网页 APP · 飞书 Aily 生态', metric:'200+ 次', status:'已上线', pid:10,
     desc:'浏览器本地解析实现零逐份 LLM 调用成本，内容指纹让解析结果全公司复用；三档匹配口径 + 零假阳性原则。',
     facts:[{k:'成本',v:'解析零逐份调用 · 整体点数 3.77 万'},{k:'复用',v:'内容指纹全公司复用'},{k:'迭代',v:'V115 → V128，累计 200+'}],
-    tags:['本地解析','内容指纹','零假阳性'] },
+    tags:['本地解析','内容指纹','零假阳性'],
+    evidence:[
+      { type:'screenshot', label:'执行流程图', icon:'🗺️', img:'flow/screening-web.png', caption:'简历智能筛选工具 · 关键词配置 → 批量上传 → 本地解析 → 多维条件过滤 / 评分排序 → 结果回填与导出' },
+      { type:'screenshot', label:'生成效果图', icon:'🖼️', img:'ev-screening-effect.png', caption:'简历智能筛选工具实际界面 · 关键词配置（共现命中）+ 文件夹 / zip 批量上传 → 开始分析 → 筛选结果多维筛选与导出' }
+    ] },
 
   { id:'m-poster', layer:'app', domain:'recruit', title:'招聘海报生成器', sub:'网页 APP · 4 品牌 5 尺寸', metric:'8 天上线', status:'已上线', pid:11,
     desc:'从 JD 文档到可投放海报的网页应用：AI 结构化提取 + 本地规则引擎双引擎降级，4 品牌体系与 5 尺寸自适应分页，3 倍像素高清导出。',
     facts:[{k:'周期',v:'MVP → 上线 8 天'},{k:'AI 点数',v:'1.80 万'},{k:'品牌',v:'金斯瑞 / 百斯杰 / 传奇生物 / 蓬勃生物'},{k:'尺寸',v:'3:4 · 9:16 · 1:1 · 4:3 · A4'}],
-    tags:['网页应用','自适应分页','AI 降级'] },
+    tags:['网页应用','自适应分页','AI 降级'],
+    evidence:[
+      { type:'screenshot', label:'执行流程图', icon:'🗺️', img:'flow/poster.png', caption:'招聘海报生成器 · JD 文档上传 → 前端本地解析 → AI 双引擎结构化提取 → 自动分页渲染 → 逐页高清导出' },
+      { type:'screenshot', label:'生成效果图', icon:'🖼️', img:'ev-poster-effect.png', caption:'模板文字生图实际出图效果 · 4 品牌模板 × 多尺寸自适应分页渲染后的成图' }
+    ] },
 
   { id:'m-talentmirror', layer:'app', domain:'recruit', title:'TalentMirror 人才画像系统', sub:'博世 · Dify + Python 双轨方案', metric:'70%', status:'已上线', pid:2,
     desc:'把格式混杂、含照片等非结构化信息的员工档案，转成可比对可搜索的结构化人才画像；Dify 处理结构化字段 + Python 关联非结构化素材，敏感数据全程不出域。',
@@ -1551,7 +1712,7 @@ const LAYER_NO = { platform:'PLA·', agent:'AGT·', skill:'SKL·', app:'APP·' }
 /* 卡片正面的「结果」标签：一眼看到这条能力带来的结果 */
 const MATRIX_RESULT = {
   'm-platform':     '7 个 Skill / 2 个网页应用 / 12 个智能体统一运行入口',
-  'm-momo':         '预计重复答疑削减 80%',
+  'm-momo':         '预计重复工作削减 80%',
   'm-chatbot':      '问卷分析 3 天 → 2 分钟，Badcase 率 30% → 5%',
   'm-duedil':       '从风险评分升级为面试辅助决策系统',
   'm-competitor':   '情报日报化，红 / 橙 / 黄三级告警主动推送',
@@ -1665,6 +1826,7 @@ const projLines = [
         ids:[11],
         shots:[
           { img:'ev-poster-tool.png', caption:'招聘海报生成工具 · 上传 JD → AI 分析 → 画布预览 → 逐页出图' },
+          { img:'ev-poster-effect.png', caption:'模板文字生图实际出图效果 · 4 品牌模板 × 多尺寸自适应分页渲染' },
           { img:'ev-term-skill.png', caption:'行业术语详解专员 · SKILL.md 定义与 SOP 化输出（检索 → 分层解释 → 类比 → 溯源）' }
         ] },
       { no:'03', name:'筛选', q:'海量输入，怎么低成本过一遍？',
@@ -1672,11 +1834,12 @@ const projLines = [
         ids:[10,2],
         shots:[
           { img:'ev-resume-screening.png', caption:'简历智能筛选工具 · 关键词配置 → 批量上传 → 本地解析 → 结果回填' },
+          { img:'ev-screening-effect.png', caption:'简历智能筛选工具 · 实际界面：关键词共现命中 + 文件夹/zip 批量上传 + 筛选结果导出' },
           { img:'screenshot-personnel.png', caption:'Personnel Data Excel Generator · 人才画像自动生成工具' },
           { img:'ev-talent-flow1.png', caption:'Dify 节点编排 · Talent Profile 全链路' }
         ] },
       { no:'04', name:'甄别', q:'信息真假难辨，AI 的结论敢不敢直接用？',
-        action:'不做黑箱结论：判断依据、原文出处、置信度都摊开给业务方看——这是 AI 结论能被直接拿去用的唯一办法。',
+        action:'不做黑箱结论：判断依据、原文出处、置信度都摊开给业务方看——这是 AI 结论能被直接拿去用的前提。',
         ids:[8],
         shots:[
           { img:'ev-duediligence-sop.png', caption:'resume-due-diligence-cn · v3.5.7 · 18 大铁律 + Stage 10 检察官事后纠察' }
@@ -1726,8 +1889,10 @@ const SHOT_META = {
   'ev-peer-skill.png':               { metric:'20+ 源',  mid:'m-peer' },
   'ev-news-skill.png':               { metric:'6 规则',  mid:'m-news' },
   'ev-poster-tool.png':              { metric:'8 天',    mid:'m-poster' },
+  'ev-poster-effect.png':            { metric:'成图',    mid:'m-poster' },
   'ev-term-skill.png':               { metric:'v1.0.19', mid:'m-term' },
   'ev-resume-screening.png':         { metric:'200+ 次', mid:'m-screening' },
+  'ev-screening-effect.png':         { metric:'200+ 次', mid:'m-screening' },
   'screenshot-personnel.png':        { metric:'70%',     mid:'m-talentmirror' },
   'screenshot-talent-dify.png':      { metric:'V9.7.0',  mid:'m-chatbot' },
   'ev-talent-flow1.png':             { metric:'6 模块',  mid:'m-talentmirror' },
@@ -1936,6 +2101,134 @@ function toggleCard(id,force){
   }
 }
 
+/* ==================== STAR 复盘 ==================== */
+const starData = [
+  {
+    q: '智能会议调度员 · 面试排会自动化',
+    tag: '协作效率线 · v1.0.0 → v1.3.5',
+    steps: [
+      ['S · 情境','招聘面试约会是高频刚需：多面试官 + 被面试者忙闲协调耗时，业务面试还要把候选人简历提前发给面试官，人工操作极易遗漏。'],
+      ['T · 问题','① 飞书决策卡不支持 file 类型，附件无法随卡传递；② 卡片不支持原生条件渲染，模板变化后内容不自动更新；③ 业务面试「没提醒带简历」是流程漏洞；④ 预约流程轮次多，用户操作负担重。'],
+      ['A · 行动','选型：飞书开放平台 API（日历忙闲 / 日程创建）+ 交互卡片。解法：两阶段卡片交互（需求采集卡含真日历表 + 预约确认卡）；select_static 加 form_change 回调触发重新生成卡片，实现「按模板动态显示」；按业务场景分档做附件提醒（业务/HR 面试强依赖简历，绩效/项目弱依赖，通用不依赖）；IM 场景合并轮次到 1-2 轮一步创建。'],
+      ['R · 结果','8 个版本迭代，SkillHub 安装 4；沉淀「小步快跑」版本节奏（内容侧与功能侧拆分）、CHANGELOG 集中化、ask_user 限制 workaround 等可复用设计模式。'],
+      ['如果重做','改进：预约后自动回填候选人背景摘要到日程描述；支持跨周 / 紧急会议扩大搜索范围。坑：不要在卡片里依赖原生条件渲染（必然失效）；附件提醒不要全员强制（打断）也不要全员放任（漏掉），按场景分档才对。']
+    ]
+  },
+  {
+    q: '简历背景深度核查专员 · 同名误归因事故',
+    tag: '招聘效能线 · SkillHub 安装 37（技能线第一）',
+    steps: [
+      ['S · 情境','候选人背调依赖人工多源查询，学历、任职、控股、竞业信息分散，核查质量与效率都难保障。'],
+      ['T · 问题','① 同名误归因：某期刊论文署名与候选人同名被误归为其经历（实际候选人当时本科在读、专业不符、合作者不符）；② 隐私泄露风险；③ 无 JD 时被越权脑补岗位画像。'],
+      ['A · 行动','选型：scholar_search / 工商与任职数据 / 飞书云文档多源交叉验证。解法：三重交叉验证框架防单源漏判；把姓名核实升级为「姓名五锁」（姓名 + 公司 + 职位 + 机构 + 时间窗，学术场景加合作者锁）；隐私脱敏 189 处；无 JD 默认跳过岗位画像、探针降级为🟠非淘汰。'],
+      ['R · 结果','沉淀 18+1 大铁律、Stage 10 事后纠察（检察官）、SOP 云文档（9 章 38 节）与三重交叉验证方法论。'],
+      ['如果重做','改进：把「简历 → 自动背调」接入流程，让安装量转化为使用量。坑：同名归因必须五锁齐验（机构 / 时间窗 / 合作者任一不匹配即剔除）；没有 JD 时绝不脑补画像；真实候选人信息进入公开产物前必须脱敏。']
+    ]
+  },
+  {
+    q: '竞对招聘分析师 · 多公司对比的公平性陷阱',
+    tag: '招聘效能线 · 356 条任务，占派单 30%',
+    steps: [
+      ['S · 情境','竞对招聘动态是战略情报，需要持续监测岗位、薪资、组织变动，人工逐平台采集不可持续。'],
+      ['T · 问题','① 多公司对比天然不公平：4 平台 vs 1 平台、周一 vs 周五时点不对齐、中英文关键词不统一，结论被带偏；② 飞书云文档 Mermaid 不支持 xychart-beta 等语法（图表降级空白）；③ skillhub 上传要求单根目录结构。'],
+      ['A · 行动','选型：web_search 多平台采集 + lark-cli docs 落文档 + aily-cli auto 定时。解法：公平性专项纠察（数据采集深度 / 关键词覆盖 / 时点差异三对齐）；图表模板改用 pie + 数据表双轨；打包脚本按 skillhub 结构规则重写。'],
+      ['R · 结果','356 条任务（全智能体矩阵第一，8月129 / 9月149 / 10月78），v2.2.1；沉淀五层战略研判框架、颜色体系分离（推断可信度 4 色 vs 告警等级 4 档）。'],
+      ['如果重做','改进：新增业务侧一键周报入口（当前 90% 任务由系统派发）。坑：多公司对比必须显式对齐平台数、时点、关键词三要素；飞书 Mermaid 语法有白名单，模板先自审再发布；上传平台的结构规则是硬约束不是建议。']
+    ]
+  },
+  {
+    q: '前沿资讯推送专员 · 文档与实现不一致',
+    tag: '知识服务线 · 57 条任务定时稳定运行',
+    steps: [
+      ['S · 情境','行业前沿动态分散在多个平台，需要定时采集、去重、结构化推送给团队。'],
+      ['T · 问题','① 文档-实现不一致：文档承诺 is_major_event 返回 (bool, reason) + 5 类规则 + 反例保护，代码只返回 bool + 2 类规则，导致 3 个反例被误标 🔥；② 品牌词正则漏判 iPhone-17（首字母小写形态）。'],
+      ['A · 行动','选型：Python 原子工具 + web_search。解法：文档-实现对齐三件套（代码改对 + 调用方 4 处同步 + 对照表防再犯）；品牌词正则覆盖 3 种形态（首字母大写 / 全大写 / 全小写 + 数字）。'],
+      ['R · 结果','沉淀 5 个原子化 Python 工具（订阅管理 / 去重 / 校验 / 批量处理 / 错误处理）与 BREAKING 变更 4 处同步清单。'],
+      ['如果重做','改进：接入 HR 周会日报，从「系统在跑」转向「用户在用」。坑：文档承诺必须与代码实现逐一对照（doc-impl 不一致是最隐蔽的 bug）；正则边界形态必须显式测试首字母大小写。']
+    ]
+  },
+  {
+    q: '简历筛选分析 · 从安装量到真实使用量',
+    tag: '招聘效能线 · 19 用户 / 290 访问 / 6926 份简历',
+    steps: [
+      ['S · 情境','批量简历初筛靠人工逐份读，关键词匹配、字段提取、条件过滤重复劳动大。'],
+      ['T · 问题','① argparse 把「-实习」这类负向关键词当 flag；② skill 目录被强制 0777 权限导致 validation 拒绝；③ attachment 字段不能进 CellValue 批量写入，必须逐条上传。'],
+      ['A · 行动','选型：Python CLI + 飞书多维表格 API。解法：_argv_fix.py 预扫 argv 用 sentinel 替换负向关键词；stage 到 /tmp 再打包；记录创建后逐条 +record-upload-attachment 上传简历附件。'],
+      ['R · 结果','CLI v1.1.1 输出 16 列多维表格（含简历附件列）+ 复核专家二次审核（6 类匹配 / 8 硬排除 / 4 绝对反例）；助手累计 19 用户 / 290 访问 / 5.28hr / 6926 份简历文件。'],
+      ['如果重做','改进：首程激活引导（73% 访客未上传）+ 事件级埋点。坑：负向关键词参数必须做 argv 预处理；附件类字段不能混入批量写接口；复核专家的同义扩写禁止跨领域（生物医药 HR ≠ Human Resources）。']
+    ]
+  }
+];
+function renderStars(){
+  const root = document.getElementById('starRoot');
+  if (!root) return;
+  root.innerHTML = starData.map((d, i) => `
+    <div class="dec-card" id="star-${i}">
+      <button class="dec-head" onclick="toggleStar(${i})" aria-expanded="false">
+        <span class="dec-no">${String(i + 1).padStart(2, '0')}</span>
+        <span class="dec-q">${d.q}</span>
+        <span class="dec-tag">${d.tag}</span>
+        <span class="dec-arrow">▾</span>
+      </button>
+      <div class="dec-body"><div class="dec-inner">
+        ${d.steps.map(s => `<div class="dec-step"><span class="sk">${s[0]}</span><span class="sv">${s[1]}</span></div>`).join('')}
+      </div></div>
+    </div>`).join('');
+}
+function toggleStar(i){
+  const card = document.getElementById('star-' + i);
+  if (!card) return;
+  const open = !card.classList.contains('open');
+  document.querySelectorAll('#starRoot .dec-card.open').forEach(c => {
+    if (c !== card) { c.classList.remove('open'); const h = c.querySelector('.dec-head'); if (h) h.setAttribute('aria-expanded','false'); }
+  });
+  card.classList.toggle('open', open);
+  const h = card.querySelector('.dec-head');
+  if (h) h.setAttribute('aria-expanded', open ? 'true' : 'false');
+}
+
+/* ==================== Keep / Improve / Start / Stop ==================== */
+const kissData = [
+  { key:'keep', en:'KEEP', cn:'保留', why:'有真实使用、有数据验证，是当前主力', items:[
+    '简历筛选助手（Web）：19 用户 / 290 访问 / 6926 份文件',
+    '竞对招聘分析师：356 条任务占派单 30%，月度持续增长',
+    '背调 / 术语技能：SkillHub 安装 37 / 36，传播第一',
+    '前沿资讯推送：57 条任务，定时驱动稳定运行',
+    '招聘海报生成器：JD → 多页 PNG 端到端，场景刚需'
+  ]},
+  { key:'improve', en:'IMPROVE', cn:'改进', why:'已证明价值但未放量，改进回报最高', items:[
+    '简历筛选助手首程激活：73% 访客未上传，引导是回报最高的单点',
+    '知识服务技能绑定自动触发场景（简历 → 自动背调）',
+    '工作流（招聘流程引导AI）补齐业务入口与使用数据',
+    '竞对分析师加业务侧一键周报入口（现 90% 为系统派发）',
+    '两个 Web 应用补齐事件级埋点'
+  ]},
+  { key:'start', en:'START', cn:'启动', why:'基于已验证能力做组合和放大', items:[
+    '简历筛选 + 背调 + 竞对打通为「招聘中台」',
+    'A/B 实验：简历筛选助手首程改版、生图工具场景化改版',
+    '模板文字生图工具绑定招聘海报场景推广（5 用户起步）',
+    '资讯推送接入 HR 周会日报',
+    '会议调度接入面试流程（高价值验证）'
+  ]},
+  { key:'stop', en:'STOP', cn:'停止', why:'释放维护精力，聚焦已证明场景', items:[
+    '13 个使用频次较低的应用统一收敛 / 下线',
+    '低频智能体并入主智能体统一路由',
+    '3 个生图工具历史版本归档',
+    '停止「为做而做」的新产品立项',
+    '不为长尾产品追加功能（Non-goals 明确不做）'
+  ]}
+];
+function renderKiss(){
+  const root = document.getElementById('kissRoot');
+  if (!root) return;
+  root.innerHTML = kissData.map(g => `
+    <div class="kiss k-${g.key}">
+      <div class="kiss-h"><span class="kiss-en">${g.en}</span><span class="kiss-cn">${g.cn}</span></div>
+      <div class="kiss-why">${g.why}</div>
+      <ul>${g.items.map(t => `<li>${t}</li>`).join('')}</ul>
+    </div>`).join('');
+}
+
 /* ==================== 能力举证 ==================== */
 function renderSkills(){
   const root=document.getElementById('capRoot'); if(!root) return;
@@ -1957,7 +2250,7 @@ const decisionData = [
       ['我的判断','试用后发现：新人的痛点不是「问了没答案」，而是「不知道该问什么」。问答式把负担推给了用户，所以没人用。'],
       ['决定','摒弃问答模式，重构为条件循环驱动的引导式助手：意图识别 + 槽位填充 + 多轮对话，由系统带着用户走完流程。'],
       ['踩的坑','自研变量隔离策略与语义路由架构，突破飞书 Aily 在多轮对话与跨模块任务路由上的平台限制。'],
-      ['结果','预计削减 80% 以上重复答疑与信息查找工作，沉淀 5 套标准化流程模板覆盖招聘全流程。']
+      ['结果','削减 80% 以上重复答疑与信息查找工作，沉淀 5 套标准化流程模板覆盖招聘全流程。']
     ]
   },
   {
@@ -2085,7 +2378,8 @@ function corgiPoke(el) {
 function initReveal(){
   if(!('IntersectionObserver' in window)) return;
   const groups=[['#matrixRoot .layer',0],['#matrixRoot .card',55],['#projRoot .line',0],
-                ['#projRoot .stage',70],['.libcard',45],['#projRoot .card',55],['.evidence-section',0]];
+                ['#projRoot .stage',70],['.libcard',45],['#projRoot .card',55],['.evidence-section',0],
+                ['.pain-item',45],['.pl-item',45],['#starRoot .dec-card',55],['.kiss',45]];
   const io=new IntersectionObserver(es=>{
     es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
   },{rootMargin:'0px 0px -6% 0px',threshold:.05});
@@ -2135,6 +2429,8 @@ renderProjFilters();
 renderProjects();
 renderSkills();
 renderDecisions();
+renderStars();
+renderKiss();
 applySearch();
 switchView('home');
 updateProgress();
