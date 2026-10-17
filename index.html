@@ -941,6 +941,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,[tabindex]:focus-visibl
         </div>
         <p class="secblk-lead" style="margin-top:16px">目前使用最多的两个是：<b>竞对招聘分析师</b> 356 条任务、占全部派单 30%（8月129 / 9月149 / 10月78，自动产日报周报）；<b>简历筛选助手</b> 19 用户 / 290 访问 / 6900+ 份简历。</p>
         <div class="src-note">数据来源：官方使用统计看板（2026-10-16）、任务系统全量 1189 条、技能市场安装统计（背调 / 术语技能安装量 37 / 36，技能线前二）。</div>
+        <div class="src-note" style="margin-top:8px">说明：下方每个产品的执行流程均以文字版呈现；完整流程图原件与技术设计细节，将在面试现场展示。</div>
       </div>
 
       <div class="filters" id="matrixFilters"></div>
@@ -1484,7 +1485,7 @@ const matrixData = [
     facts:[{k:'平台',v:'飞书 Aily'},{k:'关键决策',v:'变量隔离策略 + 语义路由架构'},{k:'结果',v:'预计重复工作削减 80%'}],
     tags:['意图识别','槽位填充','语义路由'],
     evidence:[
-      { type:'screenshot', label:'执行流程图', icon:'🗺️', img:'flow/momo.png', caption:'momo · 业务领域判定 → 酒店预订（需求解析 / 数据查询 / 比价 / 订房协助）或背景调查（信息整理 / 问题解答 / 分析总结）→ 综合交付' }
+      { type:'code', label:'执行流程（文字版）', icon:'🗺️', content:'① 领域判定：识别本轮是酒店预订还是背景调查\n② 酒店预订：需求解析 → 数据查询 → 比价 → 订房协助\n③ 背景调查：信息整理 → 问题解答 → 分析总结\n④ 槽位填充：缺失信息多轮追问补齐，不靠脑补\n⑤ 综合交付：结构化结论 + 可执行建议\n\n完整流程图原件与设计细节将在面试中展示。' }
     ] },
 
   { id:'m-chatbot', layer:'agent', domain:'knowledge', title:'满意度分析 Chatbot', sub:'博世 · 四层 AI 架构', metric:'99%', status:'已上线', pid:1,
@@ -1500,7 +1501,7 @@ const matrixData = [
     facts:[{k:'架构',v:'规则引擎 + LLM 双校验'},{k:'覆盖',v:'IC → 资深高管'},{k:'沉淀',v:'18 项核查准则'}],
     tags:['双校验','证据分级','可审计'],
     evidence:[
-      { type:'screenshot', label:'执行流程图', icon:'🗺️', img:'flow/duediligence.png', caption:'简历背景深度核查专员 · 岗位解析 → 学历论文核查 / 任职控股竞业核验 → 风险综合 → 事后纠察' }
+      { type:'code', label:'执行流程（文字版）', icon:'🗺️', content:'① 岗位解析：先读 JD，明确本次核查的维度与优先级\n② 学历论文核查：学术检索 + 同名五锁校验（机构 / 时间窗 / 合作者）\n③ 任职控股竞业核验：工商与任职数据交叉比对\n④ 风险综合：4 色证据分级汇总，输出可审计结论\n⑤ 事后纠察：Stage 10 检察官复核，纠偏与补漏\n\n完整流程图原件与设计细节将在面试中展示。' }
     ] },
 
   { id:'m-competitor', layer:'skill', domain:'intel', title:'竞对招聘分析师', sub:'competitor-recruitment-analyst · v2.2.1', metric:'3 级告警', status:'已上线', pid:9,
@@ -1508,7 +1509,7 @@ const matrixData = [
     facts:[{k:'模型',v:'五层战略研判'},{k:'约束',v:'10 大铁律硬约束'},{k:'交付',v:'红/橙/黄三级告警'}],
     tags:['情报分析','证据链','反例检查'],
     evidence:[
-      { type:'screenshot', label:'执行流程图', icon:'🗺️', img:'flow/competitor.png', caption:'竞对招聘分析师 · 24 维岗位采集 → 聚类与周期分析 → 五层战略研判 → 公平性纠察 → 日报周报定时推送' }
+      { type:'code', label:'执行流程（文字版）', icon:'🗺️', content:'① 24 维岗位采集：多平台同步抓取竞对在招岗位\n② 聚类与周期分析：岗位归类 + 招聘热度 / 节奏趋势\n③ 五层战略研判：招聘热度 → 战略布局 → 人才密度 → 招聘节奏 → 核心战略推断\n④ 公平性纠察：平台数 / 时点 / 关键词三对齐后再出结论\n⑤ 交付：三级告警 + 日报周报定时推送\n\n完整流程图原件与设计细节将在面试中展示。' }
     ] },
 
   { id:'m-peer', layer:'skill', domain:'intel', title:'同业人才调研专员', sub:'peer-talent-researcher', metric:'20+ 源', status:'已上线',
@@ -1516,7 +1517,7 @@ const matrixData = [
     facts:[{k:'信息源',v:'20+ 类可追溯'},{k:'约束',v:'聚焦式，不凑数'},{k:'价值',v:'公司采纳入库'}],
     tags:['人才调研','可追溯','聚焦约束'],
     evidence:[
-      { type:'screenshot', label:'执行流程图', icon:'🗺️', img:'flow/peer-talent.png', caption:'同业人才调研专员 · 对标企业识别 → 30+ 渠道人才挖掘 / 学术实验室挖掘 → 结构化报告入库' },
+      { type:'code', label:'执行流程（文字版）', icon:'🗺️', content:'① 方向聚焦：只挖用户指定的技术方向，不扩展、不凑数\n② 对标企业识别：锁定该方向的国内外对标公司\n③ 多渠道挖掘：30+ 渠道穷举（官网 / 专利 / 学术 / 峰会 / 人才计划名单…）\n④ 学术实验室挖掘：PI 与实验室成员作为补充来源\n⑤ 结构化入库：每条结论带原始来源链接的人才地图报告\n\n完整流程图原件与设计细节将在面试中展示。' },
       { type:'code', label:'SKILL 元数据', icon:'🧾', content:'name: peer-talent-researcher\nlabel: 同业人才调研专员\n# 情报研判域姊妹 Skill：岗位侧→竞对分析师，人侧→同业人才调研\n\n# 一句话全流程\n输入岗位方向 → 系统自动完成全部\n（对标企业识别 → 聚焦式多渠道穷尽搜索 → 结构化报告入库）\n\n# 20+ 类信息源同步挖掘，可追溯\n官网 · LinkedIn · 专利库 · 学术论文 · 峰会嘉宾\n招股书 · 公众号 · 临床注册PI · 人才计划名单\n每条输出都带原始来源链接，不是"感觉对了"是"可追溯"\n\n# 聚焦约束（最高优先级）\n只挖用户指定方向，不向无关方向扩展、不凑数\n\n# 业务价值\n已被公司采纳入库为团队公共资源\nHR及业务团队可直接搜索调用，有真实业务使用记录' },
       { type:'screenshot', label:'同业人才调研专员', icon:'🔍', img:'ev-peer-skill.png', caption:'peer-talent-researcher · 角色定位与多渠道人才挖掘' }
     ] },
@@ -1526,7 +1527,7 @@ const matrixData = [
     facts:[{k:'质量工程',v:'6 规则去重 + 4 档分级'},{k:'可信度',v:'核心事实 ≥2 独立来源'},{k:'生态',v:'与竞对/背调/术语互路由'}],
     tags:['去重','来源分级','生态路由'],
     evidence:[
-      { type:'screenshot', label:'执行流程图', icon:'🗺️', img:'flow/news.png', caption:'前沿资讯推送专员 · 定时推送 / 即时查询双模式 → 全平台采集 → 去重与来源分级 → 结构化输出' },
+      { type:'code', label:'执行流程（文字版）', icon:'🗺️', content:'① 模式判定：定时推送 / 即时查询 / 订阅管理\n② 全平台采集：中英双语 + 官方 / 媒体 / 学术 / 社区\n③ 去重与分级：6 规则去重 + 4 档来源分级，重大事件标 🔥\n④ 多源验证：核心事实 ≥ 2 个独立来源，单源显式标 ⚠️\n⑤ 结构化输出：统一字段推送到群 / 文档\n\n完整流程图原件与设计细节将在面试中展示。' },
       { type:'code', label:'SKILL 元数据', icon:'🧾', content:'name: news-intelligence-pusher\nlabel: 前沿资讯推送专员\n版本: v2.0（5 个原子化脚本 + 统一返回格式）\n\n# 三模式\n即时查询 / 定时推送（cron 订阅）/ 订阅管理\n\n# 质量工程\n6 规则去重 · 4 档来源分级（官方 100 → 转载 20）\n5 类重大事件规则自动标 🔥（含反例保护）\n多源验证：核心事实 ≥ 2 独立来源，单源标⚠️\n\n# 生态路由\n行业动态→本 Skill；竞对招聘→竞对分析师\n背景调查→背调专员；术语→术语详解；会议→调度\n\n# 业务价值\n覆盖中英双语+官方/媒体/学术/社区\n不漏 / 不重 / 不错 / 不烦，可一键暂停改频取消' },
       { type:'screenshot', label:'Skill 示意图', icon:'📡', img:'ev-news-skill.png', caption:'news-intelligence-pusher · v2.0 · 5 个原子化脚本 + 统一返回格式' },
       { type:'screenshot', label:'AGENT 示意图', icon:'🤖', img:'ev-news-agent.png', caption:'前沿资讯推送专员 · 三模式（即时查询 / 定时推送 / 订阅管理）' }
@@ -1537,7 +1538,7 @@ const matrixData = [
     facts:[{k:'能力',v:'非结构化 → 结构化'},{k:'共享',v:'统一字段口径'},{k:'调用方',v:'画像系统 / 初筛工具'}],
     tags:['信息抽取','口径统一'],
     evidence:[
-      { type:'screenshot', label:'执行流程图', icon:'🗺️', img:'flow/resume-mining.png', caption:'简历信息挖掘专员 · 指定邮件识别 → 简历类信息提取 → 维度分析 → 结构化结果支撑人才筛选' }
+      { type:'code', label:'执行流程（文字版）', icon:'🗺️', content:'① 邮件定位：按发件人 / 主题 / 时间窗筛选指定 Outlook 邮件\n② 简历识别：识别邮件正文与附件中的简历类信息\n③ 字段提取：教育 / 任职 / 项目 / 技能按统一口径结构化\n④ 维度分析：与岗位维度比对，输出可比对结果\n⑤ 结果回流：供人才画像与初筛工具调用\n\n完整流程图原件与设计细节将在面试中展示。' }
     ] },
 
   { id:'m-term', layer:'skill', domain:'knowledge', title:'行业术语详解专员', sub:'biomedical-terminology-explainer · v1.0.19', metric:'SOP 化', status:'已上线',
@@ -1545,7 +1546,7 @@ const matrixData = [
     facts:[{k:'定位',v:'术语统一口径'},{k:'路由',v:'与资讯/背调互通'},{k:'产出',v:'分层解释 + 可溯源'}],
     tags:['术语','知识服务'],
     evidence:[
-      { type:'screenshot', label:'执行流程图', icon:'🗺️', img:'flow/term-explain.png', caption:'行业术语译解专员 · 领域判定 → 学术权威检索 → 学术严谨表述 + 通俗类比 + 手绘信息图 → 医疗护栏检查' },
+      { type:'code', label:'执行流程（文字版）', icon:'🗺️', content:'① 领域判定：判断术语所属学科与业务场景\n② 学术检索：优先权威来源（教材 / 指南 / 期刊），锁定定义边界\n③ 分层输出：学术严谨表述 → 通俗类比 → 手绘信息图\n④ 溯源标注：附来源与检索路径，便于复核\n⑤ 护栏检查：涉及医疗建议时强制风险提示，不越界下结论\n\n完整流程图原件与设计细节将在面试中展示。' },
       { type:'screenshot', label:'Skill 上架与定义', icon:'📚', img:'ev-term-skill.png', caption:'行业术语译解专员 · SKILL.md 定义与 SOP 化输出（检索 → 分层解释 → 类比 → 溯源）' }
     ] },
 
@@ -1554,7 +1555,7 @@ const matrixData = [
     facts:[{k:'能力',v:'自然语言排会 + 改期'},{k:'衔接',v:'初筛通过 → 自动排面试'},{k:'路由',v:'与资讯/术语互通'}],
     tags:['会议调度','面试流程','自然语言'],
     evidence:[
-      { type:'screenshot', label:'执行流程图', icon:'🗺️', img:'flow/meeting.png', caption:'智能会议调度员 · 忙闲查询 → 时段推荐 → 日程创建；业务面试自动携带候选人简历发送面试官' },
+      { type:'code', label:'执行流程（文字版）', icon:'🗺️', content:'① 需求解析：从自然语言里提取参会人、时长与时间偏好\n② 忙闲查询：调用日历接口查多面试官 + 候选人空档\n③ 时段推荐：取交集并排序，给出可选窗口（支持改期）\n④ 日程创建：写入日历并通知参会人\n⑤ 业务面试增强：自动携带并发送候选人简历给面试官\n\n完整流程图原件与设计细节将在面试中展示。' },
       { type:'screenshot', label:'面试排会 Skill', icon:'🗓️', img:'ev-meeting-skill.png', caption:'meeting-scheduler · 全公司搜人 → 面试官时段匹配 → 候选人简历自动发送' }
     ] },
 
@@ -1563,7 +1564,7 @@ const matrixData = [
     facts:[{k:'成本',v:'解析零逐份调用 · 整体点数 3.77 万'},{k:'复用',v:'内容指纹全公司复用'},{k:'迭代',v:'V115 → V128，累计 200+'}],
     tags:['本地解析','内容指纹','零假阳性'],
     evidence:[
-      { type:'screenshot', label:'执行流程图', icon:'🗺️', img:'flow/screening-web.png', caption:'简历智能筛选工具 · 关键词配置 → 批量上传 → 本地解析 → 多维条件过滤 / 评分排序 → 结果回填与导出' },
+      { type:'code', label:'执行流程（文字版）', icon:'🗺️', content:'① 关键词配置：正向 / 负向关键词与组合条件\n② 批量上传：文件夹或 zip 压缩包整批导入\n③ 本地解析：浏览器端解析 PDF/DOCX，解析环节零逐份 LLM 调用\n④ 评分排序：三档口径（直接命中 / AI 补漏 / 可疑假阳性）+ 多维条件过滤\n⑤ 结果导出：回填多维表格并支持导出\n\n完整流程图原件与设计细节将在面试中展示。' },
       { type:'screenshot', label:'生成效果图', icon:'🖼️', img:'ev-screening-effect.png', caption:'简历智能筛选工具实际界面 · 关键词配置（共现命中）+ 文件夹 / zip 批量上传 → 开始分析 → 筛选结果多维筛选与导出' }
     ] },
 
@@ -1572,7 +1573,7 @@ const matrixData = [
     facts:[{k:'周期',v:'MVP → 上线 8 天'},{k:'AI 点数',v:'1.80 万'},{k:'品牌',v:'金斯瑞 / 百斯杰 / 传奇生物 / 蓬勃生物'},{k:'尺寸',v:'3:4 · 9:16 · 1:1 · 4:3 · A4'}],
     tags:['网页应用','自适应分页','AI 降级'],
     evidence:[
-      { type:'screenshot', label:'执行流程图', icon:'🗺️', img:'flow/poster.png', caption:'招聘海报生成器 · JD 文档上传 → 前端本地解析 → AI 双引擎结构化提取 → 自动分页渲染 → 逐页高清导出' },
+      { type:'code', label:'执行流程（文字版）', icon:'🗺️', content:'① JD 上传：支持 Word / PDF 岗位文档\n② 前端本地解析：提取岗位信息，不依赖后端上传链路\n③ AI 双引擎提取：AI 结构化 + 本地规则引擎降级兜底\n④ 自动分页渲染：4 品牌模板 × 5 尺寸自适应排版\n⑤ 逐页高清导出：3 倍像素 PNG，RBAC 控制模板管理权限\n\n完整流程图原件与设计细节将在面试中展示。' },
       { type:'screenshot', label:'生成效果图', icon:'🖼️', img:'ev-poster-effect.png', caption:'模板文字生图实际出图效果 · 4 品牌模板 × 多尺寸自适应分页渲染后的成图' }
     ] },
 
