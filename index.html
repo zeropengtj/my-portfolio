@@ -606,6 +606,117 @@ a:focus-visible,button:focus-visible,input:focus-visible,[tabindex]:focus-visibl
 .stage-action{margin:0 0 18px;font-size:13.5px;line-height:1.9;color:var(--ink-soft);max-width:84ch}
 .stage .deck{margin-top:0}
 @media(max-width:720px){.stage{gap:12px}.stage-rail{flex:0 0 30px}.stage-no{width:30px;height:30px;font-size:11px}.line-head{flex-wrap:wrap}.line-head .layer-count{margin-left:0}}
+/* ===== 单页版：能力矩阵 ===== */
+.onepage{padding-top:24px}
+.op-head{padding:26px 0 4px}
+.op-eyebrow{font-family:var(--mono);font-size:10.5px;letter-spacing:2px;color:var(--ink-meta)}
+.op-title{font-family:var(--serif);font-size:clamp(28px,4.6vw,50px);line-height:1.28;font-weight:700;margin:14px 0 12px}
+.op-title em{color:var(--seal);font-style:normal}
+.op-sub{font-size:14.5px;line-height:2;color:var(--ink-soft);max-width:82ch}
+.op-meta{display:flex;flex-wrap:wrap;gap:9px;margin-top:16px}
+.op-meta span{font-family:var(--mono);font-size:11px;color:var(--ink-meta);background:rgba(27,25,23,.03);border:1px solid var(--rule);border-radius:20px;padding:6px 13px}
+.op-meta b{font-family:var(--serif);font-size:15px;color:var(--ink);margin-right:6px}
+.op-cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.op-proof{display:grid;grid-template-columns:repeat(auto-fit,minmax(152px,1fr));gap:1px;margin:18px 0 0;background:var(--rule);border:1px solid var(--rule);border-radius:12px;overflow:hidden}
+.op-proof .pf{background:var(--paper-2);padding:14px 16px}
+.pf-n{font-family:var(--serif);font-size:clamp(19px,1.9vw,25px);font-weight:700;color:var(--seal);line-height:1.15}
+.pf-l{font-size:12.5px;font-weight:600;margin-top:5px}
+.pf-c{font-family:var(--mono);font-size:10px;color:var(--ink-meta);margin-top:3px;line-height:1.6}
+.op-edge{margin-top:26px;border:1px solid var(--rule-2);border-radius:14px;background:linear-gradient(180deg,rgba(168,53,42,.04),rgba(27,25,23,.012));padding:20px 20px 18px}
+.oe-head{font-family:var(--serif);font-size:17px;font-weight:700;margin-bottom:14px}
+.oe-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:13px}
+.oe-item{background:var(--paper-2);border:1px solid var(--rule);border-radius:11px;padding:15px 16px}
+.oe-no{font-family:var(--mono);font-size:10.5px;letter-spacing:1.6px;color:var(--seal)}
+.oe-t{font-family:var(--serif);font-size:16px;font-weight:700;margin:5px 0 8px}
+.oe-row{display:flex;gap:9px;font-size:12.5px;line-height:1.75;padding:6px 0;border-top:1px dashed var(--rule)}
+.oe-row .oe-l{flex:0 0 54px;font-family:var(--mono);font-size:10px;color:var(--ink-meta);padding-top:2px}
+.oe-row .oe-v{color:var(--ink-soft)}
+.oe-row.hl .oe-l{color:var(--seal)}
+.oe-row.hl .oe-v{color:var(--ink);font-weight:600}
+.oe-proof{margin-top:10px;font-family:var(--mono);font-size:10.5px;color:var(--seal);line-height:1.75}
+.op-cta-note{display:inline-flex;align-items:center;font-family:var(--mono);font-size:10.5px;color:var(--seal);border-left:2px solid var(--seal);padding-left:10px;margin-left:2px}
+.op-kw{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}
+.op-kw span{font-family:var(--mono);font-size:10px;letter-spacing:.6px;color:var(--ink-soft);background:rgba(27,25,23,.035);border:1px solid var(--rule);border-radius:16px;padding:5px 11px}
+.fit-wrap{margin-top:4px}
+.fit-table td:first-child,.fit-table th:first-child{width:34%}
+.fit-table td:nth-child(2),.fit-table th:nth-child(2){width:52%}
+.fit-table td.fit-cap{cursor:pointer;color:var(--seal);font-family:var(--mono);font-size:11px;white-space:nowrap;transition:all .25s var(--ease)}
+.fit-table td.fit-cap:hover{background:rgba(168,53,42,.08);letter-spacing:.5px}
+.hero-split{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,.72fr);gap:28px;align-items:center}
+.hs-card{position:relative;overflow:hidden;background:var(--ink);color:#fff;border-radius:15px;padding:20px 20px 18px;box-shadow:0 12px 38px rgba(27,25,23,.24)}
+.hs-card::after{content:'';position:absolute;right:-46px;top:-46px;width:160px;height:160px;border-radius:50%;background:radial-gradient(circle,rgba(168,53,42,.45),rgba(168,53,42,0))}
+.hsc-tag,.hsc-num,.hsc-lab,.hsc-chart,.hsc-foot{position:relative;z-index:1}
+.hsc-tag{font-family:var(--mono);font-size:10px;letter-spacing:1.6px;color:rgba(255,255,255,.62)}
+.hsc-num{font-family:var(--serif);font-size:clamp(42px,5vw,56px);font-weight:700;line-height:1;margin:12px 0 5px}
+.hsc-num em{font-style:normal;font-size:16px;margin-left:5px;color:rgba(255,255,255,.7)}
+.hsc-lab{font-size:12px;color:rgba(255,255,255,.74)}
+.hsc-chart{display:flex;align-items:flex-end;gap:11px;height:104px;margin:18px 0 26px;padding-top:15px;border-top:1px solid rgba(255,255,255,.15)}
+.hc-bar{flex:1;height:var(--h);border-radius:5px 5px 0 0;background:linear-gradient(180deg,rgba(168,53,42,.95),rgba(168,53,42,.38));position:relative}
+.hc-bar i{position:absolute;top:-17px;left:0;right:0;text-align:center;font-style:normal;font-family:var(--mono);font-size:10.5px;color:#fff;font-weight:700}
+.hc-bar b{position:absolute;bottom:-18px;left:0;right:0;text-align:center;font-weight:400;font-family:var(--mono);font-size:9.5px;color:rgba(255,255,255,.6)}
+.hsc-foot{font-family:var(--mono);font-size:10.5px;color:rgba(255,255,255,.7);line-height:1.7}
+.hsc-foot b{color:#e08a7d;font-size:13px}
+@media(max-width:900px){.hero-split{grid-template-columns:1fr;gap:20px}}
+.oe-thumbs{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:13px}
+.oe-thumbs .ot{margin:0;cursor:zoom-in;background:var(--paper-2);border:1px solid var(--rule);border-radius:10px;padding:8px;transition:all .3s var(--ease)}
+.oe-thumbs .ot:hover{border-color:var(--seal);box-shadow:var(--shadow-2);transform:translateY(-2px)}
+.oe-thumbs img{width:100%;height:118px;object-fit:cover;object-position:top left;display:block;border-radius:6px;border:1px solid var(--rule)}
+.oe-thumbs .ot.wide{grid-column:span 2}
+.oe-thumbs .ot.wide img{height:152px;object-position:top left}
+@media(max-width:700px){.oe-thumbs .ot.wide{grid-column:span 1}}
+.oe-thumbs figcaption{font-family:var(--mono);font-size:10px;color:var(--ink-meta);margin-top:7px;line-height:1.6}
+.oe-vs{font-family:var(--mono);font-size:11px;letter-spacing:1px;color:var(--seal);padding:0 6px}
+.oe-body{display:grid;grid-template-columns:1fr;gap:16px;align-items:start}
+.cmp-table{width:100%;border-collapse:separate;border-spacing:0;background:var(--paper-2);border:1px solid var(--rule);border-radius:10px;overflow:hidden;font-size:12.5px}
+.cmp-table th{font-family:var(--mono);font-size:10px;letter-spacing:1.2px;color:var(--ink-meta);text-align:left;padding:9px 12px;border-bottom:1px solid var(--rule);font-weight:600;background:rgba(27,25,23,.025)}
+.cmp-table td{padding:9px 12px;border-bottom:1px solid var(--rule);line-height:1.75;color:var(--ink-soft);vertical-align:top}
+.cmp-table tbody tr:last-child td{border-bottom:none}
+.cmp-table td:first-child{font-family:var(--mono);font-size:10.5px;color:var(--ink-meta);white-space:nowrap}
+.cmp-table td.mine{color:var(--ink);font-weight:600;background:rgba(168,53,42,.032);border-left:2px solid var(--seal)}
+.op-fig{margin:0;background:var(--paper-2);border:1px solid var(--rule);border-radius:10px;padding:10px}
+.op-fig img{width:100%;display:block;border-radius:7px;border:1px solid var(--rule);cursor:zoom-in;transition:all .3s var(--ease)}
+.op-fig img:hover{border-color:var(--seal);box-shadow:var(--shadow-2)}
+.op-fig figcaption{font-family:var(--mono);font-size:10px;color:var(--ink-meta);line-height:1.75;margin-top:8px}
+.op-fig figcaption b{color:var(--seal);letter-spacing:1px}
+@media(max-width:880px){.oe-body{grid-template-columns:1fr}}
+.oe-foot{margin-top:14px;font-size:13px;line-height:1.95;color:var(--ink-soft)}
+@media(max-width:720px){.pf-n{font-size:24px}.op-edge{padding:16px}}
+.op-sec-head{margin:34px 0 14px;padding-top:24px;border-top:1px solid var(--rule-2)}
+.cap-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(272px,1fr));gap:13px}
+.cap-cell{display:block;width:100%;text-align:left;font:inherit;color:inherit;position:relative;border:1px solid var(--rule);border-radius:12px;background:var(--paper-2);padding:17px 18px 15px;cursor:pointer;transition:all .3s var(--ease);border-left:3px solid transparent}
+.cap-cell:hover{transform:translateY(-2px);box-shadow:var(--shadow-2);border-left-color:var(--ink-weak)}
+.cap-cell.on{border-left-color:var(--seal);background:rgba(168,53,42,.03)}
+.cc-no{font-family:var(--mono);font-size:10.5px;letter-spacing:1.6px;color:var(--seal)}
+.cc-title{font-family:var(--serif);font-size:19px;font-weight:700;margin:6px 0 8px}
+.cc-desc{font-size:13px;line-height:1.9;color:var(--ink-soft)}
+.cc-foot{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:12px;font-family:var(--mono);font-size:10.5px;color:var(--ink-meta)}
+.cc-stat{color:var(--seal);font-weight:700}
+.cap-panel{margin-top:18px}
+.cap-panel:empty{display:none}
+.cp-inner{animation:cpIn .35s var(--ease);border:1px solid var(--rule);border-radius:14px;background:rgba(27,25,23,.018);padding:22px}
+@keyframes cpIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.cp-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px}
+.cp-no{font-family:var(--mono);font-size:10.5px;letter-spacing:1.6px;color:var(--seal)}
+.cp-title{font-family:var(--serif);font-size:22px;font-weight:700}
+.cp-close{margin-left:auto;font-family:var(--mono);font-size:10.5px;color:var(--ink-meta);background:none;border:1px solid var(--rule);border-radius:7px;padding:5px 11px;cursor:pointer;transition:all .25s var(--ease)}
+.cp-close:hover{border-color:var(--seal);color:var(--seal)}
+.cp-lead{font-size:14px;line-height:2;color:var(--ink-soft);margin:12px 0 0;max-width:88ch}
+.cp-dec{margin-top:16px;border-left:3px solid var(--seal);background:rgba(168,53,42,.03);border-radius:0 9px 9px 0;padding:12px 14px}
+.cp-dec b{font-family:var(--mono);font-size:10.5px;letter-spacing:1.4px;color:var(--seal)}
+.cp-dec p{font-size:13px;line-height:1.95;color:var(--ink-soft);margin-top:6px}
+.pj-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:13px;margin-top:14px}
+.pj-card{border:1px solid var(--rule);border-radius:11px;background:var(--paper-2);padding:16px 17px;transition:all .3s var(--ease)}
+.pj-card:hover{box-shadow:var(--shadow-2)}
+.pj-title{font-family:var(--serif);font-size:16.5px;font-weight:700}
+.pj-sub{font-family:var(--mono);font-size:10.5px;color:var(--ink-meta);margin:4px 0 8px}
+.pj-desc{font-size:13px;line-height:1.9;color:var(--ink-soft)}
+.pj-star{margin-top:12px;border-left:2px solid var(--seal);padding-left:10px;font-size:12.5px;line-height:1.85;color:var(--ink-soft)}
+.pj-star b{font-family:var(--mono);font-size:10.5px;letter-spacing:1.4px;color:var(--seal)}
+.op-foot{margin:42px 0 34px;padding-top:22px;border-top:1px solid var(--rule-2)}
+.op-contact{display:none;margin-top:14px;max-width:440px}
+.op-contact.show{display:block}
+@media(max-width:720px){.op-title{font-size:30px}.cp-title{font-size:19px}}
+
 </style>
 </head>
 <body>
@@ -614,495 +725,128 @@ a:focus-visible,button:focus-visible,input:focus-visible,[tabindex]:focus-visibl
 
 <nav class="nav">
   <div class="nav-logo">彭天娇<small>· 医学情报 → AI PM</small></div>
-  <div class="nav-tabs" id="navTabs">
-    <button class="active" data-view="home">首页</button>
-    <button data-view="projects">产品矩阵</button>
-    <button data-view="chain">业务链路</button>
-    <button data-view="capability">能力举证</button>
-    <button data-view="review">复盘</button>
-    <button data-view="about">关于</button>
-    <button data-view="contact">联系</button>
-  </div>
-  <button class="nav-cta" onclick="switchView('contact')">联系我 →</button>
+  <div class="nav-tabs" id="navTabs"></div>
+  <button class="nav-cta" onclick="toggleContact()">联系我 →</button>
 </nav>
 
 <main>
-  <!-- ===== 全局检索台 ===== -->
-  <div class="wrap" id="searchBar" style="padding-top:22px">
-    <div class="searchbar" style="max-width:460px">
-      <span class="sb-icon">⌕</span>
-      <input id="searchInput" type="text" placeholder="检索：关键词 / 公司" oninput="applySearch()" aria-label="检索卡片">
-      <button class="sb-clear" id="sbClear" onclick="clearSearch()" aria-label="清空检索">✕</button>
+  <div class="wrap onepage">
+    <header class="op-head">
+      <div class="hero-split">
+        <div class="hs-l">
+          <div class="op-eyebrow">§ PENG TIANJIAO · 医学情报出身 · AI 产品经理 · AI Coding 全栈交付</div>
+          <h1 class="op-title">我做的 AI 产品<br><em>业务每天都在用</em></h1>
+          <p class="op-sub">医生式的证据标准 + 工程式的自己交付：同一份 HR 问卷分析从<b> 3 天 → 2 分钟</b>，一个招聘海报生成器<b> 8 天</b>从 MVP 跑到上线。<br>不是 Demo，是 <b>17 个上线运行、被业务当日常工具在用</b>的产品。</p>
+
+          <div class="op-cta">
+            <button class="btn-line btn-solid" onclick="document.getElementById('capGrid').scrollIntoView({behavior:'smooth',block:'start'})">看 6 项能力 ↓</button>
+            <button class="btn-line btn-sm" onclick="toggleContact()">联系我</button>
+            <span class="op-cta-note">面试可现场演示一次「人机结对 → 需求到上线」的完整过程</span>
+          </div>
+          <div class="op-kw">
+            <span>LLM / 多模态</span><span>Agent 与工作流编排</span><span>RAG · 知识库</span><span>Prompt 工程</span>
+            <span>效果评估 · 幻觉率</span><span>A/B 实验</span><span>Badcase 复盘</span><span>埋点 / 看板</span><span>AI Native 工作流</span>
+          </div>
+        </div>
+        <div class="hs-r">
+          <div class="hs-card">
+            <div class="hsc-tag">真实运行记录 · 金斯瑞任务系统</div>
+            <div class="hsc-num">1189<em>条</em></div>
+            <div class="hsc-lab">累计派单（全量记录，不是试用流水）</div>
+            <div class="hsc-chart">
+              <div class="hc-bar" style="--h:87%"><i>129</i><b>8月</b></div>
+              <div class="hc-bar" style="--h:100%"><i>149</i><b>9月</b></div>
+              <div class="hc-bar" style="--h:52%"><i>78</i><b>10月</b></div>
+            </div>
+            <div class="hsc-foot">竞对招聘分析师单产品 356 条 · 占全部派单 <b>30%</b></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="op-proof">
+        <div class="pf"><div class="pf-n">3 天 → 2 分钟</div><div class="pf-l">HR 问卷分析</div><div class="pf-c">22 家子公司 × 11 部门 × 7 维度</div></div>
+        <div class="pf"><div class="pf-n">6900+</div><div class="pf-l">简历筛选处理量</div><div class="pf-c">23 用户 / 346 次访问</div></div>
+        <div class="pf"><div class="pf-n">17</div><div class="pf-l">自研产品上线</div><div class="pf-c">技能 + 智能体 + Web 应用 + 工作流</div></div>
+        <div class="pf"><div class="pf-n">8 天</div><div class="pf-l">MVP → 上线</div><div class="pf-c">一个人完成需求 / 开发 / 上线</div></div>
+        <div class="pf"><div class="pf-n">10 万+</div><div class="pf-l">Aily AI 点数消耗</div><div class="pf-c">全链路真实调用，不是白嫖额度</div></div>
+      </div>
+
+      <div class="op-edge">
+        <div class="oe-head">同岗位常见产出 <span class="oe-vs">VS</span> 我的产出</div>
+        <div class="oe-body">
+          <table class="cmp-table">
+            <thead><tr><th>维度</th><th>同岗位常见产出</th><th>我的产出</th></tr></thead>
+            <tbody>
+              <tr><td>需求来源</td><td>访谈、工单、二手转述</td><td class="mine">我在招聘业务一线，痛点每周发生在自己身上</td></tr>
+              <tr><td>交付物</td><td>PRD + 原型，等研发排期</td><td class="mine">自己写到上线：海报生成器 8 天 MVP → 上线</td></tr>
+              <tr><td>上线验证</td><td>靠主观反馈判断有没有人用</td><td class="mine">任务系统 1189 条 · 单产品 356 条占 30% · 6900+ 份简历</td></tr>
+              <tr><td>AI 可信度</td><td>模型给结论，无法核查</td><td class="mine">规则 + LLM 双校验、4 色证据分级、结论可溯源</td></tr>
+              <tr><td>覆盖范围</td><td>1-2 个点状工具</td><td class="mine">17 个产品分层复用：洞察 → 获取 → 筛选 → 甄别 → 留存</td></tr>
+              <tr><td>迭代方式</td><td>交付即结束</td><td class="mine">35 版 / 200+ 次迭代；13 个低频应用主动收敛下线</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="oe-thumbs">
+          <figure class="ot wide" onclick="openScreenshot('ev-metrics-overview.png')">
+            <img src="ev-metrics-overview.png" alt="Web 应用真实使用数据看板" loading="lazy">
+            <figcaption>真实数据看板 · 累计 23 用户 / 346 次访问（近 7 天 11 用户，环比 +450%）</figcaption>
+          </figure>
+          <figure class="ot" onclick="openScreenshot('ev-screening-effect.png')">
+            <img src="ev-screening-effect.png" alt="简历筛选工具实际界面" loading="lazy">
+            <figcaption>简历筛选工具 · 实际界面与导出</figcaption>
+          </figure>
+          <figure class="ot" onclick="openScreenshot('ev-poster-effect.png')">
+            <img src="ev-poster-effect.png" alt="海报生成器实际出图" loading="lazy">
+            <figcaption>海报生成器 · 实际出图效果</figcaption>
+          </figure>
+        </div>
+        <div class="oe-foot">上面每一条都能落到具体证据上：一手需求长成 6 个在用产品，AI Coding 让海报生成器 8 天上线，医学情报 + 知识工程让背调沉淀出 18 项核查准则——<b>这三点交叉的地方，才是我能独立把「非标信息 → 结构化 → 可信输出」做成产品的原因</b>。下面每项能力，点开就是支撑它的产品、数据与复盘。</div>
+      </div>
+    </header>
+
+    <div class="op-sec-head">
+      <div class="dec-title">能力矩阵</div>
+      <div class="dec-note">— 点开任一项，看它落在哪些产品上（项目说明、结果数据、复盘都在里面）</div>
     </div>
-    <div class="sb-hint" id="sbHint"></div>
-  </div>
+    <div class="cap-grid" id="capGrid"></div>
+    <div class="cap-panel" id="capPanel"></div>
 
-  <!-- ===== 视图：首页（主张） ===== -->
-  <section class="view active" id="view-home">
-    <div class="wrap">
-      <div class="hero">
-        <div class="hero-eyebrow">§ PENG TIANJIAO · 医学情报出身 · AI 产品经理 · AI Coding 全栈交付</div>
-        <h1 class="hero-title">我把「3 天的活」<br>压成 <em>2 分钟</em></h1>
-        <p class="hero-sub">做产品之前，我的专业是医学情报：习惯先把信息编成结构，再用 AI Coding 把它做成能上线的产品。<br><b>不是做 Demo —— 是被业务当成日常工具持续使用，下面每个数字都有真实运行记录。</b><br>「非标信息 → 结构化 → 可信输出」——这套架构才是可复用的部分。</p>
-
-        <div class="hero-meta">
-          <div class="hot"><div class="n">10 万+</div><div class="l">Aily AI 点数消耗</div></div>
-          <div><div class="n">B + C</div><div class="l">企业侧与用户侧产品</div></div>
-          <div><div class="n">AI Coding</div><div class="l">全栈独立交付</div></div>
-          <div><div class="n">0→1</div><div class="l">到 1→100 全周期</div></div>
-        </div>
-
-        <div class="hero-cta">
-          <button class="btn-line btn-solid" onclick="scrollToEl('results')">先看结果数据 ↓</button>
-          <button class="btn-line btn-sm" onclick="scrollToEl('mix')">为什么是我 ↓</button>
-          <button class="btn-line btn-sm" onclick="scrollToEl('decisions')">3 个关键决策 ↓</button>
-          <button class="btn-line btn-sm" onclick="scrollToEl('growth')">能开辟，也能放大 ↓</button>
-          <button class="btn-line btn-sm" onclick="scrollToEl('transfer')">这套能力不挑领域 ↓</button>
-          <button class="btn-line btn-sm" onclick="switchView('projects')">看产品矩阵 →</button>
-        </div>
-
-        <div class="compress">
-          <div class="cmp-head">同一份 HR 问卷分析 · 改造前后</div>
-          <div class="cmp-row">
-            <span class="cmp-label">改造前</span>
-            <div class="cmp-track"><div class="cmp-bar cmp-before">人工 3 天 / 份，且只能抽样</div></div>
-          </div>
-          <div class="cmp-row">
-            <span class="cmp-label">改造后</span>
-            <div class="cmp-track"><div class="cmp-bar cmp-after"></div></div>
-            <span class="cmp-out">2 分钟</span>
-            <span class="cmp-gain">99%</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- 结果先行：先摆数据，细说在后 -->
-      <div class="results" id="results">
-        <div class="dec-head-row">
-          <div class="dec-title">先说结果</div>
-          <div class="dec-note">— 每条都来自真实运行记录，口径写在数字下面</div>
-        </div>
-        <div class="stats">
-          <div class="stat"><div class="s-no">R-01</div><div class="s-val">22×11×7</div><div class="s-label">分析覆盖规模</div><div class="s-ctx">22 家子公司 × 11 部门 × 7 维度，成为 HR 月度复盘的固定工具</div></div>
-          <div class="stat"><div class="s-no">R-02</div><div class="s-val">80%+</div><div class="s-label">重复答疑削减</div><div class="s-ctx">新人提问即可拿到操作路径，不必再翻文档与群聊</div></div>
-          <div class="stat"><div class="s-no">R-03</div><div class="s-val">0 假阳性</div><div class="s-label">初筛口径</div><div class="s-ctx">直接命中 / AI 补漏 / 可疑假阳性三档标准，可疑结果不自动丢弃</div></div>
-          <div class="stat"><div class="s-no">R-04</div><div class="s-val">35 版</div><div class="s-label">背调准则沉淀</div><div class="s-ctx">准则版本连续收敛，把幻觉压到业务方敢直接用</div></div>
-          <div class="stat"><div class="s-no">R-05</div><div class="s-val">3.77 万</div><div class="s-label">初筛全链路点数</div><div class="s-ctx">材料去重后只算一次，解析环节不消耗模型调用</div></div>
-          <div class="stat"><div class="s-no">R-06</div><div class="s-val">8 天</div><div class="s-label">MVP 到上线</div><div class="s-ctx">海报生成器：一个人完成需求、开发与上线，不等开发排期</div></div>
-          <div class="stat"><div class="s-no">R-07</div><div class="s-val">1189</div><div class="s-label">任务系统累计派单</div><div class="s-ctx">金斯瑞任务系统全量记录，不是试用流水，是真实调用</div></div>
-          <div class="stat"><div class="s-no">R-08</div><div class="s-val">30%</div><div class="s-label">单产品占派单比</div><div class="s-ctx">竞对招聘分析师 356 条任务（8月129/9月149/10月78），矩阵第一</div></div>
-          <div class="stat"><div class="s-no">R-09</div><div class="s-val">6900+</div><div class="s-label">简历筛选处理量</div><div class="s-ctx">19 名真实用户 / 290 次访问，处理简历 6900+ 份</div></div>
-        </div>
-        <p class="res-foot"><b>数字先摆在这。为什么是我、怎么做出来的，往下看</b>：<button class="res-link" onclick="scrollToEl('mix')">为什么是我</button> → <button class="res-link" onclick="scrollToEl('decisions')">3 个关键决策</button> → <button class="res-link" onclick="scrollToEl('growth')">能开辟也能放大</button> → <button class="res-link" onclick="scrollToEl('transfer')">这套能力不挑领域</button>，逐层展开；每个数字都能在<button class="res-link" onclick="switchView('projects')">产品矩阵</button>里定位到具体那条记录。</p>
-      </div>
-
-      <!-- 个人特色：五条线索长出的能力结构 -->
-      <div class="mix" id="mix">
-        <div class="dec-head-row">
-          <div class="dec-title">为什么是我</div>
-          <div class="dec-note">— 五条线索交叉，长出一种不太常见的能力结构</div>
-        </div>
-        <p class="mix-lead">我的底子决定了我做产品的方式：<b>先定义数据结构与证据标准，再让 AI 去填</b>。研究要口径、知识工程要可追溯、B 端要落地成流程、C 端要能自己交付——五条线索长在同一套方法上。</p>
-        <div class="mix-grid">
-          <div class="mix-item"><div class="mix-idx">M-01 · 医学</div><div class="mix-t">医学情报出身</div><div class="mix-v">985 硕士 · 医学图书情报：先学会给信息编目，再谈用 AI</div></div>
-          <div class="mix-item"><div class="mix-idx">M-02 · 科研</div><div class="mix-t">卫生政策研究</div><div class="mix-v">用内容分析法比对 15 份中央 + 228 份地方长护险政策文本，结论发表在《中国卫生政策研究》</div></div>
-          <div class="mix-item"><div class="mix-idx">M-03 · 知识工程</div><div class="mix-t">答案要能被核查</div><div class="mix-v">糖尿病医学文献 → 结构化知识网络：练的是「让 AI 的答案可被核查」，而不是看起来像答案</div></div>
-          <div class="mix-item"><div class="mix-idx">M-04 · B 端</div><div class="mix-t">链路级交付</div><div class="mix-v">从洞察到留存的五个业务环节，都上线了可验证的交付物，而不是停在方案文档里</div></div>
-          <div class="mix-item"><div class="mix-idx">M-05 · C 端 + AI Coding</div><div class="mix-t">自己交付，所以快</div><div class="mix-v">C 端产品由我定义、也由我交付：桌面端 AI 陪伴助手从形态到上线全流程自己推进，不等开发排期</div></div>
-        </div>
-      </div>
-
-      <!-- 该问我的三件事 -->
-      <div class="decisions" id="decisions">
-        <div class="dec-head-row">
-          <div class="dec-title">3 个关键决策</div>
-          <div class="dec-note">— 当时都不算显而易见，最后都被数据和用户验证</div>
-        </div>
-        <div id="decRoot"></div>
-      </div>
-
-      <!-- 全周期能力：0→1 与 1→100 -->
-      <div class="growth" id="growth">
-        <div class="dec-head-row">
-          <div class="dec-title">能开辟，也能放大</div>
-          <div class="dec-note">— 0→1 靠判断力，1→100 靠体系</div>
-        </div>
-        <div class="gr-grid">
-          <div class="gr-col gr-start">
-            <div class="gr-head"><span class="gr-num">0 → 1</span><span class="gr-sub">把不存在的东西做出来</span></div>
-            <div class="gr-lead">从问题定义、架构设计到第一个可用版本，我独立走完全程——不套模板。</div>
-            <div class="gr-item">
-              <div class="gr-t">独立定义产品形态</div>
-              <div class="gr-v">没走「调个模型就能答」的省事路径，独立设计四层架构（意图识别 → 知识检索 → 逻辑推理 → 可视化），让分析结果可追溯、可解释。</div>
-              <div class="gr-tag">博世 · 智能分析 Chatbot</div>
-            </div>
-            <div class="gr-item">
-              <div class="gr-t">敢推翻已经能上线的方案</div>
-              <div class="gr-v">试用后判断真实痛点不是「问了没答案」，而是「不知道该问什么」。放弃已能上线的问答机器人，从 0 重构为引导式助手。</div>
-              <div class="gr-tag">MOMOAI · 招聘助手</div>
-            </div>
-            <div class="gr-item">
-              <div class="gr-t">不等开发排期，自己交付</div>
-              <div class="gr-v">没有开发资源，也没有排期表：从数据模型到前端、后端都由我自己推进到上线，整条链路第一次打通。</div>
-              <div class="gr-tag">金斯瑞 · 网页应用</div>
-            </div>
-            <div class="gr-item">
-              <div class="gr-t">自己定义需求</div>
-              <div class="gr-v">没有人给需求文档时，自己找场景、定边界：从 0 到 1 定义并实现桌面端 AI 陪伴助手，推翻过 4 个形态版本才找到对的方向。</div>
-              <div class="gr-tag">独立开发线</div>
-            </div>
-          </div>
-          <div class="gr-col gr-scale">
-            <div class="gr-head"><span class="gr-num">1 → 100</span><span class="gr-sub">把它做成业务离不开的东西</span></div>
-            <div class="gr-lead">上线不是终点。持续追踪用户反馈驱动迭代，把产品从「可用」带到「可信」——每一次交付都会继续长大。</div>
-            <div class="gr-item">
-              <div class="gr-t">跟着反馈把口径磨准</div>
-              <div class="gr-v">60+ 轮 Prompt 调优、复盘 50+ 条 badcase：分析对象从单份问卷扩到集团全量，口径统一之后，横向对比才第一次成立。</div>
-              <div class="gr-tag">博世 · 同一产品的持续迭代</div>
-            </div>
-            <div class="gr-item">
-              <div class="gr-t">为准确率主动做过一次减法</div>
-              <div class="gr-v">拿不准的判定不再硬猜：把可疑结果全部交回人工确认，宁可少报也不误报。这条口径后来成了筛选工具的第一原则。</div>
-              <div class="gr-tag">简历智能筛选工具</div>
-            </div>
-            <div class="gr-item">
-              <div class="gr-t">从「一个工具」长成可审计系统</div>
-              <div class="gr-v">持续沉淀出 <b>18 项核查准则</b> + 6 阶段自适应工作流 + 4 色证据分级；报告里每条结论都标了出处，HR 可以直接转发给面试官。</div>
-              <div class="gr-tag">背调与风险识别</div>
-            </div>
-            <div class="gr-item">
-              <div class="gr-t">从单点交付做成复用体系</div>
-              <div class="gr-v">智能体、Skill、网页应用三层互相编排调用：上一个项目沉淀下来的方法，下一个项目直接复用——能力从「一个项目」变成「一笔持续在跑的资产」。</div>
-              <div class="gr-tag">企业级智能体矩阵</div>
-            </div>
-          </div>
-        </div>
-        <p class="gr-foot">0→1 回答「<b>做什么、为什么做</b>」，1→100 回答「<b>怎么让它一直活下去</b>」。两段我都完整走过，留下的不是形容词，而是一笔可查的账：<b>点数消耗、迭代记录、准则版本</b>，每一项都能翻回原始证据。</p>
-      </div>
-
-      <!-- 能力可迁移：HR 是验证场，不是能力边界 -->
-      <div class="transfer" id="transfer">
-        <div class="dec-head-row">
-          <div class="dec-title">这套能力不挑领域</div>
-          <div class="dec-note">— HR 只是第一个跑通的验证场，方法本身与行业无关</div>
-        </div>
-        <p class="tf-lead">我做的不是「HR 系统」，而是一套 B 端 AI 产品的通用方法。<b>下面每一条都跑通过、有使用记录</b>，解决的却是跨行业共通的三个问题：非标数据怎么结构化、高准确率场景怎么约束大模型、批量处理的成本怎么压下来。</p>
-        <div class="tf-grid">
-          <div class="tf-item">
-            <div class="tf-from">在招聘域做的</div>
-            <div class="tf-from-v">数千份非标简历 → 可比对、可搜索的结构化人才库</div>
-            <div class="tf-arrow">↓ 抽象出来是</div>
-            <div class="tf-core">非标文档，转成结构化数据</div>
-            <div class="tf-to">可复刻到</div>
-            <div class="tf-chips"><span>合同</span><span>工单</span><span>病历</span><span>票据</span><span>客服记录</span></div>
-          </div>
-          <div class="tf-item">
-            <div class="tf-from">在背调域做的</div>
-            <div class="tf-from-v">规则引擎 + LLM 双校验：规则先判、模型补漏，把幻觉约束在可复核范围内</div>
-            <div class="tf-arrow">↓ 抽象出来是</div>
-            <div class="tf-core">高准确率场景，给大模型设边界</div>
-            <div class="tf-to">可复刻到</div>
-            <div class="tf-chips"><span>风控</span><span>合规审核</span><span>保险理赔</span><span>资质核验</span></div>
-          </div>
-          <div class="tf-item">
-            <div class="tf-from">在情报域做的</div>
-            <div class="tf-from-v">多平台采集 + 五层战略研判，每条推断强制附带证据链</div>
-            <div class="tf-arrow">↓ 抽象出来是</div>
-            <div class="tf-core">多源碎片信号，转成可决策的情报</div>
-            <div class="tf-to">可复刻到</div>
-            <div class="tf-chips"><span>市场分析</span><span>舆情监控</span><span>投资尽调</span><span>供应链预警</span></div>
-          </div>
-          <div class="tf-item">
-            <div class="tf-from">在初筛域做的</div>
-            <div class="tf-from-v">浏览器本地解析 + 内容指纹复用，把 AI 调用压到只剩「补漏」环节——成本从按份计费变成按需计费</div>
-            <div class="tf-arrow">↓ 抽象出来是</div>
-            <div class="tf-core">成本敏感场景的批量处理与结果复用</div>
-            <div class="tf-to">可复刻到</div>
-            <div class="tf-chips"><span>海量文档处理</span><span>数据清洗</span><span>本地化 / 离线合规</span></div>
-          </div>
-          <div class="tf-item">
-            <div class="tf-from">在助手域做的</div>
-            <div class="tf-from-v">MOMOAI 引导式助手，把 5 类非标操作流程做成对话式导航</div>
-            <div class="tf-arrow">↓ 抽象出来是</div>
-            <div class="tf-core">复杂流程，变成人人可用的引导式交互</div>
-            <div class="tf-to">可复刻到</div>
-            <div class="tf-chips"><span>客服</span><span>售后</span><span>新人培训</span><span>企业内部工具</span></div>
-          </div>
-          <div class="tf-item">
-            <div class="tf-from">在调度域做的</div>
-            <div class="tf-from-v">会议调度 Agent：自然语言驱动跨系统任务路由与自动执行</div>
-            <div class="tf-arrow">↓ 抽象出来是</div>
-            <div class="tf-core">自然语言，直接驱动系统动作</div>
-            <div class="tf-to">可复刻到</div>
-            <div class="tf-chips"><span>日程</span><span>审批流</span><span>跨系统操作</span><span>RPA 替代</span></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 观点 -->
-      <div class="manifesto">
-        <div class="mani-text">不做只会聊天的 AI。<br>编目是我的老本行：把散落的证据整理成可检索、<span>可回溯</span>的结构，<br>再把结构做成业务每天真的在用的东西。<span class="mani-sub">同一套方法换了三个战场：读文献时用，做产品时用，写代码时也用。</span></div>
-        <div class="mani-sign">PENG TIANJIAO · 2026</div>
-      </div>
+    <div class="op-sec-head">
+      <div class="dec-title">岗位要求对照</div>
+      <div class="dec-note">— 头部互联网公司 AI 产品经理 JD 的共性要求，逐条给出我的证据（点右侧能力编号可展开）</div>
     </div>
-  </section>
-
-  <!-- ===== 视图：产品矩阵（能力全盘） ===== -->
-  <section class="view" id="view-projects">
-    <div class="wrap">
-      <!-- 区块 A：能力全盘（矩阵） -->
-      <div class="view-head">
-        <div class="vh-row">
-          <div>
-            <div class="vh-tag">索书区 A · Product Matrix</div>
-            <h1 class="vh-title">企业级 AI <em>产品矩阵</em></h1>
-          </div>
-        </div>
-        <p class="vh-desc">不是单个项目，而是一套可复用、可编排的智能体体系。<b>这里几乎没有「交付即结束」的产物</b>：每一项上线后都还在被迭代、被复用，也还在产生新的运行记录；矩阵里的每项能力，都能在「业务链路」页里找到它服务的业务环节。</p>
-        <button class="link-chip" style="margin-top:16px" onclick="switchView('chain')">看完整业务链路 →</button>
-      </div>
-      <div class="stats">
-        <div class="stat"><div class="s-no">A-001</div><div class="s-val">12</div><div class="s-label">企业级智能体</div><div class="s-ctx">全部上线运行</div></div>
-        <div class="stat"><div class="s-no">A-002</div><div class="s-val">7</div><div class="s-label">可复用 Skill</div><div class="s-ctx">被智能体编排调用</div></div>
-        <div class="stat"><div class="s-no">A-003</div><div class="s-val">2</div><div class="s-label">网页 APP</div><div class="s-ctx">业务直接可用</div></div>
-        <div class="stat"><div class="s-no">A-004</div><div class="s-val">200+</div><div class="s-label">单产品累计迭代</div><div class="s-ctx">上线后持续维护</div></div>
-        <div class="stat"><div class="s-no">A-005</div><div class="s-val">V9.7.0</div><div class="s-label">最高演进版本</div><div class="s-ctx">从 V1 单点分析滚到多对象</div></div>
-      </div>
-      <div class="mapwrap">
-        <div class="map-head">
-          <div class="mh-t">企业级 AI 产品能力全景图<span>PRODUCT MATRIX · 4 LAYERS</span></div>
-          <div class="mh-r">自上而下：应用 → 编排 → 复用 → 承载</div>
-        </div>
-        <div class="map-body">
-          <div class="map-row" data-c="app">
-            <div class="map-key"><span class="mk-bar"></span><span class="mk-name">应用层<span class="mk-en">APPLICATION · 2</span></span></div>
-            <div class="map-items">
-              <span class="map-chip">简历智能筛选工具</span>
-              <span class="map-chip">招聘海报生成器</span>
-              <span class="map-note">网页应用 · 业务直接可用（本地解析 / 内容指纹 / 全栈交付）</span>
-            </div>
-          </div>
-          <div class="map-row" data-c="agent">
-            <div class="map-key"><span class="mk-bar"></span><span class="mk-name">智能体层<span class="mk-en">AGENT · 12</span></span></div>
-            <div class="map-items">
-              <span class="map-chip">MOMOAI 招聘助手</span>
-              <span class="map-chip">满意度分析 Chatbot</span>
-              <span class="map-chip">智能会议调度员</span>
-              <span class="map-chip">…</span>
-              <span class="map-note">面向具体业务环节的智能体，编排下面的 Skill 完成任务</span>
-            </div>
-          </div>
-          <div class="map-row" data-c="skill">
-            <div class="map-key"><span class="mk-bar"></span><span class="mk-name">Skill 层<span class="mk-en">SKILL · 7</span></span></div>
-            <div class="map-items">
-              <span class="map-chip">竞对招聘分析师</span>
-              <span class="map-chip">同业人才调研专员</span>
-              <span class="map-chip">前沿资讯推送专员</span>
-              <span class="map-chip">简历背景深度核查专员</span>
-              <span class="map-chip">简历信息挖掘专员</span>
-              <span class="map-chip">行业术语详解专员</span>
-              <span class="map-note">可复用能力单元，被不同智能体跨域调用</span>
-            </div>
-          </div>
-          <div class="map-row" data-c="platform">
-            <div class="map-key"><span class="mk-bar"></span><span class="mk-name">平台层<span class="mk-en">PLATFORM · 1</span></span></div>
-            <div class="map-items">
-              <span class="map-chip">企业 AI 产品平台</span>
-              <span class="map-chip">发布 / 调用 / 使用记录</span>
-              <span class="map-note">统一运行与观测入口，承载智能体与网页应用的调用记录</span>
-            </div>
-          </div>
-        </div>
-        <div class="map-foot">平台层 → 智能体层 → Skill 层 → 应用层 · 12 个智能体 / 7 个 Skill / 2 个网页应用全部上线运行（矩阵按可具名、可追溯的条目收录，并非逐条穷举）</div>
-      </div>
-
-      <!-- 按业务职能的另一种切法：三条产品线 -->
-      <div class="secblk">
-        <div class="dec-head-row">
-          <div class="dec-title">三条产品线 · 17 个自研产品</div>
-          <div class="dec-note">— 上面按技术分层看，这里按业务职能看：每条线端到端覆盖一个职能域</div>
-        </div>
-        <div class="pl-grid">
-          <div class="pl-item">
-            <div class="pl-head"><span class="pl-n">10</span><span class="pl-name">招聘效能线</span></div>
-            <div class="pl-desc">筛选 → 核查 → 调研 → 情报 → 流程引导，招聘主链路全环节提效。</div>
-            <div class="pl-chips"><span>简历背景深度核查</span><span>竞对招聘分析师</span><span>简历筛选工具</span><span>招聘流程引导AI</span><span>同业人才调研</span></div>
-          </div>
-          <div class="pl-item">
-            <div class="pl-head"><span class="pl-n">04</span><span class="pl-name">知识服务线</span></div>
-            <div class="pl-desc">术语、资讯、翻译等知识供给：把专业信息变成人人读得懂、拿得到的形式。</div>
-            <div class="pl-chips"><span>行业术语译解</span><span>前沿资讯推送</span><span>中英翻译</span><span>简历信息挖掘</span></div>
-          </div>
-          <div class="pl-item">
-            <div class="pl-head"><span class="pl-n">03</span><span class="pl-name">协作效率线</span></div>
-            <div class="pl-desc">会议、出图、日常事务提效：把重复琐碎的手工环节换成自动化。</div>
-            <div class="pl-chips"><span>智能会议调度员</span><span>招聘海报生成器</span><span>momo 酒店预订与背调</span></div>
-          </div>
-        </div>
-        <p class="secblk-lead" style="margin-top:16px">目前使用最多的两个是：<b>竞对招聘分析师</b> 356 条任务、占全部派单 30%（8月129 / 9月149 / 10月78，自动产日报周报）；<b>简历筛选助手</b> 19 用户 / 290 访问 / 6900+ 份简历。</p>
-        <div class="src-note">数据来源：官方使用统计看板（2026-10-16）、任务系统全量 1189 条、技能市场安装统计（背调 / 术语技能安装量 37 / 36，技能线前二）。</div>
-        <div class="src-note" style="margin-top:8px">说明：下方每个产品的执行流程均以文字版呈现；完整流程图原件与技术设计细节，将在面试现场展示。</div>
-      </div>
-
-      <div class="filters" id="matrixFilters"></div>
-      <div id="matrixRoot"></div>
+    <div class="fit-wrap">
+      <table class="cmp-table fit-table">
+        <thead><tr><th>岗位共性要求</th><th>我的证据</th><th>能力</th></tr></thead>
+        <tbody>
+          <tr><td>理解 LLM / Agent / RAG 能力边界，判断什么该用 AI 做</td><td class="mine">17 个产品覆盖 Agent / Skill / RAG / 工作流；竞对分析做五层研判 + 公平性三对齐</td><td class="fit-cap" onclick="openCap('cap-ai')">C-03 →</td></tr>
+          <tr><td>0→1 独立构建、Builder 心态（不只写 PRD）</td><td class="mine">招聘海报生成器 8 天从 MVP 到上线，需求 / 开发 / 上线一人闭环</td><td class="fit-cap" onclick="openCap('cap-code')">C-04 →</td></tr>
+          <tr><td>效果评估与指标体系（完成率、准确率、幻觉率、满意度）</td><td class="mine">4 色证据分级 + 18 项核查准则，初筛 0 假阳性，每条结论可溯源</td><td class="fit-cap" onclick="openCap('cap-trust')">C-05 →</td></tr>
+          <tr><td>数据分析与 A/B 实验驱动增长</td><td class="mine">任务系统 1189 条全量、单产品 356 条占 30%、Web 23 用户 / 346 访问；掌握 ab-test-setup 方法论</td><td class="fit-cap" onclick="openCap('cap-data')">C-02 →</td></tr>
+          <tr><td>深入业务工作流，抽象可复用的 Agent 能力</td><td class="mine">6 个一线痛点 → 6 个在用产品；术语 / 背调技能安装量 37 / 36，跨域复用</td><td class="fit-cap" onclick="openCap('cap-insight')">C-01 →</td></tr>
+          <tr><td>AI 原生工作流 / 人机结对（面试需展示案例）</td><td class="mine">调研、文档、原型、数据分析、测试全环节 AI 结对；可现场演示从需求到上线全过程</td><td class="fit-cap" onclick="openCap('cap-code')">C-04 →</td></tr>
+          <tr><td>线上监控、Badcase 复盘与灰度迭代闭环</td><td class="mine">35 版 / 200+ 次迭代；Badcase 按检索层 / 意图层 / 输出层分类定位后再改</td><td class="fit-cap" onclick="openCap('cap-iterate')">C-06 →</td></tr>
+          <tr><td>跨团队协同、项目管理与合规风控</td><td class="mine">独立对接业务方与算法 / 工程；海报模板 RBAC 鉴权、敏感信息局部遮盖</td><td class="fit-cap" onclick="openCap('cap-insight')">C-01 →</td></tr>
+        </tbody>
+      </table>
+      <div class="src-note" style="margin-top:10px">口径说明：上表按字节跳动、百度、腾讯、快手、美团公开招聘页面的 AI 产品经理岗位描述归纳高频共性要求，非逐字引用；每条右侧对应我在该要求上的证据。</div>
     </div>
-  </section>
 
-  <!-- ===== 视图：业务链路（项目卡片集） ===== -->
-  <section class="view" id="view-chain">
-    <div class="wrap">
-      <div class="view-head">
-        <div class="vh-row">
-          <div>
-            <div class="vh-tag">索书区 B · Business Chain</div>
-            <h1 class="vh-title">业务<em>链路</em></h1>
-          </div>
-        </div>
-        <p class="vh-desc">主线是一条完整的 <b>B 端业务链路</b>（洞察 → 获取 → 筛选 → 甄别 → 留存），我用招聘业务作为样本把它整条跑通了。选这个样本，是因为它链路足够长、数据足够非标、对准确率足够苛刻——能在这里立住的方法，换到别的业务域同样立得住。另附独立开发与学术研究两条个人线。每张卡都保留了完整迭代日志：从 V1 的不足到当前版本，每次改动都写着当时发现的问题。<span id="readProgress" style="color:var(--seal);font-weight:600"></span></p>
-        <button class="link-chip" style="margin-top:16px" onclick="switchView('projects')">← 回到产品矩阵</button>
+    <div class="op-foot">
+      <button class="link-chip" onclick="toggleContact()">联系我 ✉</button>
+      <div class="op-contact" id="opContact">
+        <a href="mailto:1766647040@qq.com" class="contact-item" data-copy="1766647040@qq.com" onclick="copyContact(event,this)">
+          <span class="ci-icon">📧</span><span>1766647040@qq.com</span><span class="ci-copy">点击复制</span>
+        </a>
+        <a href="tel:15200320041" class="contact-item" data-copy="15200320041" onclick="copyContact(event,this)">
+          <span class="ci-icon">📱</span><span>15200320041</span><span class="ci-copy">点击复制</span>
+        </a>
       </div>
-
-      <!-- 为什么做：先摆痛点，再看链路 -->
-      <div class="secblk">
-        <div class="dec-head-row">
-          <div class="dec-title">为什么做：招聘一线的 6 个高频痛点</div>
-          <div class="dec-note">— 每个产品都对应一个痛点，不是「为做而做」的工具堆叠</div>
-        </div>
-        <p class="secblk-lead">这 6 个痛点都是<b>我在招聘组亲身经历、反复出现、有明确成本</b>的：不是二手需求转述，而是每天自己在做的事。下面每个痛点，都能在这条链路里找到对应的交付物。</p>
-        <div class="pain-grid">
-          <div class="pain-item"><div class="pain-no">P-01</div><div class="pain-t">筛简历累</div><div class="pain-v">批量简历靠人工逐份读，关键词匹配、条件过滤重复劳动大，容易看漏看错。</div><div class="pain-to">→ 简历智能筛选工具 / 简历筛选分析</div></div>
-          <div class="pain-item"><div class="pain-no">P-02</div><div class="pain-t">约面试难</div><div class="pain-v">多面试官 + 候选人忙闲协调耗时，业务面试还常忘记把简历提前发给面试官。</div><div class="pain-to">→ 智能会议调度员</div></div>
-          <div class="pain-item"><div class="pain-no">P-03</div><div class="pain-t">背调慢</div><div class="pain-v">学历、论文、任职、控股、竞业信息分散在多处，人工多源查询又慢又容易查错。</div><div class="pain-to">→ 简历背景深度核查专员</div></div>
-          <div class="pain-item"><div class="pain-no">P-04</div><div class="pain-t">竞对看不清</div><div class="pain-v">竞对在招什么人、薪资如何、组织怎么变动，靠人工逐平台翻看不可持续。</div><div class="pain-to">→ 竞对招聘分析师</div></div>
-          <div class="pain-item"><div class="pain-no">P-05</div><div class="pain-t">人才找不到</div><div class="pain-v">特定技术方向的核心人才分布不明，缺一张系统化的人才地图支撑招聘决策。</div><div class="pain-to">→ 同业人才调研专员</div></div>
-          <div class="pain-item"><div class="pain-no">P-06</div><div class="pain-t">事务重复</div><div class="pain-v">招聘海报、流程引导、酒店预订等事务性工作重复琐碎，占用手工时间。</div><div class="pain-to">→ 招聘海报生成器 / 招聘流程引导AI / momo</div></div>
-        </div>
+      <div class="foot" style="margin-top:20px">
+        <span>彭天娇 · PENG TIANJIAO</span>
+        <span>每条数据均可展开至原始证据</span>
+        <span>截图为脱敏处理版 · 涉企业内部数据的字段已局部遮盖</span>
       </div>
-
-      <div class="filters" id="projFilters"></div>
-      <div id="projRoot"></div>
-    </div>
-  </section>
-
-  <!-- ===== 视图：能力举证 ===== -->
-  <section class="view" id="view-capability">
-    <div class="wrap">
-      <div class="view-head">
-        <div class="vh-row">
-          <div>
-            <div class="vh-tag">索书区 C · Capability</div>
-            <h1 class="vh-title">能力<em>举证</em></h1>
-          </div>
-        </div>
-        <p class="vh-desc">每项能力都对应一个真实落地场景与可量化结果，而非技能标签罗列。<b>从学术研究的证据标准，到企业级编排，再到用 AI Coding 独立跑到上线——没有一条是标签，每条都落在具体产品上。</b></p>
-      </div>
-      <div class="deck" id="capRoot"></div>
-    </div>
-  </section>
-
-  <!-- ===== 视图：复盘与下一步 ===== -->
-  <section class="view" id="view-review">
-    <div class="wrap">
-      <div class="view-head">
-        <div class="vh-row">
-          <div>
-            <div class="vh-tag">索书区 C·2 · Retrospective</div>
-            <h1 class="vh-title">复盘与<em>下一步</em></h1>
-          </div>
-        </div>
-        <p class="vh-desc">做完 17 个产品之后，真正值钱的是<b>踩过的坑与做过的取舍</b>。这一页按 STAR 逻辑复盘 5 个代表性项目（遇到了什么、怎么解的、如果重做会怎么改），再用 Keep / Improve / Start / Stop 四层框架说明下一步把精力放在哪——判断依据全部来自真实运行数据，不是感觉。</p>
-      </div>
-
-      <!-- STAR 复盘 -->
-      <div class="secblk">
-        <div class="dec-head-row">
-          <div class="dec-title">STAR 复盘 · 5 个代表性项目</div>
-          <div class="dec-note">— 每条都附「如果重做 / 可避免的坑」，点开看全过程</div>
-        </div>
-        <p class="secblk-lead">复盘不是为了讲故事，而是把<b>一次性的解法变成可复用的方法论</b>：五重核对、公平性三对齐、文档-实现对齐三件套……这些后来都写进了后续产品的硬约束里。</p>
-        <div id="starRoot"></div>
-      </div>
-
-      <!-- 四层行动框架 -->
-      <div class="secblk">
-        <div class="dec-head-row">
-          <div class="dec-title">Keep / Improve / Start / Stop</div>
-          <div class="dec-note">— 基于任务量 / 安装量 / 用户数的四层行动框架</div>
-        </div>
-        <div class="kiss-grid" id="kissRoot"></div>
-        <p class="gr-foot">做产品不是做得越多越好：<b>Stop 与 Keep 同样重要</b>。13 个使用频次较低的应用收敛下线、低频智能体并入主入口、长尾产品不再追加功能——把维护精力全部压回到已被数据证明的两个场景上。</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== 视图：关于 ===== -->
-  <section class="view" id="view-about">
-    <div class="wrap">
-      <div class="view-head">
-        <div class="vh-row">
-          <div>
-            <div class="vh-tag">索书区 D · About</div>
-            <h1 class="vh-title">关于<em>我</em></h1>
-          </div>
-        </div>
-      </div>
-      <div class="about-grid">
-        <div>
-          <p class="prose">211 本 + 985 硕士，<b>医学图书情报</b>（信息检索 / 知识图谱）出身——第一份手艺是给信息编目：把散落的文献、政策、问卷，整理成可检索、可复核的结构。<b>这套训练决定了我做 AI 产品的方式：先定证据标准，再谈结论。</b></p>
-          <p class="prose" style="margin-top:16px"><b>博世</b>（全球头部汽车技术企业）AI 产品实习：独立负责满意度分析 Chatbot 从需求定义到落地上线的全流程，把原本靠人工抽样的问卷分析换成全量结构化输出。<b>金斯瑞生物科技</b>（生物医药领域头部企业）主导企业级智能体矩阵从 0 到 1，贯通 B 端招聘业务的完整链路；C 端独立定义并实现一款桌面 AI 陪伴助手，意图识别做到 90%+。</p>
-          <p class="prose" style="margin-top:16px"><b>医学训练给我对证据的要求，情报学给我编目的方法，产品让方法长出业务价值，AI Coding 让我不必等开发排期。任何需要「非标信息处理 + 可信 AI 输出」的业务，都可以平移这套架构。</b></p>
-          <div class="stats" style="margin-top:24px">
-            <div class="stat"><div class="s-no">D-001</div><div class="s-val">IF 5.143</div><div class="s-label">一作 C 刊</div><div class="s-ctx">学科排名 3/45</div></div>
-            <div class="stat"><div class="s-no">D-002</div><div class="s-val">0.978</div><div class="s-label">问卷 KMO</div><div class="s-ctx">Cronbach's α &gt; 0.9</div></div>
-            <div class="stat"><div class="s-no">D-003</div><div class="s-val">625 篇</div><div class="s-label">医学文献入库</div><div class="s-ctx">Protege + Neo4j · 50+ 实体</div></div>
-          </div>
-          <p class="prose" style="margin-top:20px;font-size:14px;color:var(--ink-meta)">产品观：先定义「不做什么」，再决定怎么做。我习惯把重复的判断，做成可复用、可回溯的 Agent —— <b>领域会变，这套方法不变</b>。想做的事：站在 AI 产品从 0 到 1 的位置上，把不确定的模型能力变成业务敢直接用的产品，<b>行业不设限</b>。</p>
-        </div>
-        <div class="corgi-card">
-          <img src="avatar.jpg" class="avatar" alt="彭天娇" onerror="this.style.display='none'">
-          <img src="corgi.png" alt="馆员柯基" onclick="corgiPoke(this)" onerror="this.style.display='none'">
-          <div class="corgi-tip" id="corgiTip">馆员柯基 · 点一下</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== 视图：联系 ===== -->
-  <section class="view" id="view-contact">
-    <div class="wrap">
-      <div class="view-head">
-        <div class="vh-row">
-          <div>
-            <div class="vh-tag">索书区 E · Connect</div>
-            <h1 class="vh-title">联系<em>我</em></h1>
-          </div>
-        </div>
-        <p class="vh-desc">点击邮箱 / 电话即可复制。</p>
-      </div>
-      <div class="contact-grid">
-        <div class="contact-info">
-          <a href="mailto:1766647040@qq.com" class="contact-item" data-copy="1766647040@qq.com" onclick="copyContact(event,this)">
-            <span class="ci-icon">📧</span><span>1766647040@qq.com</span><span class="ci-copy">点击复制</span>
-          </a>
-          <a href="tel:15200320041" class="contact-item" data-copy="15200320041" onclick="copyContact(event,this)">
-            <span class="ci-icon">📱</span><span>15200320041</span><span class="ci-copy">点击复制</span>
-          </a>
-          <div class="contact-item" style="cursor:default">
-            <span class="ci-icon">💡</span>
-            <span style="font-size:13px;color:var(--ink-meta)">产品矩阵中的任一能力，都可以展开说明与证据链</span>
-          </div>
-        </div>
-        <div><div class="signet"><div class="sg-mark">彭</div><div class="sg-sub">PTJ · 2026</div></div></div>
-      </div>
-    </div>
-  </section>
-
-  <div class="wrap">
-    <div class="foot">
-      <span>彭天娇 · PENG TIANJIAO</span>
-      <span>本页每条数据均可展开至原始证据</span>
-      <span>截图为脱敏处理版 · 涉企业内部数据的字段已局部遮盖</span>
     </div>
   </div>
 </main>
@@ -2150,12 +1894,12 @@ const starData = [
   },
   {
     q: '简历筛选分析 · 从安装量到真实使用量',
-    tag: '招聘效能线 · 19 用户 / 290 访问 / 6926 份简历',
+    tag: '招聘效能线 · 23 用户 / 346 访问 / 6926 份简历',
     steps: [
       ['S · 情境','批量简历初筛靠人工逐份读，关键词匹配、字段提取、条件过滤重复劳动大。'],
       ['T · 问题','① argparse 把「-实习」这类负向关键词当 flag；② skill 目录被强制 0777 权限导致 validation 拒绝；③ attachment 字段不能进 CellValue 批量写入，必须逐条上传。'],
       ['A · 行动','选型：Python CLI + 飞书多维表格 API。解法：_argv_fix.py 预扫 argv 用 sentinel 替换负向关键词；stage 到 /tmp 再打包；记录创建后逐条 +record-upload-attachment 上传简历附件。'],
-      ['R · 结果','CLI v1.1.1 输出 16 列多维表格（含简历附件列）+ 复核专家二次审核（6 类匹配 / 8 硬排除 / 4 绝对反例）；助手累计 19 用户 / 290 访问 / 5.28hr / 6926 份简历文件。'],
+      ['R · 结果','CLI v1.1.1 输出 16 列多维表格（含简历附件列）+ 复核专家二次审核（6 类匹配 / 8 硬排除 / 4 绝对反例）；助手累计 23 用户 / 346 访问 / 5.28hr / 6926 份简历文件。'],
       ['如果重做','改进：首程激活引导（73% 访客未上传）+ 事件级埋点。坑：负向关键词参数必须做 argv 预处理；附件类字段不能混入批量写接口；复核专家的同义扩写禁止跨领域（生物医药 HR ≠ Human Resources）。']
     ]
   }
@@ -2191,7 +1935,7 @@ function toggleStar(i){
 /* ==================== Keep / Improve / Start / Stop ==================== */
 const kissData = [
   { key:'keep', en:'KEEP', cn:'保留', why:'有真实使用、有数据验证，是当前主力', items:[
-    '简历筛选助手（Web）：19 用户 / 290 访问 / 6926 份文件',
+    '简历筛选助手（Web）：23 用户 / 346 访问 / 6926 份文件',
     '竞对招聘分析师：356 条任务占派单 30%，月度持续增长',
     '背调 / 术语技能：SkillHub 安装 37 / 36，传播第一',
     '前沿资讯推送：57 条任务，定时驱动稳定运行',
@@ -2374,6 +2118,123 @@ function corgiPoke(el) {
   el.style.animation = '';
 }
 
+
+/* ==================== 单页版：能力矩阵（点开 → 项目作为内容说明） ==================== */
+const capMatrix = [
+  { id:'cap-insight', no:'C-01', title:'场景洞察与需求定义', dec:0,
+    desc:'深入业务真实工作流，识别高价值、可自动化、可智能化的场景，并把一次性需求抽象成可复用能力。',
+    stat:'6 个一线痛点 → 6 个在用产品',
+    lead:'我判断要不要做一个产品，只看两件事：这件事每周发生几次、能不能被抽象成通用能力。筛简历、约面试、做背调、看竞对、找人才、重复事务——这 6 件事我每周都在做，最后各自长成一个在用产品；其中术语与背调被抽象成 Skill，技能安装量 37 / 36，排在技能线前二。',
+    stats:[['6','高频痛点 → 产品','每个痛点对应一个在用产品'],['1189','任务系统累计派单','真实工作流里跑出来的需求'],['37 / 36','术语 / 背调技能安装量','技能线前二，可被跨域调用']],
+    ids:['m-momo','m-screening','m-meeting','m-poster','m-resume-mining','m-peer'] },
+
+  { id:'cap-data', no:'C-02', title:'数据分析与效果度量',
+    desc:'自己拉数据、建指标、做看板：用数据定位问题、验证价值、决定产品是继续投入还是收敛下线。',
+    stat:'356 条任务 · 占派单 30%',
+    lead:'我能自己把数据拉出来，再让数据说话：任务系统 1189 条全量、SkillHub 安装量、Web 应用 Analytics 看板都是我的判断依据。竞对招聘分析师 356 条任务占全部派单 30%（8月129 / 9月149 / 10月78），简历筛选工具 23 用户 / 346 次访问、处理简历 6900+ 份——哪个该加投入、哪个该收敛下线，不靠感觉。',
+    stats:[['1189','任务系统全量','口径、时间窗、去重规则均可复算'],['356','单产品任务数','8月129 / 9月149 / 10月78'],['23 / 346','Web 应用用户 / 访问','近 7 天 11 用户，环比 +450%']],
+    ids:['m-competitor','m-screening','m-platform'] },
+
+  { id:'cap-ai', no:'C-03', title:'大模型与 Agent 技术判断', dec:1,
+    desc:'理解 LLM / RAG / Agent / 工作流编排的能力与局限，能判断「什么该用 AI 做、什么不该用」，并能和算法、工程直接对话。',
+    stat:'35 版迭代 · 18 项核查准则',
+    lead:'我做的每个 Agent 都带硬约束：任务拆解、工具调用、知识检索、人工确认机制写进流程，而不是让模型自由发挥。背调用规则引擎 + LLM 双校验并做 4 色证据分级；竞对分析强制证据链与反例检查，多公司对比先做平台数 / 时点 / 关键词三对齐；资讯推送用 6 规则去重 + 4 档来源分级，核心事实要求 ≥2 个独立来源。代价是慢一点，收益是业务方敢直接拿去用。',
+    stats:[['18 项','核查准则沉淀','背调 35 版迭代收敛而来'],['≥2 源','核心事实多源验证','单源信息显式标 ⚠️'],['3 对齐','公平性纠察','平台数 / 时点 / 关键词对齐后才出结论']],
+    ids:['m-duedil','m-competitor','m-news','m-term'] },
+
+  { id:'cap-code', no:'C-04', title:'0→1 构建与 AI 原生工作流', dec:2,
+    desc:'Builder 心态：不只写 PRD，AI 原生工作流下自己把产品做到上线，并能量化人机结对的效率提升。',
+    stat:'8 天 MVP → 上线',
+    lead:'需求、开发、上线一个人闭环：招聘海报生成器从 MVP 到上线 8 天；简历筛选工具从浏览器本地解析到飞书多维表格回写全自己写；博世 HR-Dash 用 Python 把 2 天的汇总压到 2 分钟。日常调研、文档、原型、数据分析、测试环节都在用 AI 结对完成——面试可现场演示一次从需求到上线的完整人机结对过程（含线上真实数据）。',
+    stats:[['8 天','MVP → 上线','需求 / 开发 / 上线一个人闭环'],['2min','汇总时长','HR-Dash：人工 2 天 → 2 分钟'],['3.77 万','初筛全链路点数','本地解析 + 内容指纹复用后的成本']],
+    ids:['m-poster','m-screening','m-hrdash','m-talentmirror'] },
+
+  { id:'cap-trust', no:'C-05', title:'AI 可信与体验设计',
+    desc:'建立效果评估与体验兜底机制：引用溯源、置信度、多轮澄清、转人工与反馈闭环，控制幻觉率与合规风险。',
+    stat:'0 假阳性 · 结论可溯源',
+    lead:'AI 会「犯傻」，产品要能兜底：背调报告每条结论带证据等级与来源链接，可直接转发面试官；初筛用三档口径（直接命中 / AI 补漏 / 可疑假阳性）做到 0 假阳性；术语与资讯输出强制溯源标注与来源分级，单源标 ⚠️、医疗建议强制风险提示。判断依据、原文出处、置信度都摊开给业务方看——这是 AI 结论能被直接拿去用的前提。',
+    stats:[['4 档','证据分级','官方验证 / 间接佐证 / 单源待核 / 与简历矛盾'],['0','初筛假阳性','三档口径 + 复核专家二次审核'],['100%','结论可溯源','每条结论带来源与检索路径']],
+    ids:['m-term','m-duedil','m-resume-mining','m-news'] },
+
+  { id:'cap-iterate', no:'C-06', title:'实验驱动与闭环迭代',
+    desc:'搭建线上监控、Badcase 复盘与灰度 / A-B 实验闭环，围绕任务完成率、采纳率、节省工时持续迭代。',
+    stat:'200+ 次迭代 · V1.0 → V9.7.0',
+    lead:'上线不是结束：每个版本只聚焦 1-2 个改动，CHANGELOG 全程可追溯；Badcase 按「检索层 / 意图层 / 输出层」分类定位后再改，不盲目调 Prompt；同时掌握 A/B 实验方法论（ab-test-setup）与增长诊断框架（user-growth-analyzer），能为产品做实验设计与北极星指标设定——把一次性解法变成可复用的方法论。',
+    stats:[['200+','单产品累计迭代','V115 → V128 持续打磨'],['V9.7.0','最高演进版本','从 V1 单点分析滚到多对象'],['1-2 个','每版改动数','小步快改，平均 2-3 周一个版本']],
+    ids:['m-chatbot','m-competitor','m-news','m-screening'] }
+];
+const STAR_KEY = { 'm-meeting':'会议', 'm-duedil':'简历背景', 'm-competitor':'竞对', 'm-news':'资讯', 'm-screening':'简历筛选' };
+let activeCap = null;
+function renderCapGrid(){
+  const g=document.getElementById('capGrid'); if(!g) return;
+  g.innerHTML=capMatrix.map(c=>`<button class="cap-cell" data-cap="${c.id}" onclick="openCap('${c.id}')" aria-expanded="false">
+      <div class="cc-no">${c.no}</div>
+      <div class="cc-title">${c.title}</div>
+      <div class="cc-desc">${c.desc}</div>
+      <div class="cc-foot"><span>${c.ids.length} 个产品佐证</span><span class="cc-stat">${c.stat}</span></div>
+    </button>`).join('');
+}
+function openCap(id){
+  const cap=capMatrix.find(c=>c.id===id); if(!cap) return;
+  if(activeCap===id){ closeCap(); return; }
+  activeCap=id;
+  document.querySelectorAll('.cap-cell').forEach(el=>{
+    const on=el.dataset.cap===id; el.classList.toggle('on',on); el.setAttribute('aria-expanded',on?'true':'false');
+  });
+  renderCapPanel(cap);
+  const p=document.getElementById('capPanel');
+  if(p) setTimeout(()=>p.scrollIntoView({behavior:'smooth',block:'nearest'}),60);
+}
+function closeCap(){
+  activeCap=null;
+  document.querySelectorAll('.cap-cell').forEach(el=>{ el.classList.remove('on'); el.setAttribute('aria-expanded','false'); });
+  const p=document.getElementById('capPanel'); if(p) p.innerHTML='';
+}
+function renderCapPanel(cap){
+  const p=document.getElementById('capPanel'); if(!p) return;
+  const dec=(cap.dec!=null)?decisionData[cap.dec]:null;
+  const decTxt=dec?dec.steps.filter(x=>/我的判断|决定|结果/.test(x[0])).map(x=>x[1]).join(' '):'';
+  p.innerHTML=`<div class="cp-inner">
+      <div class="cp-head"><span class="cp-no">${cap.no}</span><span class="cp-title">${cap.title}</span>
+        <button class="cp-close" onclick="closeCap()">收起 ✕</button></div>
+      <p class="cp-lead">${cap.lead}</p>
+      <div class="stats" style="margin-top:16px">${cap.stats.map((x,i)=>`<div class="stat"><div class="s-no">${cap.no}-${String(i+1).padStart(2,'0')}</div><div class="s-val">${x[0]}</div><div class="s-label">${x[1]}</div><div class="s-ctx">${x[2]}</div></div>`).join('')}</div>
+      ${dec?`<div class="cp-dec"><b>关键决策 · ${dec.tag}</b><p><b>${dec.q}</b><br>${decTxt}</p></div>`:''}
+      <div class="op-sec-head" style="margin:24px 0 0;padding-top:18px">
+        <div class="dec-title" style="font-size:15px">支撑这个能力的产品</div>
+        <div class="dec-note">— ${cap.ids.length} 个在用产品，每条都带真实运行数据</div>
+      </div>
+      <div class="pj-grid">${cap.ids.map(capProjectCard).join('')}</div>
+    </div>`;
+}
+function capProjectCard(id){
+  const m=matrixData.find(x=>x.id===id); if(!m) return '';
+  const star=capStarFor(id);
+  const facts=(m.facts||[]).slice(0,3).map(f=>`<div class="kv-item"><div class="k">${f.k}</div><div class="v">${f.v}</div></div>`).join('');
+  const tags=(m.tags||[]).map(t=>`<span>${t}</span>`).join('');
+  return `<article class="pj-card">
+      <div class="pj-title">${m.title}</div>
+      <div class="pj-sub">${m.sub}</div>
+      <p class="pj-desc">${m.desc}</p>
+      ${facts?`<div class="kv" style="margin-top:12px">${facts}</div>`:''}
+      ${tags?`<div class="tagrow">${tags}</div>`:''}
+      ${star?`<div class="pj-star"><b>复盘</b><br>${star}</div>`:''}
+    </article>`;
+}
+function capStarFor(id){
+  const key=STAR_KEY[id]; if(!key) return '';
+  const d=starData.find(x=>x.q.indexOf(key)!==-1); if(!d) return '';
+  const pick=re=>{ const f=d.steps.find(x=>re.test(x[0])); return f?f[1]:''; };
+  const cut=(t,n)=>t&&t.length>n?t.slice(0,n)+'…':(t||'');
+  const t=cut(pick(/^T ·|任务|问题/),110), a=cut(pick(/^A ·|行动/),130), r=cut(pick(/如果重做/),110);
+  return [t?'问题：'+t:'', a?'解法：'+a:'', r?'如果重做：'+r:''].filter(Boolean).join('<br>');
+}
+function toggleContact(){
+  const c=document.getElementById('opContact'); if(!c) return;
+  c.classList.toggle('show');
+  if(c.classList.contains('show')) setTimeout(()=>c.scrollIntoView({behavior:'smooth',block:'nearest'}),60);
+}
+
 /* ---------- 初始化渲染 ---------- */
 /* ==================== 滚动动效（入场 / 数字渐显 / 进度线） ==================== */
 function initReveal(){
@@ -2424,17 +2285,7 @@ function initScrollProgress(){
   addEventListener('scroll',upd,{passive:true}); addEventListener('resize',upd); upd();
 }
 
-renderMatrixFilters();
-renderMatrix();
-renderProjFilters();
-renderProjects();
-renderSkills();
-renderDecisions();
-renderStars();
-renderKiss();
-applySearch();
-switchView('home');
-updateProgress();
+renderCapGrid();
 initReveal();
 initCountUp();
 initScrollProgress();
