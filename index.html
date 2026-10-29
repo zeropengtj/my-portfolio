@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>彭天娇 · 医学情报出身的 AI 产品经理 | AI Coding 全栈交付作品集</title>
+<title>彭天娇 · AI 产品经理（医学情报出身）| 用 AI Coding 把方案跑到上线</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%234facfe'/><stop offset='100%25' stop-color='%233b82f6'/></linearGradient></defs><rect width='100' height='100' rx='20' fill='url(%23g)'/><text x='50' y='68' text-anchor='middle' font-size='52' font-family='sans-serif' font-weight='bold' fill='white'>P</text></svg>">
-<meta name="description" content="彭天娇 · 医学情报 × AI 产品：12 个企业级智能体 / 7 Skill / 2 网页应用全部上线；一作 C 刊 IF 5.143；用 AI Coding 独立完成全栈交付">
+<meta name="description" content="彭天娇 · 医学情报 × AI 产品：23 次内部 AI 应用交付（金斯瑞 19 + 博世 4）；一作 CSSCI（IF 5.143）。需求、数据模型、界面到部署一个人跑完，代码主要由 AI 产出；性能 / 权限 / 稳定性与研发协同">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -22,9 +22,9 @@
   --paper-2:#faf7f0;
   --paper-3:#ece7db;
   --ink:#1b1917;
-  --ink-soft:rgba(27,25,23,0.72);
-  --ink-meta:rgba(27,25,23,0.46);
-  --ink-weak:rgba(27,25,23,0.18);
+  --ink-soft:rgba(27,25,23,0.84);
+  --ink-meta:rgba(27,25,23,0.66);
+  --ink-weak:rgba(27,25,23,0.42);
   --rule:rgba(27,25,23,0.13);
   --rule-2:rgba(27,25,23,0.22);
   /* 印章与矿物色 */
@@ -79,7 +79,7 @@ body{font-family:var(--sans);font-size:16px;line-height:1.75;color:var(--ink);
 .nav-tabs button.active{color:var(--seal);font-weight:600;background:var(--seal-bg)}
 .nav-tabs button.active::after{content:'';position:absolute;left:14px;right:14px;bottom:1px;height:1.5px;background:var(--seal);animation:navUnderline .4s var(--ease)}
 @keyframes navUnderline{from{transform:scaleX(.35);opacity:0}to{transform:scaleX(1);opacity:1}}
-.nav-cta{font-family:var(--mono);font-size:11px;letter-spacing:1px;color:var(--paper-2);background:var(--ink);border:none;padding:7px 15px;border-radius:8px;cursor:pointer;transition:all .3s var(--ease)}
+.nav-cta{font-family:var(--mono);font-size:12px;letter-spacing:1px;color:var(--paper-2);background:var(--ink);border:none;padding:7px 15px;border-radius:8px;cursor:pointer;transition:all .3s var(--ease)}
 .nav-cta:hover{background:var(--seal);transform:translateY(-1px)}
 
 /* ===== 视图 ===== */
@@ -112,9 +112,9 @@ main{position:relative;z-index:1;padding-bottom:72px}
 .stat{background:var(--paper-2);border:1px solid var(--rule);border-radius:12px;padding:16px 18px;box-shadow:var(--shadow-1);position:relative;transition:all .35s var(--ease)}
 .stat:hover{transform:translateY(-3px);border-color:var(--rule-2);box-shadow:var(--shadow-2)}
 .stat::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--seal);opacity:.85}
-.stat .s-no{font-family:var(--mono);font-size:9px;letter-spacing:1.5px;color:var(--ink-weak)}
+.stat .s-no{font-family:var(--mono);font-size:10.5px;letter-spacing:1.5px;color:var(--ink-weak)}
 .stat .s-val{font-family:var(--serif);font-size:clamp(24px,3.2vw,32px);font-weight:700;line-height:1.15;color:var(--ink)}
-.stat .s-label{font-size:12px;color:var(--ink);font-weight:600;margin-top:2px}
+.stat .s-label{font-size:13.5px;color:var(--ink);font-weight:600;margin-top:2px}
 .stat .s-ctx{font-size:10.5px;color:var(--ink-meta);line-height:1.5}
 
 /* ===== 能力全景图（分层示意） ===== */
@@ -665,7 +665,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,[tabindex]:focus-visibl
 .oe-thumbs .ot.wide img{height:152px;object-position:top left}
 @media(max-width:700px){.oe-thumbs .ot.wide{grid-column:span 1}}
 .oe-thumbs figcaption{font-family:var(--mono);font-size:10px;color:var(--ink-meta);margin-top:7px;line-height:1.6}
-.oe-vs{font-family:var(--mono);font-size:11px;letter-spacing:1px;color:var(--seal);padding:0 6px}
+.oe-vs{font-family:var(--mono);font-size:12px;letter-spacing:1px;color:var(--seal);padding:0 6px}
 .oe-body{display:grid;grid-template-columns:1fr;gap:16px;align-items:start}
 .cmp-table{width:100%;border-collapse:separate;border-spacing:0;background:var(--paper-2);border:1px solid var(--rule);border-radius:10px;overflow:hidden;font-size:12.5px}
 .cmp-table th{font-family:var(--mono);font-size:10px;letter-spacing:1.2px;color:var(--ink-meta);text-align:left;padding:9px 12px;border-bottom:1px solid var(--rule);font-weight:600;background:rgba(27,25,23,.025)}
@@ -717,6 +717,658 @@ a:focus-visible,button:focus-visible,input:focus-visible,[tabindex]:focus-visibl
 .op-contact.show{display:block}
 @media(max-width:720px){.op-title{font-size:30px}.cp-title{font-size:19px}}
 
+/* ===== 内嵌式页面（网页嵌套网页） ===== */
+.ipage{animation:ipIn .32s var(--ease)}
+.ipage.hidden{display:none!important}
+.hidden{display:none}
+@keyframes ipIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.crumb{display:flex;flex-wrap:wrap;align-items:center;gap:7px;font-family:var(--mono);font-size:11px;color:var(--ink-meta);margin:20px 0 4px}
+.crumb a{cursor:pointer;color:var(--ink-soft);transition:color .25s var(--ease)}
+.crumb a:hover{color:var(--seal)}
+.crumb b{color:var(--ink)}
+.pg-head{display:flex;align-items:baseline;gap:12px;margin:10px 0 6px}
+.pg-no{font-family:var(--mono);font-size:11px;letter-spacing:1.6px;color:var(--seal)}
+.pg-title{font-family:var(--serif);font-size:clamp(22px,3vw,30px);font-weight:700}
+.pg-lead{font-size:14px;line-height:2;color:var(--ink-soft);max-width:90ch;margin:8px 0 0}
+.pg-back{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 40px}
+.pj-card{cursor:pointer}
+.pj-go{margin-top:12px;font-family:var(--mono);font-size:10.5px;color:var(--seal)}
+.pj-card:hover .pj-go{letter-spacing:.5px}
+.entry-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin:20px 0 10px}
+.entry-card{text-align:left;font:inherit;color:inherit;cursor:pointer;background:var(--paper-2);border:1px solid var(--rule);border-left:3px solid transparent;border-radius:11px;padding:15px 16px;transition:all .3s var(--ease)}
+.entry-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-2);border-left-color:var(--seal)}
+.ec-t{font-family:var(--serif);font-size:16px;font-weight:700}
+.ec-d{font-size:12.5px;color:var(--ink-soft);margin-top:5px;line-height:1.8}
+.ec-go{font-family:var(--mono);font-size:10.5px;color:var(--seal);margin-top:9px}
+.ev-block{margin-top:14px;border:1px solid var(--rule);border-radius:10px;background:var(--paper-2);padding:14px 15px}
+.ev-h{font-family:var(--mono);font-size:10.5px;letter-spacing:1.2px;color:var(--ink-meta);margin-bottom:9px}
+.ev-code{white-space:pre-wrap;font-family:var(--mono);font-size:11.5px;line-height:2;color:var(--ink-soft);margin:0}
+.ev-img{width:100%;border-radius:8px;border:1px solid var(--rule);cursor:zoom-in;display:block}
+.ev-cap{font-family:var(--mono);font-size:10px;color:var(--ink-meta);margin-top:8px;line-height:1.7}
+.ev-t{font-size:13px;line-height:1.95;color:var(--ink-soft)}
+.st-block{margin-top:20px;border-left:3px solid var(--seal);background:rgba(168,53,42,.03);border-radius:0 10px 10px 0;padding:14px 16px}
+.st-h{font-family:var(--serif);font-size:16px;font-weight:700}
+.st-tag{font-family:var(--mono);font-size:10.5px;color:var(--seal);margin:4px 0 10px}
+.st-row{display:flex;gap:10px;padding:5px 0;font-size:12.5px;line-height:1.9;border-top:1px dashed var(--rule)}
+.st-row b{flex:0 0 96px;font-family:var(--mono);font-size:10.5px;color:var(--ink-meta);padding-top:2px}
+.st-row span{color:var(--ink-soft)}
+/* 联系内页：只放我是谁 + 联系方式 */
+.ct-wrap{min-height:62vh;display:flex;flex-direction:column;justify-content:center;padding:40px 0 60px;max-width:640px}
+.ct-name{font-family:var(--serif);font-size:clamp(30px,4.4vw,46px);font-weight:700;line-height:1.2}
+.ct-name span{display:block;font-family:var(--mono);font-size:11px;letter-spacing:2px;color:var(--ink-meta);margin-top:8px}
+.ct-role{font-size:14.5px;color:var(--seal);margin-top:12px}
+.ct-line{font-size:13.5px;line-height:2;color:var(--ink-soft);margin-top:10px}
+.ct-items{display:flex;flex-direction:column;gap:10px;margin:26px 0 22px}
+.ct-item{display:flex;align-items:center;gap:12px;background:var(--paper-2);border:1px solid var(--rule);border-radius:11px;padding:14px 16px;text-decoration:none;color:var(--ink);transition:all .3s var(--ease)}
+.ct-item:hover{border-color:var(--seal);box-shadow:var(--shadow-2);transform:translateY(-1px)}
+.ct-item .ci-icon{font-size:17px}
+.ct-item .ci-txt{font-family:var(--mono);font-size:14px}
+.ct-item .ci-copy{margin-left:auto;font-family:var(--mono);font-size:10px;color:var(--ink-meta)}
+.ct-back{align-self:flex-start}
+/* 一键回主页 */
+.fab-home{position:fixed;right:22px;bottom:22px;z-index:60;font-family:var(--mono);font-size:11px;letter-spacing:.5px;color:#fff;background:var(--ink);border:none;border-radius:22px;padding:11px 16px;cursor:pointer;box-shadow:0 8px 24px rgba(27,25,23,.28);transition:all .3s var(--ease)}
+.fab-home:hover{background:var(--seal);transform:translateY(-2px)}
+.fab-home.hidden{display:none}
+@media(max-width:720px){.fab-home{right:14px;bottom:14px}.ct-wrap{padding:24px 0 40px}}
+/* ===== 可读性统一：字号下限与对比度 ===== */
+.nav-logo small{font-size:11px}
+.op-eyebrow{font-size:12px}
+.op-sub{font-size:15px;line-height:2.05}
+.op-kw span{font-size:11.5px;padding:6px 12px}
+.op-cta-note{font-size:11.5px}
+.pf-c{font-size:11.5px;line-height:1.7}
+.pf-l{font-size:13.5px}
+.hsc-tag{font-size:11.5px}
+.hsc-lab{font-size:13px}
+.hc-bar i{font-size:12px;top:-18px}
+.hc-bar b{font-size:12px;bottom:-20px}
+.hsc-foot{font-size:12px;line-height:1.85}
+.hsc-foot b{font-size:14px}
+.cc-no{font-size:11.5px}
+.cc-desc{font-size:13.5px;line-height:1.95}
+.cc-foot{font-size:12px}
+.cap-cell{padding:19px 20px 17px}
+.crumb{font-size:13px}
+.pg-no{font-size:12.5px}
+.pg-lead{font-size:14.5px;line-height:2.05}
+.stat .s-no{font-size:11px;color:var(--ink-meta)}
+.stat .s-label{font-size:13px}
+.stat .s-ctx{font-size:12px;line-height:1.65}
+.kv-item .k{font-size:11px}
+.kv-item .v{font-size:13.5px;line-height:1.7}
+.tagrow span{font-size:11.5px;padding:4px 10px}
+.cp-dec b{font-size:11.5px}
+.cp-dec p{font-size:13.5px}
+.pj-title{font-size:17.5px}
+.pj-sub{font-size:11.5px}
+.pj-desc{font-size:13.5px;line-height:1.95}
+.pj-star{font-size:13px;line-height:1.9}
+.pj-star b{font-size:11.5px}
+.pj-go{font-size:11.5px}
+.ev-h{font-size:11.5px}
+.ev-code{font-size:12.5px;line-height:2.05}
+.ev-cap{font-size:11.5px;line-height:1.8}
+.st-tag{font-size:11.5px}
+.st-row{font-size:13.5px;line-height:1.95}
+.st-row b{font-size:11.5px;flex:0 0 108px}
+.cmp-table{font-size:13.5px}
+.cmp-table th{font-size:11.5px}
+.cmp-table td{line-height:1.85}
+.cmp-table td:first-child{font-size:12.5px;letter-spacing:.3px;white-space:normal}
+.fit-table td.fit-cap{font-size:12px}
+.dec-note{font-size:12.5px;line-height:1.8}
+.src-note{font-size:11.5px;line-height:1.85}
+.entry-card .ec-d{font-size:13.5px}
+.entry-card .ec-go{font-size:11.5px}
+.ct-name span{font-size:12px}
+.ct-role{font-size:15.5px}
+.ct-item .ci-txt{font-size:15px}
+.ct-item .ci-copy{font-size:11.5px}
+.fab-home{font-size:12px;padding:12px 18px}
+.btn-line{font-size:12.5px}
+.foot{font-size:11.5px;color:var(--ink-meta)}
+.pg-back .btn-line{font-size:12.5px}
+
+/* ===== 精简卡片 + 图表化 ===== */
+.pj-card{padding:14px 15px}
+.pj-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+.pj-metric{font-family:var(--serif);font-size:19px;font-weight:700;color:var(--seal);white-space:nowrap;line-height:1.2}
+.pj-one{font-size:13px;line-height:1.85;color:var(--ink-soft);margin-top:6px}
+.pj-desc{display:none}
+.pj-star{display:none}
+.pj-grid .kv{display:none}
+.mb{margin-top:10px}
+.mb-t{display:flex;justify-content:space-between;align-items:baseline;gap:8px;font-family:var(--mono);font-size:11px;color:var(--ink-meta)}
+.mb-t b{color:var(--ink);font-size:12px}
+.mb-bar{height:6px;background:rgba(27,25,23,.09);border-radius:4px;overflow:hidden;margin-top:5px}
+.mb-bar i{display:block;height:100%;background:var(--seal);border-radius:4px;transition:width .9s var(--ease)}
+.ca{display:inline-flex;align-items:center;gap:8px;background:rgba(168,53,42,.06);border:1px solid rgba(168,53,42,.28);border-radius:8px;padding:6px 11px;font-family:var(--mono);font-size:12px;margin-top:10px}
+.ca-b{color:var(--ink-meta);text-decoration:line-through}
+.ca-ar{color:var(--seal)}
+.ca-a{color:var(--seal);font-weight:700}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:9px;margin:14px 0}
+.fc{background:var(--paper-2);border:1px solid var(--rule);border-radius:9px;padding:10px 12px}
+.fc>span{display:block;font-family:var(--mono);font-size:10.5px;color:var(--ink-meta)}
+.fc>b{display:block;font-size:13.5px;color:var(--ink);margin-top:4px;line-height:1.6}
+.ca-fc .ca{margin-top:6px}
+.steps{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.step{display:flex;align-items:center;gap:9px;background:var(--paper-2);border:1px solid var(--rule);border-radius:9px;padding:9px 12px;max-width:250px}
+.step b{flex:0 0 20px;height:20px;border-radius:50%;background:var(--ink);color:#fff;font-family:var(--mono);font-size:10px;display:grid;place-items:center}
+.st-n{font-size:12.5px;font-weight:600;color:var(--ink);line-height:1.5}
+.st-d{font-size:11.5px;color:var(--ink-soft);line-height:1.65;margin-top:2px}
+.step-ar{color:var(--seal);font-size:14px;padding:0 2px}
+.pg-metric{margin-left:auto;font-family:var(--mono);font-size:13px;color:var(--seal);border:1px solid rgba(168,53,42,.3);background:rgba(168,53,42,.05);border-radius:20px;padding:5px 12px}
+
+/* 同能力其他产品 */
+.sibrow{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:9px;margin-bottom:26px}
+.sib{text-align:left;font:inherit;cursor:pointer;background:var(--paper-2);border:1px solid var(--rule);border-radius:10px;padding:11px 13px;transition:all .28s var(--ease)}
+.sib:hover{border-color:var(--seal);transform:translateY(-2px);box-shadow:var(--shadow-2)}
+.sib b{display:block;font-size:13.5px;color:var(--ink);line-height:1.55}
+.sib span{display:block;font-family:var(--mono);font-size:11px;color:var(--ink-meta);margin-top:4px;line-height:1.6}
+
+/* ===== 产品内页：一屏版 ===== */
+#pgProj{display:flex;flex-direction:column;gap:7px;min-height:calc(100vh - 108px)}
+#pgProj .crumb{margin:0}
+#pgProj .pg-head{margin:2px 0 0}
+#pgProj .pg-title{font-size:clamp(21px,2.5vw,27px)}
+#pgProj .fgrid{margin:0;gap:8px}
+#pgProj .fc{padding:8px 11px}
+#pgProj .st-block{margin-top:4px;padding:10px 13px}
+#pgProj .st-row{padding:3px 0;font-size:12.5px;line-height:1.8}
+#pgProj .st-row b{flex:0 0 96px;font-size:11px;padding-top:3px}
+#pgProj .pg-back{margin:8px 0 10px}
+#pgProj .steps .step{padding:6px 10px}
+#pgProj .steps .st-n{font-size:13px}
+.shotstrip{display:flex;gap:8px;overflow-x:auto;padding:2px 0 6px;scrollbar-width:thin}
+.shotstrip img{height:104px;width:auto;flex:0 0 auto;border-radius:8px;border:1px solid var(--rule);cursor:zoom-in;background:var(--paper-3);transition:all .3s var(--ease)}
+.shotstrip img:hover{border-color:var(--seal);transform:translateY(-2px)}
+.sibrow2{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.sib-lb{font-family:var(--mono);font-size:12px;letter-spacing:1px;color:var(--ink-meta);margin-right:2px}
+.sibrow2 .sib{font-family:var(--sans);font-size:12.5px;color:var(--ink-soft);background:var(--paper-2);border:1px solid var(--rule);border-radius:20px;padding:5px 11px;cursor:pointer;transition:all .25s var(--ease)}
+.sibrow2 .sib:hover{color:var(--seal);border-color:var(--seal)}
+
+/* 产品页两栏 + 更紧凑 */
+#pgProj{gap:4px;min-height:0}
+#pgProj .pg-title{font-size:clamp(21px,2.5vw,27px)}
+#pgProj .fc{padding:6px 9px}
+#pgProj .fc>b{font-size:clamp(14px,1.85vh,17.5px);margin-top:3px}
+#pgProj .fgrid{gap:6px}
+#pgProj .pg-back{margin:4px 0 6px}
+#pgProj .sibrow2 .sib{padding:4px 9px;font-size:11px}
+.pj-cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.52fr);gap:10px;align-items:start}
+.pj-cols .c-l{min-width:0}
+.pj-cols .c-r{min-width:0}
+.pj-cols .st-block{margin-top:0}
+.pj-cols .st-row{padding:2px 0;font-size:13px;line-height:1.75}
+.pj-cols .st-row b{flex:0 0 78px;font-size:11.5px;padding-top:3px}
+#pgProj .ev-h{display:none}
+.shotstrip img{height:74px}
+#pgProj .steps{gap:4px}
+#pgProj .steps .step{padding:5px 9px}
+@media(max-width:820px){.pj-cols{grid-template-columns:1fr}}
+
+.pj-cols .st-row{font-size:clamp(12.5px,1.55vh,14.5px);line-height:1.68;padding:2px 0}
+.pj-cols .st-row b{flex:0 0 72px;font-size:clamp(11px,1.35vh,12.5px);padding-top:3px}
+.shotstrip img{height:66px}
+#pgProj .steps .step{padding:4px 8px}
+#pgProj .steps .st-n{font-size:clamp(12px,1.5vh,13.5px)}
+#pgProj .steps .step b{flex:0 0 18px;height:18px;font-size:10.5px}
+
+#pgProj{gap:3px}
+#pgProj .pg-back .btn-line{padding:7px 15px;font-size:12.5px}
+.shotstrip img{height:clamp(88px,12.5vh,132px)}
+#pgProj .sibrow2 .sib{padding:4px 10px;font-size:clamp(11.5px,1.4vh,12.5px)}
+
+body.pg-proj main{padding-bottom:0}
+body.pg-proj .onepage{padding-top:12px}
+
+.pj-cols .st-row{font-size:clamp(12.5px,1.6vh,15px);line-height:1.7}
+.pj-cols .st-row span{-webkit-line-clamp:2;display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden}
+
+/* ==================== APP SHELL：整页不滚动 ==================== */
+html,body{height:100%;overflow:hidden}
+body{display:flex;flex-direction:column;min-height:0}
+.nav{position:relative;flex:0 0 auto}
+main{flex:1 1 auto;min-height:0;overflow:hidden;padding:0}
+.wrap.onepage{height:100%;max-width:1340px;padding:0 22px;display:block;min-height:0}
+.ipage{height:100%;min-height:0;overflow-y:auto;overflow-x:hidden;padding:10px 2px 12px;
+  scrollbar-width:thin;scrollbar-color:rgba(27,25,23,.22) transparent;overscroll-behavior:contain}
+.ipage::-webkit-scrollbar{width:7px}
+.ipage::-webkit-scrollbar-track{background:transparent}
+.ipage::-webkit-scrollbar-thumb{background:rgba(27,25,23,.18);border-radius:4px}
+.ipage::-webkit-scrollbar-thumb:hover{background:rgba(168,53,42,.45)}
+.scroll-progress{display:none!important}
+body.pg-proj main{padding-bottom:0}
+
+/* ==================== 主页：一屏 grid ==================== */
+#pgHome{display:grid;grid-template-rows:repeat(6,max-content);
+  gap:clamp(4px,.8vh,10px);overflow-x:hidden;overflow-y:auto;align-content:start;padding-top:clamp(6px,1.1vh,14px)}
+#pgHome .hero-split{align-items:stretch;gap:clamp(14px,2vw,26px)}
+#pgHome .op-proof{margin:0;grid-template-columns:repeat(5,minmax(0,1fr));border-radius:11px}
+#pgHome .op-proof .pf{padding:clamp(5px,.9vh,11px) 12px}
+#pgHome .entry-row{margin:0}
+#pgHome .src-note{margin:0!important;line-height:1.6}
+#pgHome .cap-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(5px,.8vh,9px);align-content:start}
+
+/* 首屏文案：用 vh 自适应，矮屏自动压缩 */
+#pgHome .op-title{font-size:clamp(24px,4.7vh,42px);line-height:1.16;margin:clamp(4px,1.1vh,11px) 0 clamp(4px,.9vh,8px)}
+#pgHome .op-sub{font-size:clamp(13.5px,1.8vh,16px);line-height:1.75;max-width:none}
+#pgHome .op-cta{margin-top:clamp(6px,1.2vh,12px);gap:9px}
+#pgHome .op-kw{margin-top:clamp(5px,1vh,11px);gap:6px}
+#pgHome .op-kw span{font-size:clamp(11px,1.4vh,12.5px);padding:4px 11px}
+#pgHome .op-cta-note{font-size:clamp(11px,1.35vh,12.5px);line-height:1.5}
+
+/* 能力卡压缩 */
+#pgHome .cap-cell{padding:clamp(7px,1.15vh,13px) clamp(11px,1vw,16px)}
+#pgHome .cc-title{font-size:clamp(15px,1.95vh,18px);margin:3px 0 4px}
+#pgHome .cc-desc{font-size:clamp(12px,1.55vh,14.5px);line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+#pgHome .cc-foot{font-size:clamp(11px,1.35vh,12.5px);margin-top:clamp(4px,.9vh,9px)}
+#pgHome .cc-no{font-size:11.5px}
+#pgHome .cap-head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+#pgHome .cap-head .dec-title{font-size:clamp(14px,1.85vh,16px)}
+#pgHome .cap-head .dec-note{font-size:clamp(11.5px,1.4vh,13px)}
+
+/* 数据条压缩 */
+#pgHome .pf-n{font-size:clamp(14px,2.1vh,22px)}
+#pgHome .pf-l{font-size:clamp(11.5px,1.45vh,13.5px)}
+#pgHome .pf-c{font-size:clamp(10.5px,1.3vh,12px);line-height:1.45}
+
+/* 入口卡压缩 */
+#pgHome .entry-card{padding:clamp(6px,1vh,11px) 13px}
+#pgHome .ec-t{font-size:clamp(13.5px,1.7vh,15.5px)}
+#pgHome .ec-d{font-size:clamp(11.5px,1.4vh,13.5px);line-height:1.5}
+#pgHome .ec-go{font-size:11.5px}
+
+/* 深色数据卡压缩 */
+#pgHome .hs-card{padding:clamp(12px,1.9vh,20px) clamp(13px,1.4vw,20px)}
+#pgHome .hsc-num{font-size:clamp(30px,5.4vh,52px);margin:clamp(5px,1vh,10px) 0 3px}
+#pgHome .hsc-chart{height:clamp(52px,9vh,96px);margin:clamp(8px,1.4vh,16px) 0 clamp(14px,2.6vh,24px);padding-top:10px}
+#pgHome .hsc-foot{font-size:clamp(10px,1.25vh,11.5px);line-height:1.55}
+
+/* ==================== 首屏吸引力强化 ==================== */
+.live-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:clamp(3px,.8vh,8px)}
+.live-pill{display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:11px;letter-spacing:1.1px;
+  color:var(--seal);background:rgba(168,53,42,.07);border:1px solid rgba(168,53,42,.26);border-radius:20px;padding:5px 12px;white-space:nowrap}
+.live-pill i{width:6px;height:6px;border-radius:50%;background:var(--seal);animation:livePulse 2.1s infinite}
+@keyframes livePulse{0%{box-shadow:0 0 0 0 rgba(168,53,42,.55)}70%{box-shadow:0 0 0 8px rgba(168,53,42,0)}100%{box-shadow:0 0 0 0 rgba(168,53,42,0)}}
+.live-txt{font-family:var(--mono);font-size:11px;letter-spacing:.6px;color:var(--ink-meta)}
+#pgHome .op-title em{position:relative;display:inline-block}
+#pgHome .op-title em::after{content:'';position:absolute;left:-2px;right:-2px;bottom:.02em;height:.16em;
+  background:linear-gradient(90deg,rgba(168,53,42,.30),rgba(168,53,42,.06));border-radius:3px;z-index:-1}
+.hs-card::before{content:'';position:absolute;inset:0;background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.07) 45%,transparent 60%);
+  transform:translateX(-100%);animation:sheen 7s ease-in-out infinite}
+@keyframes sheen{0%,55%{transform:translateX(-100%)}80%,100%{transform:translateX(100%)}}
+#pgHome .cap-cell:hover{transform:translateY(-3px);box-shadow:0 18px 34px rgba(27,25,23,.13);border-left-color:var(--seal)}
+#pgHome .cap-cell:hover .cc-title{color:var(--seal)}
+
+/* 联系页：垂直居中 */
+#pgContact{display:flex;align-items:center;justify-content:center}
+#pgContact .ct-wrap{height:auto;width:100%;max-width:620px;padding:0;display:flex;flex-direction:column;justify-content:center}
+
+/* 其它内页：顶到面板顶部 */
+#pgCap,#pgProj,#pgFit,#pgCompare{overflow-y:auto}
+
+/* 深色卡：柱状图标签下移，避免压住色块 */
+#pgHome .hsc-chart{padding-bottom:18px;overflow:visible}
+#pgHome .hc-bar b{bottom:-17px;font-size:11px;color:rgba(255,255,255,.72)}
+#pgHome .hsc-foot{line-height:1.5;margin-top:2px}
+
+/* 矮屏（<760px 可视高度）自动降级：优先保证"一屏看完" */
+@media(max-height:880px){
+  #pgHome .src-note{display:none}
+  #pgHome .ec-d{display:none}
+  #pgHome .entry-card{display:flex;align-items:center;justify-content:space-between;gap:10px}
+  #pgHome .ec-go{margin:0;white-space:nowrap}
+}
+@media(max-height:810px){
+  #pgHome .op-kw{display:none}
+  #pgHome .entry-row{margin-top:0}
+}
+@media(max-height:770px){
+  #pgHome .cc-desc{-webkit-line-clamp:1}
+}
+@media(max-height:660px){
+  #pgHome .op-cta-note{display:none}
+  #pgHome .cc-foot span.cc-stat{display:none}
+}
+@media(max-height:600px){
+  #pgHome .op-proof .pf-c{display:none}
+  #pgHome .cap-head .dec-note{display:none}
+  #pgHome .cc-foot{display:none}
+  #pgHome .op-sub{-webkit-line-clamp:2;display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden}
+}
+
+/* ==================== 能力页：一屏两栏 ==================== */
+#pgCap{display:flex;flex-direction:column;gap:clamp(4px,.7vh,8px)}
+#pgCap .pg-head{margin:0}
+#pgCap .pg-lead{font-size:clamp(13.5px,1.8vh,16px);line-height:1.7;margin:0;max-width:none}
+.cap-body{display:grid;grid-template-columns:minmax(0,.42fr) minmax(0,.58fr);gap:clamp(10px,1.4vw,18px);align-items:start;min-height:0}
+.cb-l{display:flex;flex-direction:column;gap:clamp(4px,.75vh,8px);min-width:0}
+.cb-l .stats{display:flex;flex-direction:column;gap:clamp(4px,.75vh,8px)}
+.cb-l .stat{padding:clamp(6px,.95vh,10px) clamp(10px,1vw,14px)}
+.cb-l .stat .s-val{font-size:clamp(21px,3.4vh,31px)}
+.cb-l .stat .s-ctx{font-size:clamp(11.5px,1.45vh,13.5px);line-height:1.5}
+#pgCap .cp-dec{padding:clamp(6px,1.05vh,11px) clamp(10px,1vw,14px);margin:0}
+#pgCap .cp-dec p{font-size:clamp(12px,1.5vh,14px);line-height:1.65;margin-top:4px}
+#pgCap .cp-dec b{font-size:11.5px}
+.cb-r{min-width:0;display:flex;flex-direction:column;gap:clamp(4px,.75vh,8px)}
+.cb-head{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.cb-head .dec-title{font-size:clamp(13px,1.75vh,15.5px)}
+.cb-head .dec-note{font-size:clamp(11px,1.35vh,12.5px)}
+#pgCap .pj-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(5px,.85vh,9px)}
+#pgCap .pj-card{padding:clamp(6px,.95vh,11px) clamp(10px,1vw,13px)}
+#pgCap .pj-title{font-size:clamp(13.5px,1.8vh,16.5px);line-height:1.35}
+#pgCap .pj-metric{font-size:clamp(14.5px,2vh,19px)}
+#pgCap .pj-one{font-size:clamp(11.5px,1.4vh,13.5px);line-height:1.55;margin-top:3px;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
+#pgCap .pj-card .tagrow{display:none}
+#pgCap .pj-card .mb,#pgCap .pj-card .ca{margin-top:5px}
+#pgCap .pj-go{display:none}
+#pgCap .painrow{display:flex;flex-wrap:wrap;gap:5px}
+#pgCap .painchip{display:inline-flex;align-items:center;gap:5px;font-family:var(--mono);font-size:11px;
+  color:var(--ink-soft);background:var(--paper-2);border:1px solid var(--rule);border-radius:5px;padding:3px 8px;white-space:nowrap}
+#pgCap .painchip b{color:var(--ink);font-weight:600}
+#pgCap .painchip i{color:var(--seal);font-style:normal}
+#pgCap .pg-back{margin:2px 0 4px}
+#pgCap .pg-back .btn-line{padding:6px 14px;font-size:12.5px}
+
+/* ==================== 岗位对照页：压缩 ==================== */
+#pgFit .pg-lead{font-size:clamp(11.5px,1.4vh,13px);line-height:1.6;margin:2px 0 4px}
+#pgFit .cmp-table{font-size:clamp(10.5px,1.32vh,13px)}
+#pgFit .cmp-table th{padding:5px 9px;font-size:10.5px}
+#pgFit .cmp-table td{padding:clamp(4px,.85vh,8px) 9px;line-height:1.5}
+#pgFit .cmp-table td:first-child{font-size:clamp(10.5px,1.28vh,12.5px)}
+#pgFit .fit-table td.fit-cap{font-size:11px}
+#pgFit .src-note{font-size:10.5px;margin-top:6px!important;line-height:1.5}
+#pgFit .pg-back{margin-top:6px}
+#pgFit .pg-back .btn-line{padding:6px 14px;font-size:11.5px}
+
+/* ==================== 对比页：压缩 ==================== */
+#pgCompare .cmp-table td{padding:clamp(4px,.85vh,8px) 9px;line-height:1.5}
+#pgCompare .oe-foot{font-size:clamp(11.5px,1.45vh,13.5px);line-height:1.6;margin-top:8px}
+#pgCompare .pg-back .btn-line{padding:6px 14px;font-size:11.5px}
+
+/* 矮屏：能力页进一步压缩，保证一屏 */
+@media(max-height:800px){
+  #pgCap .pg-lead{-webkit-line-clamp:2;display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden}
+  #pgCap .cb-l .stat .s-ctx{display:none}
+  #pgCap .cb-l .stat{padding:6px 11px}
+  #pgCap .cb-l .stat .s-val{font-size:22px}
+  #pgCap .pj-one{-webkit-line-clamp:1}
+}
+@media(max-height:700px){
+  #pgCap .painrow{display:none}
+}
+@media(max-height:640px){
+  #pgCap .cp-dec{display:none}
+}
+
+/* 常驻导航 + 浮动按钮改小圆点 */
+.nav{height:56px;padding:0 22px}
+.nav-logo{font-size:16px}
+.nav-tabs{gap:4px}
+.nav-tabs button{font-size:13.5px;padding:6px 13px}
+.fab-home{right:16px;bottom:16px;width:38px;height:38px;border-radius:50%;padding:0;font-size:15px;line-height:1;
+  display:grid;place-items:center;opacity:.9}
+.fab-home:hover{opacity:1}
+/* 能力页卡片里不显示进度条，避免底部被裁 */
+#pgCap .pj-card .mb{display:none}
+
+/* 能力页：两栏撑满面板高度，卡片均分 */
+#pgCap{height:100%}
+#pgCap .cap-body{align-items:stretch;flex:1 1 auto;min-height:0}
+#pgCap .cb-l{height:100%}
+#pgCap .cb-l .stats{flex:1 1 auto;justify-content:space-between}
+#pgCap .cb-l .stat{display:flex;flex-direction:column;justify-content:center}
+#pgCap .cb-r{height:100%}
+#pgCap .pj-grid{flex:1 1 auto;grid-auto-rows:minmax(0,1fr);align-content:stretch}
+#pgCap .pj-card{display:flex;flex-direction:column;justify-content:center}
+#pgCap .pj-card .mb{display:block}
+
+/* 能力页：不拉伸，内容自然高度 + 整体垂直居中 */
+#pgCap{height:100%;justify-content:flex-start}
+#pgCap .cap-body{align-items:start;flex:0 0 auto;min-height:0;margin:2px 0 0}
+#pgCap .cb-l{height:auto}
+#pgCap .cb-l .stats{flex:0 0 auto;justify-content:flex-start}
+#pgCap .cb-r{height:auto}
+#pgCap .pj-grid{flex:0 0 auto;grid-auto-rows:auto;align-content:start}
+#pgCap .pj-card{display:block}
+#pgCap .pj-card .mb{display:none}
+
+/* ==================== 首屏：深色 hero 条带 ==================== */
+.hero-band{position:relative;overflow:hidden;display:grid;grid-template-columns:minmax(0,1.34fr) minmax(0,.66fr);
+  gap:clamp(12px,1.6vw,26px);align-items:stretch;color:#fff;border-radius:16px;
+  background:linear-gradient(140deg,#241f1d 0%,#1b1917 52%,#2c201d 100%);
+  padding:clamp(11px,1.6vh,20px) clamp(16px,1.9vw,30px);
+  box-shadow:0 18px 46px rgba(27,25,23,.3)}
+.hero-band::after{content:'';position:absolute;right:-70px;top:-80px;width:280px;height:280px;border-radius:50%;
+  background:radial-gradient(circle,rgba(168,53,42,.5),rgba(168,53,42,0) 70%)}
+.hero-band::before{content:'';position:absolute;inset:0;z-index:2;pointer-events:none;
+  background:linear-gradient(115deg,transparent 32%,rgba(255,255,255,.09) 46%,transparent 58%);
+  transform:translateX(-100%);animation:sheen 7.5s ease-in-out infinite}
+.hb-l,.hb-r{position:relative;z-index:1}
+.hb-l .op-title{color:#fff;animation:hbIn .55s var(--ease) both}
+@keyframes hbIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+#pgHome .hb-l .op-title{font-size:clamp(24px,4.8vh,42px);line-height:1.18;margin:clamp(3px,.85vh,10px) 0 clamp(3px,.75vh,8px)}
+#pgHome .hb-l .op-title em{color:#e79185;display:inline-block;position:relative}
+#pgHome .hb-l .op-title em::after{content:'';position:absolute;left:-2px;right:-2px;bottom:.02em;height:.16em;z-index:-1;
+  background:linear-gradient(90deg,rgba(231,145,133,.38),rgba(231,145,133,.05));border-radius:3px}
+#pgHome .hb-l .op-sub{color:rgba(255,255,255,.82);font-size:clamp(12.5px,1.75vh,15.5px);line-height:1.7}
+#pgHome .hb-l .op-sub b{color:#fff}
+#pgHome .hb-l .op-cta-note{color:rgba(255,255,255,.62);border-left-color:rgba(231,145,133,.75)}
+#pgHome .hb-l .op-kw span{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.16);color:rgba(255,255,255,.86)}
+#pgHome .hb-l .live-pill{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.22);color:#f3bdb2}
+#pgHome .hb-l .live-txt{color:rgba(255,255,255,.58)}
+.btn-line.btn-light{background:#fff;color:var(--ink);border-color:#fff}
+.btn-line.btn-light:hover{background:#f3e6df;color:var(--seal)}
+.btn-line.btn-ghost{background:transparent;color:rgba(255,255,255,.92);border-color:rgba(255,255,255,.42)}
+.btn-line.btn-ghost:hover{background:rgba(255,255,255,.14);color:#fff}
+.hb-r{display:flex;flex-direction:column;justify-content:center;
+  border-left:1px solid rgba(255,255,255,.14);padding-left:clamp(12px,1.4vw,22px)}
+.hb-tag{font-family:var(--mono);font-size:11.5px;letter-spacing:1.4px;color:rgba(255,255,255,.6)}
+.hb-num{font-family:var(--serif);font-size:clamp(34px,5.6vh,54px);font-weight:700;line-height:1;margin:5px 0 3px}
+.hb-num em{font-style:normal;font-size:16.5px;color:rgba(255,255,255,.62);margin-left:5px}
+.hb-lab{font-size:clamp(11.5px,1.45vh,13.5px);color:rgba(255,255,255,.62)}
+.hb-bars{display:flex;align-items:flex-end;gap:clamp(8px,1vw,14px);height:clamp(42px,7vh,74px);
+  margin:clamp(6px,1.1vh,12px) 0 clamp(16px,2.4vh,22px);padding-top:10px;border-top:1px solid rgba(255,255,255,.15)}
+.hb-bar{position:relative;flex:1;height:var(--h);min-height:6px;border-radius:4px 4px 0 0;
+  background:linear-gradient(180deg,rgba(231,145,133,.95),rgba(168,53,42,.72))}
+.hb-bar i{position:absolute;top:-17px;left:0;right:0;text-align:center;font-style:normal;font-size:12px;color:rgba(255,255,255,.92)}
+.hb-bar b{position:absolute;bottom:-20px;left:0;right:0;text-align:center;font-weight:400;font-size:12px;color:rgba(255,255,255,.66)}
+.hb-foot{font-size:clamp(11.5px,1.45vh,13.5px);line-height:1.55;color:rgba(255,255,255,.72)}
+.hb-foot b{color:#fff}
+@media(max-width:900px){
+  .hero-band{grid-template-columns:1fr}
+  .hb-r{border-left:none;border-top:1px solid rgba(255,255,255,.14);padding-left:0;padding-top:12px}
+}
+
+/* ==================== 兜底：面板内不出现滚动条（首屏例外：底部证据带可滚出） ==================== */
+.ipage{overflow:hidden}
+#pgHome{overflow-x:hidden;overflow-y:auto;scrollbar-width:thin}
+#pgHome::-webkit-scrollbar{width:7px}
+#pgHome::-webkit-scrollbar-thumb{background:rgba(27,25,23,.18);border-radius:4px}
+
+/* ==================== JD 关键词（融进能力页，不单独成页） ==================== */
+.jd-line{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin:2px 0 0;
+  font-size:clamp(11.5px,1.45vh,13.5px);line-height:1.5;color:var(--ink-soft);
+  background:rgba(168,53,42,.045);border:1px solid rgba(168,53,42,.17);border-radius:7px;padding:5px 11px}
+.jd-line .jd-tag{font-family:var(--mono);font-size:10.5px;letter-spacing:1.2px;color:var(--seal);
+  border-right:1px solid rgba(168,53,42,.28);padding-right:9px;white-space:nowrap}
+.jd-line b{color:var(--ink);font-weight:600;background:linear-gradient(transparent 62%,rgba(168,53,42,.16) 62%)}
+#pgHome .cc-desc b{color:var(--ink);font-weight:600}
+
+/* 能力页：整体垂直居中，左栏数据等距 */
+#pgCap .cap-body{margin:auto 0}
+#pgCap .cb-l .stats{flex:0 0 auto;justify-content:flex-start;gap:clamp(5px,.9vh,9px)}
+#pgCap .cb-l .stat{justify-content:flex-start}
+/* 主页入口卡改为两张，平分宽度 */
+#pgHome .entry-row{grid-template-columns:repeat(2,minmax(0,1fr))}
+
+/* 对比页：大数字 + 小标签 */
+.pg-sub{font-family:var(--mono);font-size:11px;letter-spacing:.4px;color:var(--ink-meta);margin:3px 0 0}
+.cmp-table th em{font-style:normal;font-family:var(--mono);font-size:9.5px;letter-spacing:.8px;color:var(--ink-weak)}
+.cmp-table td.mine b{color:var(--seal);font-weight:700}
+.mset{display:flex;align-items:flex-end;gap:clamp(12px,2vw,26px);flex-wrap:wrap}
+.ms{display:flex;flex-direction:column;gap:2px}
+.ms b{font-family:var(--serif);font-size:clamp(21px,3.6vh,32px);font-weight:700;line-height:1;color:var(--seal);letter-spacing:-.5px}
+.ms span{font-size:clamp(11px,1.4vh,13px);line-height:1.4;color:var(--ink-meta);white-space:nowrap}
+.ms{position:relative;padding-left:11px}
+.ms::before{content:'';position:absolute;left:0;top:4px;bottom:2px;width:2px;background:rgba(168,53,42,.28);border-radius:2px}
+#pgCompare .cmp-table td{padding-top:clamp(5px,1vh,10px);padding-bottom:clamp(5px,1vh,10px)}
+/* 首屏数据条：数字再放大 */
+#pgHome .pf-n{font-size:clamp(16px,2.5vh,26px);letter-spacing:.2px}
+#pgHome .pf-l{font-size:clamp(12px,1.5vh,14px);margin-top:2px}
+
+@media(max-height:680px){
+  .hero-band{padding:12px 16px;gap:12px}
+  #pgHome .pf-n{font-size:clamp(15px,2.3vh,21px)}
+  #pgHome .pf-c{display:none}
+}
+
+/* 关键决策：核心洞察加粗高亮 */
+#pgCap .cp-dec .cp-q{font-family:inherit;font-size:clamp(12.5px,1.6vh,14.5px);font-weight:700;color:var(--ink);letter-spacing:0}
+#pgCap .cp-dec .ins{font-weight:700;color:var(--ink);background:linear-gradient(transparent 62%,rgba(168,53,42,.18) 62%)}
+/* 产品卡：一句话 Slogan */
+.pj-slogan{display:inline-block;margin:2px 0 3px;padding:2px 8px;border-radius:5px;
+  background:rgba(168,53,42,.07);border:1px solid rgba(168,53,42,.16);
+  font-size:clamp(11.5px,1.45vh,13.5px);font-weight:600;color:var(--seal);letter-spacing:.2px}
+.pj-slogan::before{content:'▸ ';opacity:.7}
+/* 数据卡注脚 */
+.stat .s-note{font-size:10.5px;line-height:1.4;color:var(--ink-weak);margin-top:1px}
+#pgCap .cb-l .stat .s-note{font-size:clamp(10.5px,1.2vh,11.5px)}
+
+/* 产品页：底部操作条吸底，避免大片留白 */
+#pgProj .sibrow2{margin-top:auto;padding-top:8px}
+#pgProj .pg-back{margin:6px 0 0}
+
+/* 对比表补充说明（规模边界 / 工程边界） */
+#pgCompare .cmp-table td em{display:block;margin-top:3px;font-style:normal;
+  font-size:clamp(11.5px,1.42vh,13px);line-height:1.55;color:var(--ink-meta)}
+
+.ct-note{margin-top:10px;max-width:520px;font-size:clamp(11px,1.35vh,12.5px);line-height:1.65;color:var(--ink-meta)}
+
+/* 能力页：实现口径（把大词锚定到可追问的事实） */
+.tech-line{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin:1px 0 0;
+  font-size:clamp(10.5px,1.35vh,12.5px);line-height:1.5;color:var(--ink-soft)}
+.tech-line .tc-tag{font-family:var(--mono);font-size:10px;letter-spacing:1.2px;color:var(--jade);
+  border:1px solid rgba(58,122,92,.35);background:rgba(58,122,92,.07);border-radius:5px;padding:1px 7px;white-space:nowrap}
+
+@media(max-height:780px){
+  #pgCap .cb-l .stat{padding:5px 10px}
+  #pgCap .pj-card{padding:5px 10px}
+  #pgCap .tech-line{margin:0}
+  #pgCap .jd-line{margin:0}
+}
+
+/* ==================== 首屏视觉焦点：巨型对比 + 巨号成果 ==================== */
+.op-big{display:flex;align-items:baseline;gap:clamp(7px,.9vw,13px);flex-wrap:wrap;
+  margin:clamp(3px,.8vh,9px) 0 clamp(2px,.5vh,5px)}
+.op-big b{font-family:var(--serif);font-size:clamp(26px,4.7vh,46px);font-weight:700;line-height:1;
+  color:#fff;letter-spacing:-.6px}
+.op-big b.now{color:#e79185;position:relative}
+.op-big b.now::after{content:'';position:absolute;left:-1px;right:-1px;bottom:.04em;height:.14em;
+  background:linear-gradient(90deg,rgba(231,145,133,.55),rgba(231,145,133,.08));border-radius:3px;z-index:-1}
+.op-big i{font-style:normal;font-size:clamp(17px,3vh,30px);color:rgba(255,255,255,.42);line-height:1}
+.op-big em{display:block;width:100%;font-style:normal;font-size:clamp(10.5px,1.3vh,12.5px);
+  color:rgba(255,255,255,.55);margin-top:3px;letter-spacing:.2px}
+
+/* 成果条：3 张巨号 */
+#pgHome .op-proof{grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(6px,1vw,12px);background:none;border:0}
+#pgHome .op-proof .pf{background:var(--paper-2);border:1px solid var(--rule);border-radius:12px;
+  padding:clamp(7px,1.15vh,13px) clamp(11px,1vw,16px);position:relative;overflow:hidden}
+#pgHome .op-proof .pf::after{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;
+  background:linear-gradient(180deg,var(--seal),rgba(168,53,42,.25))}
+.pf-k{font-family:var(--mono);font-size:clamp(9.5px,1.15vh,10.5px);letter-spacing:1.1px;color:var(--ink-weak);margin-bottom:1px}
+#pgHome .op-proof .pf-n{font-family:var(--serif);font-size:clamp(21px,3.1vh,34px);font-weight:700;line-height:1.05;
+  color:var(--ink);letter-spacing:-.4px}
+#pgHome .op-proof .pf-n em{font-style:normal;font-size:.42em;font-weight:600;color:var(--seal);margin-left:2px;letter-spacing:0}
+#pgHome .op-proof .pf-l{font-size:clamp(11px,1.35vh,12.5px);color:var(--ink);font-weight:600;margin-top:2px}
+#pgHome .op-proof .pf-c{font-size:clamp(10px,1.2vh,11.5px);color:var(--ink-meta);line-height:1.45;margin-top:1px}
+
+/* 能力卡：巨号编号水印 + 更实的卡面 */
+#pgHome .cap-cell{background:#fff;border:1px solid var(--rule);border-left:3px solid rgba(168,53,42,.25);
+  box-shadow:0 1px 0 rgba(27,25,23,.03)}
+#pgHome .cap-cell:hover{border-left-color:var(--seal);box-shadow:0 14px 30px rgba(27,25,23,.12)}
+.cc-wm{position:absolute;right:clamp(8px,1vw,14px);top:clamp(4px,.8vh,8px);
+  font-family:var(--serif);font-size:clamp(22px,3.4vh,36px);font-weight:700;line-height:1;
+  color:rgba(27,25,23,.09);letter-spacing:-1px;pointer-events:none}
+#pgHome .cap-cell:hover .cc-wm{color:rgba(168,53,42,.16)}
+
+/* 首屏右栏：真实界面缩略图（替代柱状图，更能证明东西真在跑） */
+.hb-shots{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;
+  margin:clamp(7px,1.2vh,12px) 0 clamp(6px,1vh,11px)}
+.hb-shots img{width:100%;height:clamp(44px,7.4vh,72px);object-fit:cover;object-position:top center;
+  border-radius:7px;border:1px solid rgba(255,255,255,.18);cursor:zoom-in;background:#2a2523;
+  transition:transform .3s var(--ease),border-color .3s var(--ease),box-shadow .3s var(--ease)}
+.hb-shots img:hover{transform:translateY(-3px) scale(1.04);border-color:rgba(231,145,133,.7);
+  box-shadow:0 10px 24px rgba(0,0,0,.4)}
+
+/* 首屏右栏：单张大图，信息密度与冲击力都优于小缩略图 */
+.hb-shot-main{position:relative;margin:clamp(7px,1.2vh,12px) 0 clamp(6px,1vh,10px);cursor:zoom-in;
+  border-radius:9px;overflow:hidden;border:1px solid rgba(255,255,255,.2);background:#2a2523;
+  transition:transform .3s var(--ease),border-color .3s var(--ease),box-shadow .3s var(--ease)}
+.hb-shot-main img{display:block;width:100%;height:clamp(66px,10.4vh,112px);object-fit:cover;object-position:top center}
+.hb-shot-main figcaption{position:absolute;left:0;right:0;bottom:0;padding:12px 9px 5px;
+  font-family:var(--mono);font-size:9.5px;letter-spacing:.4px;color:rgba(255,255,255,.86);
+  background:linear-gradient(transparent,rgba(20,17,16,.86))}
+.hb-shot-main:hover{transform:translateY(-2px);border-color:rgba(231,145,133,.75);box-shadow:0 12px 26px rgba(0,0,0,.42)}
+
+/* 首屏右栏：真实界面做底图，数据浮在上面 */
+.hb-r{position:relative;border-radius:12px;isolation:isolate}
+.hb-r .hb-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top left;
+  opacity:.42;filter:grayscale(.12) contrast(1.06);cursor:zoom-in;z-index:0;transition:opacity .4s var(--ease)}
+.hb-r:hover .hb-bg{opacity:.55}
+.hb-r::after{content:'';position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:linear-gradient(100deg,rgba(24,20,19,.97) 0%,rgba(24,20,19,.82) 38%,rgba(24,20,19,.45) 72%,rgba(24,20,19,.25) 100%)}
+.hb-r > *:not(.hb-bg){position:relative;z-index:1}
+
+/* 首屏右栏：KPI 卡 */
+.hb-r{position:relative;border-left:1px solid rgba(255,255,255,.14);border-radius:0;overflow:visible}
+.hb-num{font-family:var(--serif);font-size:clamp(38px,6vh,60px);font-weight:700;line-height:.98}
+.hb-bars{height:clamp(46px,7.4vh,80px)}
+
+/* 矮屏：新加的大字块分级收起，保证一屏不缩放 */
+@media(max-height:850px){
+  #pgHome .op-proof .pf-k{display:none}
+}
+@media(max-height:770px){
+  .op-big em{display:none}
+}
+@media(max-height:740px){
+  #pgHome .op-proof .pf-c{display:none}
+}
+@media(max-height:700px){
+  .op-big b{font-size:clamp(24px,4.2vh,38px)}
+  #pgHome .cc-foot{display:none}
+  #pgHome .cap-head .dec-note{display:none}
+}
+
+/* 首屏底部：真实界面证据带（允许滚出 80-150px） */
+.ev-strip{margin:clamp(2px,.5vh,6px) 0 0}
+.evs-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:5px}
+.evs-t{font-family:var(--mono);font-size:10.5px;letter-spacing:1.4px;color:var(--seal)}
+.evs-more{font-family:var(--mono);font-size:10px;letter-spacing:.6px;color:var(--ink-weak)}
+.evs-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.evs-row figure{position:relative;margin:0;border-radius:9px;overflow:hidden;cursor:zoom-in;
+  border:1px solid var(--rule);background:var(--paper-3);
+  transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s var(--ease)}
+.evs-row img{display:block;width:100%;height:clamp(70px,10.2vh,118px);object-fit:cover;object-position:top center}
+.evs-row figcaption{position:absolute;left:0;right:0;bottom:0;padding:11px 7px 4px;
+  font-family:var(--mono);font-size:9px;letter-spacing:.5px;color:#fff;
+  background:linear-gradient(transparent,rgba(24,20,19,.88))}
+.evs-row figure:hover{transform:translateY(-3px);border-color:var(--seal);box-shadow:0 12px 26px rgba(27,25,23,.16)}
+
+/* 首屏：证据带在尾部露出 ~60-90px，其余内容轻度收紧 */
+@media(max-height:900px){
+  #pgHome .cc-desc{-webkit-line-clamp:1}
+  .evs-row img{height:clamp(60px,8.6vh,96px)}
+  .evs-head{margin-bottom:4px}
+  #pgHome .hero-band{padding-top:clamp(10px,1.4vh,18px);padding-bottom:clamp(10px,1.4vh,18px)}
+}
+@media(max-height:760px){
+  .evs-row img{height:clamp(52px,7.2vh,78px)}
+  #pgHome .cc-foot{display:none}
+}
+
 </style>
 </head>
 <body>
@@ -726,130 +1378,137 @@ a:focus-visible,button:focus-visible,input:focus-visible,[tabindex]:focus-visibl
 <nav class="nav">
   <div class="nav-logo">彭天娇<small>· 医学情报 → AI PM</small></div>
   <div class="nav-tabs" id="navTabs"></div>
-  <button class="nav-cta" onclick="toggleContact()">联系我 →</button>
+  <button class="nav-cta" onclick="go('contact')">联系我 →</button>
 </nav>
 
-<main>
-  <div class="wrap onepage">
-    <header class="op-head">
-      <div class="hero-split">
-        <div class="hs-l">
-          <div class="op-eyebrow">§ PENG TIANJIAO · 医学情报出身 · AI 产品经理 · AI Coding 全栈交付</div>
-          <h1 class="op-title">我做的 AI 产品<br><em>业务每天都在用</em></h1>
-          <p class="op-sub">医生式的证据标准 + 工程式的自己交付：同一份 HR 问卷分析从<b> 3 天 → 2 分钟</b>，一个招聘海报生成器<b> 8 天</b>从 MVP 跑到上线。<br>不是 Demo，是 <b>17 个上线运行、被业务当日常工具在用</b>的产品。</p>
+  <main>
+    <div class="wrap onepage">
 
-          <div class="op-cta">
-            <button class="btn-line btn-solid" onclick="document.getElementById('capGrid').scrollIntoView({behavior:'smooth',block:'start'})">看 6 项能力 ↓</button>
-            <button class="btn-line btn-sm" onclick="toggleContact()">联系我</button>
-            <span class="op-cta-note">面试可现场演示一次「人机结对 → 需求到上线」的完整过程</span>
-          </div>
-          <div class="op-kw">
-            <span>LLM / 多模态</span><span>Agent 与工作流编排</span><span>RAG · 知识库</span><span>Prompt 工程</span>
-            <span>效果评估 · 幻觉率</span><span>A/B 实验</span><span>Badcase 复盘</span><span>埋点 / 看板</span><span>AI Native 工作流</span>
-          </div>
-        </div>
-        <div class="hs-r">
-          <div class="hs-card">
-            <div class="hsc-tag">真实运行记录 · 金斯瑞任务系统</div>
-            <div class="hsc-num">1189<em>条</em></div>
-            <div class="hsc-lab">累计派单（全量记录，不是试用流水）</div>
-            <div class="hsc-chart">
-              <div class="hc-bar" style="--h:87%"><i>129</i><b>8月</b></div>
-              <div class="hc-bar" style="--h:100%"><i>149</i><b>9月</b></div>
-              <div class="hc-bar" style="--h:52%"><i>78</i><b>10月</b></div>
+      <!-- ============ 主页 ============ -->
+      <section class="ipage" id="pgHome">
+        <div class="hero-band">
+          <div class="hb-l">
+            <div class="live-row">
+              <span class="live-pill"><i></i>在线运行</span>
+              <span class="live-txt">39 位跨部门同事用过 · 8–10 月真实数据</span>
             </div>
-            <div class="hsc-foot">竞对招聘分析师单产品 356 条 · 占全部派单 <b>30%</b></div>
+            <h1 class="op-title">业务在用的 AI 产品<br><em>从需求到上线，一个人跑完</em></h1>
+            <div class="op-big"><b>3 天</b><i>→</i><b class="now">2 分钟</b><em>HR 问卷汇总：一个人做 3 天，现在 2 分钟</em></div>
+            <p class="op-sub">先判断该不该做：每周发生几次、能不能抽象成通用能力；上线后按周看数据，不达标就收敛。性能 / 权限 / 稳定性这类工程深度与研发协同，验收按<b>产品标准</b>，不是「能跑就行」。</p>
+            <div class="op-cta">
+              <button class="btn-line btn-light" onclick="go('compare')">行业基线对比 →</button>
+              <button class="btn-line btn-ghost" onclick="go('contact')">联系我</button>
+              <span class="op-cta-note">面试可现场演示人机结对，也欢迎现场追问任一模块的底层实现</span>
+            </div>
+          </div>
+          <aside class="hb-r">
+            <div class="hb-tag">真实运行记录 · 金斯瑞任务系统（内部工具，非公开产品）</div>
+            <div class="hb-num">1189<em>条</em></div>
+            <div class="hb-lab">累计派单（全量记录，不是试用流水）</div>
+            <div class="hb-bars">
+              <div class="hb-bar" style="--h:87%"><i>129</i><b>8月</b></div>
+              <div class="hb-bar" style="--h:100%"><i>149</i><b>9月</b></div>
+              <div class="hb-bar" style="--h:52%"><i>78</i><b>10月</b></div>
+            </div>
+            <div class="hb-foot">竞对分析师单产品 356 条 · 占派单 <b>30%</b>；<b>39 位跨部门同事</b>复用<br>数据来自任务系统与使用日志，8–10 月。</div>
+          </aside>
+        </div>
+
+        <div class="op-proof">
+          <div class="pf"><div class="pf-k">01 · 替代了多少人工</div><div class="pf-n">8200+<em>份</em></div><div class="pf-l">简历初筛处理量 · ≈ 410 小时人工</div><div class="pf-c">按 3 分钟/份估算，口径可当场复算</div></div>
+          <div class="pf"><div class="pf-k">02 · 跨部门复用</div><div class="pf-n">39<em>位</em></div><div class="pf-l">跨部门同事在用（招聘 + 业务部门）</div><div class="pf-c">23 次交付（金斯瑞 19 + 博世 4），13 个低频已收敛</div></div>
+          <div class="pf"><div class="pf-k">03 · 省掉了多少重复劳动</div><div class="pf-n">80<em>%</em></div><div class="pf-l">重复答疑削减（预估口径）</div><div class="pf-c">MOMOAI 引导式助手 · 8 天 MVP → 上线</div></div>
+        </div>
+
+        <div class="cap-head">
+          <div class="dec-title">6 项能力 · 点开即进入独立页面</div>
+          <div class="dec-note">— 每项能力页里是结论、数据、关键决策与支撑产品</div>
+        </div>
+        <div class="cap-grid" id="capGrid"></div>
+
+        <div class="ev-strip">
+          <div class="evs-head"><span class="evs-t">真实界面 · 点开看全图</span><span class="evs-more">产品页另有 20+ 张截图 →</span></div>
+          <div class="evs-row">
+            <figure onclick="openScreenshot('ev-chatbot-llm.png')" title="点开看全图">
+              <img src="ev-chatbot-llm.png" alt="问卷分析 Agent 工作流" loading="lazy"><figcaption>问卷分析 · Agent 工作流</figcaption></figure>
+            <figure onclick="openScreenshot('ev-metrics-overview.png')" title="点开看全图">
+              <img src="ev-metrics-overview.png" alt="运行数据（聚合口径）" loading="lazy"><figcaption>运行数据 · 聚合口径</figcaption></figure>
+            <figure onclick="openScreenshot('ev-poster-effect.png')" title="点开看全图">
+              <img src="ev-poster-effect.png" alt="招聘海报生成器成图" loading="lazy"><figcaption>海报生成器 · 成图</figcaption></figure>
+            <figure onclick="openScreenshot('screenshot-talent-dify.png')" title="点开看全图">
+              <img src="screenshot-talent-dify.png" alt="问卷分析工作流" loading="lazy"><figcaption>人才画像 · Dify 工作流</figcaption></figure>
           </div>
         </div>
-      </div>
 
-      <div class="op-proof">
-        <div class="pf"><div class="pf-n">3 天 → 2 分钟</div><div class="pf-l">HR 问卷分析</div><div class="pf-c">22 家子公司 × 11 部门 × 7 维度</div></div>
-        <div class="pf"><div class="pf-n">6900+</div><div class="pf-l">简历筛选处理量</div><div class="pf-c">23 用户 / 346 次访问</div></div>
-        <div class="pf"><div class="pf-n">17</div><div class="pf-l">自研产品上线</div><div class="pf-c">技能 + 智能体 + Web 应用 + 工作流</div></div>
-        <div class="pf"><div class="pf-n">8 天</div><div class="pf-l">MVP → 上线</div><div class="pf-c">一个人完成需求 / 开发 / 上线</div></div>
-        <div class="pf"><div class="pf-n">10 万+</div><div class="pf-l">Aily AI 点数消耗</div><div class="pf-c">全链路真实调用，不是白嫖额度</div></div>
-      </div>
-
-      <div class="op-edge">
-        <div class="oe-head">同岗位常见产出 <span class="oe-vs">VS</span> 我的产出</div>
-        <div class="oe-body">
-          <table class="cmp-table">
-            <thead><tr><th>维度</th><th>同岗位常见产出</th><th>我的产出</th></tr></thead>
-            <tbody>
-              <tr><td>需求来源</td><td>访谈、工单、二手转述</td><td class="mine">我在招聘业务一线，痛点每周发生在自己身上</td></tr>
-              <tr><td>交付物</td><td>PRD + 原型，等研发排期</td><td class="mine">自己写到上线：海报生成器 8 天 MVP → 上线</td></tr>
-              <tr><td>上线验证</td><td>靠主观反馈判断有没有人用</td><td class="mine">任务系统 1189 条 · 单产品 356 条占 30% · 6900+ 份简历</td></tr>
-              <tr><td>AI 可信度</td><td>模型给结论，无法核查</td><td class="mine">规则 + LLM 双校验、4 色证据分级、结论可溯源</td></tr>
-              <tr><td>覆盖范围</td><td>1-2 个点状工具</td><td class="mine">17 个产品分层复用：洞察 → 获取 → 筛选 → 甄别 → 留存</td></tr>
-              <tr><td>迭代方式</td><td>交付即结束</td><td class="mine">35 版 / 200+ 次迭代；13 个低频应用主动收敛下线</td></tr>
-            </tbody>
-          </table>
+        <div class="entry-row">
+          <button class="entry-card" onclick="go('compare')">
+            <div class="ec-t">行业基线对比</div>
+            <div class="ec-d">常规 PM 基线 vs 我的产出</div>
+            <div class="ec-go">进入 →</div>
+          </button>
+          <button class="entry-card" onclick="go('contact')">
+            <div class="ec-t">联系我</div>
+            <div class="ec-d">我是谁 + 联系方式，一屏看完</div>
+            <div class="ec-go">进入 →</div>
+          </button>
         </div>
-        <div class="oe-thumbs">
-          <figure class="ot wide" onclick="openScreenshot('ev-metrics-overview.png')">
-            <img src="ev-metrics-overview.png" alt="Web 应用真实使用数据看板" loading="lazy">
-            <figcaption>真实数据看板 · 累计 23 用户 / 346 次访问（近 7 天 11 用户，环比 +450%）</figcaption>
-          </figure>
-          <figure class="ot" onclick="openScreenshot('ev-screening-effect.png')">
-            <img src="ev-screening-effect.png" alt="简历筛选工具实际界面" loading="lazy">
-            <figcaption>简历筛选工具 · 实际界面与导出</figcaption>
-          </figure>
-          <figure class="ot" onclick="openScreenshot('ev-poster-effect.png')">
-            <img src="ev-poster-effect.png" alt="海报生成器实际出图" loading="lazy">
-            <figcaption>海报生成器 · 实际出图效果</figcaption>
-          </figure>
+
+        <div class="src-note">口径说明：23 次交付 = 金斯瑞 19 次（2 个 Web + 9 个 Skill + 8 个 Agent）+ 博世 4 次，重点展示其中 14 个。<b>规模边界</b>：这些是 HR 招聘团队的内部提效工具，招聘团队活跃用户 23 人、累计派单 1189 条——不是平台级系统，不与 DAU 对标；价值在于把高频重复劳动压到接近 0。「410 小时」按 3 分钟/份估算，可当面复算；成本侧：全链路 AI 点数消耗 3.77 万，单次调用成本可当场折算。</div>
+      </section>
+
+      <!-- ============ 能力内页 ============ -->
+      <section class="ipage hidden" id="pgCap"></section>
+
+      <!-- ============ 产品内页 ============ -->
+      <section class="ipage hidden" id="pgProj"></section>
+
+      <!-- ============ 对比内页 ============ -->
+      <section class="ipage hidden" id="pgCompare">
+        <nav class="crumb"><a onclick="go('home')">主页</a><span>›</span><b>行业基线对比</b></nav>
+        <div class="pg-head"><div class="pg-no">对比</div><h2 class="pg-title">行业常规基线 <span class="oe-vs">VS</span> 我的产出</h2>
+        <div class="pg-sub">基线 = 常规 PM / 实习生的常见产出水平（Industry Baseline），不是针对任何人</div></div>
+        <table class="cmp-table">
+          <thead><tr><th>维度</th><th>行业常规基线<br><em>Industry Baseline</em></th><th>我的产出</th></tr></thead>
+          <tbody>
+            <tr><td>需求来源</td><td>访谈、工单、二手转述</td><td class="mine">我在招聘业务一线，痛点每周发生在自己身上</td></tr>
+            <tr><td>交付物</td><td>PRD + 原型，等研发排期</td><td class="mine">自己写到上线：海报生成器 <b>8 天</b> MVP → 上线<br><em>需求 → 数据 → 界面 → 部署一人闭环；代码主要由 AI 产出，性能 / 权限 / 稳定性与研发协同</em></td></tr>
+            <tr><td>上线验证</td><td>定性反馈，缺乏量化验证</td><td class="mine"><div class="mset"><div class="ms"><b>1189</b><span>任务系统累计派单</span></div><div class="ms"><b>356</b><span>单产品任务 · 占 30%</span></div><div class="ms"><b>8200+</b><span>筛选工具处理量</span></div></div></td></tr>
+            <tr><td>AI 可信度</td><td>模型给结论，无法核查</td><td class="mine">规则 + LLM 双校验、4 色证据分级、结论可溯源</td></tr>
+            <tr><td>覆盖范围</td><td>1-2 个点状工具</td><td class="mine"><b>23 次</b>内部交付分层复用：洞察 → 获取 → 筛选 → 甄别 → 留存<br><em>规模边界：招聘团队活跃用户 23 人、派单 1189 条，是内部提效工具，不是平台级系统</em></td></tr>
+<tr><td>业务价值</td><td>说不清省了多少</td><td class="mine">算得出：问卷汇总 <b>3 天 → 2 分钟</b>；初筛 8200 份 ≈ <b>410 小时</b>人工被替代；重复答疑<b>预计削减 80%</b><br><em>口径：省下的时间可折算人力；目前为内部工具，没有对外收入</em></td></tr>
+            <tr><td>迭代方式</td><td>交付即结束</td><td class="mine"><b>35 版</b> / <b>200+</b> 次迭代；13 个低频应用收敛下线——把维护精力压回高频链路，剩下的都是每周真被用的</td></tr>
+          </tbody>
+        </table>
+        <div class="oe-foot">上面每一条都能落到具体证据上：一手需求长成 6 个在用产品，AI Coding 让海报生成器 8 天上线，医学情报 + 知识工程让背调沉淀出 19 项核查规则——<b>这三点交叉的地方，才是我能独立把「非标信息 → 结构化 → 可信输出」做成产品的原因</b>。<br>口径与证据链在每个产品页里，所有数字可当场复算。</div>
+      </section>
+
+      <!-- ============ 联系内页（只放我是谁 + 联系方式） ============ -->
+      <section class="ipage hidden" id="pgContact">
+        <div class="ct-wrap">
+          <div class="ct-who">
+            <div class="ct-name">彭天娇<span>PENG TIANJIAO</span></div>
+            <div class="ct-role">AI 产品经理 · 医学情报（华科 985 硕士在读）</div><div class="ct-note">23 次内部交付在用。想聊某个模块怎么做的，现场演示比看文字快。</div>
+          </div>
+          <div class="ct-items">
+            <a href="mailto:1766647040@qq.com" class="ct-item" data-copy="1766647040@qq.com" onclick="copyContact(event,this)">
+              <span class="ci-icon">📧</span>
+              <span class="ci-txt">1766647040@qq.com</span>
+              <span class="ci-copy">点击复制</span>
+            </a>
+            <a href="tel:15200320041" class="ct-item" data-copy="15200320041" onclick="copyContact(event,this)">
+              <span class="ci-icon">📱</span>
+              <span class="ci-txt">15200320041</span>
+              <span class="ci-copy">点击复制</span>
+            </a>
+          </div>
+          <button class="btn-line btn-sm ct-back" onclick="go('home')">← 返回主页</button>
         </div>
-        <div class="oe-foot">上面每一条都能落到具体证据上：一手需求长成 6 个在用产品，AI Coding 让海报生成器 8 天上线，医学情报 + 知识工程让背调沉淀出 18 项核查准则——<b>这三点交叉的地方，才是我能独立把「非标信息 → 结构化 → 可信输出」做成产品的原因</b>。下面每项能力，点开就是支撑它的产品、数据与复盘。</div>
-      </div>
-    </header>
+      </section>
 
-    <div class="op-sec-head">
-      <div class="dec-title">能力矩阵</div>
-      <div class="dec-note">— 点开任一项，看它落在哪些产品上（项目说明、结果数据、复盘都在里面）</div>
-    </div>
-    <div class="cap-grid" id="capGrid"></div>
-    <div class="cap-panel" id="capPanel"></div>
-
-    <div class="op-sec-head">
-      <div class="dec-title">岗位要求对照</div>
-      <div class="dec-note">— 头部互联网公司 AI 产品经理 JD 的共性要求，逐条给出我的证据（点右侧能力编号可展开）</div>
-    </div>
-    <div class="fit-wrap">
-      <table class="cmp-table fit-table">
-        <thead><tr><th>岗位共性要求</th><th>我的证据</th><th>能力</th></tr></thead>
-        <tbody>
-          <tr><td>理解 LLM / Agent / RAG 能力边界，判断什么该用 AI 做</td><td class="mine">17 个产品覆盖 Agent / Skill / RAG / 工作流；竞对分析做五层研判 + 公平性三对齐</td><td class="fit-cap" onclick="openCap('cap-ai')">C-03 →</td></tr>
-          <tr><td>0→1 独立构建、Builder 心态（不只写 PRD）</td><td class="mine">招聘海报生成器 8 天从 MVP 到上线，需求 / 开发 / 上线一人闭环</td><td class="fit-cap" onclick="openCap('cap-code')">C-04 →</td></tr>
-          <tr><td>效果评估与指标体系（完成率、准确率、幻觉率、满意度）</td><td class="mine">4 色证据分级 + 18 项核查准则，初筛 0 假阳性，每条结论可溯源</td><td class="fit-cap" onclick="openCap('cap-trust')">C-05 →</td></tr>
-          <tr><td>数据分析与 A/B 实验驱动增长</td><td class="mine">任务系统 1189 条全量、单产品 356 条占 30%、Web 23 用户 / 346 访问；掌握 ab-test-setup 方法论</td><td class="fit-cap" onclick="openCap('cap-data')">C-02 →</td></tr>
-          <tr><td>深入业务工作流，抽象可复用的 Agent 能力</td><td class="mine">6 个一线痛点 → 6 个在用产品；术语 / 背调技能安装量 37 / 36，跨域复用</td><td class="fit-cap" onclick="openCap('cap-insight')">C-01 →</td></tr>
-          <tr><td>AI 原生工作流 / 人机结对（面试需展示案例）</td><td class="mine">调研、文档、原型、数据分析、测试全环节 AI 结对；可现场演示从需求到上线全过程</td><td class="fit-cap" onclick="openCap('cap-code')">C-04 →</td></tr>
-          <tr><td>线上监控、Badcase 复盘与灰度迭代闭环</td><td class="mine">35 版 / 200+ 次迭代；Badcase 按检索层 / 意图层 / 输出层分类定位后再改</td><td class="fit-cap" onclick="openCap('cap-iterate')">C-06 →</td></tr>
-          <tr><td>跨团队协同、项目管理与合规风控</td><td class="mine">独立对接业务方与算法 / 工程；海报模板 RBAC 鉴权、敏感信息局部遮盖</td><td class="fit-cap" onclick="openCap('cap-insight')">C-01 →</td></tr>
-        </tbody>
-      </table>
-      <div class="src-note" style="margin-top:10px">口径说明：上表按字节跳动、百度、腾讯、快手、美团公开招聘页面的 AI 产品经理岗位描述归纳高频共性要求，非逐字引用；每条右侧对应我在该要求上的证据。</div>
     </div>
 
-    <div class="op-foot">
-      <button class="link-chip" onclick="toggleContact()">联系我 ✉</button>
-      <div class="op-contact" id="opContact">
-        <a href="mailto:1766647040@qq.com" class="contact-item" data-copy="1766647040@qq.com" onclick="copyContact(event,this)">
-          <span class="ci-icon">📧</span><span>1766647040@qq.com</span><span class="ci-copy">点击复制</span>
-        </a>
-        <a href="tel:15200320041" class="contact-item" data-copy="15200320041" onclick="copyContact(event,this)">
-          <span class="ci-icon">📱</span><span>15200320041</span><span class="ci-copy">点击复制</span>
-        </a>
-      </div>
-      <div class="foot" style="margin-top:20px">
-        <span>彭天娇 · PENG TIANJIAO</span>
-        <span>每条数据均可展开至原始证据</span>
-        <span>截图为脱敏处理版 · 涉企业内部数据的字段已局部遮盖</span>
-      </div>
-    </div>
-  </div>
-</main>
+    <button class="fab-home hidden" id="fabHome" onclick="go('home')" aria-label="回主页">↑</button>
+  </main>
 
 <div class="screenshot-modal" id="screenshotModal" onclick="closeScreenshot()">
   <button class="close-modal" onclick="closeScreenshot()">✕</button>
@@ -860,10 +1519,6 @@ a:focus-visible,button:focus-visible,input:focus-visible,[tabindex]:focus-visibl
   <div class="modal-note">示意材料 · 涉企业内部数据的字段已做遮盖</div>
 </div>
 
-<div class="kbd-hint" id="kbdHint">
-  <div>点击卡片 = 就地展开</div>
-  <div><kbd>ESC</kbd> 收起当前卡片</div>
-</div>
 <div class="toast-stack" id="toastStack"></div>
 
 <script>
@@ -877,14 +1532,14 @@ const projectData = [
     metricLabel: "效率提升",
     metricContext: "3天→2分钟",
     status: "✅ 已上线",
-    summary: "独立设计四层AI架构，将HR问卷分析从3天压缩至2分钟",
+    summary: "独立设计一条分析链路（意图识别→知识检索→逻辑推理→出图），把 HR 问卷汇总从 3 天压到 2 分钟",
     tags: ["大模型", "RAG", "图表生成"],
     detail: {
       background: "HR手动分析问卷耗时3天/份，只能抽样，无法覆盖全员。通过访谈发现核心痛点不在'分析能力'，而在'数据分散、反复沟通'。需将HR的隐性分析逻辑转化为可执行的AI工作流，实现全量问卷的快速分析。",
       techStack: "Dify工作流平台（多节点编排） · 对比GPT/Claude等国外大模型后选择DeepSeek · RAG知识库检索 · Python代码节点（得分计算+数据格式化） · 文档提取器（PDF/Word解析）",
       role: "独立负责全流程产品设计。决策采用对话式AI架构（意图识别→知识检索→逻辑推理→可视化），而非单一模型调用，确保分析结果可追溯、可解释。",
       challenge: "核心痛点: 数据分散、反复沟通 → 设计知识检索模块整合多源数据；信息呈现效率低 → 增加图表自动生成功能，降低阅读门槛。",
-      iterationLog: "V1.0: 基础问答式分析，准确率约70%。\n→ 发现仅靠大模型无法回答HR历史数据相关问题，存在严重知识盲区\nV2.0: 增加知识检索层，引入RAG模块。\n→ RAG补充了数据查询能力，但缺乏可视化，HR反馈文字过多，数据可视化不强\nV3.0: 四层架构重构，增加图表自动生成，输出可读性大幅提升。\n→ 架构定型后，60+轮Prompt调优中分析50+条badcase，发现多轮追问场景下意图识别不稳定\nV4.0: 优化Prompt策略+增强上下文记忆，意图识别大幅提升。\n→ HR提出核心新需求：能否同时对比22家子公司×11部门×7维度的数据？\nV9.7.0: 当前版本，支持多对象交互分析（22家子公司×11部门×7维度），成为HR月度复盘固定工具。",
+      iterationLog: "V1.0: 基础问答式分析，准确率约70%。\n→ 发现仅靠大模型无法回答HR历史数据相关问题，存在严重知识盲区\nV2.0: 增加知识检索层，引入RAG模块。\n→ RAG补充了数据查询能力，但缺乏可视化，HR反馈文字过多，数据可视化不强\nV3.0: 链路定型（识别→检索→推理→出图），增加图表自动生成，输出可读性大幅提升。\n→ 架构定型后，60+轮Prompt调优中分析50+条badcase，发现多轮追问场景下意图识别不稳定\nV4.0: 优化Prompt策略+增强上下文记忆，意图识别大幅提升。\n→ HR提出核心新需求：能否同时对比22家子公司×11部门×7维度的数据？\nV9.7.0: 当前版本，支持多对象交互分析（22家子公司×11部门×7维度），成为HR月度复盘固定工具。",
       result: "3个工作日→2分钟，效率提升99%，成为HR部门固定使用工具。沉淀了可复用的'非结构化数据→结构化分析→自动可视化'链路的HR场景智能化分析SOP。"
     },
     evidence: [
@@ -936,10 +1591,10 @@ const projectData = [
     summary: "Python自动化采集+PowerBI实时看板，重复工作量减少80%",
     tags: ["Python", "PowerBI", "自动化"],
     detail: {
-      background: "跨年度、月份数据量大，人工易出错。流程卡在'多源Excel手动合并'和'重复清洗'。管理层决策缺乏实时数据支撑，招聘效率难以量化评估。",
+      background: "跨年度、月份数据量大，人工易出错。流程卡在'多源Excel手动合并'和'重复清洗'。管理层看数缺实时口径，招聘效率难量化。",
       techStack: "Python多线程脚本（Pandas自动化清洗+指标计算+多源汇总） · PowerBI（实时看板+漏斗分析+渠道对比+预警机制） · 多平台数据对接",
       role: "数据产品负责人。负责需求分析、数据源梳理、自动化流程设计和可视化看板搭建。将模糊的「想看数据」需求转化为具体指标体系，将数据分析从'事后汇报'转变为'实时监控'。",
-      challenge: "多源Excel手动合并 → Python多线程脚本统一清洗+汇总；管理层决策缺实时数据 → PowerBI实时看板含漏斗分析。",
+      challenge: "多源Excel手动合并 → Python多线程脚本统一清洗+汇总；看数缺口径 → PowerBI 实时看板含漏斗分析。",
       iterationLog: "V1.0: 覆盖2个数据源的基础自动化采集，验证可行性。\n→ 2个数据源远不够，HR每月需要对比所有招聘渠道效率，无法跨平台对比\nV2.0: 扩展到全部招聘平台，增加多线程数据清洗逻辑。\n→ 清洗脚本稳定后，HR反馈'数据有了但看不出趋势'，Excel表格阅读效率低\nV3.0: 搭建PowerBI看板，含漏斗分析+渠道对比+周期监控。\n→ 看板上线后管理层频繁查看但依赖手动刷新，希望能'异常时不用盯着也能知道'\nV4.0: 增加自动预警机制，关键指标异常主动推送通知，实现'实时监控'。",
       result: "跨年度数据汇总从2天降至2分钟，重复工作量减少80%。看板被HR部门采用，成为月度复盘固定工具，实现从'事后汇报'到'实时监控'的转变。"
     },
@@ -947,7 +1602,7 @@ const projectData = [
       { type: "code", label: "数据采集脚本示例", icon: "💻", content: "# Python自动化数据采集\nimport pandas as pd\nfrom concurrent.futures import ThreadPoolExecutor\n\n# 多源数据采集\nsources = ['招聘平台A', '内推系统', 'ATS']\n# 统一清洗逻辑\n# PowerBI实时看板对接" },
       { type: "comparison", label: "数据对比", icon: "📊", content: "数据汇总时间：2天 → 2分钟\n重复工作量减少：80%\n报表生成：手动 → 自动化" },
       { type: "timeline", label: "上线记录", icon: "📅", content: "2025-2026 · HR部门使用，并为月度复盘工具" },
-      { type: "screenshot", label: "PowerBI看板", icon: "📸", img: "screenshot-powerbi.png", caption: "招聘数据PowerBI实时看板 · 多源数据可视化" }
+      { type: "screenshot", label: "运行数据（聚合口径）", icon: "📸", img: "ev-metrics-overview.png", caption: "使用量与会话数据 · 聚合口径，不含候选人/员工个人信息" }
     ]
   },
   {
@@ -981,22 +1636,22 @@ const projectData = [
     category: "enterprise",
     metric: "35版",
     metricLabel: "累计迭代",
-    metricContext: "沉淀18项核查准则，覆盖IC到高管",
+    metricContext: "沉淀19项核查规则，覆盖IC到高管",
     status: "✅ 已上线",
-    summary: "规则引擎+LLM双校验架构，6阶段自适应工作流，35版迭代沉淀18项核查准则，从风险评分工具升级为面试辅助决策系统",
+    summary: "规则引擎+LLM双校验架构，6阶段自适应工作流，35版迭代沉淀19项核查规则，从风险评分工具升级为面试辅助决策系统",
     tags: ["AI Skill", "背调", "双校验架构"],
     detail: {
       background: "背调对象覆盖IC到高管全层级，简历信息失真、离职信息难核实，纯LLM判断易产生幻觉，传统背调效率低且标准不一。需要可信、可审计、可复用的智能化背调流程。",
-      techStack: "规则引擎+LLM双校验架构 · 6阶段自适应工作流 · 30+数据源交叉校验 · 4色证据分级 · Embedding语义匹配 · 18项核查准则",
-      role: "主导Skill架构设计与双校验机制决策，搭建6阶段自适应工作流与证据分级体系，在35版迭代中沉淀18项核查准则，推动产品从风险评分工具升级为面试辅助决策系统。",
-      challenge: "纯LLM判断易产生幻觉，结论可信度不足 → 规则引擎输出确定性命中/未命中，LLM承担模糊场景语义识别与原因解释；背调对象覆盖IC到高管 → 35版迭代沉淀18项核查准则；面试官需快速判断 → 升级为面试辅助决策系统，报告可直接转发。",
-      iterationLog: "架构决策: 对比纯LLM方案，引入规则引擎兜底。\n→ 规则引擎输出确定性命中/未命中结论，LLM补充模糊场景语义识别与原因解释，牺牲部分自动化率换取可信度\n流程搭建: 设计6阶段自适应工作流（JD解析→画像→30+数据源交叉校验→4色证据分级→Embedding语义匹配风险识别→事后纠察）。\n→ 统一背调执行路径，证据分级支撑可审计\n准则沉淀: 在35版迭代中持续沉淀核查准则。\n→ 产出18项核查准则，覆盖IC到高管全层级\n产品升级: 从风险评分工具升级为面试辅助决策系统。\n→ HR反馈可直接把报告转发给面试官",
-      result: "规则引擎+LLM双校验架构显著降低纯LLM幻觉带来的误判风险；累计迭代35版沉淀18项核查准则，覆盖IC到高管全层级，报告可直接转发面试官，压缩决策链路。"
+      techStack: "规则引擎+LLM双校验架构 · 6阶段自适应工作流 · 30+数据源交叉校验 · 4色证据分级 · Embedding语义匹配 · 19项核查规则",
+      role: "主导Skill架构设计与双校验机制决策，搭建6阶段自适应工作流与证据分级体系，在35版迭代中沉淀19项核查规则，推动产品从风险评分工具升级为面试辅助决策系统。",
+      challenge: "纯LLM判断易产生幻觉，结论可信度不足 → 规则引擎输出确定性命中/未命中，LLM承担模糊场景语义识别与原因解释；背调对象覆盖IC到高管 → 35版迭代沉淀19项核查规则；面试官需快速判断 → 升级为面试辅助决策系统，报告可直接转发。",
+      iterationLog: "架构决策: 对比纯LLM方案，引入规则引擎兜底。\n→ 规则引擎输出确定性命中/未命中结论，LLM补充模糊场景语义识别与原因解释，牺牲部分自动化率换取可信度\n流程搭建: 设计6阶段自适应工作流（JD解析→画像→30+数据源交叉校验→4色证据分级→Embedding语义匹配风险识别→事后纠察）。\n→ 统一背调执行路径，证据分级支撑可审计\n准则沉淀: 在35版迭代中持续沉淀核查准则。\n→ 产出19项核查规则，覆盖IC到高管全层级\n产品升级: 从风险评分工具升级为面试辅助决策系统。\n→ HR反馈可直接把报告转发给面试官",
+      result: "规则引擎+LLM双校验架构显著降低纯LLM幻觉带来的误判风险；累计迭代35版沉淀19项核查规则，覆盖IC到高管全层级，报告可直接转发面试官，压缩决策链路。"
     },
     evidence: [
       { type: "code", label: "双校验架构", icon: "💻", content: "# 规则引擎 + LLM 双校验\n规则引擎 → 确定性命中/未命中结论\nLLM → 模糊场景语义识别与原因解释\n→ 牺牲部分自动化率，换取结果可信度\n\n# 6阶段自适应工作流\nJD解析 → 8维画像 → 30+数据源交叉校验\n→ 4色证据分级 → Embedding语义匹配 → 事后纠察\n\n# 4色证据分级\n🟢 官方渠道直接验证\n🟡 第三方间接佐证\n🟠 单一来源待核实\n🔴 与简历矛盾/造假嫌疑" },
-      { type: "code", label: "SKILL 元数据", icon: "🧾", content: "name: resume-due-diligence-cn\nlabel: 简历背景深度核查专员\n版本: v3.5.7（2026-09-02 生效，IC 至资深高管）\n执行: Stage 0-6 + Stage 10 事后纠察\n\n# 18 大铁律硬约束（节选）\n· 三源交叉验证\n· 被动离职识别\n· Ownership / 扩展数据\n· 风险自动灰显，保留人工决策入口" },
-      { type: "screenshot", label: "背调 SOP 示意图", icon: "🗺️", img: "ev-duediligence-sop.png", caption: "resume-due-diligence-cn · v3.5.7 · 18 大铁律 + Stage 10 检察官事后纠察" }
+      { type: "code", label: "SKILL 元数据", icon: "🧾", content: "name: resume-due-diligence-cn\nlabel: 简历背景深度核查专员\n版本: v3.5.7（2026-09-02 生效，IC 至资深高管）\n执行: Stage 0-6 + Stage 10 事后纠察\n\n# 18 条硬约束（节选）\n· 三源交叉验证\n· 被动离职识别\n· Ownership / 扩展数据\n· 风险自动灰显，保留人工决策入口" },
+      { type: "screenshot", label: "背调 SOP 示意图", icon: "🗺️", img: "ev-duediligence-sop.png", caption: "resume-due-diligence-cn · v3.5.7 · 18 条硬约束 + Stage 10 事后纠察" }
     ]
   },
   {
@@ -1008,19 +1663,19 @@ const projectData = [
     metricLabel: "告警机制",
     metricContext: "红/橙/黄三级",
     status: "✅ 已上线",
-    summary: "五层战略研判模型，每条推断强制附带完整证据链，透视竞对战略意图",
+    summary: "从竞对在招岗位读战略意图：分层解读（热度→布局→密度→节奏→推断），每条推断强制附证据链与反例检查，可被复核",
     tags: ["数据采集", "情报分析", "自动化看板"],
     detail: {
       background: "自主系统追踪竞对招聘动态难度高，难以从海量岗位数据中提炼出竞争对手的组织扩张节奏与战略意图。",
-      techStack: "多平台多源数据采集与清洗 · 五层战略研判模型 · 自定义自动化看板 · 日报/周报推送 · 红/橙/黄三级告警",
-      role: "主导设计覆盖多平台多源数据的采集与清洗系统，创造\"五层战略研判\"模型（招聘热度→战略布局→人才密度→招聘节奏→核心战略推断）。",
-      challenge: "海量岗位数据难提炼战略意图 → 五层战略研判模型，每条推断强制附带完整证据链（支撑数据点+来源链接+推理逻辑）。",
-      iterationLog: "数据采集: 搭建覆盖多平台多源数据的采集与清洗系统。\n→ 原始岗位数据噪音大，需统一清洗与结构化\n模型设计: 创造\"五层战略研判\"模型（招聘热度→战略布局→人才密度→招聘节奏→核心战略推断）。\n→ 每条推断强制附带完整证据链（支撑数据点+来源链接+推理逻辑）\n交付沉淀: 产出自定义自动化看板、日报/周报推送及红/橙/黄三级告警机制。\n→ 透视多家竞对潜在战略意图，为管理层提供高价值决策情报",
-      result: "产出自定义自动化看板、日报/周报推送及红/橙/黄三级告警机制。透视多家竞对的潜在战略意图，为管理层提供高价值决策情报。"
+      techStack: "多平台岗位数据采集与清洗 · 分层解读（招聘热度→组织布局→人才密度→招聘节奏→战略推断） · 自动化看板 · 日报/周报推送 · 红/橙/黄三级告警",
+      role: "主导设计多平台岗位数据的采集与清洗流程，并定义分层解读口径（招聘热度→组织布局→人才密度→招聘节奏→战略推断）——本质是一套「从岗位数据推战略意图」的推理约束，不是自研算法模型。",
+      challenge: "岗位数据多但噪音大，难提炼战略意图 → 用分层解读口径约束输出（热度→布局→密度→节奏→推断），每条推断强制附带完整证据链（支撑数据点 + 来源链接 + 推理逻辑）。",
+      iterationLog: "数据采集: 搭建覆盖多平台多源数据的采集与清洗系统。\n→ 原始岗位数据噪音大，需统一清洗与结构化\n模型设计: 定义分层解读口径（招聘热度→组织布局→人才密度→招聘节奏→战略推断）。\n→ 每条推断强制附带完整证据链（支撑数据点 + 来源链接 + 推理逻辑）\n交付沉淀: 产出自定义自动化看板、日报/周报推送及红/橙/黄三级告警机制。\n→ 透视多家竞对潜在战略意图，为管理层提供高价值决策情报",
+      result: "产出自动看板、日报/周报推送及红/橙/黄三级告警。为管理层提供竞对招聘动向的可复核情报——结论带证据链，能被追问，也能被推翻。"
     },
     evidence: [
       { type: "comparison", label: "交付成果", icon: "📊", content: "自动化看板：自定义可视化\n推送机制：日报/周报自动推送\n告警机制：红/橙/黄三级\n证据链：数据点+来源链接+推理逻辑" },
-      { type: "code", label: "竞对 Agent 元数据", icon: "🧾", content: "name: competitor-recruitment-analyst\nlabel: 竞对招聘分析师\n版本: v2.2.1（SOP 同步，2026-09-02 生效）\n执行: Stage 0-7 串行 + Stage 7 事后纠察\n\n# 五层战略研判\n招聘热度 → 战略布局 → 人才密度\n→ 招聘节奏 → 核心战略推断\n每条推断必带：证据链 + 反例检查 + 可信度\n\n# 10 大铁律硬约束\n官网必采 / 三源交叉 / 覆盖率硬约束 / 推断标注\n双重链接 / 数据不虚构 / 穷尽式采集\n日环比 / 准时送达 / 增量感知" },
+      { type: "code", label: "竞对 Agent 元数据", icon: "🧾", content: "name: competitor-recruitment-analyst\nlabel: 竞对招聘分析师\n版本: v2.2.1（SOP 同步，2026-09-02 生效）\n执行: Stage 0-7 串行 + Stage 7 事后纠察\n\n# 分层解读口径（不是自研模型）\n招聘热度 → 组织布局 → 人才密度\n→ 招聘节奏 → 战略推断\n每条推断必带：证据链 + 反例检查 + 可信度\n\n# 10 条硬约束（采集与推断）\n官网必采 / 三源交叉 / 覆盖率要求 / 推断标注\n双重链接 / 数据不虚构 / 增量感知\n日环比 / 准时送达" },
       { type: "screenshot", label: "Stage 0-7 工作流示意图", icon: "🗺️", img: "ev-competitor-workflow.png", caption: "竞对招聘分析师 · Stage 0-7 串行工作流（采集→聚类→分析→研判→报告→纠察）" }
     ]
   },
@@ -1038,15 +1693,15 @@ const projectData = [
     tags: ["网页APP", "飞书Aily", "本地解析", "内容指纹"],
     detail: {
       background: "招聘旺季在线简历量大，人工初筛耗时长且标准不一；若对每份简历逐一调用大模型，成本高企且结果难以回溯，需要一套低成本、可复用、可解释的初筛方案。",
-      techStack: "飞书Aily生态 · 浏览器本地解析 · 内容指纹复用 · 三档匹配口径 · 零假阳性原则",
-      role: "主导开发简历智能筛选工具网页APP，决策浏览器本地解析方案（零逐份LLM调用成本），设计内容指纹复用机制与四轮校准的三档匹配口径，贯彻零假阳性原则。",
+      techStack: "飞书Aily生态 · 浏览器本地解析 · 内容指纹复用 · 三档匹配口径 · 低误判率口径（2%）",
+      role: "主导开发简历智能筛选工具网页APP，决策浏览器本地解析方案（零逐份LLM调用成本），设计内容指纹复用机制与四轮校准的三档匹配口径，贯彻低误判率口径（2%）。",
       challenge: "逐份调用LLM成本高 → 浏览器本地解析，零逐份LLM调用成本；同一候选人多次投递重复解析 → 内容指纹实现全公司复用；初筛标准不一、易错判 → 四轮校准出「直接命中/AI补漏/可疑假阳性」三档，可疑结果自动灰显，宁漏判不错判。",
       iterationLog: "方案选型: 对比云端逐份LLM与浏览器本地解析方案。\n→ 浏览器本地解析，零逐份LLM调用成本\n复用设计: 设计内容指纹机制。\n→ 同一候选人解析结果全公司复用，避免重复计算\n口径校准: 经四轮校准匹配口径。\n→ 「直接命中/AI补漏/可疑假阳性」三档，每条结果可回溯原文定位\n持续迭代: 跟随HR反馈持续打磨。\n→ 累计迭代超200次，大幅释放HR初筛人力",
-      result: "累计迭代超200次，浏览器本地解析实现零逐份LLM调用成本，内容指纹实现解析结果全公司复用；三档匹配+零假阳性原则在释放初筛人力的同时保障筛选公平性。"
+      result: "累计迭代超200次，浏览器本地解析实现零逐份LLM调用成本，内容指纹实现解析结果全公司复用；三档匹配+低误判率口径（2%）在释放初筛人力的同时保障筛选公平性。"
     },
     evidence: [
-      { type: "code", label: "三档匹配口径", icon: "💻", content: "# 三档匹配口径（四轮校准）\n1. 直接命中：与JD要求强匹配\n2. AI补漏：语义相关，规则引擎未命中\n3. 可疑假阳性：灰显，需人工复核\n\n# 零假阳性原则\n宁漏判、不错判 —— 可疑结果自动灰显，保留人工决策入口\n\n# 内容指纹复用\n同一候选人解析结果全公司复用，避免重复LLM调用" },
-      { type: "comparison", label: "落地成果", icon: "📊", content: "LLM成本：解析环节零逐份调用（改由浏览器本地解析，AI 仅用于「AI 补漏」档）\nAI 点数消耗：3.77 万（整体）\n复用机制：内容指纹全公司复用\n匹配口径：三档+零假阳性\n累计迭代：200次+" },
+      { type: "code", label: "三档匹配口径", icon: "💻", content: "# 三档匹配口径（四轮校准）\n1. 直接命中：与JD要求强匹配\n2. AI补漏：语义相关，规则引擎未命中\n3. 可疑假阳性：灰显，需人工复核\n\n# 低误判率口径（2%）\n宁漏判、不错判 —— 可疑结果自动灰显，保留人工决策入口\n\n# 内容指纹复用\n同一候选人解析结果全公司复用，避免重复LLM调用" },
+      { type: "comparison", label: "落地成果", icon: "📊", content: "LLM成本：解析环节零逐份调用（改由浏览器本地解析，AI 仅用于「AI 补漏」档）\nAI 点数消耗：3.77 万（整体）\n复用机制：内容指纹全公司复用\n匹配口径：三档+低误判率（8200+ 份实测误判率 2%）\n累计迭代：200次+" },
       { type: "code", label: "功能与迭代", icon: "📋", content: "GenScript Biotech 人才智能部 · 简历智能筛选工具\n\n# 核心能力\n配置筛选关键词（Java/Python/机器学习/GMP/生物医药…）\n批量上传简历（支持 zip 压缩包）\n→ 本地解析，分析结果回填 Web 端，无需逐份 LLM 调用\n→ 版本迭代 V115 → V128 持续打磨" },
       { type: "screenshot", label: "筛选工具界面与流程", icon: "🖥️", img: "ev-resume-screening.png", caption: "简历智能筛选工具 · 关键词配置 → 批量上传 → 本地解析 → 结果回填" }
     ]
@@ -1142,7 +1797,7 @@ const projectData = [
     detail: {
       background: "招聘海报依赖设计师手工排版，一份 JD 到成图周期长、品牌规范难统一；招聘组需要一款能自助产出、可批量投放的海报工具。",
       techStack: "AI 结构化提取 + 本地规则引擎双引擎降级 · 4 品牌模板体系与 5 尺寸自适应分页 · 3 倍像素高清导出 · 分级权限管控",
-      role: "用 AI Coding 独立完成从 MVP 到上线的全栈开发与产品设计：定义 JD 提取凝练规则与词频标题口径，搭建 4 品牌模板体系、5 尺寸自适应分页算法与 AI／本地双引擎降级策略。",
+      role: "独立完成从 MVP 到上线的产品设计与开发：定义 JD 提取凝练规则与词频标题口径，搭建 4 品牌模板体系、5 尺寸自适应分页算法与 AI／本地双引擎降级策略。代码主要来自 AI Coding，我负责口径定义、验收标准与上线后的真实使用跟进。",
       challenge: "① AI 插件 QPS 限流 → 限流不立即重试，直接回退本地规则引擎，保证功能始终可用；② html2canvas 导出下沉裁切、字体错行 → 改用 html-to-image + 内联字体嵌入；③ 并发导出 2250×3000 画布内存峰值卡死页面 → 逐页串行导出 + 页间 50ms 让出主线程；④ 分页容量常量与渲染度量不一致导致条目被裁切 → 两者强制成对同步。",
       iterationLog: "08-13 MVP: 上传 JD → AI 插件结构化提取 → 模板渲染 → 下载 PNG 全链路打通。\n→ 修复 JD 提取插件执行失败、下载与编辑同步问题\n08-14 品牌体系: 新增四公司品牌体系（金斯瑞/百斯杰/传奇生物/蓬勃生物）与品牌字体。\n→ 背景图改为 CSS 渐变+同心圆弧，消除文字重影\n08-17 排版与导出重构（单日最大迭代量）: 主标题改为 JD 正文动态词频提取。\n→ 修复「自动化部经理/总监 → 理/总监」残段标题；导出引擎 html2canvas → html-to-image\n08-18 性能与权限: AI 限流退避与本地降级、下载拆独立模块、RBAC 角色管控。\n→ 历史海报按用户行级隔离；新增 5 种尺寸、公司 Logo 与海报深链\n08-19 视觉与下载体验: 五组字体分控、尺寸自适应分页、逐页串行出图。\n→ 影印机等待动画 + 撒花动效；修复 Logo 偶发丢失（导出前等图片加载）\n08-20 收敛: 按用户要求整体移除生成完成飞书提醒链路。",
       result: "8 天完成 MVP 到上线，支持 4 品牌、5 种尺寸与 3 倍像素高清导出；AI 限流自动降级本地引擎保证可用性，招聘组可自助产出品牌规范的投放海报。"
@@ -1159,7 +1814,7 @@ const capabilityData = [
   {
     tool: "Dify 工作流编排",
     icon: "🔗",
-    proof: "搭建「满意度分析Chatbot」四层工作流（意图识别→知识检索→逻辑推理→可视化），解决了HR数据分散、分析耗时长的问题，从3天压缩至2分钟。"
+    proof: "搭建「满意度分析 Chatbot」的一条分析链路（意图识别→知识检索→逻辑推理→出图），解决 HR 数据分散、汇总耗时长的问题，从 3 天压到 2 分钟。"
   },
   {
     tool: "大模型选型与评测",
@@ -1192,9 +1847,9 @@ const capabilityData = [
     proof: "研究阶段留下的不是论文，而是做产品的口径：怎么抽样、怎么检验信效度、结论怎么回指原始数据。这套「先定验收标准、再让 AI 出结果」的流程，后来直接变成了产品评测与 Badcase 归因的方法。"
   },
   {
-    tool: "AI Coding 全栈交付",
+    tool: "AI 原生交付",
     icon: "⌨️",
-    proof: "用 AI Coding 独立完成招聘海报生成器的全栈交付：AI 提取与本地规则双引擎降级、4 品牌 × 5 尺寸自适应分页、3 倍像素高清导出，从需求到上线一个人推进。工作方式以 AI Coding 为主——代码由 AI 产出，数据模型、接口口径、调试与验收由我负责，不需要等开发资源排期。（定位是能自己把方案跑到上线的产品经理，不主张工程深度。）"
+    proof: "用 AI Coding 独立完成招聘海报生成器：AI 提取与本地规则双引擎降级、4 品牌 × 5 尺寸自适应分页、3 倍像素高清导出，从需求到上线一个人推进。边界说清楚：代码主要由 AI 产出，我负责需求判断、数据模型与接口口径、效果验收；性能、权限体系、稳定性与研发协同。（定位是把方案跑到上线的产品经理。）"
   },
   {
     tool: "企业级智能体矩阵",
@@ -1232,37 +1887,37 @@ const matrixData = [
       { type:'code', label:'执行流程（文字版）', icon:'🗺️', content:'① 领域判定：识别本轮是酒店预订还是背景调查\n② 酒店预订：需求解析 → 数据查询 → 比价 → 订房协助\n③ 背景调查：信息整理 → 问题解答 → 分析总结\n④ 槽位填充：缺失信息多轮追问补齐，不靠脑补\n⑤ 综合交付：结构化结论 + 可执行建议\n\n完整流程图原件与设计细节将在面试中展示。' }
     ] },
 
-  { id:'m-chatbot', layer:'agent', domain:'knowledge', title:'满意度分析 Chatbot', sub:'博世 · 四层 AI 架构', metric:'99%', status:'已上线', pid:1,
-    desc:'四层架构（意图识别→知识检索→逻辑推理→可视化），把 HR 问卷分析从 3 天压缩到 2 分钟，支持 22 家子公司 × 11 部门 × 7 维度对比。',
-    facts:[{k:'技术栈',v:'Dify + DeepSeek + RAG'},{k:'迭代',v:'V1.0 → V9.7.0'},{k:'结果',v:'3天 → 2分钟'}],
+  { id:'m-chatbot', layer:'agent', domain:'knowledge', title:'满意度分析 Chatbot', sub:'博世 · 问卷分析链路', metric:'99%', status:'已上线', pid:1,
+    desc:'一条链路（意图识别 → 知识检索 → 逻辑推理 → 自动出图），把 HR 问卷汇总从 3 天压缩到 2 分钟；横向对比范围 = 一次年报问卷的真实边界（22 家子公司 × 11 部门），不是长期系统的覆盖范围。',
+    facts:[{k:'技术栈',v:'Dify + DeepSeek + RAG 检索'},{k:'迭代',v:'V1.0 → V9.7.0'},{k:'结果',v:'3 天 → 2 分钟'},{k:'Badcase 率',v:'30% → 5%'}],
     tags:['RAG','图表生成','多对象分析'],
     evidence:[
       { type:'screenshot', label:'Dify 工作流', icon:'🔧', img:'screenshot-talent-dify.png', caption:'满意度分析 Chatbot · Dify 工作流输入变量与 Prompt 编排界面' }
     ] },
 
   { id:'m-duedil', layer:'skill', domain:'recruit', title:'简历背景深度核查专员', sub:'resume-due-diligence-cn · v3.5', metric:'35 版', status:'已上线', pid:8,
-    desc:'规则引擎 + LLM 双校验架构，6 阶段自适应工作流，4 色证据分级；35 版迭代沉淀 18 项核查准则，覆盖 IC 到高管。',
-    facts:[{k:'架构',v:'规则引擎 + LLM 双校验'},{k:'覆盖',v:'IC → 资深高管'},{k:'沉淀',v:'18 项核查准则'}],
+    desc:'规则引擎 + LLM 双校验架构，6 阶段自适应工作流，4 色证据分级；35 版迭代沉淀 19 项核查规则，覆盖 39 位跨部门用户高频复用。',
+    facts:[{k:'架构',v:'规则引擎 + LLM 双校验'},{k:'覆盖',v:'39 位跨部门用户高频复用'},{k:'沉淀',v:'19 项核查规则'}],
     tags:['双校验','证据分级','可审计'],
     evidence:[
       { type:'code', label:'执行流程（文字版）', icon:'🗺️', content:'① 岗位解析：先读 JD，明确本次核查的维度与优先级\n② 学历论文核查：学术检索 + 同名五锁校验（机构 / 时间窗 / 合作者）\n③ 任职控股竞业核验：工商与任职数据交叉比对\n④ 风险综合：4 色证据分级汇总，输出可审计结论\n⑤ 事后纠察：Stage 10 检察官复核，纠偏与补漏\n\n完整流程图原件与设计细节将在面试中展示。' }
     ] },
 
   { id:'m-competitor', layer:'skill', domain:'intel', title:'竞对招聘分析师', sub:'competitor-recruitment-analyst · v2.2.1', metric:'3 级告警', status:'已上线', pid:9,
-    desc:'五层战略研判模型（招聘热度→战略布局→人才密度→招聘节奏→核心战略推断），每条推断强制附带完整证据链与反例检查。',
-    facts:[{k:'模型',v:'五层战略研判'},{k:'约束',v:'10 大铁律硬约束'},{k:'交付',v:'红/橙/黄三级告警'}],
+    desc:'从竞对在招岗位读战略意图：分层解读（热度→布局→密度→节奏→推断），每条推断强制附证据链与反例检查，可被追问。',
+    facts:[{k:'口径',v:'分层解读 5 步'},{k:'约束',v:'10 条硬约束'},{k:'交付',v:'红/橙/黄三级告警'}],
     tags:['情报分析','证据链','反例检查'],
     evidence:[
-      { type:'code', label:'执行流程（文字版）', icon:'🗺️', content:'① 24 维岗位采集：多平台同步抓取竞对在招岗位\n② 聚类与周期分析：岗位归类 + 招聘热度 / 节奏趋势\n③ 五层战略研判：招聘热度 → 战略布局 → 人才密度 → 招聘节奏 → 核心战略推断\n④ 公平性纠察：平台数 / 时点 / 关键词三对齐后再出结论\n⑤ 交付：三级告警 + 日报周报定时推送\n\n完整流程图原件与设计细节将在面试中展示。' }
+      { type:'code', label:'执行流程（文字版）', icon:'🗺️', content:'① 岗位采集：多平台同步抓取竞对在招岗位（24 个字段）\n② 聚类与周期分析：岗位归类 + 招聘热度 / 节奏趋势\n③ 分层解读：招聘热度 → 组织布局 → 人才密度 → 招聘节奏 → 战略推断\n④ 公平性纠察：平台数 / 时点 / 关键词三对齐后再出结论\n⑤ 交付：三级告警 + 日报周报定时推送\n\n完整流程图原件与设计细节将在面试中展示。' }
     ] },
 
   { id:'m-peer', layer:'skill', domain:'intel', title:'同业人才调研专员', sub:'peer-talent-researcher', metric:'20+ 源', status:'已上线',
-    desc:'情报研判域的姊妹 Skill：岗位侧交给竞对分析师，人侧交给同业人才调研。20+ 类信息源穷尽搜索，每条输出都带原始来源链接。',
+    desc:'情报研判域的姊妹 Skill：岗位侧交给竞对分析师，人侧交给同业人才调研。20+ 类信息源逐个检索，每条输出都带原始来源链接。',
     facts:[{k:'信息源',v:'20+ 类可追溯'},{k:'约束',v:'聚焦式，不凑数'},{k:'价值',v:'公司采纳入库'}],
     tags:['人才调研','可追溯','聚焦约束'],
     evidence:[
       { type:'code', label:'执行流程（文字版）', icon:'🗺️', content:'① 方向聚焦：只挖用户指定的技术方向，不扩展、不凑数\n② 对标企业识别：锁定该方向的国内外对标公司\n③ 多渠道挖掘：30+ 渠道穷举（官网 / 专利 / 学术 / 峰会 / 人才计划名单…）\n④ 学术实验室挖掘：PI 与实验室成员作为补充来源\n⑤ 结构化入库：每条结论带原始来源链接的人才地图报告\n\n完整流程图原件与设计细节将在面试中展示。' },
-      { type:'code', label:'SKILL 元数据', icon:'🧾', content:'name: peer-talent-researcher\nlabel: 同业人才调研专员\n# 情报研判域姊妹 Skill：岗位侧→竞对分析师，人侧→同业人才调研\n\n# 一句话全流程\n输入岗位方向 → 系统自动完成全部\n（对标企业识别 → 聚焦式多渠道穷尽搜索 → 结构化报告入库）\n\n# 20+ 类信息源同步挖掘，可追溯\n官网 · LinkedIn · 专利库 · 学术论文 · 峰会嘉宾\n招股书 · 公众号 · 临床注册PI · 人才计划名单\n每条输出都带原始来源链接，不是"感觉对了"是"可追溯"\n\n# 聚焦约束（最高优先级）\n只挖用户指定方向，不向无关方向扩展、不凑数\n\n# 业务价值\n已被公司采纳入库为团队公共资源\nHR及业务团队可直接搜索调用，有真实业务使用记录' },
+      { type:'code', label:'SKILL 元数据', icon:'🧾', content:'name: peer-talent-researcher\nlabel: 同业人才调研专员\n# 情报研判域姊妹 Skill：岗位侧→竞对分析师，人侧→同业人才调研\n\n# 一句话全流程\n输入岗位方向 → 系统自动完成全部\n（对标企业识别 → 聚焦式多渠道逐个检索 → 结构化报告入库）\n\n# 20+ 类信息源同步挖掘，可追溯\n官网 · LinkedIn · 专利库 · 学术论文 · 峰会嘉宾\n招股书 · 公众号 · 临床注册PI · 人才计划名单\n每条输出都带原始来源链接，不是"感觉对了"是"可追溯"\n\n# 聚焦约束（最高优先级）\n只挖用户指定方向，不向无关方向扩展、不凑数\n\n# 业务价值\n已被公司采纳入库为团队公共资源\nHR及业务团队可直接搜索调用，有真实业务使用记录' },
       { type:'screenshot', label:'同业人才调研专员', icon:'🔍', img:'ev-peer-skill.png', caption:'peer-talent-researcher · 角色定位与多渠道人才挖掘' }
     ] },
 
@@ -1303,12 +1958,12 @@ const matrixData = [
       { type:'screenshot', label:'面试排会 Skill', icon:'🗓️', img:'ev-meeting-skill.png', caption:'meeting-scheduler · 全公司搜人 → 面试官时段匹配 → 候选人简历自动发送' }
     ] },
 
-  { id:'m-screening', layer:'app', domain:'recruit', title:'简历智能筛选工具', sub:'网页 APP · 飞书 Aily 生态', metric:'200+ 次', status:'已上线', pid:10,
-    desc:'浏览器本地解析实现零逐份 LLM 调用成本，内容指纹让解析结果全公司复用；三档匹配口径 + 零假阳性原则。',
-    facts:[{k:'成本',v:'解析零逐份调用 · 整体点数 3.77 万'},{k:'复用',v:'内容指纹全公司复用'},{k:'迭代',v:'V115 → V128，累计 200+'}],
-    tags:['本地解析','内容指纹','零假阳性'],
+  { id:'m-screening', layer:'app', domain:'recruit', title:'简历智能筛选工具', sub:'网页 APP · 飞书 Aily 生态', metric:'误判率 2%', status:'已上线', pid:10,
+    desc:'浏览器本地解析让解析环节基本不逐份调用 LLM，内容指纹让解析结果全公司复用；三档匹配口径把误判率压到 2%。',
+    facts:[{k:'处理量',v:'8200+ 份数据'},{k:'准确率',v:'误判率低至 2%'},{k:'增长',v:'零推广 WAU +450% / PV +650%'},{k:'成本',v:'解析环节基本不逐份调用 LLM'}],
+    tags:['本地解析','内容指纹','误判率 2%'],
     evidence:[
-      { type:'code', label:'执行流程（文字版）', icon:'🗺️', content:'① 关键词配置：正向 / 负向关键词与组合条件\n② 批量上传：文件夹或 zip 压缩包整批导入\n③ 本地解析：浏览器端解析 PDF/DOCX，解析环节零逐份 LLM 调用\n④ 评分排序：三档口径（直接命中 / AI 补漏 / 可疑假阳性）+ 多维条件过滤\n⑤ 结果导出：回填多维表格并支持导出\n\n完整流程图原件与设计细节将在面试中展示。' },
+      { type:'code', label:'执行流程（文字版）', icon:'🗺️', content:'① 关键词配置：正向 / 负向关键词与组合条件\n② 批量上传：文件夹或 zip 压缩包整批导入\n③ 本地解析：浏览器端解析 PDF/DOCX，解析环节基本不逐份调用 LLM\n④ 评分排序：三档口径（直接命中 / AI 补漏 / 可疑假阳性）+ 多维条件过滤\n⑤ 结果导出：回填多维表格并支持导出\n\n完整流程图原件与设计细节将在面试中展示。' },
       { type:'screenshot', label:'生成效果图', icon:'🖼️', img:'ev-screening-effect.png', caption:'简历智能筛选工具实际界面 · 关键词配置（共现命中）+ 文件夹 / zip 批量上传 → 开始分析 → 筛选结果多维筛选与导出' }
     ] },
 
@@ -1327,8 +1982,8 @@ const matrixData = [
     tags:['数据治理','Prompt 工程','合规不出域'] },
 
   { id:'m-hrdash', layer:'app', domain:'efficiency', title:'HR-Dash 招聘数据自动化', sub:'博世 · Python + PowerBI 分级权限看板', metric:'2min', status:'已上线', pid:3,
-    desc:'跨年度、跨部门的多源 Excel 自动清洗、汇总与指标计算，接入 PowerBI 形成分级权限可视化看板，替代人工月度手工合并。',
-    facts:[{k:'周期',v:'汇总 2 天 → 2 分钟'},{k:'收益',v:'重复工作量 −80%'},{k:'落地',v:'HR 月度复盘固定工具'}],
+    desc:'跨年度、跨部门的 60+ 异构 Excel 自动清洗、汇总与指标计算，接入 PowerBI 形成分级权限可视化看板，替代人工月度手工合并。',
+    facts:[{k:'周期',v:'汇总 2 天 → 2 分钟'},{k:'准确率',v:'薪酬核算 100% 零误差'},{k:'治理',v:'60+ 异构 Excel 口径标准化'},{k:'落地',v:'部门核心 BI 数据枢纽'}],
     tags:['自动化','PowerBI','分级权限'] }
 ];
 
@@ -1407,19 +2062,9 @@ function updateReadProgress(){
 /* ==================== 涉密截图：局部打码 ==================== */
 /* 每张图一组矩形，按图片自身宽高的百分比定位；x/y 为左上角，w/h 为宽高，c 为色块颜色（缺省为界面浅底灰） */
 const MASK_DEFAULT = '#e9ecef';
-const IMG_MASKS = {
-  'screenshot-powerbi.png': [
-    { x:42.5, y:15, w:26, h:35 },
-    { x:42.5, y:50, w:26, h:46 }
-  ]
-};
+const IMG_MASKS = {};
 /* 缩略图按 4:3 裁切后的打码坐标（打码图在缩略图里用 object-position:top left，只露出左侧 70%） */
-const IMG_MASKS_CROP = {
-  'screenshot-powerbi.png': [
-    { x:60.7, y:15, w:37.1, h:35 },
-    { x:60.7, y:50, w:37.1, h:46 }
-  ]
-};
+const IMG_MASKS_CROP = {};
 function maskLayer(src,cropped){
   const list=(cropped&&IMG_MASKS_CROP[src])||IMG_MASKS[src];
   if(!list||!list.length) return '';
@@ -1461,7 +2106,7 @@ const MATRIX_RESULT = {
   'm-chatbot':      '问卷分析 3 天 → 2 分钟，Badcase 率 30% → 5%',
   'm-duedil':       '从风险评分升级为面试辅助决策系统',
   'm-competitor':   '情报日报化，红 / 橙 / 黄三级告警主动推送',
-  'm-peer':         '20+ 类信息源穷尽搜索，已入库为团队公共资源',
+  'm-peer':         '20+ 类信息源逐个检索，已入库为团队公共资源',
   'm-news':         '6 规则去重、4 档分级，重大事件自动标 🔥',
   'm-resume-mining':'非标简历转为可比对、可搜索的结构化人才数据',
   'm-term':         '术语解释统一口径，新员工也能直接读懂业务黑话',
@@ -1587,7 +2232,7 @@ const projLines = [
         action:'不做黑箱结论：判断依据、原文出处、置信度都摊开给业务方看——这是 AI 结论能被直接拿去用的前提。',
         ids:[8],
         shots:[
-          { img:'ev-duediligence-sop.png', caption:'resume-due-diligence-cn · v3.5.7 · 18 大铁律 + Stage 10 检察官事后纠察' }
+          { img:'ev-duediligence-sop.png', caption:'resume-due-diligence-cn · v3.5.7 · 18 条硬约束 + Stage 10 事后纠察' }
         ] },
       { no:'05', name:'留存', q:'用户怎么留下来？体验怎么量化？',
         action:'把操作路径嵌进对话本身：不需要培训，边问边做；数据分析也从人工抽样变成全量自动出结果。',
@@ -1597,7 +2242,7 @@ const projLines = [
           { img:'ev-momo-agent.png', caption:'momo 入职业务助手 · 智能体架构与知识库路由' },
           { img:'screenshot-chatbot1.png', caption:'博世满意度 Chatbot · 实际运行界面' },
           { img:'ev-chatbot-llm.png', caption:'LLM 节点：引用上下文 + 分层分析 Prompt 策略' },
-          { img:'screenshot-powerbi.png', caption:'HR-Dash 招聘数据自动化 · PowerBI 实时看板 · 多源数据可视化' },
+          { img:'ev-metrics-overview.png', caption:'运行数据 · 聚合口径，不含候选人/员工个人信息' },
           { img:'screenshot-talent-dify.png', caption:'Dify 工作流 · 满意度问卷分析 Prompt 编排界面' }
         ] }
     ]
@@ -1641,12 +2286,12 @@ const SHOT_META = {
   'screenshot-personnel.png':        { metric:'70%',     mid:'m-talentmirror' },
   'screenshot-talent-dify.png':      { metric:'V9.7.0',  mid:'m-chatbot' },
   'ev-talent-flow1.png':             { metric:'6 模块',  mid:'m-talentmirror' },
-  'ev-duediligence-sop.png':         { metric:'18 铁律', mid:'m-duedil' },
+  'ev-duediligence-sop.png':         { metric:'18 条约束', mid:'m-duedil' },
   'screenshot-momoai.png':           { metric:'85%',     mid:'m-momo' },
   'ev-momo-agent.png':               { metric:'80%',     mid:'m-momo' },
   'screenshot-chatbot1.png':         { metric:'99%',     mid:'m-chatbot' },
   'ev-chatbot-llm.png':              { metric:'4 层',    mid:'m-chatbot' },
-  'screenshot-powerbi.png':          { metric:'2min',    mid:'m-hrdash' },
+  'ev-metrics-overview.png':         { metric:'2min',    mid:'m-hrdash' },
   '屏幕截图 2026-06-23 141329.png':  { metric:'90%' },
   'screenshot-neo4j.png':            { metric:'50+ 实体' }
 };
@@ -1866,7 +2511,7 @@ const starData = [
       ['S · 情境','候选人背调依赖人工多源查询，学历、任职、控股、竞业信息分散，核查质量与效率都难保障。'],
       ['T · 问题','① 同名误归因：某期刊论文署名与候选人同名被误归为其经历（实际候选人当时本科在读、专业不符、合作者不符）；② 隐私泄露风险；③ 无 JD 时被越权脑补岗位画像。'],
       ['A · 行动','选型：scholar_search / 工商与任职数据 / 飞书云文档多源交叉验证。解法：三重交叉验证框架防单源漏判；把姓名核实升级为「姓名五锁」（姓名 + 公司 + 职位 + 机构 + 时间窗，学术场景加合作者锁）；隐私脱敏 189 处；无 JD 默认跳过岗位画像、探针降级为🟠非淘汰。'],
-      ['R · 结果','沉淀 18+1 大铁律、Stage 10 事后纠察（检察官）、SOP 云文档（9 章 38 节）与三重交叉验证方法论。'],
+      ['R · 结果','沉淀 18+1 条硬约束、Stage 10 事后纠察、SOP 云文档（9 章 38 节）与三重交叉验证方法论。'],
       ['如果重做','改进：把「简历 → 自动背调」接入流程，让安装量转化为使用量。坑：同名归因必须五锁齐验（机构 / 时间窗 / 合作者任一不匹配即剔除）；没有 JD 时绝不脑补画像；真实候选人信息进入公开产物前必须脱敏。']
     ]
   },
@@ -1877,7 +2522,7 @@ const starData = [
       ['S · 情境','竞对招聘动态是战略情报，需要持续监测岗位、薪资、组织变动，人工逐平台采集不可持续。'],
       ['T · 问题','① 多公司对比天然不公平：4 平台 vs 1 平台、周一 vs 周五时点不对齐、中英文关键词不统一，结论被带偏；② 飞书云文档 Mermaid 不支持 xychart-beta 等语法（图表降级空白）；③ skillhub 上传要求单根目录结构。'],
       ['A · 行动','选型：web_search 多平台采集 + lark-cli docs 落文档 + aily-cli auto 定时。解法：公平性专项纠察（数据采集深度 / 关键词覆盖 / 时点差异三对齐）；图表模板改用 pie + 数据表双轨；打包脚本按 skillhub 结构规则重写。'],
-      ['R · 结果','356 条任务（全智能体矩阵第一，8月129 / 9月149 / 10月78），v2.2.1；沉淀五层战略研判框架、颜色体系分离（推断可信度 4 色 vs 告警等级 4 档）。'],
+      ['R · 结果','356 条任务（全智能体矩阵第一，8月129 / 9月149 / 10月78），v2.2.1；沉淀岗位数据分层解读框架、颜色体系分离（推断可信度 4 色 vs 告警等级 4 档）。'],
       ['如果重做','改进：新增业务侧一键周报入口（当前 90% 任务由系统派发）。坑：多公司对比必须显式对齐平台数、时点、关键词三要素；飞书 Mermaid 语法有白名单，模板先自审再发布；上传平台的结构规则是硬约束不是建议。']
     ]
   },
@@ -1894,12 +2539,12 @@ const starData = [
   },
   {
     q: '简历筛选分析 · 从安装量到真实使用量',
-    tag: '招聘效能线 · 23 用户 / 346 访问 / 6926 份简历',
+    tag: '招聘效能线 · 8200+ 份数据 / 误判率 2%',
     steps: [
       ['S · 情境','批量简历初筛靠人工逐份读，关键词匹配、字段提取、条件过滤重复劳动大。'],
       ['T · 问题','① argparse 把「-实习」这类负向关键词当 flag；② skill 目录被强制 0777 权限导致 validation 拒绝；③ attachment 字段不能进 CellValue 批量写入，必须逐条上传。'],
       ['A · 行动','选型：Python CLI + 飞书多维表格 API。解法：_argv_fix.py 预扫 argv 用 sentinel 替换负向关键词；stage 到 /tmp 再打包；记录创建后逐条 +record-upload-attachment 上传简历附件。'],
-      ['R · 结果','CLI v1.1.1 输出 16 列多维表格（含简历附件列）+ 复核专家二次审核（6 类匹配 / 8 硬排除 / 4 绝对反例）；助手累计 23 用户 / 346 访问 / 5.28hr / 6926 份简历文件。'],
+      ['R · 结果','CLI v1.1.1 输出 16 列多维表格（含简历附件列）+ 复核专家二次审核（6 类匹配 / 8 硬排除 / 4 绝对反例）；助手累计 8200+ 份简历、招聘团队 23 位同事在用，误判率低至 2%。'],
       ['如果重做','改进：首程激活引导（73% 访客未上传）+ 事件级埋点。坑：负向关键词参数必须做 argv 预处理；附件类字段不能混入批量写接口；复核专家的同义扩写禁止跨领域（生物医药 HR ≠ Human Resources）。']
     ]
   }
@@ -1935,7 +2580,7 @@ function toggleStar(i){
 /* ==================== Keep / Improve / Start / Stop ==================== */
 const kissData = [
   { key:'keep', en:'KEEP', cn:'保留', why:'有真实使用、有数据验证，是当前主力', items:[
-    '简历筛选助手（Web）：23 用户 / 346 访问 / 6926 份文件',
+    '简历筛选助手（Web）：8200+ 份数据 / 误判率 2%',
     '竞对招聘分析师：356 条任务占派单 30%，月度持续增长',
     '背调 / 术语技能：SkillHub 安装 37 / 36，传播第一',
     '前沿资讯推送：57 条任务，定时驱动稳定运行',
@@ -2006,7 +2651,7 @@ const decisionData = [
       ['我的判断','背调结论要能被面试官直接采信，「快」不如「可信」——可信度是这个产品的生命线。'],
       ['决定','规则引擎 + LLM 双校验：规则引擎输出确定性命中/未命中，LLM 只负责模糊场景的语义识别与原因解释。主动牺牲自动化率，换可信度。'],
       ['做的体系','6 阶段自适应工作流 + 30+ 数据源交叉校验 + 4 色证据分级（官方验证 / 间接佐证 / 单源待核 / 与简历矛盾）。'],
-      ['结果','35 版迭代沉淀 18 项核查准则，报告可直接转发面试官，压缩决策链路。']
+      ['结果','35 版迭代沉淀 19 项核查规则，报告可直接转发面试官，压缩决策链路。']
     ]
   },
   {
@@ -2122,120 +2767,309 @@ function corgiPoke(el) {
 /* ==================== 单页版：能力矩阵（点开 → 项目作为内容说明） ==================== */
 const capMatrix = [
   { id:'cap-insight', no:'C-01', title:'场景洞察与需求定义', dec:0,
-    desc:'深入业务真实工作流，识别高价值、可自动化、可智能化的场景，并把一次性需求抽象成可复用能力。',
+    desc:'深入业务真实工作流，识别高价值、可自动化、可智能化的场景，并把一次性需求<b>抽象成可复用能力</b>。',
     stat:'6 个一线痛点 → 6 个在用产品',
-    lead:'我判断要不要做一个产品，只看两件事：这件事每周发生几次、能不能被抽象成通用能力。筛简历、约面试、做背调、看竞对、找人才、重复事务——这 6 件事我每周都在做，最后各自长成一个在用产品；其中术语与背调被抽象成 Skill，技能安装量 37 / 36，排在技能线前二。',
-    stats:[['6','高频痛点 → 产品','每个痛点对应一个在用产品'],['1189','任务系统累计派单','真实工作流里跑出来的需求'],['37 / 36','术语 / 背调技能安装量','技能线前二，可被跨域调用']],
-    ids:['m-momo','m-screening','m-meeting','m-poster','m-resume-mining','m-peer'] },
+    lead:'先决定该不该做：每周发生几次、能不能抽象成通用能力。过了才做——6 个一线痛点各自长成一个在用产品，13 个不满足的直接砍掉。',
+    tech:'判断标准写死：每周发生 & 能否抽象成通用 Skill / Agent；不满足的直接砍（13 个低频应用收敛下线）',
+    jd:'深入业务工作流，抽象可复用的 <b>Agent 能力</b>；跨团队协同推进落地',
+    stats:[['6','高频痛点 → 产品','每个痛点对应一个在用产品'],['1189','任务系统累计派单','真实工作流里跑出来的需求'],['37 / 36','术语 / 背调技能安装量','技能线前二，可被跨域调用','已封装并跨 Agent 调用']],
+    map:[['每周筛几百份简历，标准还不一致','简历智能筛选工具','处理 8200+ 份数据，误判率 2%'],
+         ['约面试来回改期、简历还要手动转给面试官','智能会议调度员','自然语言排会 + 改期，通过即自动发简历'],
+         ['背调信息分散，容易漏判','简历背景深度核查专员','19 项核查规则，39 位跨部门用户复用'],
+         ['盯竞对招聘动向，判断战略变化','竞对招聘分析师','356 条任务，占全部派单 30%'],
+         ['定向找同业人才，只靠人脉不够','同业人才调研专员','20+ 类信息源逐个检索，每条可追溯'],
+         ['重复的事务性问答，每周都在回答','MOMOAI 招聘助手','引导式助手，预计削减 80% 重复工作']],
+    ids:['m-screening','m-meeting','m-duedil','m-competitor','m-peer','m-momo'] },
 
   { id:'cap-data', no:'C-02', title:'数据分析与效果度量',
-    desc:'自己拉数据、建指标、做看板：用数据定位问题、验证价值、决定产品是继续投入还是收敛下线。',
+    desc:'拉数据、建指标、做看板：用数据定位问题、<b>验证价值</b>、决定产品是继续投入还是收敛下线。',
     stat:'356 条任务 · 占派单 30%',
-    lead:'我能自己把数据拉出来，再让数据说话：任务系统 1189 条全量、SkillHub 安装量、Web 应用 Analytics 看板都是我的判断依据。竞对招聘分析师 356 条任务占全部派单 30%（8月129 / 9月149 / 10月78），简历筛选工具 23 用户 / 346 次访问、处理简历 6900+ 份——哪个该加投入、哪个该收敛下线，不靠感觉。',
+    lead:'拉数据、建指标、做看板，让数据决定是加投入还是收敛下线；口径与时间窗写死在表里，可当场复算。',
+    tech:'口径写死在表里：任务系统后台全量导出，同一任务去重、按周聚合；时间窗与去重规则可当场复算',
+    jd:'<b>数据分析</b>与 <b>A/B 实验</b>驱动增长：建指标、做看板、算清价值',
     stats:[['1189','任务系统全量','口径、时间窗、去重规则均可复算'],['356','单产品任务数','8月129 / 9月149 / 10月78'],['23 / 346','Web 应用用户 / 访问','近 7 天 11 用户，环比 +450%']],
     ids:['m-competitor','m-screening','m-platform'] },
 
   { id:'cap-ai', no:'C-03', title:'大模型与 Agent 技术判断', dec:1,
-    desc:'理解 LLM / RAG / Agent / 工作流编排的能力与局限，能判断「什么该用 AI 做、什么不该用」，并能和算法、工程直接对话。',
-    stat:'35 版迭代 · 18 项核查准则',
-    lead:'我做的每个 Agent 都带硬约束：任务拆解、工具调用、知识检索、人工确认机制写进流程，而不是让模型自由发挥。背调用规则引擎 + LLM 双校验并做 4 色证据分级；竞对分析强制证据链与反例检查，多公司对比先做平台数 / 时点 / 关键词三对齐；资讯推送用 6 规则去重 + 4 档来源分级，核心事实要求 ≥2 个独立来源。代价是慢一点，收益是业务方敢直接拿去用。',
-    stats:[['18 项','核查准则沉淀','背调 35 版迭代收敛而来'],['≥2 源','核心事实多源验证','单源信息显式标 ⚠️'],['3 对齐','公平性纠察','平台数 / 时点 / 关键词对齐后才出结论']],
+    desc:'理解 <b>LLM / RAG / Agent</b> 的能力与局限，能判断「<b>什么该用 AI 做</b>」，并能和算法、工程直接对话。',
+    stat:'35 版迭代 · 19 项规则',
+    lead:'每个 Agent 都带硬约束：任务拆解、工具调用、人工确认写进流程，不让模型自由发挥。慢一点，但业务方敢直接拿去用。',
+    tech:'实现写死在流程里：规则引擎出确定性结论 → LLM 只补语义解释；30+ 数据源交叉；结论附来源与检索路径',
+    jd:'理解 <b>LLM / Agent / RAG</b> 能力边界，判断<b>什么该用 AI 做</b>，能与算法 / 工程直接对话',
+    stats:[['19 项','核查规则沉淀','覆盖 39 位跨部门用户高频复用'],['≥2 源','核心事实多源验证','单源信息显式标 ⚠️'],['3 对齐','公平性纠察','平台数 / 时点 / 关键词对齐后才出结论']],
     ids:['m-duedil','m-competitor','m-news','m-term'] },
 
   { id:'cap-code', no:'C-04', title:'0→1 构建与 AI 原生工作流', dec:2,
-    desc:'Builder 心态：不只写 PRD，AI 原生工作流下自己把产品做到上线，并能量化人机结对的效率提升。',
+    desc:'<b>Builder 心态</b>：不只写 PRD，<b>AI 原生工作流</b>下自己把产品做到上线——交付标准仍按产品验收（指标口径、失败兜底、用户可用性），不是炫技。',
     stat:'8 天 MVP → 上线',
-    lead:'需求、开发、上线一个人闭环：招聘海报生成器从 MVP 到上线 8 天；简历筛选工具从浏览器本地解析到飞书多维表格回写全自己写；博世 HR-Dash 用 Python 把 2 天的汇总压到 2 分钟。日常调研、文档、原型、数据分析、测试环节都在用 AI 结对完成——面试可现场演示一次从需求到上线的完整人机结对过程（含线上真实数据）。',
-    stats:[['8 天','MVP → 上线','需求 / 开发 / 上线一个人闭环'],['2min','汇总时长','HR-Dash：人工 2 天 → 2 分钟'],['3.77 万','初筛全链路点数','本地解析 + 内容指纹复用后的成本']],
+    lead:'需求判断、数据模型与接口口径、界面与部署、效果验收都在我手里；代码主要由 AI 产出，性能 / 权限 / 稳定性与研发协同。上线按产品标准验收：指标口径、失败兜底、可用性，缺一条都算没交付。',
+    tech:'交付写死在验收上：先定指标口径与失败兜底，再让 AI 写代码；上线后按周看使用数据，不达标就收敛下线',
+    jd:'<b>0→1 独立构建</b>、Builder 心态（不只写 PRD）；<b>AI 原生工作流 / 人机结对</b>',
+    stats:[['8 天','MVP → 上线','需求 / 数据 / 界面 / 部署一次跑完'],['≈410 h','人工初筛被替代','8200 份 × 3 分钟/份，口径可复算'],['2 分钟','问卷汇总','HR-Dash：人工 2 天 → 2 分钟']],
     ids:['m-poster','m-screening','m-hrdash','m-talentmirror'] },
 
   { id:'cap-trust', no:'C-05', title:'AI 可信与体验设计',
-    desc:'建立效果评估与体验兜底机制：引用溯源、置信度、多轮澄清、转人工与反馈闭环，控制幻觉率与合规风险。',
-    stat:'0 假阳性 · 结论可溯源',
-    lead:'AI 会「犯傻」，产品要能兜底：背调报告每条结论带证据等级与来源链接，可直接转发面试官；初筛用三档口径（直接命中 / AI 补漏 / 可疑假阳性）做到 0 假阳性；术语与资讯输出强制溯源标注与来源分级，单源标 ⚠️、医疗建议强制风险提示。判断依据、原文出处、置信度都摊开给业务方看——这是 AI 结论能被直接拿去用的前提。',
-    stats:[['4 档','证据分级','官方验证 / 间接佐证 / 单源待核 / 与简历矛盾'],['0','初筛假阳性','三档口径 + 复核专家二次审核'],['100%','结论可溯源','每条结论带来源与检索路径']],
+    desc:'建立效果评估与兜底机制：<b>引用溯源</b>、置信度、多轮澄清、转人工与反馈闭环，控制<b>幻觉率</b>。',
+    stat:'误判率 2% · 结论可溯源',
+    lead:'AI 会犯傻，产品要兜底：证据分级、结论可溯源、可疑结果交人工复核。',
+    tech:'兜底写死在链路上：4 色证据分级 → 可疑项灰显 → 人工复核入口；引用溯源到来源字段，幻觉有出口',
+    jd:'效果评估与指标体系（准确率、<b>幻觉率</b>、满意度）：<b>引用溯源、置信度、转人工</b>',
+    stats:[['4 档','证据分级','官方验证 / 间接佐证 / 单源待核 / 与简历矛盾'],['2%','初筛误判率','8200+ 份数据实测，可疑结果灰显交人工复核'],['逐条','结论可溯源','来源与检索路径可复核，不是结论裸奔']],
     ids:['m-term','m-duedil','m-resume-mining','m-news'] },
 
   { id:'cap-iterate', no:'C-06', title:'实验驱动与闭环迭代',
-    desc:'搭建线上监控、Badcase 复盘与灰度 / A-B 实验闭环，围绕任务完成率、采纳率、节省工时持续迭代。',
+    desc:'线上监控、<b>Badcase 复盘</b>与<b>灰度 / A-B 实验</b>闭环，围绕完成率、采纳率、节省工时持续迭代。',
     stat:'200+ 次迭代 · V1.0 → V9.7.0',
-    lead:'上线不是结束：每个版本只聚焦 1-2 个改动，CHANGELOG 全程可追溯；Badcase 按「检索层 / 意图层 / 输出层」分类定位后再改，不盲目调 Prompt；同时掌握 A/B 实验方法论（ab-test-setup）与增长诊断框架（user-growth-analyzer），能为产品做实验设计与北极星指标设定——把一次性解法变成可复用的方法论。',
+    lead:'上线不是结束：小步快改（每版只 1-2 个改动）+ Badcase 三分法定位，2-3 周一个版本。',
+    tech:'迭代写死在动作上：Badcase 周复盘 → 定位到规则 / 提示词 / 数据源 → 灰度放行 → 看指标回看',
+    jd:'线上监控、<b>Badcase 复盘</b>与<b>灰度迭代</b>闭环；埋点与指标看板',
     stats:[['200+','单产品累计迭代','V115 → V128 持续打磨'],['V9.7.0','最高演进版本','从 V1 单点分析滚到多对象'],['1-2 个','每版改动数','小步快改，平均 2-3 周一个版本']],
     ids:['m-chatbot','m-competitor','m-news','m-screening'] }
 ];
+const ONELINE = {
+  'm-platform':'Agent / Skill / Web 三层统一入口',
+  'm-momo':'引导式招聘助手，不是问答机器人',
+  'm-chatbot':'多问卷自动归并，零误差',
+  'm-duedil':'4 色证据分级 + 19 项核查规则，结论可溯源',
+  'm-competitor':'从岗位数据读战略意图，结论可复核',
+  'm-peer':'20+ 类信息源逐个检索，每条可追溯',
+  'm-news':'多源抓取去重 + 分级摘要',
+  'm-resume-mining':'20+ 字段抽取 + 一致性校验',
+  'm-term':'术语歧义自动纠偏 + 溯源标注',
+  'm-meeting':'自然语言排会，通过即自动发简历',
+  'm-screening':'浏览器本地解析，零逐份 LLM 调用',
+  'm-poster':'需求到上线一人闭环，8 天',
+  'm-talentmirror':'技能标签自动抽取，支持检索',
+  'm-hrdash':'HR 不再手工搬表，零误差'
+};
 const STAR_KEY = { 'm-meeting':'会议', 'm-duedil':'简历背景', 'm-competitor':'竞对', 'm-news':'资讯', 'm-screening':'简历筛选' };
-let activeCap = null;
+const PAGES = { home:'pgHome', cap:'pgCap', proj:'pgProj', compare:'pgCompare', fit:'pgFit', contact:'pgContact' };
+let lastCap = null;
+
+/* ---- 路由：网页嵌套网页 ---- */
+const NAV_ITEMS = [['主页','home'],['基线对比','compare'],['联系我','contact']];
+function buildNav(){
+  const el = document.getElementById('navTabs'); if(!el) return;
+  el.innerHTML = NAV_ITEMS.map(function(x){
+    return '<button data-page="' + x[1] + '" onclick="go(\'' + x[1] + '\')">' + x[0] + '</button>';
+  }).join('');
+}
+function syncNav(page){
+  const map = { home:'home', fit:'fit', compare:'compare', contact:'contact' };
+  document.querySelectorAll('#navTabs button').forEach(function(b){
+    b.classList.toggle('active', b.dataset.page === (map[page] || 'home'));
+  });
+}
+function autoFit(){
+  var page = document.querySelector('.ipage:not(.hidden)');
+  if(!page) return;
+  page.style.zoom = '';
+  /* 首屏允许露出底部证据带（约 150px 可滚），其余页面仍严格一屏 */
+  var grace = (page.id === 'pgHome') ? 210 : 0;
+  for(var i = 0; i < 6; i++){
+    var z = parseFloat(page.style.zoom || '1');
+    var avail = page.clientHeight;
+    var need = page.scrollHeight - grace;
+    if(need <= avail + 2) break;
+    var k = Math.max(0.72, z * (avail / need));
+    page.style.zoom = String(k);
+    if(k <= 0.72) break;
+  }
+}
+var __fitTimer = null;
+window.addEventListener('resize', function(){
+  clearTimeout(__fitTimer); __fitTimer = setTimeout(autoFit, 120);
+});
+function go(page, arg){
+  if(page === 'fit') page = 'home';
+  Object.keys(PAGES).forEach(k=>{
+    const el = document.getElementById(PAGES[k]);
+    if(el) el.classList.toggle('hidden', k !== page);
+  });
+  const fab = document.getElementById('fabHome');
+  if(fab) fab.classList.toggle('hidden', page === 'home' || page === 'contact');
+  const cta = document.querySelector('.nav-cta');
+  if(cta) cta.classList.toggle('hidden', page === 'contact');
+  document.body.classList.toggle('pg-proj', page === 'proj');
+  if(page === 'cap'){ lastCap = arg; renderCapPage(arg); }
+  if(page === 'proj') renderProjPage(arg);
+  document.querySelectorAll('.ipage').forEach(function(p){ p.scrollTop = 0; });
+  syncNav(page);
+  autoFit();
+  window.scrollTo({ top:0, behavior:'auto' });
+}
+function crumbHtml(parts){
+  return '<nav class="crumb">' + parts.map((p,i)=>{
+    const last = i === parts.length - 1;
+    return last ? '<b>' + p[0] + '</b>'
+                : '<a onclick="go(\'' + p[1] + '\'' + (p[2] ? ',\'' + p[2] + '\'' : '') + ')">' + p[0] + '</a><span>›</span>';
+  }).join('') + '</nav>';
+}
+function backRow(capId){
+  return '<div class="pg-back">' +
+    (capId ? '<button class="btn-line btn-sm" onclick="go(\'cap\',\'' + capId + '\')">← 返回能力页</button>' : '') +
+    '<button class="btn-line btn-sm" onclick="go(\'home\')">← 返回主页</button></div>';
+}
+
+/* ---- 主页：能力矩阵 ---- */
 function renderCapGrid(){
-  const g=document.getElementById('capGrid'); if(!g) return;
-  g.innerHTML=capMatrix.map(c=>`<button class="cap-cell" data-cap="${c.id}" onclick="openCap('${c.id}')" aria-expanded="false">
+  const g = document.getElementById('capGrid'); if(!g) return;
+  g.innerHTML = capMatrix.map(c=>`<button class="cap-cell" data-cap="${c.id}" onclick="go('cap','${c.id}')">
+      <b class="cc-wm">${c.no.replace('C-','')}</b>
       <div class="cc-no">${c.no}</div>
       <div class="cc-title">${c.title}</div>
       <div class="cc-desc">${c.desc}</div>
       <div class="cc-foot"><span>${c.ids.length} 个产品佐证</span><span class="cc-stat">${c.stat}</span></div>
     </button>`).join('');
 }
-function openCap(id){
-  const cap=capMatrix.find(c=>c.id===id); if(!cap) return;
-  if(activeCap===id){ closeCap(); return; }
-  activeCap=id;
-  document.querySelectorAll('.cap-cell').forEach(el=>{
-    const on=el.dataset.cap===id; el.classList.toggle('on',on); el.setAttribute('aria-expanded',on?'true':'false');
+
+/* ---- 能力内页 ---- */
+function boldInsight(t){
+  if(!t) return '';
+  const i = t.indexOf('。');
+  if(i > 8 && i < 64) return '<span class="ins">' + t.slice(0, i + 1) + '</span>' + t.slice(i + 1);
+  return '<span class="ins">' + t + '</span>';
+}
+function renderCapPage(id){
+  const p = document.getElementById('pgCap'); if(!p) return;
+  const cap = capMatrix.find(c=>c.id===id); if(!cap) return;
+  const dec = (cap.dec != null) ? decisionData[cap.dec] : null;
+  const decRaw = dec ? (function(){const f=dec.steps.find(x=>/我的判断|决定|结果/.test(x[0])); const t=f?f[1]:''; return t.length>96?t.slice(0,96)+'…':t;})() : '';
+  const decTxt = boldInsight(decRaw);
+  const painRow = cap.map ? `<div class="painrow">${cap.map.map(r=>`<span class="painchip"><b>${r[0].slice(0,6)}</b><i>→</i>${r[1]}</span>`).join('')}</div>` : '';
+  p.innerHTML = crumbHtml([['主页','home'],[cap.no + ' ' + cap.title,'cap',id]]) +
+    (cap.jd ? `<div class="jd-line"><span class="jd-tag">JD 关键词</span><span>${cap.jd}</span></div>` : '') +
+    (cap.tech ? `<div class="tech-line"><span class="tc-tag">实现口径 · 可追问</span><span>${cap.tech}</span></div>` : '') +
+    `<div class="pg-head"><div class="pg-no">${cap.no}</div><h2 class="pg-title">${cap.title}</h2>
+       <div class="pg-metric">${cap.stats[0][0]} · ${cap.stats[0][1]}</div></div>
+     <p class="pg-lead">${cap.lead}</p>
+     <div class="cap-body">
+       <div class="cb-l">
+         <div class="stats">${cap.stats.map((x,i)=>`<div class="stat"><div class="s-no">${cap.no}-${String(i+1).padStart(2,'0')}</div><div class="s-val">${x[0]}</div><div class="s-label">${x[1]}</div><div class="s-ctx">${x[2]}</div>${x[3]?`<div class="s-note">（${x[3]}）</div>`:''}</div>`).join('')}</div>
+         ${dec?`<div class="cp-dec"><b>关键决策 · ${dec.tag}</b><p><b class="cp-q">${dec.q}</b><br>${decTxt}</p></div>`:''}
+       </div>
+       <div class="cb-r">
+         <div class="cb-head"><div class="dec-title">支撑产品 · ${cap.ids.length} 个</div><div class="dec-note">— 点开看项目详情</div></div>
+         <div class="pj-grid">${cap.ids.map(m=>capProjectCard(m, id)).join('')}</div>
+       </div>
+     </div>
+     ${painRow}
+     ${backRow(null)}`;
+}
+
+function factVisual(f){
+  const v = String(f.v);
+  const ar = v.match(/^(.+?)\s*(?:→|->)\s*(.+)$/);
+  if(ar) return `<div class="fc"><span>${f.k}</span><div class="ca"><span class="ca-b">${ar[1].trim()}</span><span class="ca-ar">→</span><span class="ca-a">${ar[2].trim()}</span></div></div>`;
+  const p = v.match(/(\d+(?:\.\d+)?)\s*%/);
+  if(p && parseFloat(p[1]) <= 90){
+    const w = Math.max(4, parseFloat(p[1]));
+    return `<div class="fc"><div class="mb-t"><span>${f.k}</span><b>${v}</b></div><div class="mb-bar"><i style="width:${w}%"></i></div></div>`;
+  }
+  return `<div class="fc"><span>${f.k}</span><b>${v}</b></div>`;
+}
+function cardVisual(m){
+  for(const f of (m.facts||[])){
+    const v = String(f.v);
+    if(/→|->/.test(v)){
+      const a2 = v.split(/→|->/);
+      return `<div class="ca"><span class="ca-b">${a2[0].trim()}</span><span class="ca-ar">→</span><span class="ca-a">${a2[1].trim()}</span></div>`;
+    }
+  }
+  for(const f of (m.facts||[])){
+    const p = String(f.v).match(/(\d+(?:\.\d+)?)\s*%/);
+    if(p){
+      const w = Math.max(4, Math.min(100, parseFloat(p[1])));
+      return `<div class="mb"><div class="mb-t"><span>${f.k}</span><b>${String(f.v)}</b></div><div class="mb-bar"><i style="width:${w}%"></i></div></div>`;
+    }
+  }
+  return '';
+}
+function stepsFrom(content){
+  const out = [];
+  (content||'').split('\n').forEach(line=>{
+    const m = line.match(/^[①-⑩\d]\s*(.{2,10}?)[：:]\s*(.+)$/);
+    if(m) out.push([m[1].trim(), m[2].trim()]);
   });
-  renderCapPanel(cap);
-  const p=document.getElementById('capPanel');
-  if(p) setTimeout(()=>p.scrollIntoView({behavior:'smooth',block:'nearest'}),60);
+  if(out.length < 3) return '';
+  return '<div class="steps">' + out.map((x,i)=>
+    `<div class="step" title="${x[1]}"><b>${i+1}</b><span class="st-n">${x[0]}</span></div>`
+    + (i < out.length-1 ? '<span class="step-ar">→</span>' : '')
+  ).join('') + '</div>';
 }
-function closeCap(){
-  activeCap=null;
-  document.querySelectorAll('.cap-cell').forEach(el=>{ el.classList.remove('on'); el.setAttribute('aria-expanded','false'); });
-  const p=document.getElementById('capPanel'); if(p) p.innerHTML='';
-}
-function renderCapPanel(cap){
-  const p=document.getElementById('capPanel'); if(!p) return;
-  const dec=(cap.dec!=null)?decisionData[cap.dec]:null;
-  const decTxt=dec?dec.steps.filter(x=>/我的判断|决定|结果/.test(x[0])).map(x=>x[1]).join(' '):'';
-  p.innerHTML=`<div class="cp-inner">
-      <div class="cp-head"><span class="cp-no">${cap.no}</span><span class="cp-title">${cap.title}</span>
-        <button class="cp-close" onclick="closeCap()">收起 ✕</button></div>
-      <p class="cp-lead">${cap.lead}</p>
-      <div class="stats" style="margin-top:16px">${cap.stats.map((x,i)=>`<div class="stat"><div class="s-no">${cap.no}-${String(i+1).padStart(2,'0')}</div><div class="s-val">${x[0]}</div><div class="s-label">${x[1]}</div><div class="s-ctx">${x[2]}</div></div>`).join('')}</div>
-      ${dec?`<div class="cp-dec"><b>关键决策 · ${dec.tag}</b><p><b>${dec.q}</b><br>${decTxt}</p></div>`:''}
-      <div class="op-sec-head" style="margin:24px 0 0;padding-top:18px">
-        <div class="dec-title" style="font-size:15px">支撑这个能力的产品</div>
-        <div class="dec-note">— ${cap.ids.length} 个在用产品，每条都带真实运行数据</div>
+const SLOGAN = {
+  'm-platform':'23 个内部应用一个入口',
+  'm-momo':'替代重复答疑，预计削减 80%',
+  'm-chatbot':'问卷汇总 3 天 → 2 分钟',
+  'm-duedil':'背调结论可溯源，直接转发面试官',
+  'm-competitor':'竞对动向自动告警，不用人盯',
+  'm-peer':'同业人才可检索，不再只靠人脉',
+  'm-news':'前沿资讯定时直达，免人工搜集',
+  'm-resume-mining':'非标简历自动结构化，免人工整理',
+  'm-term':'术语统一口径，全公司复用',
+  'm-meeting':'替代人工排期与改期，沟通成本归零',
+  'm-screening':'8200+ 份简历，替代人工初筛',
+  'm-poster':'替代设计师排版，JD 直出可投海报',
+  'm-talentmirror':'员工档案变可搜索人才库',
+  'm-hrdash':'HR 不再手工搬表，零误差'
+};
+function capProjectCard(mid, capId){
+  const m = matrixData.find(x=>x.id===mid); if(!m) return '';
+  const tags = (m.tags||[]).slice(0,2).map(t=>`<span>${t}</span>`).join('');
+  return `<article class="pj-card" onclick="go('proj','${mid}')">
+      <div class="pj-top">
+        <div class="pj-title">${m.title}</div>
+        ${m.metric?`<div class="pj-metric">${m.metric}</div>`:''}
       </div>
-      <div class="pj-grid">${cap.ids.map(capProjectCard).join('')}</div>
-    </div>`;
-}
-function capProjectCard(id){
-  const m=matrixData.find(x=>x.id===id); if(!m) return '';
-  const star=capStarFor(id);
-  const facts=(m.facts||[]).slice(0,3).map(f=>`<div class="kv-item"><div class="k">${f.k}</div><div class="v">${f.v}</div></div>`).join('');
-  const tags=(m.tags||[]).map(t=>`<span>${t}</span>`).join('');
-  return `<article class="pj-card">
-      <div class="pj-title">${m.title}</div>
-      <div class="pj-sub">${m.sub}</div>
-      <p class="pj-desc">${m.desc}</p>
-      ${facts?`<div class="kv" style="margin-top:12px">${facts}</div>`:''}
+      ${SLOGAN[mid]?`<div class="pj-slogan">${SLOGAN[mid]}</div>`:`<div class="pj-one">${ONELINE[mid]||m.desc}</div>`}
+      ${cardVisual(m)}
       ${tags?`<div class="tagrow">${tags}</div>`:''}
-      ${star?`<div class="pj-star"><b>复盘</b><br>${star}</div>`:''}
+      <div class="pj-go">看详情 →</div>
     </article>`;
 }
 function capStarFor(id){
-  const key=STAR_KEY[id]; if(!key) return '';
-  const d=starData.find(x=>x.q.indexOf(key)!==-1); if(!d) return '';
-  const pick=re=>{ const f=d.steps.find(x=>re.test(x[0])); return f?f[1]:''; };
-  const cut=(t,n)=>t&&t.length>n?t.slice(0,n)+'…':(t||'');
-  const t=cut(pick(/^T ·|任务|问题/),110), a=cut(pick(/^A ·|行动/),130), r=cut(pick(/如果重做/),110);
-  return [t?'问题：'+t:'', a?'解法：'+a:'', r?'如果重做：'+r:''].filter(Boolean).join('<br>');
-}
-function toggleContact(){
-  const c=document.getElementById('opContact'); if(!c) return;
-  c.classList.toggle('show');
-  if(c.classList.contains('show')) setTimeout(()=>c.scrollIntoView({behavior:'smooth',block:'nearest'}),60);
+  const key = STAR_KEY[id]; if(!key) return '';
+  const d = starData.find(x=>x.q.indexOf(key)!==-1); if(!d) return '';
+  const pick = re => { const f = d.steps.find(x=>re.test(x[0])); return f ? f[1] : ''; };
+  const cut = (t,n) => t && t.length > n ? t.slice(0,n) + '…' : (t||'');
+  const t = cut(pick(/^T ·|任务|问题/),70), a2 = cut(pick(/^A ·|行动/),80), r = cut(pick(/如果重做/),70);
+  return [t?'问题：'+t:'', a2?'解法：'+a2:'', r?'如果重做：'+r:''].filter(Boolean).join('<br>');
 }
 
-/* ---------- 初始化渲染 ---------- */
+/* ---- 产品内页：一屏版（不滚屏） ---- */
+function renderProjPage(mid){
+  const p = document.getElementById('pgProj'); if(!p) return;
+  const m = matrixData.find(x=>x.id===mid); if(!m) return;
+  const cap = capMatrix.find(c=>c.ids.indexOf(mid)!==-1);
+  const facts = (m.facts||[]).map(factVisual).join('');
+  const ev = (m.evidence||[]);
+  const codes = ev.filter(e=>e.type==='code' && !/元数据/.test(e.label));
+  const shots = ev.filter(e=>e.type==='screenshot' && e.img);
+  const steps = codes.map(e=>stepsFrom(e.content)).filter(Boolean)[0] || '';
+  const shotHtml = shots.length ? `<div class="shotstrip">${shots.map(e=>`<img src="${e.img}" alt="${e.label}" loading="lazy" onclick="openScreenshot('${e.img}')" title="${e.label}">`).join('')}</div>` : '';
+  const key = STAR_KEY[mid];
+  const d = key ? starData.find(x=>x.q.indexOf(key)!==-1) : null;
+  const st = t => (t||'').length > 84 ? t.slice(0,84) + '…' : (t||'');
+  const star = d ? `<div class="st-block"><div class="st-tag">复盘 · ${d.tag}</div>
+      ${d.steps.filter(x=>/^S|^A|^R/.test(x[0])).slice(0,3).map(x=>`<div class="st-row"><b>${x[0]}</b><span>${st(x[1])}</span></div>`).join('')}</div>` : '';
+  const sibs = cap ? cap.ids.filter(x=>x!==mid).map(x=>{const o=matrixData.find(y=>y.id===x); return o?`<button class="sib" onclick="go('proj','${x}')">${o.title}</button>`:'';}).join('') : '';
+  const parts = [['主页','home']];
+  if(cap) parts.push([cap.no + ' ' + cap.title, 'cap', cap.id]);
+  parts.push([m.title, 'proj', mid]);
+  p.innerHTML = crumbHtml(parts) +
+    `<div class="pg-head"><div class="pg-no">${(m.layer||'').toUpperCase()}</div><h2 class="pg-title">${m.title}</h2>
+       ${m.metric?`<div class="pg-metric">${m.metric}</div>`:''}</div>
+     ${SLOGAN[mid]?`<div class="pj-slogan">${SLOGAN[mid]}</div>`:''}
+    <div class="pj-one" style="font-size:clamp(13.5px,1.7vh,15.5px)">${ONELINE[mid]||m.desc}</div>
+     <div class="pj-cols">
+       <div class="c-l">${facts?`<div class="fgrid">${facts}</div>`:''}${steps}${shotHtml}</div>
+       ${star?`<div class="c-r">${star}</div>`:''}
+     </div>
+     ${sibs?`<div class="sibrow2"><span class="sib-lb">同能力其他产品</span>${sibs}</div>`:''}
+     ${backRow(cap?cap.id:null)}`;
+}
+
+/* ---------- 初始化渲染 ---------- *//* ---------- 初始化渲染 ---------- */
 /* ==================== 滚动动效（入场 / 数字渐显 / 进度线） ==================== */
 function initReveal(){
   if(!('IntersectionObserver' in window)) return;
@@ -2285,7 +3119,9 @@ function initScrollProgress(){
   addEventListener('scroll',upd,{passive:true}); addEventListener('resize',upd); upd();
 }
 
+buildNav();
 renderCapGrid();
+autoFit();
 initReveal();
 initCountUp();
 initScrollProgress();
