@@ -3641,6 +3641,7 @@ setTimeout(()=>{ const h=document.getElementById('kbdHint'); if(h) h.classList.r
       var tr = 'translate3d(0,' + (9 * a * a).toFixed(1) + 'px,' + z +
         'px) rotateY(' + ry.toFixed(1) + 'deg)';
       if(c._tr !== tr){ c.style.transform = tr; c._tr = tr; }
+      c._t = t;
 
       var op = Math.max(0.45, 1 - 0.38 * a);
       if(c._op !== op){ c.style.opacity = op; c._op = op; }
@@ -3702,6 +3703,26 @@ setTimeout(()=>{ const h=document.getElementById('kbdHint'); if(h) h.classList.r
     dragging = false; last = 0;
   });
   row.addEventListener('click', function(e){ if(moved){ e.preventDefault(); e.stopPropagation(); } }, true);
+
+  /* 3D 透视下 figure 的 hit-test 会落回 track，这里按点击位置兜底定位卡片 */
+  row.addEventListener('click', function(e){
+    if(moved) return;
+    if(e.target.closest && e.target.closest('figure')) return;
+    var rect = row.getBoundingClientRect();
+    var want = (e.clientX - rect.left - row.clientWidth / 2) / step;
+    var best = null, bd = 1e9;
+    for(var i = 0; i < items.length; i++){
+      var it = items[i];
+      if(typeof it._t !== 'number') continue;
+      var d = Math.abs(it._t - want);
+      if(d < bd){ bd = d; best = it; }
+    }
+    var c = best;
+    if(!c) return;
+    var oc = c.getAttribute('onclick') || '';
+    var m = oc.match(/openScreenshot\(['"]([^'"]+)['"]\)/);
+    if(m && window.openScreenshot) openScreenshot(m[1]);
+  });
 })();
 console.log('%cPeng Tianjiao %cProduct Matrix','font-family:Inter;font-size:16px;font-weight:bold;color:#3b82f6','color:#94a3b8;font-size:11px');
 </script>
